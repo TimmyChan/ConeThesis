@@ -1,142 +1,60 @@
 =============Initializing Experiment============
-Random Vector 0 = [-3, -1, 2]
-Random Vector 1 = [-3, -3, 2]
-Random Vector 2 = [1, 2, 2]
-Random Vector 3 = [2, 2, 3]
-Random Vector 4 = [-3, 1, 2]
-Random Vector 5 = [-2, -2, 2]
-Random Vector 6 = [-1, -3, 1]
-Random Vector 7 = [-1, -1, 1]
-Random Vector 8 = [-2, 0, 2]
-Random Vector 9 = [3, -3, 2]
-N(-3, -3, 2),
-N( 3, -3, 2),
+Random Vector 0 = [1, -1, 3]
+Random Vector 1 = [3, 3, 3]
+Random Vector 2 = [0, -3, 1]
+Random Vector 3 = [-3, 1, 2]
+Random Vector 4 = [2, 2, 1]
+Random Vector 5 = [-1, 2, 3]
+Random Vector 6 = [-3, -2, 2]
+Random Vector 7 = [0, 3, 3]
+Random Vector 8 = [1, -1, 1]
+Random Vector 9 = [2, -2, 1]
+N(-3, -2, 2),
 N(-3,  1, 2),
-N(-1, -3, 1),
-N( 2,  2, 3),
-N( 1,  2, 2)
+N( 2,  2, 1),
+N( 0, -3, 1),
+N( 2, -2, 1)
 in 3-d lattice N
-vector before making it primitive = [-1, 1, 3], gcd = 1
-returning (-1, 1, 3)
-(-1, 1, 3) is in the Cone.
-vector before making it primitive = [1, -1, 3], gcd = 1
-returning (1, -1, 3)
-(1, -1, 3) is in the Cone.
-vector before making it primitive = [-3, -3, 1], gcd = 1
-returning (-3, -3, 1)
+vector before making it primitive = [-1, 2, 2], gcd = 1
+returning (-1, 2, 2)
 Extremal Generators of the Inner Cone: 
-N(-3, -3, 2),
-N( 3, -3, 2),
+N(-3, -2, 2),
 N(-3,  1, 2),
-N(-1, -3, 1),
-N( 2,  2, 3),
-N( 1,  2, 2)
+N( 2,  2, 1),
+N( 0, -3, 1),
+N( 2, -2, 1)
 in 3-d lattice N
-Vector Outside of Inner Cone: (-3, -3, 1)
+Vector Outside of Inner Cone: (-1, 2, 2)
 Extremal Generators of the Outer Cone: 
-N(-3, -3, 1),
-N( 3, -3, 2),
+N(-3, -2, 2),
 N(-3,  1, 2),
-N(-1, -3, 1),
-N( 1,  2, 2),
-N( 2,  2, 3)
+N( 2,  2, 1),
+N( 0, -3, 1),
+N( 2, -2, 1),
+N(-1,  2, 2)
 in 3-d lattice N
 =============Initialization Complete============
-Hilbert Basis of D: [[-3L, -3L, 1L], [-3L, 0L, 2L], [-3L, 1L, 2L], [-2L, -3L, 1L], [-2L, -2L, 1L], [-2L, -1L, 1L], [-2L, 1L, 2L], [-2L, 2L, 3L], [-1L, -3L, 1L], [-1L, -2L, 1L], [-1L, -1L, 1L], [-1L, 0L, 1L], [-1L, 1L, 2L], [-1L, 2L, 3L], [0L, -2L, 1L], [0L, -1L, 1L], [0L, 0L, 1L], [0L, 1L, 2L], [1L, -4L, 2L], [1L, -1L, 1L], [1L, 0L, 2L], [1L, 1L, 2L], [1L, 2L, 2L], [2L, -3L, 2L], [2L, -1L, 2L], [2L, 2L, 3L], [3L, -3L, 2L], [3L, -1L, 3L]]
+Hilbert Basis of D: [[-3L, -2L, 2L], [-3L, -1L, 2L], [-3L, 0L, 2L], [-3L, 1L, 2L], [-2L, -3L, 2L], [-2L, 1L, 2L], [-1L, -1L, 1L], [-1L, 0L, 1L], [-1L, 2L, 2L], [0L, -3L, 1L], [0L, -2L, 1L], [0L, -1L, 1L], [0L, 0L, 1L], [0L, 1L, 1L], [1L, -2L, 1L], [1L, -1L, 1L], [1L, 0L, 1L], [1L, 1L, 1L], [2L, -2L, 1L], [2L, -1L, 1L], [2L, 0L, 1L], [2L, 1L, 1L], [2L, 2L, 1L]]
 v removed ok
-Extremal generators of Intermediate Cone: 
-N( 3, -3, 2),
-N(-3,  1, 2),
-N(-2, -3, 1),
-N( 2,  2, 3),
-N(-2, -1, 1),
-N( 1,  2, 2),
-N(-1, -3, 1)
-in 3-d lattice N
-Extremal generators not contained in C: [N(-2, -3, 1), N(-2, -1, 1)]
-Vector norms: [sqrt(14), sqrt(6)]
-N(-2, -1, 1)
-Vector to remove = N(-2, -1, 1) and its norm = sqrt(6)
-Hilbert Basis of Intermediate Cone: 
- [[-3L, 0L, 2L], [-3L, 1L, 2L], [-2L, -3L, 1L], [-2L, -2L, 1L], [-2L, -1L, 1L], [-2L, 1L, 2L], [-2L, 2L, 3L], [-1L, -3L, 1L], [-1L, -2L, 1L], [-1L, -1L, 1L], [-1L, 0L, 1L], [-1L, 1L, 2L], [-1L, 2L, 3L], [0L, -2L, 1L], [0L, -1L, 1L], [0L, 0L, 1L], [0L, 1L, 2L], [1L, -4L, 2L], [1L, -1L, 1L], [1L, 0L, 2L], [1L, 1L, 2L], [1L, 2L, 2L], [2L, -3L, 2L], [2L, -1L, 2L], [2L, 2L, 3L], [3L, -3L, 2L], [3L, -1L, 3L]]
-IntermediateConeSAGE = 
-N( 3, -3, 2),
-N( 2,  2, 3),
-N(-3,  1, 2),
-N(-2, -3, 1),
-N(-2, -2, 1),
-N( 1,  2, 2),
-N(-1, -3, 1)
-in 3-d lattice N
-Step 2... Original number of extremal rays: 6, Now: 7
-Extremal generators of Intermediate Cone: 
-N( 3, -3, 2),
-N( 2,  2, 3),
-N(-3,  1, 2),
-N(-2, -3, 1),
-N(-2, -2, 1),
-N( 1,  2, 2),
-N(-1, -3, 1)
-in 3-d lattice N
-Extremal generators not contained in C: [N(-2, -3, 1), N(-2, -2, 1)]
-Vector norms: [sqrt(14), 3]
-N(-2, -2, 1)
-Vector to remove = N(-2, -2, 1) and its norm = 3
-Hilbert Basis of Intermediate Cone: 
- [[-3L, -1L, 2L], [-3L, 0L, 2L], [-3L, 1L, 2L], [-2L, -3L, 1L], [-2L, -2L, 1L], [-2L, 1L, 2L], [-2L, 2L, 3L], [-1L, -3L, 1L], [-1L, -2L, 1L], [-1L, -1L, 1L], [-1L, 0L, 1L], [-1L, 1L, 2L], [-1L, 2L, 3L], [0L, -2L, 1L], [0L, -1L, 1L], [0L, 0L, 1L], [0L, 1L, 2L], [1L, -4L, 2L], [1L, -1L, 1L], [1L, 0L, 2L], [1L, 1L, 2L], [1L, 2L, 2L], [2L, -3L, 2L], [2L, -1L, 2L], [2L, 2L, 3L], [3L, -3L, 2L], [3L, -1L, 3L]]
-IntermediateConeSAGE = 
-N( 3, -3, 2),
-N( 2,  2, 3),
-N( 1,  2, 2),
-N(-3,  1, 2),
-N(-2, -3, 1),
-N(-1, -3, 1)
-in 3-d lattice N
-Step 3... Original number of extremal rays: 6, Now: 6
-Extremal generators of Intermediate Cone: 
-N( 3, -3, 2),
-N( 2,  2, 3),
-N( 1,  2, 2),
-N(-3,  1, 2),
-N(-2, -3, 1),
-N(-1, -3, 1)
-in 3-d lattice N
-Extremal generators not contained in C: [N(-2, -3, 1)]
-Vector norms: [sqrt(14)]
-N(-2, -3, 1)
-Vector to remove = N(-2, -3, 1) and its norm = sqrt(14)
-Hilbert Basis of Intermediate Cone: 
- [[-3L, -2L, 2L], [-3L, -1L, 2L], [-3L, 0L, 2L], [-3L, 1L, 2L], [-2L, -3L, 1L], [-2L, 1L, 2L], [-2L, 2L, 3L], [-1L, -3L, 1L], [-1L, -2L, 1L], [-1L, -1L, 1L], [-1L, 0L, 1L], [-1L, 1L, 2L], [-1L, 2L, 3L], [0L, -2L, 1L], [0L, -1L, 1L], [0L, 0L, 1L], [0L, 1L, 2L], [1L, -4L, 2L], [1L, -1L, 1L], [1L, 0L, 2L], [1L, 1L, 2L], [1L, 2L, 2L], [2L, -3L, 2L], [2L, -1L, 2L], [2L, 2L, 3L], [3L, -3L, 2L], [3L, -1L, 3L]]
-IntermediateConeSAGE = 
-N(-3, -3, 2),
-N( 3, -3, 2),
-N( 2,  2, 3),
-N( 1,  2, 2),
-N(-3,  1, 2),
-N(-1, -3, 1)
-in 3-d lattice N
-Step 4... Original number of extremal rays: 6, Now: 6
-Finished in 4 steps.
+Finished in 1 steps.
  Intermediate Cone = 
-N(-3, -3, 2),
-N( 3, -3, 2),
-N( 2,  2, 3),
-N( 1,  2, 2),
+N(-3, -2, 2),
+N( 2,  2, 1),
+N( 2, -2, 1),
 N(-3,  1, 2),
-N(-1, -3, 1)
+N( 0, -3, 1)
 in 3-d lattice N
  Goal Cone = 
-N(-3, -3, 2),
-N( 3, -3, 2),
+N(-3, -2, 2),
 N(-3,  1, 2),
-N(-1, -3, 1),
-N( 2,  2, 3),
-N( 1,  2, 2)
+N( 2,  2, 1),
+N( 0, -3, 1),
+N( 2, -2, 1)
 in 3-d lattice N Initial Cone = 
-N(-3, -3, 1),
-N( 3, -3, 2),
+N(-3, -2, 2),
 N(-3,  1, 2),
-N(-1, -3, 1),
-N( 1,  2, 2),
-N( 2,  2, 3)
+N( 2,  2, 1),
+N( 0, -3, 1),
+N( 2, -2, 1),
+N(-1,  2, 2)
 in 3-d lattice N 

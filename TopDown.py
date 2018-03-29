@@ -12,13 +12,13 @@ import numpy as np
 # GLOBAL VARIABLES #
 #==================# 
 # The number of generators used for the cone (useful for 3d and up)
-NUMGEN = 10
+NUMGEN = 5
 
 
 # RESTRICTIONS ON RANDOM NUMBER GENERATOR. 
-RMAX = 3
+RMAX = 10
 RMIN = -RMAX
-INFINITYCORK = 1000000
+INFINITYCORK = 10000
 
 # Takes the sage.geometry.cone.Cone() object and returns an equaivalent object in Normaliz
 def SAGEtoNormaliz(ConeSAGE):
@@ -51,11 +51,10 @@ def TOPDOWNstep(C,Intermediate, verbose=False):
 	
 	VectorToRemove = min(ExtremalNotinC, key = lambda x: x.norm())
 	verboseprint("Vector norms: {}".format([r.norm() for r in ExtremalNotinC]))
-	verboseprint(VectorToRemove)
 	verboseprint("Vector to remove = {} and its norm = {}".format(VectorToRemove,VectorToRemove.norm()))
 
 	IntermediateHB = SAGEtoNormaliz(Intermediate).HilbertBasis()
-	verboseprint("Hilbert Basis of Intermediate Cone: \n {}".format(IntermediateHB))
+	#verboseprint("Hilbert Basis of Intermediate Cone: \n {}".format(IntermediateHB))
 
 	IntermediateHB.remove(list([long(i) for i in VectorToRemove]))
 	NewGenerators = IntermediateHB + list([list([long(i) for i in ray]) for ray in C.rays()])
@@ -64,7 +63,7 @@ def TOPDOWNstep(C,Intermediate, verbose=False):
 	
 
 
-def TOPDOWNtrial(dim,verbose=False):
+def TOPDOWNtrial(C,D,v,verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
@@ -73,11 +72,6 @@ def TOPDOWNtrial(dim,verbose=False):
     else:
         verboseprint = lambda *a: None 
     
-    # Initialize conditions 
-    # C is the inner cone
-    # D is the conical hull of the union of the extremal generators of C and v
-    C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX, verbose)
-    # for now Testing:
     numC = len(C.rays())
     
     # STEP 1: Set the "intermediate cone" to be D at the first step.
@@ -93,6 +87,7 @@ def TOPDOWNtrial(dim,verbose=False):
     	verboseprint("v removed ok")
   	# STEP 3.2: Take the conical Hull of the list from step 3.1, iterate to next step.
     IntermediateConeSAGE = sage.geometry.cone.Cone(IntermediateHilbertBasis)
+
     
     # STEP 4: look in the definition of TOPDOWNstep.
     counter = 1
@@ -101,7 +96,12 @@ def TOPDOWNtrial(dim,verbose=False):
     	counter = counter + 1
     	print("IntermediateConeSAGE = \n{}".format(IntermediateConeSAGE.rays()))
     	print("Step {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateConeSAGE.rays())))
+    	#if not D.contains(IntermediateConeSAGE) or not IntermediateConeSAGE.contains(C):
+    	#	print("ERROR: D.contains(IntermediateConeSAGE) = {} \nIntermediateConeSAGE.contains(C) = {}".format(D.contains(IntermediateConeSAGE),IntermediateConeSAGE.contains(C)))
+    	#	break
+    	if counter >= INFINITYCORK:
+    		print("ERROR: At step {}".format(counter))
     if C.is_equivalent(IntermediateConeSAGE):
-        print("Finished in {} steps.\n Intermediate Cone = \n{}\n Goal Cone = \n{} Initial Cone = \n{} ".format(counter,IntermediateConeSAGE.rays(),C.rays(),D.rays()))
+        print("\n Intermediate Cone = \n{}\n Goal Cone = \n{} Initial Cone = \n{} \n\n Finished in {} steps. ".format(IntermediateConeSAGE.rays(),C.rays(),D.rays(),counter))
 
 

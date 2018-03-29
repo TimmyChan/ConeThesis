@@ -10,24 +10,7 @@ from PyNormaliz import *
 # Description: Generates (numgen) many vectors in the halfspace z>0
 #              and takes conical hull
 # Returns: SAGE Cone
-def generateCone(dim, numgen, RMIN, RMAX,verbose=False):
-    if verbose:
-        def verboseprint(*args):
-            for arg in args:
-               print arg,
-            print
-    else:
-        verboseprint = lambda *a: None 
 
-    vects = [[0 for i in range(dim)] for i in range(numgen)] # Empty list of vectors
-    for i in range(numgen):
-        vect = [randint(RMIN, RMAX) for j in range(dim-1)]        
-        vect.append(randint(1,RMAX))
-        vects[i] = vect
-        verboseprint("Random Vector {} = {}".format(i,vects[i]))
-    Temp = sage.geometry.cone.Cone([vector(v) for v in vects])
-    print Temp.rays()
-    return Temp
 
 # Functions used to generate a primitive rational vector
 def GCD(a,b):
@@ -47,6 +30,9 @@ def generateRandomVector(dim, RMIN,RMAX,verbose=False):
     
     vectlist  = [randint(RMIN,RMAX) for i in range(dim-1)]
     vectlist.append(randint(1,RMAX))
+    # in testing, so currently ast digit is always 1
+    #vectlist.append(1)
+
     gcd = GCD_List(vectlist)
     verboseprint("vector before making it primitive = {}, gcd = {}".format(vectlist,gcd))
     primvectlist = [(i / gcd) for i in vectlist] 
@@ -54,6 +40,20 @@ def generateRandomVector(dim, RMIN,RMAX,verbose=False):
     verboseprint("returning {}".format(vect))
     return vect
     
+def generateCone(dim, numgen, RMIN, RMAX,verbose=False):
+    if verbose:
+        def verboseprint(*args):
+            for arg in args:
+               print arg,
+            print
+    else:
+        verboseprint = lambda *a: None 
+
+    vects = [generateRandomVector(dim,RMIN,RMAX,verbose) for i in range(numgen)] # Empty list of vectors
+    verboseprint("Generating Cone with: \n{}\n...\n".format(vects))
+    Temp = sage.geometry.cone.Cone([vector(v) for v in vects])
+    #print Temp.rays()
+    return Temp
 
 
 #Function that takes a SAGE 
