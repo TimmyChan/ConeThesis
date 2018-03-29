@@ -66,7 +66,7 @@ def generateOutsideVector(dim, SAGECone, RMIN, RMAX,verbose=False):
     else:
         verboseprint = lambda *a: None 
 
-    temp = generateRandomVector(dim, RMIN, RMAX,verbose)                                             # Generate Some Random Vector
+    temp = generateRandomVector(dim, RMIN, RMAX,verbose)                        # Generate Some Random Vector
     #print("Generating Random Vector: {}".format(temp))                        
     while(SAGECone.contains(temp) or SAGECone.contains(-1*temp)):               # Loop to verify v not in C and -v not in C
         if SAGECone.contains(temp):
