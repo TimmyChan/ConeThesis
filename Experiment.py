@@ -39,13 +39,13 @@ dim = args.dimension
 # Initialize conditions 
 # C is the inner cone
 # D is the conical hull of the union of the extremal generators of C and v
-#C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX, verbose)
+C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX, verbose)
 # for now Testing:
-C = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1]])
-v = vector([3,1,1])
-D = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1],[3,1,1]])
+#C = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1]])
+#v = vector([3,1,1])
+#D = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1],[3,1,1]])
 
 print("C proper?: {}".format(C.is_proper()))
-print("D contains C?:{}\nD contains v?:{}\nC contains v?:{}\n".format(D.intersection(C).is_equivalent(C) ,D.contains(v),C.contains(v)))
-
+print("D contains C?: {}\nD contains v?: {}\nC contains v?: {}\n".format(D.intersection(C).is_equivalent(C) ,D.contains(v),C.contains(v)))
+print("Is D proper?: {}".format(D.is_proper()))
 TOPDOWNtrial(C,D,v,verbose=True)

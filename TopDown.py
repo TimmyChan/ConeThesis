@@ -8,16 +8,7 @@ import numpy as np
 # sage.geometry.cone.Cone(list), where list is a list of vectors.
 
 
-#==================#
-# GLOBAL VARIABLES #
-#==================# 
-# The number of generators used for the cone (useful for 3d and up)
-NUMGEN = 5
 
-
-# RESTRICTIONS ON RANDOM NUMBER GENERATOR. 
-RMAX = 10
-RMIN = -RMAX
 INFINITYCORK = 10000
 
 # Takes the sage.geometry.cone.Cone() object and returns an equaivalent object in Normaliz
@@ -57,7 +48,7 @@ def TOPDOWNstep(C,Intermediate, verbose=False):
 	#verboseprint("Hilbert Basis of Intermediate Cone: \n {}".format(IntermediateHB))
 
 	IntermediateHB.remove(list([long(i) for i in VectorToRemove]))
-	NewGenerators = IntermediateHB + list([list([long(i) for i in ray]) for ray in C.rays()])
+	NewGenerators = IntermediateHB#+ list([list([long(i) for i in ray]) for ray in C.rays()])
 
 	return sage.geometry.cone.Cone(NewGenerators)
 	
@@ -94,14 +85,21 @@ def TOPDOWNtrial(C,D,v,verbose=False):
     while ((not C.is_equivalent(IntermediateConeSAGE)) and (counter < INFINITYCORK)):
     	IntermediateConeSAGE = TOPDOWNstep(C,IntermediateConeSAGE, verbose)
     	counter = counter + 1
-    	print("IntermediateConeSAGE = \n{}".format(IntermediateConeSAGE.rays()))
+    	#print("IntermediateConeSAGE = \n{}".format(IntermediateConeSAGE.rays()))
     	print("Step {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateConeSAGE.rays())))
-    	#if not D.contains(IntermediateConeSAGE) or not IntermediateConeSAGE.contains(C):
+    	if not D.intersection(IntermediateConeSAGE).is_equivalent(IntermediateConeSAGE):
+            print("ERROR: Intermediate Cone not in D")
+            break
+        if not IntermediateConeSAGE.intersection(C).is_equivalent(C):
+            print("ERROR: C not in Intermediate Cone")
+            break
+        #if not D.contains(IntermediateConeSAGE) or not IntermediateConeSAGE.contains(C):
     	#	print("ERROR: D.contains(IntermediateConeSAGE) = {} \nIntermediateConeSAGE.contains(C) = {}".format(D.contains(IntermediateConeSAGE),IntermediateConeSAGE.contains(C)))
     	#	break
     	if counter >= INFINITYCORK:
     		print("ERROR: At step {}".format(counter))
     if C.is_equivalent(IntermediateConeSAGE):
         print("\n Intermediate Cone = \n{}\n Goal Cone = \n{} Initial Cone = \n{} \n\n Finished in {} steps. ".format(IntermediateConeSAGE.rays(),C.rays(),D.rays(),counter))
+
 
 
