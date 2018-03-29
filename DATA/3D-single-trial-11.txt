@@ -1,0 +1,65 @@
+=============Initializing Experiment============
+Random Vector 0 = [1, -6, 8]
+Random Vector 1 = [4, -6, 9]
+Random Vector 2 = [5, -6, 8]
+Random Vector 3 = [-1, 6, 1]
+Random Vector 4 = [1, 0, 10]
+Random Vector 5 = [3, 3, 2]
+Random Vector 6 = [-4, -2, 6]
+Random Vector 7 = [-9, -4, 10]
+Random Vector 8 = [0, 5, 6]
+Random Vector 9 = [6, 0, 9]
+N(-9, -4, 10),
+N( 5, -6,  8),
+N(-1,  6,  1),
+N( 3,  3,  2),
+N( 1, -6,  8)
+in 3-d lattice N
+vector before making it primitive = [8, 2, 1], gcd = 1
+returning (8, 2, 1)
+Extremal Generators of the Inner Cone: 
+N(-9, -4, 10),
+N( 5, -6,  8),
+N(-1,  6,  1),
+N( 3,  3,  2),
+N( 1, -6,  8)
+in 3-d lattice N
+Vector Outside of Inner Cone: (8, 2, 1)
+Extremal Generators of the Outer Cone: 
+N(-9, -4, 10),
+N(-1,  6,  1),
+N( 1, -6,  8),
+N( 8,  2,  1),
+N( 5, -6,  8)
+in 3-d lattice N
+=============Initialization Complete============
+D contains C?:False
+D contains v?:True
+C contains v?:False
+
+Hilbert Basis of D: [[-9L, -4L, 10L], [-9L, -3L, 10L], [-9L, -2L, 10L], [-9L, -1L, 10L], [-9L, 0L, 10L], [-9L, 1L, 10L], [-9L, 2L, 10L], [-8L, -5L, 11L], [-8L, -3L, 9L], [-8L, -2L, 9L], [-8L, -1L, 9L], [-8L, 0L, 9L], [-8L, 1L, 9L], [-8L, 2L, 9L], [-7L, -3L, 8L], [-7L, -2L, 8L], [-7L, -1L, 8L], [-7L, 0L, 8L], [-7L, 1L, 8L], [-7L, 2L, 8L], [-7L, 3L, 8L], [-6L, -5L, 10L], [-6L, -2L, 7L], [-6L, -1L, 7L], [-6L, 0L, 7L], [-6L, 1L, 7L], [-6L, 2L, 7L], [-6L, 3L, 7L], [-5L, -2L, 6L], [-5L, -1L, 6L], [-5L, 0L, 6L], [-5L, 1L, 6L], [-5L, 2L, 6L], [-5L, 3L, 6L], [-4L, -5L, 9L], [-4L, -2L, 5L], [-4L, -1L, 5L], [-4L, 0L, 5L], [-4L, 1L, 5L], [-4L, 2L, 5L], [-4L, 3L, 5L], [-4L, 4L, 5L], [-3L, -6L, 10L], [-3L, -1L, 4L], [-3L, 0L, 4L], [-3L, 1L, 4L], [-3L, 2L, 4L], [-3L, 3L, 4L], [-3L, 4L, 4L], [-2L, -1L, 3L], [-2L, 0L, 3L], [-2L, 1L, 3L], [-2L, 2L, 3L], [-2L, 3L, 3L], [-2L, 4L, 3L], [-1L, -6L, 9L], [-1L, -1L, 2L], [-1L, 0L, 2L], [-1L, 1L, 2L], [-1L, 2L, 2L], [-1L, 3L, 2L], [-1L, 4L, 2L], [-1L, 5L, 2L], [-1L, 6L, 1L], [0L, -2L, 3L], [0L, -1L, 2L], [0L, 0L, 1L], [0L, 1L, 1L], [0L, 2L, 1L], [0L, 3L, 1L], [0L, 4L, 1L], [0L, 5L, 1L], [1L, -6L, 8L], [1L, -3L, 4L], [1L, -2L, 3L], [1L, -1L, 2L], [1L, 0L, 1L], [1L, 1L, 1L], [1L, 2L, 1L], [1L, 3L, 1L], [1L, 4L, 1L], [1L, 5L, 1L], [2L, -3L, 4L], [2L, -2L, 3L], [2L, -1L, 2L], [2L, 0L, 1L], [2L, 1L, 1L], [2L, 2L, 1L], [2L, 3L, 1L], [2L, 4L, 1L], [3L, 1L, 1L], [3L, 2L, 1L], [3L, 3L, 1L], [3L, 4L, 1L], [4L, 1L, 1L], [4L, 2L, 1L], [4L, 3L, 1L], [5L, -6L, 8L], [5L, -5L, 7L], [5L, -4L, 6L], [5L, -3L, 5L], [5L, -2L, 4L], [5L, -1L, 3L], [5L, 0L, 2L], [5L, 1L, 1L], [5L, 2L, 1L], [5L, 3L, 1L], [6L, 2L, 1L], [7L, 2L, 1L], [8L, 2L, 1L]]
+v removed ok
+Extremal generators of Intermediate Cone: 
+N(-9, -4, 10),
+N( 7,  2,  1),
+N( 5,  1,  1),
+N( 5, -6,  8),
+N( 1, -6,  8),
+N(-1,  6,  1)
+in 3-d lattice N
+Extremal generators not contained in C: [N(7, 2, 1), N(5, 1, 1)]
+Vector norms: [3*sqrt(6), 3*sqrt(3)]
+Vector to remove = N(5, 1, 1) and its norm = 3*sqrt(3)
+Hilbert Basis of Intermediate Cone: 
+ [[-9L, -4L, 10L], [-9L, -3L, 10L], [-9L, -2L, 10L], [-9L, -1L, 10L], [-9L, 0L, 10L], [-9L, 1L, 10L], [-9L, 2L, 10L], [-8L, -5L, 11L], [-8L, -3L, 9L], [-8L, -2L, 9L], [-8L, -1L, 9L], [-8L, 0L, 9L], [-8L, 1L, 9L], [-8L, 2L, 9L], [-7L, -3L, 8L], [-7L, -2L, 8L], [-7L, -1L, 8L], [-7L, 0L, 8L], [-7L, 1L, 8L], [-7L, 2L, 8L], [-7L, 3L, 8L], [-6L, -5L, 10L], [-6L, -2L, 7L], [-6L, -1L, 7L], [-6L, 0L, 7L], [-6L, 1L, 7L], [-6L, 2L, 7L], [-6L, 3L, 7L], [-5L, -2L, 6L], [-5L, -1L, 6L], [-5L, 0L, 6L], [-5L, 1L, 6L], [-5L, 2L, 6L], [-5L, 3L, 6L], [-4L, -5L, 9L], [-4L, -2L, 5L], [-4L, -1L, 5L], [-4L, 0L, 5L], [-4L, 1L, 5L], [-4L, 2L, 5L], [-4L, 3L, 5L], [-4L, 4L, 5L], [-3L, -6L, 10L], [-3L, -1L, 4L], [-3L, 0L, 4L], [-3L, 1L, 4L], [-3L, 2L, 4L], [-3L, 3L, 4L], [-3L, 4L, 4L], [-2L, -1L, 3L], [-2L, 0L, 3L], [-2L, 1L, 3L], [-2L, 2L, 3L], [-2L, 3L, 3L], [-2L, 4L, 3L], [-1L, -6L, 9L], [-1L, -1L, 2L], [-1L, 0L, 2L], [-1L, 1L, 2L], [-1L, 2L, 2L], [-1L, 3L, 2L], [-1L, 4L, 2L], [-1L, 5L, 2L], [-1L, 6L, 1L], [0L, -2L, 3L], [0L, -1L, 2L], [0L, 0L, 1L], [0L, 1L, 1L], [0L, 2L, 1L], [0L, 3L, 1L], [0L, 4L, 1L], [0L, 5L, 1L], [1L, -6L, 8L], [1L, -3L, 4L], [1L, -2L, 3L], [1L, -1L, 2L], [1L, 0L, 1L], [1L, 1L, 1L], [1L, 2L, 1L], [1L, 3L, 1L], [1L, 4L, 1L], [1L, 5L, 1L], [2L, -3L, 4L], [2L, -2L, 3L], [2L, -1L, 2L], [2L, 0L, 1L], [2L, 1L, 1L], [2L, 2L, 1L], [2L, 3L, 1L], [2L, 4L, 1L], [3L, 1L, 1L], [3L, 2L, 1L], [3L, 3L, 1L], [3L, 4L, 1L], [4L, 1L, 1L], [4L, 2L, 1L], [4L, 3L, 1L], [5L, -6L, 8L], [5L, -5L, 7L], [5L, -4L, 6L], [5L, -3L, 5L], [5L, -2L, 4L], [5L, -1L, 3L], [5L, 0L, 2L], [5L, 1L, 1L], [5L, 2L, 1L], [5L, 3L, 1L], [6L, 2L, 1L], [7L, 2L, 1L]]
+IntermediateConeSAGE = 
+N(-9, -4, 10),
+N( 7,  2,  1),
+N( 5,  0,  2),
+N( 5, -6,  8),
+N( 1, -6,  8),
+N(-1,  6,  1)
+in 3-d lattice N
+Step 2... Original number of extremal rays: 5, Now: 6
+ERROR: D.contains(IntermediateConeSAGE) = False 
+IntermediateConeSAGE.contains(C) = False
