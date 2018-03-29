@@ -1,0 +1,51 @@
+#=============================#
+# OUTPUT FUNCTION DEFINITIONS #
+#=============================#
+
+
+# FORMATTING FUNCTION
+def printseparator(): 
+    print("================================================================")
+
+
+
+# TAKES AN INTEGER ARRAY AND RETURNS A FREQUENCY TABLE (MEANT FOR PLOTTING DATA)
+def frequencyArray(List):
+    maximum = max(List)
+    return [List.count(i) for i in range(maximum+1)]
+        
+        
+        
+# DISPLAY STATISTICS OF A LIST RAWDATA, WHERE EACH ENTRY IN THE LIST IS A TUPLE (# of steps, Cone, Vector)
+def printStats(RawData, Final=False): 
+    Data = [RawData[i][0] for i in range(len(RawData))]
+    #print Data
+    if Final:
+        printseparator()
+        print("DATA SUMMARY:")
+    else:
+        print("TRIAL STATS:")
+    print("\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(N(mean(Data),digits=SIGFIG),  N(median(Data),digits=SIGFIG), mode(Data), min(Data), max(Data), N(std(Data),digits=SIGFIG)))
+    if Final        index_min = min(xrange(len(Data)), key=Data.__getitem__) # GET THE INDEX OF THE MIN STEP
+        minC = RawData[index_min][1]
+        minD = RawData[index_min][2]
+        #print("DEBUG: The index of the minimum value: {}, Minimum Value: {}".format(index_min, Data[index_min]))
+        print("An initial condition that gave us the minimum number of steps:")
+        printCD(minC,minD)
+
+        index_max = max(xrange(len(Data)), key=Data.__getitem__) # GET THE INDEX OF THE MAX STEP        
+        maxC = RawData[index_max][1]
+        maxD = RawData[index_max][2]
+        #print("DEBUG: The index of the maximum value: {}, Minimum Value: {}".format(index_max, Data[index_max]))
+        print("An initial condition that gave us the maximum number of steps:")
+        printCD(maxC,maxD)
+        
+        
+        frequencyTable = frequencyArray(Data)
+        plot(bar_chart(frequencyTable)).show()
+        from pylab import boxplot,savefig
+        b=boxplot(Data)
+        savefig("sage1.png")
+        
+        
+

@@ -1,0 +1,10 @@
+Experiment.py - Wrapper file
+
+Init.py - Generates C, D, v and contains all logic and generalizes to d dimensions.
+
+TopDown.py - Generalized module that can take on any dimension.
+
+
+Goal: 
+BottomUp4D.py - specialized module for 4D bottom up
+  -> BottomUp.py - perhaps not possible...? Maybe?
