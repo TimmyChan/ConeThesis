@@ -55,7 +55,7 @@ def TOPDOWNstep(C,Intermediate, verbose=False):
 
 
 def TOPDOWNtrial(C,D,v,verbose=False):
-    if verbose:
+    fi verbose:
         def verboseprint(*args):
             for arg in args:
                print arg,
@@ -74,8 +74,8 @@ def TOPDOWNtrial(C,D,v,verbose=False):
     
     # STEP 3.1: Remove v from Hilb(D_0) or "intermediate hilbert basis" list 
     IntermediateHilbertBasis.remove(list([long(i) for i in v]))
-    if not list([long(i) for i in v]) in IntermediateHilbertBasis:
-    	verboseprint("v removed ok")
+    #if not list([long(i) for i in v]) in IntermediateHilbertBasis:
+    #	verboseprint("v removed ok")
   	# STEP 3.2: Take the conical Hull of the list from step 3.1, iterate to next step.
     IntermediateConeSAGE = sage.geometry.cone.Cone(IntermediateHilbertBasis)
 

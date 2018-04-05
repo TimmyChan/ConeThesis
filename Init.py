@@ -19,7 +19,7 @@ def GCD_List(args):
     return reduce(GCD, args)
 
 
-def generateRandomVector(dim, RMIN,RMAX,verbose=False):
+def generateRandomVector(dim, RMIN, RMAX, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
@@ -27,7 +27,7 @@ def generateRandomVector(dim, RMIN,RMAX,verbose=False):
             print
     else:
         verboseprint = lambda *a: None 
-    
+
     vectlist  = [randint(RMIN,RMAX) for i in range(dim-1)]
     vectlist.append(randint(1,RMAX))
     # in testing, so currently ast digit is always 1
@@ -40,7 +40,7 @@ def generateRandomVector(dim, RMIN,RMAX,verbose=False):
     verboseprint("returning {}".format(vect))
     return vect
     
-def generateCone(dim, numgen, RMIN, RMAX,verbose=False):
+def generateCone(dim, numgen, RMIN, RMAX, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
@@ -48,6 +48,9 @@ def generateCone(dim, numgen, RMIN, RMAX,verbose=False):
             print
     else:
         verboseprint = lambda *a: None 
+
+    if dim < numgen:
+        numgen = dim
 
     vects = [generateRandomVector(dim,RMIN,RMAX,verbose) for i in range(numgen)] # Empty list of vectors
     verboseprint("Generating Cone with: \n{}\n...\n".format(vects))
@@ -57,7 +60,7 @@ def generateCone(dim, numgen, RMIN, RMAX,verbose=False):
 
 
 #Function that takes a SAGE 
-def generateOutsideVector(dim, SAGECone, RMIN, RMAX,verbose=False):
+def generateOutsideVector(dim, SAGECone, RMIN, RMAX, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:

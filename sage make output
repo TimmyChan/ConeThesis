@@ -1,0 +1,26 @@
+[six-1.11.0] Finished installing six-1.11.0.spkg
+make[2]: Leaving directory '/home/EVKae/sage/build/make'
+Makefile:803: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/EVKae/sage/build/make'
+
+real	40m58.297s
+user	131m49.837s
+sys	8m15.656s
+***************************************************************
+Error building Sage.
+
+The following package(s) may have failed to build (not necessarily
+during this run of 'make all'):
+
+* package: singular-4.1.0p3.p0
+  log file: /home/EVKae/sage/logs/pkgs/singular-4.1.0p3.p0.log
+  build directory: /home/EVKae/sage/local/var/tmp/sage/build/singular-4.1.0p3.p0
+
+The build directory may contain configuration files and other potentially
+helpful information. WARNING: if you now run 'make' again, the build
+directory will, by default, be deleted. Set the environment variable
+SAGE_KEEP_BUILT_SPKGS to 'yes' to prevent this.
+
+Makefile:16: recipe for target 'all' failed
+make: *** [all] Error 1
