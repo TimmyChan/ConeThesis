@@ -28,39 +28,35 @@ Where DIM is the ambient dimension for the test.
 ### Modules
 
 #### Experiment.py
-Wrapper file, defines global variables and calls on generateInitialConditions 
-	----- Variables -----
-	RMIN, RMAX 
-		variables that control random number generators
-	numgen 
-		number of generators used in generateCone()
+Wrapper file, defines global variables and calls on generateInitialConditions  
+	----- Variables -----  
+	RMIN, RMAX  
+		variables that control random number generators  
+	numgen   
+		number of generators used in generateCone()  
 
 
 #### Init.py 
-Generates Initial Conditions for the experiment.
-	----- Functions -----
-	generateRandomVector(dim, RMIN, RMAX, verbose=False)
-		GCD_List(args): Returns 
-		GCD(a,b): Returns gcd of a and b, returns a if b = 0.
-	generateCone(dim, numgen, RMIN, RMAX, verbose=False)
-		Generates proper full dimensional cone.
-	generateOutsideVector(dim, SAGECone, RMIN, RMAX, verbose=False)
-		Takes a cone, called SAGECone, and generates a vector v outside of the cone such that v and -v are both not in SAGECone.
-	generateInitialConditions(dim, gencount, RMIN, RMAX, verbose=False)
+Generates Initial Conditions for the experiment.  
+	----- Functions -----  
+	generateRandomVector(dim, RMIN, RMAX, verbose=False)  
+		GCD_List(args): Returns  
+		GCD(a,b): Returns gcd of a and b, returns a if b = 0.  
+	generateCone(dim, numgen, RMIN, RMAX, verbose=False)  
+		Generates proper full dimensional cone.  
+	generateOutsideVector(dim, SAGECone, RMIN, RMAX, verbose=False)  
+		Takes a cone, called SAGECone, and generates a vector v outside of the cone such that v and -v are both not in SAGECone.  
+	generateInitialConditions(dim, gencount, RMIN, RMAX, verbose=False)  
 		Calls the above functions, and returns C, D, v, where C is contained in D, with D as the conical hull of C and v.
 
 
 #### TopDown.py 
-Implements the Top Down Algorithm as described in "The Poset of Rational Cones"
-	----- Functions -----
-	TopDownTrial(C,D,v, verbose=False)
-		Conducts the experiment using the TopDown algorithm
-	TopDownStep(C,D,v, verbose=False)
+Implements the Top Down Algorithm as described in "The Poset of Rational Cones"  
+	----- Functions -----  
+	TopDownTrial(C,D,v, verbose=False)  
+		Conducts the experiment using the TopDown algorithm  
+	TopDownStep(C,D,v, verbose=False)  
 		Conducts one step of the algorithm
 		Takes Hilbert Basis of D, removes shortest extremal ray of D not contained in C
 		Takes conical hull of vectors remaining from previous step, return this intermediate cone.
 
-
-Goal: 
-BottomUp4D.py - specialized module for 4D bottom up
-  -> BottomUp.py - perhaps not possible...? Maybe?
