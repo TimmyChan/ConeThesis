@@ -1,18 +1,19 @@
+#!/usr/bin/env sage -python
 
 from sage.all import *
-from PyNormaliz import *
+import PyNormaliz 
 from Init import *
 from TopDown import *
+from Output import * 
 import numpy as np
 import argparse
+import datetime
 
 
+#parser = argparse.ArgumentParser()
+#parser.add_argument("dimension", type=int,help="Dimension of ambient space for this experiment.")
 
-
-parser = argparse.ArgumentParser()
-parser.add_argument("dimension", type=int,help="Dimension of ambient space for this experiment.")
-
-args = parser.parse_args()
+#args = parser.parse_args()
 # FILE = open('RawDataTopDown3D','a')
 
 # Please note that to make a default cone in SAGE, one must now use 
@@ -35,28 +36,48 @@ NUMOFTRIALS = 10
 NUMOFTESTS = 100
 
 #dim = input("Dimension: ")
-dim = args.dimension
+#dim = args.dimension
+dim = input("dimension = ")
+
+
+filename = str(datetime.datetime.now())
+filename = "./DATA/{}d experiment - ".format(dim) + filename + ".txt"
+print("Saving Data to file \"{}\"".format(filename))
+FILE = open(filename,"w+")
 # Initialize conditions 
 # C is the inner cone
 # D is the conical hull of the union of the extremal generators of C and v
-#C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX, verbose)
-# for now Testing:
-#C = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1]])
-#v = vector([3,1,1])
-#D = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1],[3,1,1]])
-
-#testing now
-#n = 15
-#C = sage.geometry.cone.Cone([[-n,n,1],[n,-n,1],[-n,-n,1]])
-#D = sage.geometry.cone.Cone([[-n,n,1],[n,-n,1],[n,n,1],[-n,-n,1]])
-#v = vector([n,n,1])
 
 
-C = sage.geometry.cone.Cone([[1,0],[23,19]])
-v = vector([31,23])
-D = sage.geometry.cone.Cone([[1,0],[31,23]])
-
-print("C proper?: {}".format(C.is_proper()))
-print("D contains C?: {}\nD contains v?: {}\nC contains v?: {}\n".format(D.intersection(C).is_equivalent(C) ,D.contains(v),C.contains(v)))
-print("Is D proper?: {}".format(D.is_proper()))
+#==============#
+# COLLECT DATA #
+#==============#
+AllDATA = [None]*(NUMOFTRIALS*NUMOFTESTS)
+totalcounter = 0
+print("Verbose Run for Accuracy Verification:")
+FILE.write("Verbose Run for Accuracy Verification:")
+C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX, verbose=True)
 TOPDOWNtrial(C,D,v,verbose=True)
+
+print("\n\n")
+print("Number of Tests: {} \nVector Coordinate Bound: (+/-){}".format((NUMOFTESTS*NUMOFTRIALS), RMAX))
+FILE.write("\n\n")
+FILE.write("Number of Tests: {} \nVector Coordinate Bound: (+/-){}".format((NUMOFTESTS*NUMOFTRIALS), RMAX))
+
+printseparator(FILE)
+
+DATA = [None]*(NUMOFTESTS)
+for trial in range(NUMOFTRIALS):
+	for t in range(NUMOFTESTS):
+		C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX)
+		DATA[t] = TOPDOWNtrial(C,D,v)
+	print("TRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
+	FILE.write("TRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
+	printStats(DATA,FILE)
+	for i in range(NUMOFTESTS):
+		AllDATA[i+totalcounter] = DATA[i]
+	totalcounter = totalcounter + NUMOFTESTS
+	printseparator(FILE)
+	
+#print AllDATA
+printStats(AllDATA,FILE,Final=True)

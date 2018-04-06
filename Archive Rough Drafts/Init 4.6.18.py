@@ -54,13 +54,13 @@ def generateCone(dim, numgen, RMIN, RMAX, verbose=False):
 
     vects = [generateRandomVector(dim,RMIN,RMAX,verbose) for i in range(numgen)] # Empty list of vectors
     verboseprint("Generating Cone with: \n{}\n...\n".format(vects))
-    Temp = Polyhedron(rays=[vector(v) for v in vects],backend='normaliz')
+    Temp = sage.geometry.cone.Cone([vector(v) for v in vects])
     #print Temp.rays()
     return Temp
 
 
-#Function that takes a Cone that is a Polyhedron with normaliz backed. 
-def generateOutsideVector(dim, Cone, RMIN, RMAX, verbose=False):
+#Function that takes a SAGE 
+def generateOutsideVector(dim, SAGECone, RMIN, RMAX, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
@@ -71,11 +71,11 @@ def generateOutsideVector(dim, Cone, RMIN, RMAX, verbose=False):
 
     temp = generateRandomVector(dim, RMIN, RMAX,verbose)                        # Generate Some Random Vector
     #print("Generating Random Vector: {}".format(temp))                        
-    while(Cone.contains(temp) or Cone.contains(-1*temp)):               # Loop to verify v not in C and -v not in C
-        if Cone.contains(temp):
+    while(SAGECone.contains(temp) or SAGECone.contains(-1*temp)):               # Loop to verify v not in C and -v not in C
+        if SAGECone.contains(temp):
             verboseprint("{} is in the Cone.".format(temp))
         else:
-            verboseprint("{} is in the Cone.".format(-temp))
+            verboseprint("{} is in the Cone.".format(-temp,someCone.contains(-temp)))
         temp = generateRandomVector(dim, RMIN,RMAX,verbose)
         #print("Generating Random Vector: {}".format(temp))     
 
@@ -106,11 +106,8 @@ def generateInitialConditions(dim, gencount, RMIN, RMAX, verbose=False):
     OuterConeGenerators = []
     for point in InnerConeGenerators:
         OuterConeGenerators.append(point)
-
     OuterConeGenerators.append(OutsideVector)
-
-    OuterCone = Polyhedron(rays=OuterConeGenerators,backend='normaliz')
-    
+    OuterCone = sage.geometry.cone.Cone(OuterConeGenerators)
     #print OuterCone.rays
 
     #InnerCone = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1]])

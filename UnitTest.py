@@ -25,14 +25,23 @@ Tests: 			- C is full dimensional even if numgen < dim (simply force use dim)
 """
 class InitTestCase(unittest.TestCase):
 	""" Tests for Init.py"""
-	def test_is_C_SAGEcone(self):
-		C = generateCone(2, 10, -10, 10)
+
+	# 2D tests
+	dim = 2
+	def test_is_C2_fulldim(self):
+		C= generateCone(dim,dim-1,-10,10)
+
+	def test_is_C2_SAGEcone(self):
+		C = generateCone(dim, 10, -10, 10)
 		self.assertIsInstance(C, sage.geometry.cone)
 
-	def test_is_C_proper(self):
-		C = generateCone()
+	def test_is_C2_proper(self):
+		C = generateCone(dim,10,-10,10)
+
+
 """
-Functions used to generate a primitive rational vector
+
+Find the GCD of a list of numbers
 
 Input:		List of integers
 Method:		Recursion
