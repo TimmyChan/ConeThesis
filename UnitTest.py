@@ -4,6 +4,8 @@ from TopDown import *
 import datetime
 
 
+FILE = open("UnitTest Output Dump.txt","w+")
+
 """
 generateCone(dim, numgen, RMIN, RMAX, FILE, verbose=False)
 
@@ -48,9 +50,6 @@ class Test_generateCone(unittest.TestCase):
 		C = generateCone(5,10,-10,10, FILE)
 		self.assertTrue(C.lines_list() == [])
 
-
-
-
 class Test_GCD_List(unittest.TestCase):
 	# is v inside C?
 	def test_GCD_of_zeros(self):
@@ -62,8 +61,6 @@ class Test_GCD_List(unittest.TestCase):
 	def test_GCD_coprime(self):
 		gcd = GCD_List([7,8])
 		self.assertEqual(gcd,1)
-	
-
 
 class Test_generateRandomVector(unittest.TestCase):
 	def test_v_primitive(self):
@@ -74,8 +71,6 @@ class Test_generateRandomVector(unittest.TestCase):
 		halfspace = Polyhedron(rays=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,-1]],backend='normaliz') 
 		self.assertFalse(halfspace.contains(v))
 
-
-
 class Test_generateOutsideVector(unittest.TestCase):
 	def test_v_outside_C(self):
 		C = generateCone(5,10,-10,10,FILE)
@@ -85,27 +80,16 @@ class Test_generateOutsideVector(unittest.TestCase):
 		v = generateRandomVector(5,-10,10)
 		self.assertEqual(GCD_List(list([i for i in v])),1)
 
-
- 
-
-
-#Function that takes a SAGE cone and generates a random vector outside of the cone such that
-#v not in C and -v not in C
-#generateOutsideVector(dim, SAGECone, RMIN, RMAX,verbose=False):
-
-# This function returns two SAGE cones, C & D, and a vector v, where
-# D is the conical hull of the extremal generators of C union v 
-# input: dim - ambient dimension
-#        gencount - number of extremal generators 
-#C, D, v = generateInitialConditions(dim, gencount, RMIN, RMAX, FILE, verbose=False):
 class Test_generateInitialConditions(unittest.TestCase):
 	def test_D_contains_C_and_v(self):
 		C,D,v = generateInitialConditions(5, 10, -10, 10,FILE)
-		self.assertTrue(D.contains(C))
+		Crays = C.rays_list()
+		for r in Crays:
+			self.assertTrue(D.contains(r))
 		self.assertTrue(D.contains(v))
 	def test_D_proper(self):
 		C,D,v = generateInitialConditions(5, 10, -10, 10,FILE)
-		self.assertEqual(D.lines_list,[])
+		self.assertEqual(D.lines_list(),[])
 	def test_D_full_dimensional(self):
 		C,D,v = generateInitialConditions(5, 10, -10, 10,FILE)
 		self.assertTrue(D.is_full_dimensional())
@@ -113,21 +97,24 @@ class Test_generateInitialConditions(unittest.TestCase):
 
 
 
+TestNames = [Test_generateCone,Test_GCD_List,Test_generateRandomVector,Test_generateOutsideVector, Test_generateInitialConditions]
+
+for i in range(len(TestNames)):
+	suite = unittest.TestLoader().loadTestsFromTestCase(TestNames[i])
+	unittest.TextTestRunner(verbosity=2).run(suite)
 
 
 
 
 
 
+#suite = unittest.TestLoader().loadTestsFromTestCase(Test_GCD_List)
+#unittest.TextTestRunner(verbosity=2).run(suite)
 
 
-suite = unittest.TestLoader().loadTestsFromTestCase(Test_GCD_List)
-unittest.TextTestRunner(verbosity=2).run(suite)
+#suite = unittest.TestLoader().loadTestsFromTestCase(Test_generateRandomVector)
+#unittest.TextTestRunner(verbosity=2).run(suite)
 
 
-suite = unittest.TestLoader().loadTestsFromTestCase(Test_generateRandomVector)
-unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-suite = unittest.TestLoader().loadTestsFromTestCase(Test_generateCone)
-unittest.TextTestRunner(verbosity=2).run(suite)
+#suite = unittest.TestLoader().loadTestsFromTestCase(Test_generateCone)
+#unittest.TextTestRunner(verbosity=2).run(suite)
