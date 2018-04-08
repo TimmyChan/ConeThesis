@@ -12,7 +12,7 @@ SIGFIG = 2
 # FORMATTING FUNCTION
 def printseparator(FILE): 
     print("================================================================")
-    FILE.write("================================================================")
+    FILE.write("\n================================================================")
     
 
 # TAKES AN INTEGER ARRAY AND RETURNS A FREQUENCY TABLE (MEANT FOR PLOTTING DATA)
@@ -23,7 +23,7 @@ def frequencyArray(List):
         
 def printCD(C,D,FILE):
     print("Inner Cone: \n{}\nOuterCone:\n{}".format(C.rays_list(),D.rays_list()))
-    FILE.write("Inner Cone: \n{}\nOuterCone:\n{}".format(C.rays_list(),D.rays_list()))
+    FILE.write("\nInner Cone: \n{}\nOuterCone:\n{}".format(C.rays_list(),D.rays_list()))
     
 # DISPLAY STATISTICS OF A LIST RAWDATA, WHERE EACH ENTRY IN THE LIST IS A TUPLE (# of steps, Cone, Vector)
 def printStats(RawData,FILE, Final=False): 
@@ -32,13 +32,13 @@ def printStats(RawData,FILE, Final=False):
     if Final:
         printseparator(FILE)
         print("DATA SUMMARY:")
-        FILE.write("DATA SUMMARY:")
+        FILE.write("\nDATA SUMMARY:")
         
     else:
         print("TRIAL STATS:")
-        FILE.write("TRIAL STATS:")
+        FILE.write("\nTRIAL STATS:")
     print("\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), max(Data), min(Data), np.max(Data), round(std(Data),SIGFIG)))
-    FILE.write("\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), max(Data), min(Data), np.max(Data), round(std(Data),SIGFIG)))
+    FILE.write("\n\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), max(Data), min(Data), np.max(Data), round(std(Data),SIGFIG)))
     
     if Final:
         index_min = min(xrange(len(Data)), key=Data.__getitem__) # GET THE INDEX OF THE MIN STEP
@@ -47,7 +47,7 @@ def printStats(RawData,FILE, Final=False):
         #print("DEBUG: The index of the minimum value: {}, Minimum Value: {}".format(index_min, Data[index_min]))
         print("An initial condition that gave us the minimum number of steps ({}):".format(RawData[index_min][0]))
         
-        FILE.write("An initial condition that gave us the minimum number of steps ({}):".format(RawData[index_min][0]))
+        FILE.write("\nAn initial condition that gave us the minimum number of steps ({}):".format(RawData[index_min][0]))
         printCD(minC,minD,FILE)
 
         index_max = max(xrange(len(Data)), key=Data.__getitem__) # GET THE INDEX OF THE MAX STEP        
@@ -55,7 +55,7 @@ def printStats(RawData,FILE, Final=False):
         maxD = RawData[index_max][2]
         #print("DEBUG: The index of the maximum value: {}, Minimum Value: {}".format(index_max, Data[index_max]))
         print("An initial condition that gave us the maximum number of steps ({}):".format(RawData[index_max][0]))
-        FILE.write("An initial condition that gave us the maximum number of steps ({}):".format(RawData[index_max][0]))
+        FILE.write("\nAn initial condition that gave us the maximum number of steps ({}):".format(RawData[index_max][0]))
         
         printCD(maxC,maxD,FILE)
         
@@ -64,9 +64,13 @@ def printStats(RawData,FILE, Final=False):
 
         from pylab import boxplot,savefig
         import datetime 
-
-        c=plot(bar_chart(frequencyTable))
+        '''
+        bar_chart(frequencyTable).plot()
+        imagefile = FILE.name[:-4] + "BARCHART.png" 
+        savefig(imagefile)
+        '''
+        
         b=boxplot(Data)
-        imagefile = FILE.name[:-3] + ".png" 
+        imagefile = FILE.name[:-4] + "BOXPLOT.png" 
         savefig(imagefile)
 

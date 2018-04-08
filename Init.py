@@ -1,5 +1,5 @@
 from sage.all import *
-from PyNormaliz import *
+#from PyNormaliz import *
 
 
 
@@ -20,14 +20,6 @@ def GCD_List(args):
 
 
 def generateRandomVector(dim, RMIN, RMAX, verbose=False):
-    if verbose:
-        def verboseprint(*args):
-            for arg in args:
-               print arg,
-            print
-    else:
-        verboseprint = lambda *a: None 
-
     vectlist  = [randint(RMIN,RMAX) for i in range(dim-1)]
     vectlist.append(randint(1,RMAX))
     # in testing, so currently ast digit is always 1
@@ -40,31 +32,38 @@ def generateRandomVector(dim, RMIN, RMAX, verbose=False):
     #verboseprint("returning {}".format(vect))
     return vect
     
-def generateCone(dim, numgen, RMIN, RMAX, verbose=False):
+def generateCone(dim, numgen, RMIN, RMAX, FILE, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
                print arg,
+               FILE.write("\n"+str(arg))
             print
     else:
         verboseprint = lambda *a: None 
 
-    if dim < numgen:
-        numgen = dim
-
-    vects = [generateRandomVector(dim,RMIN,RMAX,verbose) for i in range(numgen)] # Empty list of vectors
-    verboseprint("Generating Cone with: \n{}\n...\n".format(vects))
-    Temp = Polyhedron(rays=[vector(v) for v in vects],backend='normaliz')
-    #print Temp.rays()
+    if numgen < dim: 
+        numgen = int(dim) + 1
+    while True: 
+    #keep looping until we have a full dimensional cone. Shouldn't take very long unless the bounds for RMAX is set very low and NUMGEN is close to dim
+        vects = [generateRandomVector(dim,RMIN,RMAX,verbose) for i in range(numgen)] # Empty list of vectors
+        verboseprint("Generating Cone with: \n{}\n...\n".format(vects))
+        Temp = Polyhedron(rays=[vector(v) for v in vects],backend='normaliz')
+        # make sure the cone we return satisifies the conditions:
+        if Temp.is_full_dimensional():
+            break
+        #print Temp.rays()
     return Temp
 
 
-#Function that takes a Cone that is a Polyhedron with normaliz backed. 
-def generateOutsideVector(dim, Cone, RMIN, RMAX, verbose=False):
+#Function that takes a Cone that is a Polyhedron with normaliz backed
+# and returns a vector that is outside of the cone. 
+def generateOutsideVector(dim, Cone, RMIN, RMAX,FILE,verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
                print arg,
+               FILE.write("\n"+str(arg))
             print
     else:
         verboseprint = lambda *a: None 
@@ -88,17 +87,18 @@ def generateOutsideVector(dim, Cone, RMIN, RMAX, verbose=False):
 # D is the conical hull of the extremal generators of C union v 
 # input: dim - ambient dimension
 #        gencount - number of extremal generators 
-def generateInitialConditions(dim, gencount, RMIN, RMAX, verbose=False):
+def generateInitialConditions(dim, gencount, RMIN, RMAX, FILE, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
                print arg,
+               FILE.write("\n"+str(arg))
             print
     else:
         verboseprint = lambda *a: None 
-    verboseprint("=============Initializing Experiment============")
-    InnerCone = generateCone(dim,gencount, RMIN, RMAX,verbose)
-    OutsideVector = generateOutsideVector(dim, InnerCone, RMIN, RMAX,verbose)
+    verboseprint("\n=============Initializing Experiment============")
+    InnerCone = generateCone(dim,gencount, RMIN, RMAX,FILE,verbose)
+    OutsideVector = generateOutsideVector(dim, InnerCone, RMIN, RMAX,FILE,verbose)
     
 
     InnerConeGenerators = InnerCone.rays()             # Collect all extremal generators of the inner cone
