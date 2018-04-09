@@ -17,12 +17,16 @@ Similarly, make Normaliz and PyNormaliz. *Need to document the installation proc
 pyNormaliz2
 
 Check ticket #25090
+``` https://trac.sagemath.org/ticket/25090```
 Once closed.
 
-1) Update sage via: git checkout develop followed by make.
-2) sage -i normaliz
-3) sage -i pynormaliz
-
+1) Update sage by navigating to the sage folder, then do the following four commands:
+```
+1)	git checkout develop
+2)	make
+3)	sage -i normaliz
+4)	sage -i pynormaliz
+``` 
 
 Check when a ticket is merged in which version:
 https://groups.google.com/forum/#!forum/sage-release
