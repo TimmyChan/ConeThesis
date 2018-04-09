@@ -58,7 +58,7 @@ def generateCone(dim, numgen, RMIN, RMAX, FILE, verbose=False):
 
 #Function that takes a Cone that is a Polyhedron with normaliz backed
 # and returns a vector that is outside of the cone. 
-def generateOutsideVector(dim, Cone, RMIN, RMAX,FILE,verbose=False):
+def generateOutsideVector(Cone, RMIN, RMAX,FILE,verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
@@ -67,7 +67,7 @@ def generateOutsideVector(dim, Cone, RMIN, RMAX,FILE,verbose=False):
             print
     else:
         verboseprint = lambda *a: None 
-
+    dim = Cone.dim()
     temp = generateRandomVector(dim, RMIN, RMAX,verbose)                        # Generate Some Random Vector
     #print("Generating Random Vector: {}".format(temp))                        
     while(Cone.contains(temp) or Cone.contains(-1*temp)):               # Loop to verify v not in C and -v not in C

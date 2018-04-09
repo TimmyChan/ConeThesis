@@ -6,20 +6,11 @@ import datetime
 
 FILE = open("UnitTest Output Dump.txt","w+")
 
-"""
-generateCone(dim, numgen, RMIN, RMAX, FILE, verbose=False)
-
-Description:	Generates a full dimensional proper rational cone 
-
-Input: 			Number of extremeal generators (numgen) in the cone
-Method: 		Generates (numgen) many vectors in the halfspace z>0
-        		and takes conical hull
-Returns: 		SAGE Cone
-Tests: 			- C is full dimensional even if numgen < dim (simply force use dim)
-				- C is proper
-				- C is convex
-				- verbose version works
-"""
+''' 
+verify that generateCone(dim,numgen,RMIN,RMAX,FILE,verbose=False) yields
+	- full dimensional cone
+	- cone that contains no lines.
+'''
 class Test_generateCone(unittest.TestCase):
 	# 2D tests
 	def test_C_fulldim_in_2D(self):
@@ -49,7 +40,14 @@ class Test_generateCone(unittest.TestCase):
 	def test_C_proper_in_5D(self):
 		C = generateCone(5,10,-10,10, FILE)
 		self.assertTrue(C.lines_list() == [])
-
+'''
+verify that GCD_List(args) yields
+	- GCD of a list with a zero is automatically 1
+	- Always return the positive gcd
+	- one prime should already give gcd 1
+	- coprimes should have gcd 1 
+	* Maybe eventually be careful and throw exceptions for type errors?
+'''
 class Test_GCD_List(unittest.TestCase):
 	# is v inside C?
 	def test_GCD_of_zeros(self):
@@ -58,28 +56,46 @@ class Test_GCD_List(unittest.TestCase):
 	def test_GCD_posneg(self):
 		gcd = GCD_List([-5,10])
 		self.assertEqual(gcd,5)
-	def test_GCD_coprime(self):
-		gcd = GCD_List([7,8])
+	def test_GCD_oneprime(self):
+		gcd = GCD_List([7,8,10])
 		self.assertEqual(gcd,1)
+	def test_GCD_coprime(self):
+		gcd = GCD_List([8,27,125])
+		self.assertEqual(gcd,1)	
 
+'''
+verify that generateRandomVector() yields
+	- primitive vector in dimensions 2,3,4,5
+'''
 class Test_generateRandomVector(unittest.TestCase):
-	def test_v_primitive(self):
-		v = generateRandomVector(5,-10,10)
-		self.assertEqual(GCD_List(list([i for i in v])),1)
-	def test_v_above_halfspace(self):
+	def test_v_primitive_2D(self):
+		v = generateRandomVector(2,-10,10)
+		entriesofv = list([i for i in v])
+		self.assertEqual(GCD_List(entriesofv),1)
+	def test_v_primitive_3D(self):
 		v = generateRandomVector(3,-10,10)
-		halfspace = Polyhedron(rays=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,-1]],backend='normaliz') 
-		self.assertFalse(halfspace.contains(v))
+		entriesofv = list([i for i in v])
+		self.assertEqual(GCD_List(entriesofv),1)
+	def test_v_primitive_4D(self):
+		v = generateRandomVector(4,-10,10)
+		entriesofv = list([i for i in v])
+		self.assertEqual(GCD_List(entriesofv),1)
+	def test_v_primitive_5D(self):
+		v = generateRandomVector(5,-10,10)
+		entriesofv = list([i for i in v])
+		self.assertEqual(GCD_List(entriesofv),1)
 
+
+'''
+verify that generateOutsideVector()
+	- always yields vector outside of cone, in 
+'''
 class Test_generateOutsideVector(unittest.TestCase):
 	def test_v_outside_C(self):
 		C = generateCone(5,10,-10,10,FILE)
-		v = generateOutsideVector(5, C, -10,10, FILE)
+		v = generateOutsideVector( C, -10,10, FILE)
 		self.assertFalse(C.contains(v))
-	def test_v_primitive(self):
-		v = generateRandomVector(5,-10,10)
-		self.assertEqual(GCD_List(list([i for i in v])),1)
-
+	
 class Test_generateInitialConditions(unittest.TestCase):
 	def test_D_contains_C_and_v(self):
 		C,D,v = generateInitialConditions(5, 10, -10, 10,FILE)
@@ -97,24 +113,10 @@ class Test_generateInitialConditions(unittest.TestCase):
 
 
 
-TestNames = [Test_generateCone,Test_GCD_List,Test_generateRandomVector,Test_generateOutsideVector, Test_generateInitialConditions]
+InitTestNames = [Test_generateCone,Test_GCD_List,Test_generateRandomVector,Test_generateOutsideVector, Test_generateInitialConditions]
 
-for i in range(len(TestNames)):
+print("Testing Init.py:\n")
+
+for i in range(len(InitTestNames)):
 	suite = unittest.TestLoader().loadTestsFromTestCase(TestNames[i])
 	unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-
-
-
-
-#suite = unittest.TestLoader().loadTestsFromTestCase(Test_GCD_List)
-#unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-#suite = unittest.TestLoader().loadTestsFromTestCase(Test_generateRandomVector)
-#unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-#suite = unittest.TestLoader().loadTestsFromTestCase(Test_generateCone)
-#unittest.TextTestRunner(verbosity=2).run(suite)
