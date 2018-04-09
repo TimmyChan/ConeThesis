@@ -14,7 +14,18 @@ https://github.com/sagemath/sage
 ```
 
 Similarly, make Normaliz and PyNormaliz. *Need to document the installation process for getting the development branch*
+pyNormaliz2
 
+Check ticket #25090
+Once closed.
+
+1) Update sage via: git checkout develop followed by make.
+2) sage -i normaliz
+3) sage -i pynormaliz
+
+
+Check when a ticket is merged in which version:
+https://groups.google.com/forum/#!forum/sage-release
 
 ### Instructions
 Install dependencies then simply run
