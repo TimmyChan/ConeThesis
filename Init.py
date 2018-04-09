@@ -98,25 +98,18 @@ def generateInitialConditions(dim, gencount, RMIN, RMAX, FILE, verbose=False):
         verboseprint = lambda *a: None 
     verboseprint("\n=============Initializing Experiment============")
     InnerCone = generateCone(dim,gencount, RMIN, RMAX,FILE,verbose)
-    OutsideVector = generateOutsideVector(dim, InnerCone, RMIN, RMAX,FILE,verbose)
-    
+    OutsideVector = generateOutsideVector(InnerCone, RMIN, RMAX,FILE,verbose)
+    OuterCone = InnerCone.convex_hull(Polyhedron(rays=[OutsideVector], backend='normaliz'))
 
-    InnerConeGenerators = InnerCone.rays()             # Collect all extremal generators of the inner cone
-
-    OuterConeGenerators = []
-    for point in InnerConeGenerators:
-        OuterConeGenerators.append(point)
-
-    OuterConeGenerators.append(OutsideVector)
-
-    OuterCone = Polyhedron(rays=OuterConeGenerators,backend='normaliz')
-    
+    #InnerConeGenerators = InnerCone.rays()             # Collect all extremal generators of the inner cone
+    #OuterConeGenerators = []
+    #for point in InnerConeGenerators:
+    #    OuterConeGenerators.append(point)
+    #OuterConeGenerators.append(OutsideVector)
+    #OuterCone = Polyhedron(rays=OuterConeGenerators,backend='normaliz')  
     #print OuterCone.rays
 
-    #InnerCone = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1]])
-    #OutsideVector = [3,1,1]
-    #OuterCone = sage.geometry.cone.Cone([[-3,-1,1],[-3,0,1],[-2,-2,1],[2,0,1],[-2,2,1],[2,-1,1],[1,-3,1],[3,1,1]])
-    
+
     verboseprint("Extremal Generators of the Inner Cone: \n{}".format(InnerCone.rays()))
     verboseprint("Vector Outside of Inner Cone: {}".format(OutsideVector))
     verboseprint("Extremal Generators of the Outer Cone: \n{}".format(OuterCone.rays()))

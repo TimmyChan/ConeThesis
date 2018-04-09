@@ -10,9 +10,30 @@ SIGFIG = 2
 
 
 # FORMATTING FUNCTION
-def printseparator(FILE): 
-    print("================================================================")
-    FILE.write("\n================================================================")
+def printseparator(FILE=None): 
+    print("\n----------------------------------------------------------------------\n")
+    if FILE <> None:
+        FILE.write("\n----------------------------------------------------------------------\n")
+
+def boxprint(string,symbol='#'):
+    '''
+    list1 = [1, 2, 3]
+    str1 = ''.join(str(e) for e in list1)
+    '''
+    length = len(string)+4
+    mainline = []
+    mainline.append(symbol)
+    mainline.append(' ')
+    mainline.append(string)
+    mainline.append(' ')
+    mainline.append(symbol)
+    mainlinestring = "".join(str(e) for e in mainline)
+
+    horizontalboarder = [symbol for i in range(length)]
+    horizontalboarderstring = "".join(str(e) for e in horizontalboarder)
+    print(horizontalboarderstring)
+    print(mainlinestring)
+    print(horizontalboarderstring)
     
 
 # TAKES AN INTEGER ARRAY AND RETURNS A FREQUENCY TABLE (MEANT FOR PLOTTING DATA)
