@@ -85,7 +85,7 @@ AllDATA = [None]*(NUMOFTRIALS*NUMOFTESTS)
 totalcounter = 0
 print("Verbose Run for Accuracy Verification:")
 FILE.write("\nVerbose Run for Accuracy Verification:")
-C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX, FILE,verbose=True)
+C, D, v = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE,verbose=True)
 TOPDOWNtrial(C,D,v,FILE,verbose=True)
 
 print("\n\n")
@@ -98,7 +98,7 @@ printseparator(FILE)
 DATA = [None]*(NUMOFTESTS)
 for trial in range(NUMOFTRIALS):
 	for t in range(NUMOFTESTS):
-		C, D, v = generateInitialConditions(dim,NUMGEN, RMIN, RMAX,FILE)
+		C, D, v = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE)
 		DATA[t] = TOPDOWNtrial(C,D,v,FILE)
 	print("TRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
 	FILE.write("\nTRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))

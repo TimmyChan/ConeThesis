@@ -78,10 +78,15 @@ def TOPDOWNtrial(C,D,v,FILE,verbose=False):
 	else:
 		verboseprint = lambda *a: None 
 	
-	numC = len(C.rays())
-	
+	numC = len(C.rays()) 	# number of extremal generaters in C
+	dim = C.dim()			# ambient dimension (since C is assumed full dimension)
 	# STEP 1: Set the "intermediate cone" to be D at the first step.
 	IntermediateCone = D # IntermediateCone is a Polyhedron with normaliz backend
+
+
+	if verbose and dim <= 3:
+		PLOT = D.plot() + v.plot()
+		PLOT.save(FILE.name[:-4] + "INITIAL CONDITION.png")
 
 	# STEP 2: Get the Hilbert Basis for "intermediate cone".
 	IntermediateHilbertBasis = list(IntermediateCone.integral_points_generators()[1])
@@ -97,12 +102,18 @@ def TOPDOWNtrial(C,D,v,FILE,verbose=False):
 	#verboseprint("Taking Conical Hull of: \n{}".format(FirstStepGenerators))
 	IntermediateCone = Polyhedron(rays=FirstStepGenerators,backend='normaliz')
 
-	
 	# STEP 4: look in the definition of TOPDOWNstep.
 	counter = 1
+	if verbose and dim <= 3:
+		PLOT = D.plot() + v.plot()
+		PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
+
 	while (not C ==IntermediateCone):
 		IntermediateCone = TOPDOWNstep(C,IntermediateCone,FILE,verbose)
 		counter = counter + 1
+		if verbose and dim <= 3:
+			PLOT = IntermediateCone.plot() + v.plot()
+			PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
 		#print("IntermediateConeSAGE = \n{}".format(IntermediateConeSAGE.rays()))
 		verboseprint("Step {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))
 		#FILE.write("\nStep {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))

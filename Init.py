@@ -32,13 +32,15 @@ def generateRandomVector(dim, RMIN, RMAX, verbose=False):
     #verboseprint("returning {}".format(vect))
     return vect
     
-def generateCone(dim, numgen, RMIN, RMAX, FILE, verbose=False):
+def generateCone(dim, RMIN, RMAX, numgen= dim, FILE=None, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
-               print arg,
-               FILE.write("\n"+str(arg))
+                print arg,
+                if FILE <> None:
+                    FILE.write("\n"+str(arg))
             print
+
     else:
         verboseprint = lambda *a: None 
 
@@ -58,12 +60,13 @@ def generateCone(dim, numgen, RMIN, RMAX, FILE, verbose=False):
 
 #Function that takes a Cone that is a Polyhedron with normaliz backed
 # and returns a vector that is outside of the cone. 
-def generateOutsideVector(Cone, RMIN, RMAX,FILE,verbose=False):
+def generateOutsideVector(Cone, RMIN, RMAX,FILE=None,verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
-               print arg,
-               FILE.write("\n"+str(arg))
+                print arg,
+                if FILE <> None:
+                    FILE.write("\n"+str(arg))
             print
     else:
         verboseprint = lambda *a: None 
@@ -87,20 +90,22 @@ def generateOutsideVector(Cone, RMIN, RMAX,FILE,verbose=False):
 # D is the conical hull of the extremal generators of C union v 
 # input: dim - ambient dimension
 #        gencount - number of extremal generators 
-def generateInitialConditions(dim, gencount, RMIN, RMAX, FILE, verbose=False):
+def generateInitialConditions(dim, RMIN, RMAX, gencount=10, FILE=None, verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
-               print arg,
-               FILE.write("\n"+str(arg))
+                print arg,
+                if FILE <> None:
+                    FILE.write("\n"+str(arg))
             print
     else:
         verboseprint = lambda *a: None 
     verboseprint("\n=============Initializing Experiment============")
-    InnerCone = generateCone(dim,gencount, RMIN, RMAX,FILE,verbose)
+    InnerCone = generateCone(dim, RMIN, RMAX, gencount, FILE,verbose)
     OutsideVector = generateOutsideVector(InnerCone, RMIN, RMAX,FILE,verbose)
     OuterCone = InnerCone.convex_hull(Polyhedron(rays=[OutsideVector], backend='normaliz'))
-
+    #print OuterCone.rays_list()
+    #print OuterCone.lines_list()
     #InnerConeGenerators = InnerCone.rays()             # Collect all extremal generators of the inner cone
     #OuterConeGenerators = []
     #for point in InnerConeGenerators:

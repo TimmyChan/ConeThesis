@@ -58,8 +58,8 @@ def printStats(RawData,FILE, Final=False):
     else:
         print("TRIAL STATS:")
         FILE.write("\nTRIAL STATS:")
-    print("\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), max(Data), min(Data), np.max(Data), round(std(Data),SIGFIG)))
-    FILE.write("\n\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), max(Data), min(Data), np.max(Data), round(std(Data),SIGFIG)))
+    print("\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), mode(Data), min(Data), max(Data), round(std(Data),SIGFIG)))
+    FILE.write("\n\tMean: {}\tMedian: {}\tMode: {}\n\tMin: {}\tMax: {} \n\tStandard Deviation: {}".format(round(mean(Data),SIGFIG),  round(median(Data),SIGFIG), mode(Data), min(Data), max(Data), round(std(Data),SIGFIG)))
     
     if Final:
         index_min = min(xrange(len(Data)), key=Data.__getitem__) # GET THE INDEX OF THE MIN STEP
@@ -95,3 +95,12 @@ def printStats(RawData,FILE, Final=False):
         imagefile = FILE.name[:-4] + "BOXPLOT.png" 
         savefig(imagefile)
 
+        if minC.dim() <= 3:
+            PlotMinC = minC.plot()
+            PlotMinD = minD.plot()
+            PLOT = PlotMinD + PlotMinC
+            PLOT.save(FILE.name[:-4] + "MINMUM CASE.png")
+            PlotMaxC = maxC.plot()
+            PlotMaxD = maxD.plot()
+            PLOT = PlotMinD + PlotMinC
+            PLOT.save(FILE.name[:-4] + "MAXIMUM STEPS CASE.png")
