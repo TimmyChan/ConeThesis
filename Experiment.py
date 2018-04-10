@@ -36,38 +36,48 @@ while True:
 	except:
 		print("Please enter a positive integer greater than 1.")
 
+defaultsettings = query_yes_no("Keep Deafult Settings? (Number of generators for inner cone = 10 and \n\tRandom numbers bounded at (+/-) 10", default="yes"):
 			
 # The number of generators used for the cone (useful for 3d and up)
-while True:
-	try:
-		NUMGEN = int(input("Number of vectors for random cones = "))
-		if NUMGEN >= dim: 
-			break 
-		else: 
+if defaultsettings:
+	NUMGEN = 10
+	RMAX = 10
+else:
+	while True:
+		try:
+			NUMGEN = int(input("Number of vectors for random cones = "))
+			if NUMGEN >= dim: 
+				break 
+			else: 
+				print("Please enter a positive integer greater than {}.".format(dim))
+		except:
 			print("Please enter a positive integer greater than {}.".format(dim))
-	except:
-		print("Please enter a positive integer greater than {}.".format(dim))
 
 
 
-# RESTRICTIONS ON RANDOM NUMBER GENERATOR. 
-while True:
-	try:
-		RMAX = int(input("Bound on random generator (greater than or equal to 2) = "))
-		if RMAX >= 2:
-			break 
-		else: 
-			print("Using default of (+/-)10")
-			RMAX = 10
-			break
-	except:
-		print("Please enter a positive integer greater than or equal to 2.")
+	# RESTRICTIONS ON RANDOM NUMBER GENERATOR. 
+	while True:
+		try:
+			RMAX = int(input("Bound on random generator (greater than or equal to 2) = "))
+			if RMAX >= 2:
+				break 
+			else: 
+				print("Using default of (+/-)10")
+				RMAX = 10
+				break
+		except:
+			print("Please enter a positive integer greater than or equal to 2.")
 
 
 RMIN = -RMAX
-NUMOFTRIALS = 10
-NUMOFTESTS = 100
 
+fulltest = query_yes_no("Full Experiment?")
+if fulltest:
+	NUMOFTRIALS = 10
+	NUMOFTESTS = 100
+else:
+	NUMOFTRIALS = 1
+	NUMOFTESTS = 1
 
 
 filename = "./DATA/{}d experiment - ".format(dim) + str(datetime.datetime.now()) + ".txt"
