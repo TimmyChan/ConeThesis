@@ -36,7 +36,7 @@ while True:
 	except:
 		print("Please enter a positive integer greater than 1.")
 
-defaultsettings = query_yes_no("Keep Deafult Settings? (Number of generators for inner cone = 10 and \n\tRandom numbers bounded at (+/-) 10", default="yes"):
+defaultsettings = query_yes_no("Keep Deafult Settings? (Number of generators for inner cone = 10 and \n\tRandom numbers bounded at (+/-) 10", default="yes")
 			
 # The number of generators used for the cone (useful for 3d and up)
 if defaultsettings:
@@ -105,18 +105,19 @@ FILE.write("Number of Tests: {} \nVector Coordinate Bound: (+/-){}".format((NUMO
 
 printseparator(FILE)
 
-DATA = [None]*(NUMOFTESTS)
-for trial in range(NUMOFTRIALS):
-	for t in range(NUMOFTESTS):
-		C, D, v = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE)
-		DATA[t] = TOPDOWNtrial(C,D,v,FILE)
-	print("TRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
-	FILE.write("\nTRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
-	printStats(DATA,FILE)
-	for i in range(NUMOFTESTS):
-		AllDATA[i+totalcounter] = DATA[i]
-	totalcounter = totalcounter + NUMOFTESTS
-	printseparator(FILE)
-	
-#print AllDATA
-printStats(AllDATA,FILE,Final=True)
+if fulltest:
+	DATA = [None]*(NUMOFTESTS)
+	for trial in range(NUMOFTRIALS):
+		for t in range(NUMOFTESTS):
+			C, D, v = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE)
+			DATA[t] = TOPDOWNtrial(C,D,v,FILE)
+		print("TRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
+		FILE.write("\nTRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
+		printStats(DATA,FILE)
+		for i in range(NUMOFTESTS):
+			AllDATA[i+totalcounter] = DATA[i]
+		totalcounter = totalcounter + NUMOFTESTS
+		printseparator(FILE)
+		
+	#print AllDATA
+	printStats(AllDATA,FILE,Final=True)

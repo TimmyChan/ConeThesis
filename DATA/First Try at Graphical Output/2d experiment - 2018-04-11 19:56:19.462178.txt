@@ -1,0 +1,47 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(2, 1), (10, 9)]
+...
+
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (2, 1), A ray in the direction (10, 9))
+Vector Outside of Inner Cone: (5, 9)
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (2, 1), A ray in the direction (5, 9))
+=============Initialization Complete============
+Hilbert Basis of D: [(1, 1), (2, 1), (2, 3), (3, 5), (4, 7), (5, 9)]
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(65)]
+Vector to remove = (4, 7) and its norm = sqrt(65)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+Step 2... Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(34)]
+Vector to remove = (3, 5) and its norm = sqrt(34)
+Forming cone with 5 vectors in Hilbert Basis of D + Extremal Generators of C.
+Step 3... Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(13)]
+Vector to remove = (2, 3) and its norm = sqrt(13)
+Forming cone with 4 vectors in Hilbert Basis of D + Extremal Generators of C.
+Step 4... Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(2)]
+Vector to remove = (1, 1) and its norm = sqrt(2)
+Forming cone with 3 vectors in Hilbert Basis of D + Extremal Generators of C.
+Step 5... Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[2, 1], [10, 9]]
+ Goal Cone = 
+[[2, 1], [10, 9]]
+ Initial Cone = 
+[[2, 1], [5, 9]]
+	Finished in 5 steps. 
+
+Number of Tests: 1 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------

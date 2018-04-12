@@ -1,0 +1,27 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(9, 10), (-8, 3), (10, 1), (4, 7), (1, 2), (9, 1), (9, 8), (-1, 10), (-5, 4), (-4, 1)]
+...
+
+(2, 3) is in the Cone.
+(-3, 5) is in the Cone.
+(5, 4) is in the Cone.
+(9, 7) is in the Cone.
+(-2, 5) is in the Cone.
+(3, 1) is in the Cone.
+(1, 4) is in the Cone.
+(-10, 7) is in the Cone.
+(-3, 2) is in the Cone.
+(1, 1) is in the Cone.
+(-7, 6) is in the Cone.
+(9, 1) is in the Cone.
+(1, 2) is in the Cone.
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (-4, 1), A ray in the direction (10, 1))
+Vector Outside of Inner Cone: (-6, 1)
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-6, 1), A ray in the direction (10, 1))
+=============Initialization Complete============
