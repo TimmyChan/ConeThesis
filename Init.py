@@ -131,15 +131,36 @@ def generateInitialConditions(dim, RMIN, RMAX, gencount=10, FILE=None, verbose=F
     
 
 
-    verboseprint("Extremal Generators of the Inner Cone: \n{}".format(InnerCone.rays()))
+    verboseprint("Extremal Generators of the Inner Cone: \n{}".format(InnerCone.rays_list()))
     #verboseprint("Vector Outside of Inner Cone: {}".format(OutsideVector))
-    verboseprint("Extremal Generators of the Outer Cone: \n{}".format(OuterCone.rays()))
+    verboseprint("Extremal Generators of the Outer Cone: \n{}".format(OuterCone.rays_list()))
 
     verboseprint("=============Initialization Complete============")
     return InnerCone, OuterCone#, OutsideVector
 
 
-
+def ExtremalGeneratorNotContainedbyInnerCone(Inner, Outer,FILE,verbose=False):
+    if verbose:
+        def verboseprint(*args):
+            for arg in args:
+                print arg,
+                FILE.write("\n"+str(arg))
+            print
+    else:
+        verboseprint = lambda *a: None 
+    if not Outer.intersection(Inner) == Inner : 
+        print("Something is wrong!")
+    #verboseprint("Extremal generators of Intermediate Cone: \n{}".format(Outer.rays_list()))
+    ExtremalGenerators = Outer.rays_list()
+    for r in Outer.rays_list():
+        #print("Checking {}...".format(r))
+        if (Inner.contains(r)):
+            ExtremalGenerators.remove(r)
+    ExtremalGeneratorsFinal = [vector(i for i in v) for v in ExtremalGenerators]
+    verboseprint("Number of Extremal Generators NOT contained in C: {}".format(len(ExtremalGeneratorsFinal)))
+    #verboseprint("Extremal generators not contained in C: {}".format(ExtremalGeneratorsFinal))
+    #FILE.write("\nExtremal generators not contained in C: {}".format(ExtremalGeneratorsFinal))
+    return ExtremalGeneratorsFinal
 
 
 

@@ -4,4 +4,10 @@ from sage.misc import *
 import numpy as np
 from Init import *
 
-# Visible facets to v
+# C subset D
+# F_v = facets of C visible from D
+
+C,D = generateInitialConditions(2, 0, 10)
+
+print(C.rays_list())
+print(D.rays_list())

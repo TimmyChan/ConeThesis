@@ -21,19 +21,20 @@ NUMGEN = 10
 NUMOFTRIALS = 10
 NUMOFTESTS = 100
 fulltest = True
+verboserun = True
 
 # Ask the user, first, dimension of the experiment?
 # Then ask if user wants to hard code input.
 while True:
 		try:
-			dim = int(input("dimension = "))
+			dim = int(input("Dimension = ? "))
 			if dim > 1: 
 				break
 			else: 
 				print("Please enter a positive integer greater than 1.")
 		except:
 			print("Please enter a positive integer greater than 1.")
-print("Dimension = {}".format(dim))
+#print("Dimension = {}".format(dim))
 	
 # Ask the user, second, are we randomly generating cones or testing a specific case.
 generaterandomly = query_yes_no("Generate random cones?")
@@ -75,7 +76,10 @@ if generaterandomly:
 		
 		# Run full experiment?
 		fulltest = query_yes_no("Full Experiment?")
+		verboserun = query_yes_no("Verbose Run for Accuracy Verification?")
+
 else:
+	verboserun = True
 	fulltest = False
 	continueinput = True
 	while continueinput:
@@ -132,13 +136,16 @@ else:
 
 
 if not fulltest:
+	verboserun = True
 	NUMOFTRIALS = 1
 	NUMOFTESTS = 1
 
 RMIN = -RMAX
 
-
-DIRECTORY = "DATA/{}d-experiment/".format(dim) + str(datetime.datetime.now()) + "/"
+if fulltest:
+	DIRECTORY = "DATA/{}d-experiment/Full Experiment/".format(dim) + str(datetime.datetime.now()) + "/"
+else:
+	DIRECTORY = "DATA/{}d-experiment/Single Trial/".format(dim) + str(datetime.datetime.now()) + "/"
 
 os.makedirs(DIRECTORY, 0755) 
 
@@ -155,11 +162,14 @@ FILE = open(filename,"w+")
 #==============#
 AllDATA = [None]*(NUMOFTRIALS*NUMOFTESTS)
 totalcounter = 0
-print("Verbose Run for Accuracy Verification:")
-FILE.write("\nVerbose Run for Accuracy Verification:")
-if generaterandomly:
-	C, D = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE,verbose=True)
-TOPDOWNtrial(C,D,FILE,verbose=True)
+
+
+if verboserun:
+	print("Beginning Verbose Run for Accuracy Verification:")
+	FILE.write("\nBeginning Verbose Run for Accuracy Verification:")
+	if generaterandomly:
+		C, D = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE,verbose=True)
+	TOPDOWNtrial(C,D,FILE,verbose=True)
 
 print("\n\n")
 print("Number of Tests: {} \nVector Coordinate Bound: (+/-){}".format((NUMOFTESTS*NUMOFTRIALS), RMAX))

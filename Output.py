@@ -82,7 +82,14 @@ def frequencyArray(List):
 def printCD(C,D,FILE):
     print("Inner Cone: \n{}\nOuterCone:\n{}".format(C.rays_list(),D.rays_list()))
     FILE.write("\nInner Cone: \n{}\nOuterCone:\n{}".format(C.rays_list(),D.rays_list()))
-    
+
+
+def plotCD(C,D,FILE,string=".png"):
+    PLOT = C.plot(point=False, line=False, polygon=(0,0,1)) + D.plot(point=False,line='red',polygon=False)
+    PLOT.save(FILE.name[:-4] + string)
+
+
+
 # DISPLAY STATISTICS OF A LIST RAWDATA, WHERE EACH ENTRY IN THE LIST IS A TUPLE (# of steps, Cone, Vector)
 def printStats(RawData,FILE, Final=False): 
     Data = [RawData[i][0] for i in range(len(RawData))]
@@ -133,11 +140,11 @@ def printStats(RawData,FILE, Final=False):
         savefig(imagefile)
 
         if minC.dim() <= 3:
-            PlotMinC = minC.plot()
-            PlotMinD = minD.plot()
-            PLOT = PlotMinD + PlotMinC
-            PLOT.save(FILE.name[:-4] + "MINMUM CASE.png")
-            PlotMaxC = maxC.plot()
-            PlotMaxD = maxD.plot()
+            plotCD(minC,minD,FILE,"MINMUM STEPS CASE.png")
+            plotCD(maxC,maxD,FILE,"MAXIMUM STEPS CASE.png")
+            '''
+            PlotMaxC = maxC.plot(point=False, line=False, polygon=(0,0,1))
+            PlotMaxD = maxD.plot(point=False, line='red', polygon=False)
             PLOT = PlotMaxD + PlotMaxC
             PLOT.save(FILE.name[:-4] + "MAXIMUM STEPS CASE.png")
+            '''

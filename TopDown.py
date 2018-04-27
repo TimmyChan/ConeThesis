@@ -12,29 +12,7 @@ from Init import *
 INFINITYCORK = 10000
 
 
-def ExtremalGeneratorNotContainedbyInnerCone(Inner, Outer,FILE,verbose=False):
-	if verbose:
-		def verboseprint(*args):
-			for arg in args:
-				print arg,
-				FILE.write("\n"+str(arg))
-			print
-	else:
-		verboseprint = lambda *a: None 
-	if not Outer.intersection(Inner) == Inner : 
-		print("Something is wrong!")
-	#verboseprint("Extremal generators of Intermediate Cone: \n{}".format(Outer.rays_list()))
-	ExtremalGenerators = Outer.rays_list()
-	for r in Outer.rays_list():
-		#print("Checking {}...".format(r))
-		if (Inner.contains(r)):
-			ExtremalGenerators.remove(r)
-	ExtremalGeneratorsFinal = [vector(i for i in v) for v in ExtremalGenerators]
-	verboseprint("Number of Extremal Generators NOT contained in C: {}".format(len(ExtremalGeneratorsFinal)))
-	#verboseprint("Extremal generators not contained in C: {}".format(ExtremalGeneratorsFinal))
-	#FILE.write("\nExtremal generators not contained in C: {}".format(ExtremalGeneratorsFinal))
-	
-	return ExtremalGeneratorsFinal
+
 
 # One step in the loop, step 4 in the psuedocode 
 # Assumes Intermediate is a SAGE default cone object.
@@ -85,39 +63,29 @@ def TOPDOWNtrial(C,D,FILE,verbose=False):
 
 
 	if verbose and dim <= 3:
-		PLOT = D.plot() + C.plot()
-		PLOT.save(FILE.name[:-4] + "INITIAL CONDITION.png")
-
-	# STEP 2: Get the Hilbert Basis for "intermediate cone".
-	#IntermediateHilbertBasis = list(IntermediateCone.integral_points_generators()[1])
-	#verboseprint("Hilbert Basis of D: {}".format(IntermediateHilbertBasis))
-	#FILE.write("\nHilbert Basis of D: {}".format(IntermediateHilbertBasis))
-	
-	# STEP 3.1: Remove v from Hilb(D_0) or "intermediate hilbert basis" list 
-	#IntermediateHilbertBasis.remove(v)
-	#if not list([long(i) for i in v]) in IntermediateHilbertBasis:
-	#	verboseprint("v removed ok")
-	# STEP 3.2: Take the conical Hull of the list from step 3.1, iterate to next step.
-	#FirstStepGenerators = IntermediateHilbertBasis + C.rays_list()
-	#verboseprint("Taking Conical Hull of: \n{}".format(FirstStepGenerators))
-	#IntermediateCone = Polyhedron(rays=FirstStepGenerators,backend='normaliz')
+		plotCD(C,D,FILE,"INITIAL CONDITION.png")
+		#PLOT = C.plot(point=False, line=False, polygon=(0,0,1)) + D.plot(point=False,line='red',polygon=False)
+		#PLOT.save(FILE.name[:-4] + "INITIAL CONDITION.png")
 
 	# STEP 4: look in the definition of TOPDOWNstep.
 	counter = 0
-	if verbose and dim <= 3:
-		PLOT = D.plot() + C.plot()
-		PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
-
+	
 	IntermediateCone = D
+	if verbose and dim <= 3:
+		plotCD(IntermediateCone,D, FILE,"STEP {}.png".format(counter))
+		#PLOT = D.plot() + C.plot()
+		#PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
+	
+
 	while (not C ==IntermediateCone):
 		IntermediateCone = TOPDOWNstep(C,IntermediateCone,FILE,verbose)
 		counter = counter + 1
 		if verbose and dim <= 3:
-			PLOT = IntermediateCone.plot() + D.plot()
-			PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
-		#print("IntermediateConeSAGE = \n{}".format(IntermediateConeSAGE.rays()))
+			plotCD(IntermediateCone,D,FILE,"STEP {}.png".format(counter))
+			#PLOT = IntermediateCone.plot(point=False, line=False, polygon=(0,0,1)) + D.plot(point=False, line='red', polygon=False)
+			#PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
+		verboseprint("#########################################")
 		verboseprint("Finished Step {} - Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))
-		#FILE.write("\nStep {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))
 		
 		if not D.intersection(IntermediateCone) == IntermediateCone:
 			print("ERROR: Intermediate Cone not in D")
