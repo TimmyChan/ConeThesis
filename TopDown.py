@@ -68,7 +68,7 @@ def TOPDOWNstep(C,Intermediate,FILE,verbose=False):
 	
 
 
-def TOPDOWNtrial(C,D,v,FILE,verbose=False):
+def TOPDOWNtrial(C,D,FILE,verbose=False):
 	if verbose:
 		def verboseprint(*args):
 			for arg in args:
@@ -85,37 +85,38 @@ def TOPDOWNtrial(C,D,v,FILE,verbose=False):
 
 
 	if verbose and dim <= 3:
-		PLOT = D.plot() + v.plot()
+		PLOT = D.plot() + C.plot()
 		PLOT.save(FILE.name[:-4] + "INITIAL CONDITION.png")
 
 	# STEP 2: Get the Hilbert Basis for "intermediate cone".
-	IntermediateHilbertBasis = list(IntermediateCone.integral_points_generators()[1])
-	verboseprint("Hilbert Basis of D: {}".format(IntermediateHilbertBasis))
+	#IntermediateHilbertBasis = list(IntermediateCone.integral_points_generators()[1])
+	#verboseprint("Hilbert Basis of D: {}".format(IntermediateHilbertBasis))
 	#FILE.write("\nHilbert Basis of D: {}".format(IntermediateHilbertBasis))
 	
 	# STEP 3.1: Remove v from Hilb(D_0) or "intermediate hilbert basis" list 
-	IntermediateHilbertBasis.remove(v)
+	#IntermediateHilbertBasis.remove(v)
 	#if not list([long(i) for i in v]) in IntermediateHilbertBasis:
 	#	verboseprint("v removed ok")
 	# STEP 3.2: Take the conical Hull of the list from step 3.1, iterate to next step.
-	FirstStepGenerators = IntermediateHilbertBasis + C.rays_list()
+	#FirstStepGenerators = IntermediateHilbertBasis + C.rays_list()
 	#verboseprint("Taking Conical Hull of: \n{}".format(FirstStepGenerators))
-	IntermediateCone = Polyhedron(rays=FirstStepGenerators,backend='normaliz')
+	#IntermediateCone = Polyhedron(rays=FirstStepGenerators,backend='normaliz')
 
 	# STEP 4: look in the definition of TOPDOWNstep.
-	counter = 1
+	counter = 0
 	if verbose and dim <= 3:
-		PLOT = D.plot() + v.plot()
+		PLOT = D.plot() + C.plot()
 		PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
 
+	IntermediateCone = D
 	while (not C ==IntermediateCone):
 		IntermediateCone = TOPDOWNstep(C,IntermediateCone,FILE,verbose)
 		counter = counter + 1
 		if verbose and dim <= 3:
-			PLOT = IntermediateCone.plot() + v.plot()
+			PLOT = IntermediateCone.plot() + D.plot()
 			PLOT.save(FILE.name[:-4] + "STEP {}.png".format(counter))
 		#print("IntermediateConeSAGE = \n{}".format(IntermediateConeSAGE.rays()))
-		verboseprint("Step {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))
+		verboseprint("Finished Step {} - Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))
 		#FILE.write("\nStep {}... Original number of extremal rays: {}, Now: {}".format(counter,numC, len(IntermediateCone.rays())))
 		
 		if not D.intersection(IntermediateCone) == IntermediateCone:

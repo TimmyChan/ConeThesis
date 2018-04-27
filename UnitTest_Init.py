@@ -140,52 +140,52 @@ verify that gernateInitialConditions()
 '''
 class Test_generateInitialConditions(unittest.TestCase):
 	def test_D_contains_C_and_v_2D(self):
-		C,D,v = generateInitialConditions(2, 10, -10, 10)
+		C,D,v = generateInitialConditions(2, -10, 10)
 		Crays = C.rays_list()
 		for r in Crays:
 			self.assertTrue(D.contains(r))
 		self.assertTrue(D.contains(v))
 	def test_D_contains_C_and_v_3D(self):
-		C,D,v = generateInitialConditions(3, 10, -10, 10)
+		C,D,v = generateInitialConditions(3, -10, 10)
 		Crays = C.rays_list()
 		for r in Crays:
 			self.assertTrue(D.contains(r))
 		self.assertTrue(D.contains(v))
 	def test_D_contains_C_and_v_4D(self):
-		C,D,v = generateInitialConditions(4, 10, -10, 10)
+		C,D,v = generateInitialConditions(4, -10, 10)
 		Crays = C.rays_list()
 		for r in Crays:
 			self.assertTrue(D.contains(r))
 		self.assertTrue(D.contains(v))
 	def test_D_contains_C_and_v_5D(self):
-		C,D,v = generateInitialConditions(5, 10, -10, 10)
+		C,D,v = generateInitialConditions(5, -10, 10)
 		Crays = C.rays_list()
 		for r in Crays:
 			self.assertTrue(D.contains(r))
 		self.assertTrue(D.contains(v))
 	def test_D_proper_2D(self):
-		C,D,v = generateInitialConditions(2, 10, -10, 10)
+		C,D,v = generateInitialConditions(2, -10, 10)
 		self.assertEqual(D.lines_list(),[])	
 	def test_D_proper_3D(self):
-		C,D,v = generateInitialConditions(3, 10, -10, 10)
+		C,D,v = generateInitialConditions(3, -10, 10)
 		self.assertEqual(D.lines_list(),[])	
 	def test_D_proper_4D(self):
-		C,D,v = generateInitialConditions(4, 10, -10, 10)
+		C,D,v = generateInitialConditions(4, -10, 10)
 		self.assertEqual(D.lines_list(),[])
 	def test_D_proper_5D(self):
-		C,D,v = generateInitialConditions(5, 10, -10, 10)
+		C,D,v = generateInitialConditions(5, -10, 10)
 		self.assertEqual(D.lines_list(),[])
 	def test_D_full_dimensional_2D(self):
-		C,D,v = generateInitialConditions(2, 10, -10, 10)
+		C,D,v = generateInitialConditions(2, -10, 10)
 		self.assertTrue(D.is_full_dimensional())
 	def test_D_full_dimensional_3D(self):
-		C,D,v = generateInitialConditions(3, 10, -10, 10)
+		C,D,v = generateInitialConditions(3, -10, 10)
 		self.assertTrue(D.is_full_dimensional())
 	def test_D_full_dimensional_4D(self):
-		C,D,v = generateInitialConditions(4, 10, -10, 10)
+		C,D,v = generateInitialConditions(4, -10, 10)
 		self.assertTrue(D.is_full_dimensional())
 	def test_D_full_dimensional_5D(self):
-		C,D,v = generateInitialConditions(5, 10, -10, 10)
+		C,D,v = generateInitialConditions(5, -10, 10)
 		self.assertTrue(D.is_full_dimensional())
 
 InitTestNames = [Test_generateCone,Test_GCD_List,Test_generateRandomVector,Test_generateOutsideVector, Test_generateInitialConditions]

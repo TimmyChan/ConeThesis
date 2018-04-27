@@ -139,5 +139,5 @@ def printStats(RawData,FILE, Final=False):
             PLOT.save(FILE.name[:-4] + "MINMUM CASE.png")
             PlotMaxC = maxC.plot()
             PlotMaxD = maxD.plot()
-            PLOT = PlotMinD + PlotMinC
+            PLOT = PlotMaxD + PlotMaxC
             PLOT.save(FILE.name[:-4] + "MAXIMUM STEPS CASE.png")
