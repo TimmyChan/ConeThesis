@@ -33,7 +33,7 @@ while True:
 				print("Please enter a positive integer greater than 1.")
 		except:
 			print("Please enter a positive integer greater than 1.")
-
+print("Dimension = {}".format(dim))
 	
 # Ask the user, second, are we randomly generating cones or testing a specific case.
 generaterandomly = query_yes_no("Generate random cones?")
@@ -84,7 +84,7 @@ else:
 		while True:
 			try:
 				printseparator()
-				print("Current list of extremal generators for the outer cone: {}".format(outerGenerator))
+				print("Current list of extremal generators for the OUTER cone: {}".format(outerGenerator))
 				printseparator()
 				handle = raw_input("Please enter an extremal generator \"x_1,...,x_d\" of the outer cone without quotes, \nor type \"finish\" when done: ")
 				if str(handle).lower() == "finish":
@@ -107,12 +107,13 @@ else:
 		while True:
 			try:
 				printseparator()
-				print("Current list of extremal generators for the inner cone: {}".format(innerGenerator))
+				print("Current list of extremal generators for the INNER cone: {}".format(innerGenerator))
 				printseparator()
 				handle = raw_input("Please enter an extremal generator \"x_1,...,x_d\" of the inner cone without quotes, \nor type \"finish\" when done: ")
 				if handle.lower() == "finish":
 					if len(innerGenerator) < dim:
 						print("Not enough generators for a full dimensional cone!")
+						break
 					else:
 						break
 				else:
@@ -125,7 +126,7 @@ else:
 						print("{} is not contained in outer cone!".format(handlelist))				
 			except Exception as inputerror:
 				print("Input error detected: {}".format(inputerror))
-			os.system('clear')
+			
 		C = Polyhedron(rays=innerGenerator,backend='normaliz')
 		continueinput = not sanitycheck(C,D)
 

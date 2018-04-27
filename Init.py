@@ -1,4 +1,5 @@
 from sage.all import *
+from Output import *
 #from PyNormaliz import *
 
 
@@ -48,15 +49,30 @@ def generateRandomVector(dim, RMIN, RMAX, verbose=False):
 def sanitycheck(C,D):
     if not C.is_full_dimensional():
         print("C is not full dimensional!")
+        printseparator()
+        printseparator()
+        print("RESTARTING INPUT!")
     if not D.is_full_dimensional():
         print("D is not full dimensional!")
+        printseparator()
+        printseparator()
+        print("RESTARTING INPUT!")
     if not C.lines_list() == []:
         print("C is not proper!")
+        printseparator()
+        printseparator()
+        print("RESTARTING INPUT!")
     if not D.lines_list() == []:
         print("D is not proper!")
+        printseparator()
+        printseparator()        
+        print("RESTARTING INPUT!")
     if not conecontainment(C,D):
         print("C is not in D!")
-    return (C.is_full_dimensional() and D.is_full_dimensional() or C.lines_list() == [] and D.lines_list() == [] and conecontainment(C,D))
+        printseparator()
+        printseparator()
+        print("RESTARTING INPUT!")
+    return (C.is_full_dimensional() and D.is_full_dimensional() and C.lines_list() == [] and D.lines_list() == [] and conecontainment(C,D))
         
 
 
