@@ -2,16 +2,41 @@ from sage.all import *
 from Output import *
 #from PyNormaliz import *
 
-
-
 #=================================================#
 # GENERATE INITIAL CONDITIONS FOR CONE EXPERIMENT #
 #=================================================#
-# Input: Number of extremeal generators (numgen) in the cone
-# Description: Generates (numgen) many vectors in the halfspace z>0
-#              and takes conical hull
-# Returns: SAGE Cone
 
+def stepcheck(C,D,verbose=False):
+    if verbose:
+        def verboseprint(*args):
+            for arg in args:
+                print arg,
+                if FILE <> None:
+                    FILE.write("\n"+str(arg))
+            print
+    else:
+        verboseprint = lambda *a: None 
+    verboseprint("Checking that HilbD remove v subset of HilbC...")
+    if C == D:
+        #print("same cone!")
+        return True
+    verboseprint("\tComputing Hilbert basis of C...")
+    HilbC = list(C.integral_points_generators()[1])
+
+    verboseprint("\tComputing Hilbert basis of D...")
+    HilbD = list(D.integral_points_generators()[1])
+    verboseprint("\tFinding extremal generator of D not in C")
+    v = ExtremalGeneratorNotContainedbyInnerCone(C,D)
+    
+    #print("HilbC = \n{}\nHilbD = \n{}\nv = {} ".format(HilbC,HilbD,v[0]))
+    verboseprint("\t\tRemoving {} from HilbD".format(v))
+    HilbD.remove(v[0])
+
+    BOOL = True
+    for vect in HilbD:
+        BOOL = BOOL and (vect in HilbC) 
+    verboseprint("\t\tHilbD \\ v  is a subset of HilbC? {}".format(BOOL))
+    return BOOL
 
 # Functions used to generate a primitive rational vector
 def GCD(a,b):
@@ -25,7 +50,18 @@ def conecontainment(C,D):
     for ray in C.rays():
         sofar = (sofar and D.contains(ray))
     return sofar
-    
+
+# expects a list of integer vectors, returns one with shortest norm.
+def shortestvector(vectorlist):
+    return min(vectorlist, key = lambda x: x.norm())
+
+def longestvector(vectorlist):
+    try:
+        return max(vectorlist, key = lambda x: x.norm()) 
+    except:
+        return None
+
+      
 # takes a list of integers returns a primitive vector 
 def makePrimitive(vectlist):
     gcd = GCD_List(vectlist)
@@ -74,7 +110,6 @@ def sanitycheck(C,D):
         print("RESTARTING INPUT!")
     return (C.is_full_dimensional() and D.is_full_dimensional() and C.lines_list() == [] and D.lines_list() == [] and conecontainment(C,D))
         
-
 
 def generateCone(dim, RMIN, RMAX, numgen=10, FILE=None, verbose=False):
     if verbose:
@@ -139,12 +174,13 @@ def generateInitialConditions(dim, RMIN, RMAX, gencount=10, FILE=None, verbose=F
     return InnerCone, OuterCone#, OutsideVector
 
 
-def ExtremalGeneratorNotContainedbyInnerCone(Inner, Outer,FILE,verbose=False):
+def ExtremalGeneratorNotContainedbyInnerCone(Inner, Outer,FILE=None,verbose=False):
     if verbose:
         def verboseprint(*args):
             for arg in args:
                 print arg,
-                FILE.write("\n"+str(arg))
+                if FILE <> None:
+                    FILE.write("\n"+str(arg))
             print
     else:
         verboseprint = lambda *a: None 

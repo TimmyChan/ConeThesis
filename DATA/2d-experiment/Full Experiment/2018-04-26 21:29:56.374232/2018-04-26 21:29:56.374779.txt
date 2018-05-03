@@ -1,0 +1,13 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(-1, 1), (-2, 5), (-7, 1), (7, 5), (-7, 8), (1, 10), (-9, 5), (-1, 2), (-1, 3), (0, 1)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-9, 8], [2, 3]]
+Extremal Generators of the Outer Cone: 
+[[-7, 1], [7, 5]]
+=============Initialization Complete============

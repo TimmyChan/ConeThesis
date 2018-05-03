@@ -16,12 +16,13 @@ INFINITYCORK = 10000
 
 # One step in the loop, step 4 in the psuedocode 
 # Assumes Intermediate is a SAGE default cone object.
-def TOPDOWNstep(C,Intermediate,FILE,verbose=False):
+def TOPDOWNstep(C,Intermediate,FILE=None,verbose=False):
 	if verbose:
 		def verboseprint(*args):
 			for arg in args:
 				print arg,
-				FILE.write("\n"+str(arg))
+				if FILE <> None:
+					FILE.write("\n"+str(arg))
 			print
 	else:
 		verboseprint = lambda *a: None 
@@ -30,7 +31,7 @@ def TOPDOWNstep(C,Intermediate,FILE,verbose=False):
 	ExtremalNotinC = ExtremalGeneratorNotContainedbyInnerCone(C, Intermediate,FILE,verbose)
 
 	
-	VectorToRemove = min(ExtremalNotinC, key = lambda x: x.norm())
+	VectorToRemove = shortestvector(ExtremalNotinC)
 	verboseprint("Vector norms: {}".format([r.norm() for r in ExtremalNotinC]))
 	verboseprint("Vector to remove = {} and its norm = {}".format(VectorToRemove,VectorToRemove.norm()))
 
@@ -78,6 +79,8 @@ def TOPDOWNtrial(C,D,FILE,verbose=False):
 	
 
 	while (not C ==IntermediateCone):
+		if verbose:
+			stepcheck(TOPDOWNstep(C,IntermediateCone,None),IntermediateCone)
 		IntermediateCone = TOPDOWNstep(C,IntermediateCone,FILE,verbose)
 		counter = counter + 1
 		if verbose and dim <= 3:
