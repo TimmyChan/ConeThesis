@@ -19,8 +19,8 @@ import os, sys
 
 RMAX = 10
 NUMGEN = 10
-NUMOFTRIALS = 10
-NUMOFTESTS = 100
+NUMOFTRIALS = 100
+NUMOFTESTS = 10
 fulltest = True
 verboserun = True
 
