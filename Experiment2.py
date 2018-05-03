@@ -11,7 +11,15 @@ import argparse
 import datetime
 import os, sys
 
-
+# switch is int:
+# 1 - TopDown
+# 2 - BottomUP
+# other - Error
+def GeneralTrial(switch,C,D,FILE=None,verbose=False):
+	if switch == 1:
+		return TOPDOWNtrial(C,D,FILE,verbose)
+	if switch == 2:
+		return BOTTOMUPtrial(C,D,FILE,verbose)
 
 #==================#
 # GLOBAL VARIABLES #
@@ -23,20 +31,30 @@ NUMOFTRIALS = 100
 NUMOFTESTS = 10
 fulltest = True
 verboserun = True
+EXPERIMENTTYPE = 0
 
 # Ask the user, first, dimension of the experiment?
 # Then ask if user wants to hard code input.
 while True:
-		try:
-			dim = int(input("Dimension = ? "))
-			if dim > 1: 
-				break
-			else: 
-				print("Please enter a positive integer greater than 1.")
-		except:
+	try:
+		dim = int(input("Dimension = ? "))
+		if dim > 1: 
+			break
+		else: 
 			print("Please enter a positive integer greater than 1.")
+	except:
+		print("Please enter a positive integer greater than 1.")
 #print("Dimension = {}".format(dim))
-	
+
+while True:
+	try:
+		EXPERIMENTTYPE = int(input("Experiment type? Enter 1 for TopDown, 2 for BottomUP:"))
+		if EXPERIMENTTYPE in [1,2]:
+			break
+		else:
+			print("Please enter 1 or 2.")
+	except:
+		print("Please enter 1 or 2.")	
 # Ask the user, second, are we randomly generating cones or testing a specific case.
 generaterandomly = query_yes_no("Generate random cones?")
 
@@ -75,8 +93,9 @@ if generaterandomly:
 			except:
 				print("Please enter a positive integer greater than or equal to 2.")
 		
-		# Run full experiment?
-		fulltest = query_yes_no("Full Experiment?")
+	# Run full experiment?
+	fulltest = query_yes_no("Full Experiment?")
+	if fulltest:
 		verboserun = query_yes_no("Verbose Run for Accuracy Verification?")
 
 else:
@@ -143,10 +162,19 @@ if not fulltest:
 
 RMIN = -RMAX
 
-if fulltest:
-	DIRECTORY = "DATA/{}d-experiment/BottomUp/Full Experiment/".format(dim) + str(datetime.datetime.now()) + "/"
+DIRECTORY = "DATA/{}d-experiment/".format(dim)
+if EXPERIMENTTYPE == 1:
+	DIRECTORY = DIRECTORY + "TopDown/"
+if EXPERIMENTTYPE == 2:
+	DIRECTORY = DIRECTORY + "BottomUp/"
 else:
-	DIRECTORY = "DATA/{}d-experiment/BottomUp/Single Trial/".format(dim) + str(datetime.datetime.now()) + "/"
+	print("Should never land here?")
+
+
+if fulltest:
+	DIRECTORY = DIRECTORY + "Full Experiment/" + str(datetime.datetime.now()) + "/"
+else:
+	DIRECTORY = DIRECTORY + "Single Trial/" + str(datetime.datetime.now()) + "/"
 
 os.makedirs(DIRECTORY, 0755) 
 
@@ -170,7 +198,8 @@ if verboserun:
 	FILE.write("\nBeginning Verbose Run for Accuracy Verification:")
 	if generaterandomly:
 		C, D = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE,verbose=True)
-	BOTTOMUPtrial(C,D,FILE,verbose=True)
+	GeneralTrial(EXPERIMENTTYPE, C,D,FILE,verbose=True)
+
 
 print("\n\n")
 print("Number of Tests: {} \nVector Coordinate Bound: (+/-){}".format((NUMOFTESTS*NUMOFTRIALS), RMAX))
@@ -184,7 +213,7 @@ if fulltest:
 	for trial in range(NUMOFTRIALS):
 		for t in range(NUMOFTESTS):
 			C, D = generateInitialConditions(dim, RMIN, RMAX, NUMGEN, FILE)
-			DATA[t] = BOTTOMUPtrial(C,D,FILE)
+			DATA[t] = 	GeneralTrial(EXPERIMENTTYPE, C,D,FILE,verbose=True)
 		print("TRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
 		FILE.write("\nTRIAL {}/{}: test # {} - {}".format(trial+1,NUMOFTRIALS, totalcounter+1, totalcounter+NUMOFTESTS))
 		printStats(DATA,FILE)

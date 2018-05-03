@@ -155,11 +155,12 @@ def generateInitialConditions(dim, RMIN, RMAX, gencount=10, FILE=None, verbose=F
         verboseprint = lambda *a: None 
     verboseprint("\n=============Initializing Experiment============")
     OuterCone = generateCone(dim, RMIN, RMAX, gencount, FILE,verbose)
-    InnerConeGenerators = [(0 for i in range(dim))]
+    InnerConeGenerators = []
     while len(InnerConeGenerators) < gencount:
         temp = generateRandomVector(dim, RMIN, RMAX)
-        if OuterCone.contains(temp):
+        if OuterCone.contains(temp) and (temp not in InnerConeGenerators):
             InnerConeGenerators.append(temp)
+            print("InnerCone generators = {}".format(InnerConeGenerators))
     InnerCone = Polyhedron(rays=InnerConeGenerators,backend='normaliz')
     #    OutsideVectorList = [generateOutsideVector(InnerCone, RMIN, RMAX,FILE,verbose) for i in range(gencount)]
     #    OuterCone = Polyhedron(rays=OutsideVectorList, backend='normaliz')
