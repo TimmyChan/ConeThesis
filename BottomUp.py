@@ -108,7 +108,7 @@ def BOTTOMUPstep(C,v,FILE=None,verbose=False):
 	verboseprint("Returning the convex hull of Intermediate with {}...".format(shortestIntegralPoint))
 	return C.convex_hull(Polyhedron(rays=[shortestIntegralPoint],backend='normaliz'))
 
-def BOTTOMUPtrial(C,D,FILE=oNne,verbose=False):
+def BOTTOMUPtrial(C,D,FILE=None,verbose=False):
 	if verbose:
 		def verboseprint(*args):
 			for arg in args:

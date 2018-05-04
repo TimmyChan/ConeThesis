@@ -1,0 +1,18 @@
+Verbose Run for Accuracy Verification:Hilbert Basis of D: [(-1, 6), (0, 1), (1, 1)]
+ Intermediate Cone = 
+[[-1, 6], [3, 4]]
+ Goal Cone = 
+[[-1, 6], [3, 4]]
+ Initial Cone = 
+[[-1, 6], [1, 1]]
+	Finished in 1 steps. 
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10================================================================Hilbert Basis of D: [(-3, 1), (-2, 1), (-1, 1), (0, 1), (1, 2)]
+ Intermediate Cone = 
+[[-3, 1], [1, 7]]
+ Goal Cone = 
+[[-3, 1], [1, 7]]
+ Initial Cone = 
+[[-3, 1], [1, 2]]
+	Finished in 1 steps. Hilbert Basis of D: [(-7, 8), (-6, 7), (-5, 6), (-4, 5), (-3, 4), (-2, 3), (-1, 2), (0, 1), (1, 2)]
