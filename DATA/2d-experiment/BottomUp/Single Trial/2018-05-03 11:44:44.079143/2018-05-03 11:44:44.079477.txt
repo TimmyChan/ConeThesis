@@ -1,0 +1,137 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(164, 1335), (-2252, 2843)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-5621, 7340], [-1154, 1559]]
+Extremal Generators of the Outer Cone: 
+[[-2252, 2843], [164, 1335]]
+=============Initialization Complete============
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 1
+Returning the convex hull of Intermediate with (-4349, 5679)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 2
+Returning the convex hull of Intermediate with (-3077, 4018)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 3
+Returning the convex hull of Intermediate with (-1805, 2357)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 4
+Returning the convex hull of Intermediate with (-533, 696)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 5
+Returning the convex hull of Intermediate with (-327, 427)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 6
+Returning the convex hull of Intermediate with (-121, 158)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 7
+Returning the convex hull of Intermediate with (-36, 47)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 8
+Returning the convex hull of Intermediate with (-23, 30)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 9
+Returning the convex hull of Intermediate with (-10, 13)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 10
+Returning the convex hull of Intermediate with (-7, 9)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 11
+Returning the convex hull of Intermediate with (-11, 14)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 12
+Returning the convex hull of Intermediate with (-15, 19)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 13
+Returning the convex hull of Intermediate with (-19, 24)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 14
+Returning the convex hull of Intermediate with (-80, 101)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 15
+Returning the convex hull of Intermediate with (-221, 279)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 16
+Returning the convex hull of Intermediate with (-583, 736)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 17
+Returning the convex hull of Intermediate with (-945, 1193)...
+Extremal generators of D not in Intermediate: [(-2252, 2843), (164, 1335)]
+Step 18
+Returning the convex hull of Intermediate with (-2252, 2843)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 19
+Returning the convex hull of Intermediate with (-681, 920)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 20
+Returning the convex hull of Intermediate with (-208, 281)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 21
+Returning the convex hull of Intermediate with (-151, 204)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 22
+Returning the convex hull of Intermediate with (-94, 127)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 23
+Returning the convex hull of Intermediate with (-37, 50)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 24
+Returning the convex hull of Intermediate with (-17, 23)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 25
+Returning the convex hull of Intermediate with (-14, 19)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 26
+Returning the convex hull of Intermediate with (-11, 15)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 27
+Returning the convex hull of Intermediate with (-8, 11)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 28
+Returning the convex hull of Intermediate with (-5, 7)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 29
+Returning the convex hull of Intermediate with (-2, 3)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 30
+Returning the convex hull of Intermediate with (-1, 2)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 31
+Returning the convex hull of Intermediate with (0, 1)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 32
+Returning the convex hull of Intermediate with (1, 9)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 33
+Returning the convex hull of Intermediate with (2, 17)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 34
+Returning the convex hull of Intermediate with (3, 25)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 35
+Returning the convex hull of Intermediate with (4, 33)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 36
+Returning the convex hull of Intermediate with (5, 41)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 37
+Returning the convex hull of Intermediate with (6, 49)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 38
+Returning the convex hull of Intermediate with (7, 57)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 39
+Returning the convex hull of Intermediate with (57, 464)...
+Extremal generators of D not in Intermediate: [(164, 1335)]
+Step 40
+Returning the convex hull of Intermediate with (164, 1335)...
+
+Number of Tests: 1 
+Vector Coordinate Bound: (+/-)10000
+----------------------------------------------------------------------

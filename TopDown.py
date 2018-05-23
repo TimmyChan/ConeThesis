@@ -2,7 +2,7 @@ from sage.all import *
 from sage.misc import *
 #import PyNormaliz as PyNormaliz
 import numpy as np
-from InitialConditions import *
+from Init import *
 
 # Please note that to make a default cone in SAGE, one must now use 
 # sage.geometry.cone.Cone(list), where list is a list of vectors.

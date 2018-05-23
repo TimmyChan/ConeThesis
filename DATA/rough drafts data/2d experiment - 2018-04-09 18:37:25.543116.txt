@@ -1,0 +1,15 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(1, 2), (1, 7)]
+...
+
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (1, 2), A ray in the direction (1, 7))
+Vector Outside of Inner Cone: (-1, 10)
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-1, 10), A ray in the direction (1, 2))
+=============Initialization Complete============
+Hilbert Basis of D: [(-1, 10), (0, 1), (1, 2)]

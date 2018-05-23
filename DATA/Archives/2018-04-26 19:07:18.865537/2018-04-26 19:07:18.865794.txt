@@ -1,0 +1,1937 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(5, -6, 4), (3, -2, 7), (9, 2, 8), (-8, -4, 9), (-2, -1, 5), (-6, -6, 7), (-1, -1, 1), (-1, -4, 6), (3, 1, 5), (-5, 6, 3)]
+...
+
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (-7, 6, 5), A ray in the direction (-3, -2, 4), A ray in the direction (-1, -10, 9), A ray in the direction (4, -5, 5), A ray in the direction (4, 3, 8))
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-5, 6, 3), A ray in the direction (-1, -1, 1), A ray in the direction (5, -6, 4), A ray in the direction (9, 2, 8))
+=============Initialization Complete============
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(70), sqrt(3), sqrt(77), sqrt(149)]
+Vector to remove = (-1, -1, 1) and its norm = sqrt(3)
+Forming cone with 47 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 1 - Original number of extremal rays: 5, Now: 6
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(70), sqrt(2), sqrt(77), sqrt(149)]
+Vector to remove = (-1, 0, 1) and its norm = sqrt(2)
+Forming cone with 54 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 2 - Original number of extremal rays: 5, Now: 6
+Number of Extremal Generators NOT contained in C: 3
+Vector norms: [sqrt(70), sqrt(77), sqrt(149)]
+Vector to remove = (-5, 6, 3) and its norm = sqrt(70)
+Forming cone with 61 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 3 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [5*sqrt(2), sqrt(22), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-3, 3, 2) and its norm = sqrt(22)
+Forming cone with 60 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 4 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [5*sqrt(2), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-4, 5, 3) and its norm = 5*sqrt(2)
+Forming cone with 66 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 5 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(41), sqrt(17), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-2, 3, 2) and its norm = sqrt(17)
+Forming cone with 65 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 6 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(41), sqrt(29), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-2, 4, 3) and its norm = sqrt(29)
+Forming cone with 67 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 7 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(41), sqrt(34), 3*sqrt(5), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-3, 4, 3) and its norm = sqrt(34)
+Forming cone with 69 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 8 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(41), 3*sqrt(5), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-4, 4, 3) and its norm = sqrt(41)
+Forming cone with 69 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 9 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(57), 3*sqrt(5), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-2, 5, 4) and its norm = 3*sqrt(5)
+Forming cone with 69 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 10 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(57), 5*sqrt(2), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-3, 5, 4) and its norm = 5*sqrt(2)
+Forming cone with 71 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 11 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(57), sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-4, 5, 4) and its norm = sqrt(57)
+Forming cone with 71 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 12 - Original number of extremal rays: 5, Now: 7
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(65), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-2, 6, 5) and its norm = sqrt(65)
+Forming cone with 71 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 13 - Original number of extremal rays: 5, Now: 7
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(70), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-3, 6, 5) and its norm = sqrt(70)
+Forming cone with 72 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 14 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(77), sqrt(73), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-1, 6, 6) and its norm = sqrt(73)
+Forming cone with 71 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 15 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(77), sqrt(51), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-1, 5, 5) and its norm = sqrt(51)
+Forming cone with 70 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 16 - Original number of extremal rays: 5, Now: 7
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(77), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-4, 6, 5) and its norm = sqrt(77)
+Forming cone with 69 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 17 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(86), sqrt(33), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (-1, 4, 4) and its norm = sqrt(33)
+Forming cone with 68 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 18 - Original number of extremal rays: 5, Now: 7
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(86), sqrt(114), sqrt(77), sqrt(149)]
+Vector to remove = (5, -6, 4) and its norm = sqrt(77)
+Forming cone with 67 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 19 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(86), sqrt(114), sqrt(29), sqrt(34), sqrt(86), sqrt(77), sqrt(149)]
+Vector to remove = (2, -4, 3) and its norm = sqrt(29)
+Forming cone with 66 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 20 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(86), sqrt(62), sqrt(114), sqrt(34), sqrt(86), sqrt(77), sqrt(149)]
+Vector to remove = (3, -4, 3) and its norm = sqrt(34)
+Forming cone with 66 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 21 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(86), sqrt(62), sqrt(114), 3*sqrt(5), sqrt(86), sqrt(77), sqrt(149)]
+Vector to remove = (2, -5, 4) and its norm = 3*sqrt(5)
+Forming cone with 65 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 22 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(86), sqrt(62), sqrt(114), sqrt(86), sqrt(77), sqrt(149)]
+Vector to remove = (1, -6, 5) and its norm = sqrt(62)
+Forming cone with 64 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 23 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(86), sqrt(113), sqrt(114), sqrt(86), sqrt(77), sqrt(149)]
+Vector to remove = (6, -4, 5) and its norm = sqrt(77)
+Forming cone with 63 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 24 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(86), sqrt(113), sqrt(114), sqrt(86), sqrt(89), sqrt(149)]
+Vector to remove = (-5, 6, 5) and its norm = sqrt(86)
+Forming cone with 63 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 25 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(97), sqrt(19), sqrt(113), sqrt(114), sqrt(86), sqrt(89), sqrt(149)]
+Vector to remove = (-1, 3, 3) and its norm = sqrt(19)
+Forming cone with 62 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 26 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(97), sqrt(113), sqrt(114), sqrt(86), sqrt(89), sqrt(149)]
+Vector to remove = (6, -5, 5) and its norm = sqrt(86)
+Forming cone with 62 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 27 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(97), sqrt(113), sqrt(3), sqrt(114), sqrt(101), sqrt(89), sqrt(149)]
+Vector to remove = (1, -1, 1) and its norm = sqrt(3)
+Forming cone with 61 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 28 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(97), sqrt(113), sqrt(114), sqrt(101), sqrt(89), sqrt(149)]
+Vector to remove = (7, -2, 6) and its norm = sqrt(89)
+Forming cone with 68 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 29 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(97), sqrt(113), sqrt(114), sqrt(101), sqrt(94), sqrt(113), sqrt(149)]
+Vector to remove = (7, -3, 6) and its norm = sqrt(94)
+Forming cone with 68 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 30 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(97), sqrt(113), sqrt(114), sqrt(101), sqrt(113), sqrt(149)]
+Vector to remove = (-6, 6, 5) and its norm = sqrt(97)
+Forming cone with 68 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 31 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [3*sqrt(6), sqrt(113), sqrt(114), sqrt(101), sqrt(113), sqrt(149)]
+Vector to remove = (-2, 5, 5) and its norm = 3*sqrt(6)
+Forming cone with 67 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 32 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(113), sqrt(114), sqrt(101), sqrt(113), sqrt(149)]
+Vector to remove = (7, -4, 6) and its norm = sqrt(101)
+Forming cone with 66 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 33 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(113), sqrt(114), sqrt(66), sqrt(122), sqrt(113), sqrt(149)]
+Vector to remove = (5, -4, 5) and its norm = sqrt(66)
+Forming cone with 65 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 34 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(113), sqrt(114), sqrt(41), sqrt(122), sqrt(113), sqrt(149)]
+Vector to remove = (4, -3, 4) and its norm = sqrt(41)
+Forming cone with 64 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 35 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(113), sqrt(114), sqrt(122), sqrt(113), sqrt(149)]
+Vector to remove = (0, -8, 7) and its norm = sqrt(113)
+Forming cone with 63 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 36 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(114), sqrt(122), sqrt(113), sqrt(149)]
+Vector to remove = (8, 0, 7) and its norm = sqrt(113)
+Forming cone with 62 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 37 - Original number of extremal rays: 5, Now: 8
+Number of Extremal Generators NOT contained in C: 4
+Vector norms: [sqrt(114), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (1, 7, 8) and its norm = sqrt(114)
+Forming cone with 62 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 38 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(86), sqrt(282), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (1, 6, 7) and its norm = sqrt(86)
+Forming cone with 61 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 39 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [3, sqrt(62), sqrt(165), sqrt(282), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (-1, 2, 2) and its norm = 3
+Forming cone with 61 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 40 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(62), sqrt(165), sqrt(282), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (1, 5, 6) and its norm = sqrt(62)
+Forming cone with 64 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 41 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(187), sqrt(42), sqrt(165), sqrt(282), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (1, 4, 5) and its norm = sqrt(42)
+Forming cone with 64 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 42 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(187), sqrt(26), sqrt(165), sqrt(282), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (1, 3, 4) and its norm = sqrt(26)
+Forming cone with 64 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 43 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(122), sqrt(114), sqrt(149)]
+Vector to remove = (8, -1, 7) and its norm = sqrt(114)
+Forming cone with 73 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 44 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(122), 3*sqrt(13), sqrt(149)]
+Vector to remove = (8, -2, 7) and its norm = 3*sqrt(13)
+Forming cone with 73 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 45 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(122), sqrt(149)]
+Vector to remove = (8, -3, 7) and its norm = sqrt(122)
+Forming cone with 73 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 46 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(187), sqrt(22), sqrt(165), sqrt(282), sqrt(149), sqrt(149)]
+Vector to remove = (3, -2, 3) and its norm = sqrt(22)
+Forming cone with 72 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 47 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(149), sqrt(149)]
+Vector to remove = (9, -2, 8) and its norm = sqrt(149)
+Forming cone with 71 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 48 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(187), 3, sqrt(165), sqrt(282), sqrt(146), sqrt(149)]
+Vector to remove = (2, -1, 2) and its norm = 3
+Forming cone with 70 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 49 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(146), sqrt(149)]
+Vector to remove = (9, -1, 8) and its norm = sqrt(146)
+Forming cone with 74 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 50 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(145), sqrt(149), sqrt(267)]
+Vector to remove = (9, 0, 8) and its norm = sqrt(145)
+Forming cone with 73 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 51 - Original number of extremal rays: 5, Now: 10
+Number of Extremal Generators NOT contained in C: 6
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(146), sqrt(149), sqrt(267)]
+Vector to remove = (9, 1, 8) and its norm = sqrt(146)
+Forming cone with 72 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 52 - Original number of extremal rays: 5, Now: 9
+Number of Extremal Generators NOT contained in C: 5
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(149), sqrt(267)]
+Vector to remove = (9, 2, 8) and its norm = sqrt(149)
+Forming cone with 71 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 53 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(187), sqrt(165), sqrt(102), sqrt(282), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (7, 2, 7) and its norm = sqrt(102)
+Forming cone with 70 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 54 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(187), sqrt(33), sqrt(165), sqrt(282), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (4, 1, 4) and its norm = sqrt(33)
+Forming cone with 69 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 55 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(2), sqrt(165), sqrt(122), sqrt(282), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (1, 0, 1) and its norm = sqrt(2)
+Forming cone with 68 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 56 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(19), sqrt(165), sqrt(122), sqrt(282), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (3, -1, 3) and its norm = sqrt(19)
+Forming cone with 87 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 57 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(165), 3*sqrt(6), sqrt(122), sqrt(282), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (5, -2, 5) and its norm = 3*sqrt(6)
+Forming cone with 105 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 58 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(165), sqrt(107), sqrt(122), sqrt(282), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (7, -3, 7) and its norm = sqrt(107)
+Forming cone with 123 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 59 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(165), sqrt(122), sqrt(282), sqrt(178), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (7, 3, 8) and its norm = sqrt(122)
+Forming cone with 141 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 60 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(165), sqrt(282), sqrt(178), sqrt(185), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (4, 7, 10) and its norm = sqrt(165)
+Forming cone with 140 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 61 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(187), sqrt(398), sqrt(133), sqrt(282), sqrt(178), sqrt(185), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (4, 6, 9) and its norm = sqrt(133)
+Forming cone with 139 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 62 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(187), sqrt(398), sqrt(78), sqrt(282), sqrt(178), sqrt(185), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (2, 5, 7) and its norm = sqrt(78)
+Forming cone with 138 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 63 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(187), sqrt(398), sqrt(131), sqrt(282), sqrt(178), sqrt(185), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (1, 7, 9) and its norm = sqrt(131)
+Forming cone with 139 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 64 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(187), sqrt(398), sqrt(202), sqrt(282), sqrt(178), sqrt(185), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (9, -4, 9) and its norm = sqrt(178)
+Forming cone with 140 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 65 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(398), sqrt(202), sqrt(282), sqrt(185), sqrt(269), sqrt(389), sqrt(267)]
+Vector to remove = (9, 2, 10) and its norm = sqrt(185)
+Forming cone with 158 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 66 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(187), sqrt(398), sqrt(202), sqrt(282), sqrt(149), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (8, 2, 9) and its norm = sqrt(149)
+Forming cone with 157 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 67 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(187), sqrt(398), sqrt(202), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (-5, 9, 9) and its norm = sqrt(187)
+Forming cone with 157 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 68 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(114), sqrt(398), sqrt(202), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (-4, 7, 7) and its norm = sqrt(114)
+Forming cone with 156 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 69 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(59), sqrt(230), sqrt(398), sqrt(202), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (-3, 5, 5) and its norm = sqrt(59)
+Forming cone with 155 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 70 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(230), sqrt(398), sqrt(202), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (0, 9, 11) and its norm = sqrt(202)
+Forming cone with 155 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 71 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(230), sqrt(398), sqrt(291), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (-3, 10, 11) and its norm = sqrt(230)
+Forming cone with 156 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 72 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [3*sqrt(17), sqrt(398), sqrt(291), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (-5, 8, 8) and its norm = 3*sqrt(17)
+Forming cone with 155 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 73 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(398), sqrt(291), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(266)]
+Vector to remove = (11, 1, 12) and its norm = sqrt(266)
+Forming cone with 154 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 74 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(398), sqrt(291), 3*sqrt(13), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(365)]
+Vector to remove = (7, 2, 8) and its norm = 3*sqrt(13)
+Forming cone with 153 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 75 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(398), sqrt(291), sqrt(282), sqrt(222), sqrt(269), sqrt(389), sqrt(267), sqrt(365)]
+Vector to remove = (10, 1, 11) and its norm = sqrt(222)
+Forming cone with 154 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 76 - Original number of extremal rays: 5, Now: 11
+Number of Extremal Generators NOT contained in C: 7
+Vector norms: [sqrt(398), sqrt(291), sqrt(282), sqrt(269), sqrt(389), sqrt(267), sqrt(365)]
+Vector to remove = (11, -5, 11) and its norm = sqrt(267)
+Forming cone with 155 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 77 - Original number of extremal rays: 5, Now: 12
+Number of Extremal Generators NOT contained in C: 8
+Vector norms: [sqrt(398), sqrt(291), sqrt(282), sqrt(269), sqrt(389), sqrt(446), sqrt(365), sqrt(941)]
+Vector to remove = (10, 5, 12) and its norm = sqrt(269)
+Forming cone with 189 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 78 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(398), sqrt(291), sqrt(282), sqrt(305), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (7, 8, 13) and its norm = sqrt(282)
+Forming cone with 188 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 79 - Original number of extremal rays: 5, Now: 15
+Number of Extremal Generators NOT contained in C: 11
+Vector norms: [sqrt(398), sqrt(291), sqrt(105), 19, 11*sqrt(2), sqrt(305), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (4, 5, 8) and its norm = sqrt(105)
+Forming cone with 187 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 80 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), sqrt(291), 19, 11*sqrt(2), sqrt(305), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (7, 7, 12) and its norm = 11*sqrt(2)
+Forming cone with 189 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 81 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), sqrt(291), 19, sqrt(586), sqrt(305), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (-1, 11, 13) and its norm = sqrt(291)
+Forming cone with 189 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 82 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(398), 19, sqrt(586), sqrt(305), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (10, 6, 13) and its norm = sqrt(305)
+Forming cone with 190 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 83 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), 19, sqrt(146), sqrt(586), sqrt(345), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (7, 4, 9) and its norm = sqrt(146)
+Forming cone with 189 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 84 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), 3*sqrt(5), 19, sqrt(586), sqrt(345), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (4, 2, 5) and its norm = 3*sqrt(5)
+Forming cone with 188 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 85 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), sqrt(65), 19, sqrt(586), sqrt(345), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (5, 2, 6) and its norm = sqrt(65)
+Forming cone with 190 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 86 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), sqrt(89), 19, sqrt(586), sqrt(345), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (6, 2, 7) and its norm = sqrt(89)
+Forming cone with 192 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 87 - Original number of extremal rays: 5, Now: 13
+Number of Extremal Generators NOT contained in C: 9
+Vector norms: [sqrt(398), 19, sqrt(586), sqrt(345), sqrt(389), sqrt(446), sqrt(365), sqrt(410), sqrt(941)]
+Vector to remove = (10, 7, 14) and its norm = sqrt(345)
+Forming cone with 212 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 88 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), 19, sqrt(586), sqrt(389), sqrt(395), sqrt(446), sqrt(365), sqrt(410), sqrt(854), sqrt(941)]
+Vector to remove = (6, 10, 15) and its norm = 19
+Forming cone with 211 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 89 - Original number of extremal rays: 5, Now: 14
+Number of Extremal Generators NOT contained in C: 10
+Vector norms: [sqrt(398), sqrt(458), sqrt(586), sqrt(389), sqrt(395), sqrt(446), sqrt(365), sqrt(410), sqrt(854), sqrt(941)]
+Vector to remove = (13, 0, 14) and its norm = sqrt(365)
+Forming cone with 211 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 90 - Original number of extremal rays: 5, Now: 15
+Number of Extremal Generators NOT contained in C: 11
+Vector norms: [sqrt(398), sqrt(458), sqrt(586), sqrt(389), sqrt(395), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (10, 8, 15) and its norm = sqrt(389)
+Forming cone with 210 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 91 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [sqrt(398), sqrt(458), sqrt(174), sqrt(206), sqrt(586), sqrt(395), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (7, 5, 10) and its norm = sqrt(174)
+Forming cone with 209 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 92 - Original number of extremal rays: 5, Now: 15
+Number of Extremal Generators NOT contained in C: 11
+Vector norms: [sqrt(398), sqrt(458), sqrt(206), sqrt(586), sqrt(395), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (7, 6, 11) and its norm = sqrt(206)
+Forming cone with 210 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 93 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [sqrt(398), sqrt(458), sqrt(370), sqrt(586), sqrt(395), 21, sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (8, 9, 15) and its norm = sqrt(370)
+Forming cone with 209 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 94 - Original number of extremal rays: 5, Now: 15
+Number of Extremal Generators NOT contained in C: 11
+Vector norms: [sqrt(398), sqrt(458), sqrt(586), sqrt(395), 21, sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (11, 7, 15) and its norm = sqrt(395)
+Forming cone with 208 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 95 - Original number of extremal rays: 5, Now: 15
+Number of Extremal Generators NOT contained in C: 11
+Vector norms: [sqrt(398), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (-2, 13, 15) and its norm = sqrt(398)
+Forming cone with 208 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 96 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [sqrt(149), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (-2, 8, 9) and its norm = sqrt(149)
+Forming cone with 207 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 97 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [sqrt(86), 5*sqrt(17), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (-1, 6, 7) and its norm = sqrt(86)
+Forming cone with 206 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 98 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [sqrt(22), 5*sqrt(17), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (-2, 3, 3) and its norm = sqrt(22)
+Forming cone with 206 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 99 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [5*sqrt(17), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(410), sqrt(482), sqrt(854), sqrt(806), sqrt(941)]
+Vector to remove = (13, 4, 15) and its norm = sqrt(410)
+Forming cone with 212 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 100 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [5*sqrt(17), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (0, 13, 16) and its norm = 5*sqrt(17)
+Forming cone with 222 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 101 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), 7*sqrt(5), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (-1, 10, 12) and its norm = 7*sqrt(5)
+Forming cone with 221 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 102 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(403), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (-3, 13, 15) and its norm = sqrt(403)
+Forming cone with 223 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 103 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), 21, sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (11, 8, 16) and its norm = 21
+Forming cone with 225 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 104 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), 9, sqrt(458), sqrt(586), sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (4, 4, 7) and its norm = 9
+Forming cone with 224 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 105 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(61), sqrt(458), sqrt(586), sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (4, 3, 6) and its norm = sqrt(61)
+Forming cone with 225 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 106 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(210), sqrt(586), sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (8, 5, 11) and its norm = sqrt(210)
+Forming cone with 231 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 107 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), sqrt(449), sqrt(446), sqrt(482), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (13, -9, 14) and its norm = sqrt(446)
+Forming cone with 237 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 108 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), sqrt(329), sqrt(449), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (11, -8, 12) and its norm = sqrt(329)
+Forming cone with 236 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 109 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(230), sqrt(586), sqrt(377), sqrt(449), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (9, -7, 10) and its norm = sqrt(230)
+Forming cone with 235 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 110 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), sqrt(377), sqrt(449), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (12, -8, 13) and its norm = sqrt(377)
+Forming cone with 234 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 111 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), sqrt(449), sqrt(429), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (13, -8, 14) and its norm = sqrt(429)
+Forming cone with 233 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 112 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), 3*sqrt(30), sqrt(449), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (10, -7, 11) and its norm = 3*sqrt(30)
+Forming cone with 232 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 113 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(149), sqrt(586), sqrt(449), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (7, -6, 8) and its norm = sqrt(149)
+Forming cone with 231 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 114 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), sqrt(449), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (12, 7, 16) and its norm = sqrt(449)
+Forming cone with 230 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 115 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(458), sqrt(586), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (5, 12, 17) and its norm = sqrt(458)
+Forming cone with 236 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 116 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), sqrt(485), sqrt(482), 3*sqrt(66), sqrt(589), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (15, -1, 16) and its norm = sqrt(482)
+Forming cone with 235 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 117 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), sqrt(485), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (14, -8, 15) and its norm = sqrt(485)
+Forming cone with 234 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 118 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), sqrt(314), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (11, -7, 12) and its norm = sqrt(314)
+Forming cone with 233 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 119 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), sqrt(362), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (12, -7, 13) and its norm = sqrt(362)
+Forming cone with 232 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 120 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(181), sqrt(586), 3*sqrt(46), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (8, -6, 9) and its norm = sqrt(181)
+Forming cone with 231 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 121 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), 3*sqrt(46), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (13, -7, 14) and its norm = 3*sqrt(46)
+Forming cone with 230 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 122 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), sqrt(470), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (14, -7, 15) and its norm = sqrt(470)
+Forming cone with 229 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 123 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(217), sqrt(586), sqrt(530), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (9, -6, 10) and its norm = sqrt(217)
+Forming cone with 228 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 124 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(517), sqrt(586), sqrt(530), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (7, 12, 18) and its norm = sqrt(517)
+Forming cone with 227 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 125 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(586), sqrt(530), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (15, -7, 16) and its norm = sqrt(530)
+Forming cone with 226 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 126 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(573), sqrt(586), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (4, 14, 19) and its norm = sqrt(573)
+Forming cone with 225 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 127 - Original number of extremal rays: 5, Now: 16
+Number of Extremal Generators NOT contained in C: 12
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), sqrt(586), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (9, 12, 19) and its norm = sqrt(586)
+Forming cone with 224 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 128 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(158), sqrt(706), sqrt(195), sqrt(526), sqrt(941), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (3, 7, 10) and its norm = sqrt(158)
+Forming cone with 223 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 129 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), sqrt(195), sqrt(526), sqrt(941), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (5, 7, 11) and its norm = sqrt(195)
+Forming cone with 224 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 130 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(526), sqrt(941), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (9, 11, 18) and its norm = sqrt(526)
+Forming cone with 224 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 131 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), 3*sqrt(51), sqrt(941), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (7, 11, 17) and its norm = 3*sqrt(51)
+Forming cone with 223 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 132 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), sqrt(266), 3*sqrt(85), sqrt(941), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (4, 9, 13) and its norm = sqrt(266)
+Forming cone with 222 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 133 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), 3*sqrt(66), sqrt(589), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (16, 3, 18) and its norm = sqrt(589)
+Forming cone with 223 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 134 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(523), 3*sqrt(66), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (15, 3, 17) and its norm = sqrt(523)
+Forming cone with 222 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 135 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(461), 3*sqrt(66), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (14, 3, 16) and its norm = sqrt(461)
+Forming cone with 221 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 136 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), 3*sqrt(66), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (16, -7, 17) and its norm = 3*sqrt(66)
+Forming cone with 221 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 137 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(257), sqrt(941), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (10, -6, 11) and its norm = sqrt(257)
+Forming cone with 220 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 138 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(301), sqrt(941), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (11, -6, 12) and its norm = sqrt(301)
+Forming cone with 219 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 139 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(349), sqrt(941), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (12, -6, 13) and its norm = sqrt(349)
+Forming cone with 218 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 140 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(401), sqrt(941), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (13, -6, 14) and its norm = sqrt(401)
+Forming cone with 217 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 141 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(457), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (14, -6, 15) and its norm = sqrt(457)
+Forming cone with 216 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 142 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(517), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (15, -6, 16) and its norm = sqrt(517)
+Forming cone with 215 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 143 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(581), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (16, -6, 17) and its norm = sqrt(581)
+Forming cone with 214 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 144 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [11*sqrt(5), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (-5, 16, 18) and its norm = 11*sqrt(5)
+Forming cone with 213 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 145 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(649), sqrt(617), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (17, -2, 18) and its norm = sqrt(617)
+Forming cone with 213 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 146 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(313), sqrt(941), sqrt(649), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (12, 0, 13) and its norm = sqrt(313)
+Forming cone with 212 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 147 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(649), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (17, -6, 18) and its norm = sqrt(649)
+Forming cone with 213 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 148 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(706), 3*sqrt(85), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(786), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (3, 16, 21) and its norm = sqrt(706)
+Forming cone with 212 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 149 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), 3*sqrt(85), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(786), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (5, 16, 22) and its norm = 3*sqrt(85)
+Forming cone with 211 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 150 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(229), sqrt(857), sqrt(402), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(786), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (2, 9, 12) and its norm = sqrt(229)
+Forming cone with 210 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 151 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(402), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(786), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (5, 11, 16) and its norm = sqrt(402)
+Forming cone with 211 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 152 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(786), sqrt(770), sqrt(806), sqrt(941), sqrt(1597)]
+Vector to remove = (19, -3, 20) and its norm = sqrt(770)
+Forming cone with 211 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 153 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(786), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (19, -5, 20) and its norm = sqrt(786)
+Forming cone with 210 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 154 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(710), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (18, -5, 19) and its norm = sqrt(710)
+Forming cone with 209 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 155 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(638), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (17, -5, 18) and its norm = sqrt(638)
+Forming cone with 208 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 156 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(570), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (16, -5, 17) and its norm = sqrt(570)
+Forming cone with 207 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 157 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(506), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (15, -5, 16) and its norm = sqrt(506)
+Forming cone with 206 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 158 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(446), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (14, -5, 15) and its norm = sqrt(446)
+Forming cone with 205 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 159 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(390), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (13, -5, 14) and its norm = sqrt(390)
+Forming cone with 204 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 160 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), 13*sqrt(2), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (12, -5, 13) and its norm = 13*sqrt(2)
+Forming cone with 203 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 161 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(290), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (11, -5, 12) and its norm = sqrt(290)
+Forming cone with 202 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 162 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(246), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (10, -5, 11) and its norm = sqrt(246)
+Forming cone with 201 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 163 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(206), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (9, -5, 10) and its norm = sqrt(206)
+Forming cone with 200 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 164 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(170), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (8, -5, 9) and its norm = sqrt(170)
+Forming cone with 199 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 165 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(138), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (7, -5, 8) and its norm = sqrt(138)
+Forming cone with 198 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 166 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(110), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (6, -5, 7) and its norm = sqrt(110)
+Forming cone with 197 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 167 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(86), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (5, -5, 6) and its norm = sqrt(86)
+Forming cone with 196 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 168 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(790), sqrt(806), sqrt(941), sqrt(1597), sqrt(1461)]
+Vector to remove = (18, 5, 21) and its norm = sqrt(790)
+Forming cone with 195 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 169 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(714), sqrt(854), 3*sqrt(154), sqrt(806), 5*sqrt(41), sqrt(941), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (17, 5, 20) and its norm = sqrt(714)
+Forming cone with 194 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 170 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), sqrt(806), 5*sqrt(41), sqrt(941), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (19, 2, 21) and its norm = sqrt(806)
+Forming cone with 193 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 171 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(182), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (9, 1, 10) and its norm = sqrt(182)
+Forming cone with 192 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 172 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(835), sqrt(941), sqrt(854), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (9, 15, 23) and its norm = sqrt(835)
+Forming cone with 197 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 173 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(566), sqrt(941), sqrt(854), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (6, 13, 19) and its norm = sqrt(566)
+Forming cone with 196 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 174 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(941), sqrt(854), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (17, 9, 22) and its norm = sqrt(854)
+Forming cone with 196 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 175 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), 13*sqrt(3), sqrt(941), 3*sqrt(102), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (13, 7, 17) and its norm = 13*sqrt(3)
+Forming cone with 195 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 176 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(857), sqrt(1154), sqrt(941), 3*sqrt(102), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (2, 18, 23) and its norm = sqrt(857)
+Forming cone with 195 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 177 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(1117), sqrt(318), sqrt(1154), sqrt(941), 3*sqrt(102), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (1, 11, 14) and its norm = sqrt(318)
+Forming cone with 194 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 178 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(861), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(941), 3*sqrt(102), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (-10, 19, 20) and its norm = sqrt(861)
+Forming cone with 195 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 179 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(609), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(941), 3*sqrt(102), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (-8, 16, 17) and its norm = sqrt(609)
+Forming cone with 194 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 180 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(941), 3*sqrt(102), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (17, 10, 23) and its norm = 3*sqrt(102)
+Forming cone with 193 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 181 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(941), sqrt(986), 3*sqrt(154), sqrt(934), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (18, 9, 23) and its norm = sqrt(934)
+Forming cone with 192 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 182 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(941), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (13, 14, 24) and its norm = sqrt(941)
+Forming cone with 191 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 183 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(470), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (9, 10, 17) and its norm = sqrt(470)
+Forming cone with 190 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 184 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(161), sqrt(1154), sqrt(758), 17*sqrt(3), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (5, 6, 10) and its norm = sqrt(161)
+Forming cone with 189 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 185 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(758), 17*sqrt(3), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (7, 15, 22) and its norm = sqrt(758)
+Forming cone with 189 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 186 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), 9*sqrt(5), 17*sqrt(3), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (7, 10, 16) and its norm = 9*sqrt(5)
+Forming cone with 188 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 187 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), 17*sqrt(3), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (13, 13, 23) and its norm = 17*sqrt(3)
+Forming cone with 188 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 188 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(569), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (8, 12, 19) and its norm = sqrt(569)
+Forming cone with 187 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 189 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(941), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (21, -4, 22) and its norm = sqrt(941)
+Forming cone with 187 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 190 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), sqrt(857), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (20, -4, 21) and its norm = sqrt(857)
+Forming cone with 186 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 191 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), sqrt(694), sqrt(777), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (18, -3, 19) and its norm = sqrt(694)
+Forming cone with 185 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 192 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), 3*sqrt(61), sqrt(986), 3*sqrt(154), sqrt(777), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (16, -2, 17) and its norm = 3*sqrt(61)
+Forming cone with 184 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 193 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(422), sqrt(986), 3*sqrt(154), sqrt(777), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (14, -1, 15) and its norm = sqrt(422)
+Forming cone with 183 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 194 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), sqrt(777), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461)]
+Vector to remove = (19, -4, 20) and its norm = sqrt(777)
+Forming cone with 187 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 195 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(622), sqrt(986), 3*sqrt(154), sqrt(701), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066)]
+Vector to remove = (17, -3, 18) and its norm = sqrt(622)
+Forming cone with 186 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 196 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), sqrt(701), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066)]
+Vector to remove = (18, -4, 19) and its norm = sqrt(701)
+Forming cone with 187 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 197 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(629), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (17, -4, 18) and its norm = sqrt(629)
+Forming cone with 186 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 198 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(561), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (16, -4, 17) and its norm = sqrt(561)
+Forming cone with 185 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 199 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(497), sqrt(554), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (15, -4, 16) and its norm = sqrt(497)
+Forming cone with 184 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 200 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(437), sqrt(554), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (14, -4, 15) and its norm = sqrt(437)
+Forming cone with 183 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 201 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(381), sqrt(554), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (13, -4, 14) and its norm = sqrt(381)
+Forming cone with 182 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 202 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(329), sqrt(554), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (12, -4, 13) and its norm = sqrt(329)
+Forming cone with 181 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 203 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(281), sqrt(554), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (11, -4, 12) and its norm = sqrt(281)
+Forming cone with 180 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 204 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(554), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (16, -3, 17) and its norm = sqrt(554)
+Forming cone with 179 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 205 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(237), 7*sqrt(10), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (10, -4, 11) and its norm = sqrt(237)
+Forming cone with 179 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 206 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), 7*sqrt(10), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (15, -3, 16) and its norm = 7*sqrt(10)
+Forming cone with 178 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 207 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(430), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (14, -3, 15) and its norm = sqrt(430)
+Forming cone with 178 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 208 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(197), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (9, -4, 10) and its norm = sqrt(197)
+Forming cone with 179 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 209 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [3*sqrt(106), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (-5, 20, 23) and its norm = 3*sqrt(106)
+Forming cone with 179 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 210 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [sqrt(401), 7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (-6, 13, 14) and its norm = sqrt(401)
+Forming cone with 178 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 211 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(971), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5)]
+Vector to remove = (21, 1, 23) and its norm = sqrt(971)
+Forming cone with 177 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 212 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(986), 3*sqrt(154), 5*sqrt(41), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (17, 11, 24) and its norm = sqrt(986)
+Forming cone with 178 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 213 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1117), sqrt(1154), 23*sqrt(2), 3*sqrt(154), 5*sqrt(41), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (20, 7, 24) and its norm = 5*sqrt(41)
+Forming cone with 177 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 214 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1117), sqrt(1154), 23*sqrt(2), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (17, 12, 25) and its norm = 23*sqrt(2)
+Forming cone with 176 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 215 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(1117), sqrt(1154), sqrt(557), 9*sqrt(14), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (13, 8, 18) and its norm = sqrt(557)
+Forming cone with 175 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 216 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1117), sqrt(1154), 9*sqrt(14), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (0, 21, 26) and its norm = sqrt(1117)
+Forming cone with 176 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 217 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(938), sqrt(1154), 9*sqrt(14), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (1, 19, 24) and its norm = sqrt(938)
+Forming cone with 175 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 218 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(462), sqrt(1154), 9*sqrt(14), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (2, 13, 17) and its norm = sqrt(462)
+Forming cone with 174 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 219 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [7*sqrt(29), sqrt(1154), 9*sqrt(14), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (17, 13, 26) and its norm = 9*sqrt(14)
+Forming cone with 174 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 220 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1154), sqrt(1214), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (5, 20, 27) and its norm = sqrt(1154)
+Forming cone with 173 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 221 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [7*sqrt(29), sqrt(777), sqrt(355), sqrt(1229), sqrt(1214), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (3, 11, 15) and its norm = sqrt(355)
+Forming cone with 172 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 222 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(777), sqrt(1229), sqrt(1214), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (2, 17, 22) and its norm = sqrt(777)
+Forming cone with 171 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 223 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(1214), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (17, 14, 27) and its norm = sqrt(1214)
+Forming cone with 170 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 224 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1221), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (23, 4, 26) and its norm = sqrt(1221)
+Forming cone with 169 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 225 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(403), sqrt(1298), 3*sqrt(154), 15*sqrt(5), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (13, 3, 15) and its norm = sqrt(403)
+Forming cone with 168 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 226 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(642), sqrt(1298), 3*sqrt(154), 15*sqrt(5), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (16, 5, 19) and its norm = sqrt(642)
+Forming cone with 169 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 227 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(1298), 3*sqrt(154), sqrt(939), 15*sqrt(5), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (19, 7, 23) and its norm = sqrt(939)
+Forming cone with 169 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 228 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(1298), 3*sqrt(154), 15*sqrt(5), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (22, 4, 25) and its norm = 15*sqrt(5)
+Forming cone with 169 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 229 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1229), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (11, 18, 28) and its norm = sqrt(1229)
+Forming cone with 169 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 230 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(14), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (1, 2, 3) and its norm = sqrt(14)
+Forming cone with 168 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 231 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(41), sqrt(418), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (0, 4, 5) and its norm = sqrt(41)
+Forming cone with 174 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 232 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), 9*sqrt(6), sqrt(418), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (9, 9, 16) and its norm = sqrt(418)
+Forming cone with 202 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 233 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), 9*sqrt(6), sqrt(1209), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-1, 14, 17) and its norm = 9*sqrt(6)
+Forming cone with 204 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 234 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(1209), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (8, 19, 28) and its norm = sqrt(1209)
+Forming cone with 231 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 235 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(1298), 3*sqrt(154), sqrt(1294), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (22, 9, 27) and its norm = sqrt(1294)
+Forming cone with 230 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 236 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(1298), 3*sqrt(154), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (17, 15, 28) and its norm = sqrt(1298)
+Forming cone with 229 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 237 - Original number of extremal rays: 5, Now: 17
+Number of Extremal Generators NOT contained in C: 13
+Vector norms: [7*sqrt(29), sqrt(2490), 3*sqrt(154), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (17, 16, 29) and its norm = 3*sqrt(154)
+Forming cone with 228 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 238 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(818), sqrt(797), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (13, 12, 22) and its norm = sqrt(797)
+Forming cone with 227 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 239 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(818), sqrt(731), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (13, 11, 21) and its norm = sqrt(731)
+Forming cone with 226 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 240 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(818), sqrt(669), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (13, 10, 20) and its norm = sqrt(669)
+Forming cone with 225 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 241 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(818), sqrt(370), sqrt(611), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (9, 8, 15) and its norm = sqrt(370)
+Forming cone with 224 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 242 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(818), sqrt(611), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (13, 9, 19) and its norm = sqrt(611)
+Forming cone with 225 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 243 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(818), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (8, 15, 23) and its norm = sqrt(818)
+Forming cone with 228 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 244 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(509), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (8, 11, 18) and its norm = sqrt(509)
+Forming cone with 228 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 245 - Original number of extremal rays: 5, Now: 18
+Number of Extremal Generators NOT contained in C: 14
+Vector norms: [7*sqrt(29), sqrt(2490), 3*sqrt(113), sqrt(1541), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (14, 14, 25) and its norm = 3*sqrt(113)
+Forming cone with 233 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 246 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(941), sqrt(1265), sqrt(1541), sqrt(1390), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (14, 13, 24) and its norm = sqrt(941)
+Forming cone with 232 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 247 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(1265), sqrt(1541), sqrt(1390), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (15, 16, 28) and its norm = sqrt(1265)
+Forming cone with 232 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 248 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(1541), sqrt(1390), sqrt(1774), sqrt(1469), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (18, 15, 29) and its norm = sqrt(1390)
+Forming cone with 231 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 249 - Original number of extremal rays: 5, Now: 19
+Number of Extremal Generators NOT contained in C: 15
+Vector norms: [7*sqrt(29), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-2, 24, 29) and its norm = 7*sqrt(29)
+Forming cone with 230 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 250 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [sqrt(698), 5*sqrt(43), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-3, 17, 20) and its norm = sqrt(698)
+Forming cone with 239 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 251 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [sqrt(237), 5*sqrt(43), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-4, 10, 11) and its norm = sqrt(237)
+Forming cone with 238 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 252 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [5*sqrt(43), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-3, 21, 25) and its norm = 5*sqrt(43)
+Forming cone with 238 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 253 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [7*sqrt(14), sqrt(1317), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-6, 17, 19) and its norm = 7*sqrt(14)
+Forming cone with 237 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 254 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [3*sqrt(13), sqrt(1317), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-2, 7, 8) and its norm = 3*sqrt(13)
+Forming cone with 236 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 255 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [7*sqrt(6), sqrt(1317), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-2, 11, 13) and its norm = 7*sqrt(6)
+Forming cone with 238 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 256 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [sqrt(553), sqrt(1317), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-2, 15, 18) and its norm = sqrt(553)
+Forming cone with 240 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 257 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [sqrt(894), sqrt(1317), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-2, 19, 23) and its norm = sqrt(894)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 258 - Original number of extremal rays: 5, Now: 20
+Number of Extremal Generators NOT contained in C: 16
+Vector norms: [sqrt(1317), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (-2, 23, 28) and its norm = sqrt(1317)
+Forming cone with 244 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 259 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [5*sqrt(65), 23*sqrt(3), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(1461), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762)]
+Vector to remove = (26, -1, 28) and its norm = sqrt(1461)
+Forming cone with 244 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 260 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [5*sqrt(65), 23*sqrt(3), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1469), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3981)]
+Vector to remove = (22, 12, 29) and its norm = sqrt(1469)
+Forming cone with 246 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 261 - Original number of extremal rays: 5, Now: 21
+Number of Extremal Generators NOT contained in C: 17
+Vector norms: [5*sqrt(65), 23*sqrt(3), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(1502), sqrt(2334), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (25, 6, 29) and its norm = sqrt(1502)
+Forming cone with 245 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 262 - Original number of extremal rays: 5, Now: 22
+Number of Extremal Generators NOT contained in C: 18
+Vector norms: [5*sqrt(65), 23*sqrt(3), sqrt(4261), sqrt(2490), sqrt(1541), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (16, 18, 31) and its norm = sqrt(1541)
+Forming cone with 244 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 263 - Original number of extremal rays: 5, Now: 23
+Number of Extremal Generators NOT contained in C: 19
+Vector norms: [5*sqrt(65), 23*sqrt(3), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-1, 25, 31) and its norm = 23*sqrt(3)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 264 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [5*sqrt(65), sqrt(1426), sqrt(1118), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-1, 21, 26) and its norm = sqrt(1118)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 265 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [5*sqrt(65), sqrt(1426), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-3, 24, 29) and its norm = sqrt(1426)
+Forming cone with 241 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 266 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [5*sqrt(65), sqrt(731), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-1, 17, 21) and its norm = sqrt(731)
+Forming cone with 240 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 267 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [5*sqrt(65), sqrt(985), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-3, 20, 24) and its norm = sqrt(985)
+Forming cone with 240 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 268 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [5*sqrt(65), sqrt(1283), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-5, 23, 27) and its norm = sqrt(1283)
+Forming cone with 240 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 269 - Original number of extremal rays: 5, Now: 23
+Number of Extremal Generators NOT contained in C: 19
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1597), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (24, 11, 30) and its norm = sqrt(1597)
+Forming cone with 240 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 270 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1018), sqrt(1774), sqrt(1198), sqrt(1829), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (19, 9, 24) and its norm = sqrt(1018)
+Forming cone with 239 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 271 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(569), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1106), sqrt(1198), sqrt(1829), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (14, 7, 18) and its norm = sqrt(569)
+Forming cone with 238 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 272 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), 5*sqrt(10), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1106), sqrt(1198), sqrt(1829), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (9, 5, 12) and its norm = 5*sqrt(10)
+Forming cone with 237 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 273 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1106), sqrt(1198), sqrt(1553), sqrt(1829), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (20, 9, 25) and its norm = sqrt(1106)
+Forming cone with 244 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 274 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1198), sqrt(1553), sqrt(1829), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (21, 9, 26) and its norm = sqrt(1198)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 275 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(635), sqrt(1714), sqrt(4330), sqrt(857), sqrt(1774), sqrt(1553), sqrt(1829), sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (15, 7, 19) and its norm = sqrt(635)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 276 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(705), sqrt(857), sqrt(1774), sqrt(1553), sqrt(1829), 41, sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (16, 7, 20) and its norm = sqrt(705)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 277 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(779), sqrt(857), sqrt(1774), sqrt(1553), sqrt(1829), 41, sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (17, 7, 21) and its norm = sqrt(779)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 278 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(857), sqrt(1774), sqrt(1553), sqrt(1829), 41, sqrt(2334), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (18, 7, 22) and its norm = sqrt(857)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 279 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1553), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (22, 13, 30) and its norm = sqrt(1553)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 280 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [5*sqrt(65), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-7, 26, 30) and its norm = 5*sqrt(65)
+Forming cone with 249 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 281 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(1158), sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-7, 22, 25) and its norm = sqrt(1158)
+Forming cone with 248 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 282 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(773), sqrt(3181), sqrt(870), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-7, 18, 20) and its norm = sqrt(773)
+Forming cone with 247 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 283 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(470), sqrt(3181), sqrt(870), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-7, 14, 15) and its norm = sqrt(470)
+Forming cone with 246 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 284 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(249), sqrt(3181), sqrt(870), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-7, 10, 10) and its norm = sqrt(249)
+Forming cone with 245 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 285 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(870), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-5, 19, 22) and its norm = sqrt(870)
+Forming cone with 244 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 286 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), 7*sqrt(11), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (-5, 15, 17) and its norm = 7*sqrt(11)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 287 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), 41, sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (24, 12, 31) and its norm = 41
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 288 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(1714), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (15, 20, 33) and its norm = sqrt(1714)
+Forming cone with 243 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 289 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(355), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (7, 9, 15) and its norm = sqrt(355)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 290 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(229), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (6, 7, 12) and its norm = sqrt(229)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 291 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(131), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (5, 5, 9) and its norm = sqrt(131)
+Forming cone with 242 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 292 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1774), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (19, 18, 33) and its norm = sqrt(1774)
+Forming cone with 273 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 293 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), 3*sqrt(186), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (19, 17, 32) and its norm = 3*sqrt(186)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 294 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(869), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (14, 12, 23) and its norm = sqrt(869)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 295 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(326), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (9, 7, 14) and its norm = sqrt(326)
+Forming cone with 277 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 296 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1829), sqrt(1793), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (25, 12, 32) and its norm = sqrt(1793)
+Forming cone with 284 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 297 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1829), sqrt(1909), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(3981)]
+Vector to remove = (22, 16, 33) and its norm = sqrt(1829)
+Forming cone with 284 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 298 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(1885), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1909), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3981)]
+Vector to remove = (0, 27, 34) and its norm = sqrt(1885)
+Forming cone with 286 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 299 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(1370), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1909), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3981)]
+Vector to remove = (0, 23, 29) and its norm = sqrt(1370)
+Forming cone with 285 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 300 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(1909), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3981)]
+Vector to remove = (26, 12, 33) and its norm = sqrt(1909)
+Forming cone with 285 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 301 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(2334), sqrt(2029), sqrt(1937), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3981)]
+Vector to remove = (28, 8, 33) and its norm = sqrt(1937)
+Forming cone with 285 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 302 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1986), sqrt(2334), sqrt(2029), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3981)]
+Vector to remove = (20, 19, 35) and its norm = sqrt(1986)
+Forming cone with 284 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 303 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(2029), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3981)]
+Vector to remove = (27, 12, 34) and its norm = sqrt(2029)
+Forming cone with 283 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 304 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), sqrt(2081), sqrt(2066), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (31, -4, 33) and its norm = sqrt(2066)
+Forming cone with 282 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 305 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), sqrt(2081), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (30, 5, 34) and its norm = sqrt(2081)
+Forming cone with 281 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 306 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1033), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (21, 4, 24) and its norm = sqrt(1033)
+Forming cone with 280 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 307 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), 21*sqrt(5), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (32, -5, 34) and its norm = 21*sqrt(5)
+Forming cone with 280 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 308 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(1606), sqrt(6054), 5*sqrt(83), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (27, -6, 29) and its norm = sqrt(1606)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 309 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(1109), sqrt(2334), sqrt(6054), 5*sqrt(83), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (22, -7, 24) and its norm = sqrt(1109)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 310 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), 5*sqrt(83), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (31, -5, 33) and its norm = 5*sqrt(83)
+Forming cone with 277 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 311 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(374), sqrt(485), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), sqrt(1949), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (13, -3, 14) and its norm = sqrt(374)
+Forming cone with 276 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 312 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(485), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), sqrt(1949), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (15, -2, 16) and its norm = sqrt(485)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 313 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(1811), sqrt(6054), sqrt(1949), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (29, -3, 31) and its norm = sqrt(1811)
+Forming cone with 281 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 314 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), sqrt(1949), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981)]
+Vector to remove = (30, -5, 32) and its norm = sqrt(1949)
+Forming cone with 283 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 315 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(1019), sqrt(2326), sqrt(2334), 3*sqrt(203), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (21, -7, 23) and its norm = sqrt(1019)
+Forming cone with 282 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 316 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(1390), sqrt(2334), 3*sqrt(203), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (25, -6, 27) and its norm = sqrt(1390)
+Forming cone with 281 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 317 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), 3*sqrt(203), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (29, -5, 31) and its norm = 3*sqrt(203)
+Forming cone with 280 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 318 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(1709), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (28, -5, 30) and its norm = sqrt(1709)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 319 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(322), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(1595), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (12, -3, 13) and its norm = sqrt(322)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 320 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(161), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(1595), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (8, -4, 9) and its norm = sqrt(161)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 321 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(1595), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (27, -5, 29) and its norm = sqrt(1595)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 322 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(1190), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (23, -6, 25) and its norm = sqrt(1190)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 323 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(851), sqrt(2326), 3*sqrt(165), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (19, -7, 21) and its norm = sqrt(851)
+Forming cone with 277 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 324 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), 3*sqrt(165), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (26, -5, 28) and its norm = 3*sqrt(165)
+Forming cone with 276 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 325 - Original number of extremal rays: 5, Now: 24
+Number of Extremal Generators NOT contained in C: 20
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(2211), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (1, 29, 37) and its norm = sqrt(2211)
+Forming cone with 275 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 326 - Original number of extremal rays: 5, Now: 25
+Number of Extremal Generators NOT contained in C: 21
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(2245), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (15, 24, 38) and its norm = sqrt(2245)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 327 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(1905), sqrt(2858), sqrt(4330), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (14, 22, 35) and its norm = sqrt(1905)
+Forming cone with 273 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 328 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2273), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (-2, 30, 37) and its norm = sqrt(2273)
+Forming cone with 272 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 329 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2326), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (21, 21, 38) and its norm = sqrt(2326)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 330 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(1097), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (15, 14, 26) and its norm = sqrt(1097)
+Forming cone with 270 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 331 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(2334), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181)]
+Vector to remove = (26, 17, 37) and its norm = sqrt(2334)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 332 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), 9*sqrt(30), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (31, 10, 37) and its norm = 9*sqrt(30)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 333 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(574), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (15, 5, 18) and its norm = sqrt(574)
+Forming cone with 270 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 334 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(349), sqrt(510), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (12, 3, 14) and its norm = sqrt(349)
+Forming cone with 269 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 335 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(510), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (14, 5, 17) and its norm = sqrt(510)
+Forming cone with 275 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 336 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), 15*sqrt(2), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (13, 5, 16) and its norm = 15*sqrt(2)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 337 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(394), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (12, 5, 15) and its norm = sqrt(394)
+Forming cone with 273 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 338 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2490), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (7, 29, 40) and its norm = sqrt(2490)
+Forming cone with 280 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 339 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 3*sqrt(285), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (2, 31, 40) and its norm = 3*sqrt(285)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 340 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), 5*sqrt(66), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (1, 25, 32) and its norm = 5*sqrt(66)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 341 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(2582), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 7*sqrt(157)]
+Vector to remove = (33, 7, 38) and its norm = sqrt(2582)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 342 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(2617), sqrt(6054), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (24, 21, 40) and its norm = sqrt(2617)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 343 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(6054), sqrt(3227), sqrt(4789), sqrt(2669), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (35, 0, 38) and its norm = sqrt(2669)
+Forming cone with 279 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 344 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(6054), 15*sqrt(10), sqrt(3227), sqrt(4789), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (32, 1, 35) and its norm = 15*sqrt(10)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 345 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(1154), sqrt(6054), sqrt(3227), sqrt(4789), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (23, 0, 25) and its norm = sqrt(1154)
+Forming cone with 277 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 346 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(1869), sqrt(6054), sqrt(3227), sqrt(4789), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (29, 2, 32) and its norm = sqrt(1869)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 347 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(2694), sqrt(6054), sqrt(3227), sqrt(4789), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (22, 23, 41) and its norm = sqrt(2694)
+Forming cone with 278 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 348 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(2705), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (-4, 33, 40) and its norm = sqrt(2705)
+Forming cone with 277 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 349 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2762), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157)]
+Vector to remove = (35, 4, 39) and its norm = sqrt(2762)
+Forming cone with 276 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 350 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(1526), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326)]
+Vector to remove = (26, 3, 29) and its norm = sqrt(1526)
+Forming cone with 275 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 351 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(654), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326)]
+Vector to remove = (17, 2, 19) and its norm = sqrt(654)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 352 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(2858), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326)]
+Vector to remove = (15, 28, 43) and its norm = sqrt(2858)
+Forming cone with 276 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 353 - Original number of extremal rays: 5, Now: 26
+Number of Extremal Generators NOT contained in C: 22
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(2947), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326)]
+Vector to remove = (3, 33, 43) and its norm = sqrt(2947)
+Forming cone with 275 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 354 - Original number of extremal rays: 5, Now: 27
+Number of Extremal Generators NOT contained in C: 23
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), 3*sqrt(330), sqrt(3981), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326)]
+Vector to remove = (37, -1, 40) and its norm = 3*sqrt(330)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 355 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(2987), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326)]
+Vector to remove = (35, 9, 41) and its norm = sqrt(2987)
+Forming cone with 273 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 356 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3026), sqrt(1294), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (23, 6, 27) and its norm = sqrt(1294)
+Forming cone with 272 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 357 - Original number of extremal rays: 5, Now: 31
+Number of Extremal Generators NOT contained in C: 27
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(2442), sqrt(3227), sqrt(4789), sqrt(3110), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (32, 7, 37) and its norm = sqrt(2442)
+Forming cone with 272 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 358 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3026), sqrt(3090), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3110), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (19, 27, 44) and its norm = sqrt(3026)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 359 - Original number of extremal rays: 5, Now: 31
+Number of Extremal Generators NOT contained in C: 27
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), 3*sqrt(177), sqrt(3553), sqrt(4330), sqrt(3090), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3110), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (13, 20, 32) and its norm = 3*sqrt(177)
+Forming cone with 270 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 360 - Original number of extremal rays: 5, Now: 31
+Number of Extremal Generators NOT contained in C: 27
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(618), sqrt(3553), sqrt(4330), sqrt(3090), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3110), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (7, 13, 20) and its norm = sqrt(618)
+Forming cone with 269 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 361 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3090), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3110), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (23, 25, 44) and its norm = sqrt(3090)
+Forming cone with 275 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 362 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3110), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (35, 11, 42) and its norm = sqrt(3110)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 363 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3181), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-6, 36, 43) and its norm = sqrt(3181)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 364 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(626), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-3, 16, 19) and its norm = sqrt(626)
+Forming cone with 273 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 365 - Original number of extremal rays: 5, Now: 31
+Number of Extremal Generators NOT contained in C: 27
+Vector norms: [sqrt(290), sqrt(426), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-5, 11, 12) and its norm = sqrt(290)
+Forming cone with 272 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 366 - Original number of extremal rays: 5, Now: 31
+Number of Extremal Generators NOT contained in C: 27
+Vector norms: [sqrt(349), sqrt(426), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-3, 12, 14) and its norm = sqrt(349)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 367 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(426), sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-1, 13, 16) and its norm = sqrt(426)
+Forming cone with 270 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 368 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(3227), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (33, 17, 43) and its norm = sqrt(3227)
+Forming cone with 272 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 369 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3289), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (39, -2, 42) and its norm = sqrt(3289)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 370 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(3322), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-1, 36, 45) and its norm = sqrt(3322)
+Forming cone with 270 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 371 - Original number of extremal rays: 5, Now: 32
+Number of Extremal Generators NOT contained in C: 28
+Vector norms: [sqrt(1082), sqrt(1217), 5*sqrt(105), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-4, 21, 25) and its norm = sqrt(1082)
+Forming cone with 269 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 372 - Original number of extremal rays: 5, Now: 31
+Number of Extremal Generators NOT contained in C: 27
+Vector norms: [sqrt(1217), 5*sqrt(105), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-2, 22, 27) and its norm = sqrt(1217)
+Forming cone with 268 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 373 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [5*sqrt(105), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-1, 32, 40) and its norm = 5*sqrt(105)
+Forming cone with 267 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 374 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(937), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (0, 19, 24) and its norm = sqrt(937)
+Forming cone with 266 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 375 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(203), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-1, 9, 11) and its norm = sqrt(203)
+Forming cone with 268 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 376 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(154), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-3, 8, 9) and its norm = sqrt(154)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 377 - Original number of extremal rays: 5, Now: 30
+Number of Extremal Generators NOT contained in C: 26
+Vector norms: [sqrt(123), sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (-5, 7, 7) and its norm = sqrt(123)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 378 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(5073), 3*sqrt(373), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (4, 35, 46) and its norm = 3*sqrt(373)
+Forming cone with 277 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 379 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(5073), sqrt(3795), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), 7*sqrt(69), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (34, 17, 44) and its norm = 7*sqrt(69)
+Forming cone with 276 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 380 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(5073), sqrt(3795), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(3514), sqrt(4409), sqrt(6054), sqrt(4886), sqrt(4789), sqrt(3539), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (24, 27, 47) and its norm = sqrt(3514)
+Forming cone with 275 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 381 - Original number of extremal rays: 5, Now: 29
+Number of Extremal Generators NOT contained in C: 25
+Vector norms: [sqrt(5073), sqrt(3795), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(4409), sqrt(3966), sqrt(6054), sqrt(4886), sqrt(4789), sqrt(3539), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (35, 17, 45) and its norm = sqrt(3539)
+Forming cone with 274 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 382 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(5073), sqrt(3795), sqrt(4261), sqrt(3553), sqrt(4330), sqrt(4409), sqrt(3966), sqrt(6054), sqrt(4886), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (15, 32, 48) and its norm = sqrt(3553)
+Forming cone with 273 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 383 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(5073), sqrt(3795), sqrt(4261), sqrt(4330), sqrt(4409), sqrt(3966), sqrt(6054), sqrt(4886), sqrt(10186), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), 7*sqrt(74), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (41, -3, 44) and its norm = 7*sqrt(74)
+Forming cone with 272 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 384 - Original number of extremal rays: 5, Now: 28
+Number of Extremal Generators NOT contained in C: 24
+Vector norms: [sqrt(5073), sqrt(3795), sqrt(4261), sqrt(4330), sqrt(4409), sqrt(1355), sqrt(3966), sqrt(6054), sqrt(4886), sqrt(10186), sqrt(4789), sqrt(3970), sqrt(4402), sqrt(3701), sqrt(3954), sqrt(3981), 3*sqrt(451), sqrt(4181), 3*sqrt(718), 3*sqrt(563), sqrt(5714), 7*sqrt(157), sqrt(5326), sqrt(9106)]
+Vector to remove = (25, -1, 27) and its norm = sqrt(1355)
+Forming cone with 271 vectors in Hilbert Basis of D + Extremal Generators of C.

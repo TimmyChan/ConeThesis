@@ -1,0 +1,42 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(-3, 5), (5, 9)]
+...
+
+(1, 5) is in the Cone.
+(2, 5) is in the Cone.
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (-3, 5), A ray in the direction (5, 9))
+Vector Outside of Inner Cone: (-7, 3)
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-7, 3), A ray in the direction (5, 9))
+=============Initialization Complete============
+Hilbert Basis of D: [(-7, 3), (-2, 1), (-1, 1), (0, 1), (1, 2), (5, 9)]
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+Step 2... Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(2)]
+Vector to remove = (-1, 1) and its norm = sqrt(2)
+Forming cone with 5 vectors in Hilbert Basis of D + Extremal Generators of C.
+Step 3... Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-3, 5], [5, 9]]
+ Goal Cone = 
+[[-3, 5], [5, 9]]
+ Initial Cone = 
+[[-7, 3], [5, 9]]
+	Finished in 3 steps. 
+
+Number of Tests: 1 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------
+
+TRIAL 1/1: test # 1 - 1
+TRIAL STATS:

@@ -2,7 +2,7 @@
 
 from sage.all import *
 #import PyNormaliz 
-from InitialConditions import *
+from Init import *
 from TopDown import *
 from BottomUp import *
 from Output import * 

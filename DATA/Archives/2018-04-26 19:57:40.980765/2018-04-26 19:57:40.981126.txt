@@ -1,0 +1,109 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(0, 1), (-5, 8), (-1, 9), (-1, 2), (-1, 8), (-7, 8), (4, 3), (3, 1), (2, 1), (1, 9)]
+...
+
+(0, 1) is in the Cone.
+(0, 1) is in the Cone.
+(0, 1) is in the Cone.
+(2, 1) is in the Cone.
+(-1, 5) is in the Cone.
+(-1, 3) is in the Cone.
+(0, 1) is in the Cone.
+(0, 1) is in the Cone.
+(-5, 8) is in the Cone.
+(-7, 9) is in the Cone.
+(3, 5) is in the Cone.
+(1, 10) is in the Cone.
+(5, 8) is in the Cone.
+(-1, 2) is in the Cone.
+(3, 8) is in the Cone.
+(5, 2) is in the Cone.
+(7, 5) is in the Cone.
+(-1, 3) is in the Cone.
+(4, 7) is in the Cone.
+(0, 1) is in the Cone.
+(5, 2) is in the Cone.
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (-7, 8), A ray in the direction (3, 1))
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-7, 1), A ray in the direction (4, 1))
+=============Initialization Complete============
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [5*sqrt(2), sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5*sqrt(2)]
+Vector to remove = (-7, 1) and its norm = 5*sqrt(2)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(37)]
+Vector to remove = (-6, 1) and its norm = sqrt(37)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (-4, 1) and its norm = sqrt(17)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 6 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 7 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(2)]
+Vector to remove = (-1, 1) and its norm = sqrt(2)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+Finished Step 8 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-7, 8], [3, 1]]
+ Goal Cone = 
+[[-7, 8], [3, 1]]
+ Initial Cone = 
+[[-7, 1], [4, 1]]
+	Finished in 8 steps. 
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------
+
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermediate Cone not in D
+ERROR: Intermed

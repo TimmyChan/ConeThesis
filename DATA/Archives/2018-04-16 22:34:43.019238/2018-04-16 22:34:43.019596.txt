@@ -1,0 +1,102 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(2, 3), (-2, 3), (-3, 2), (6, 7), (-4, 3), (-2, 1), (4, 1), (-8, 9), (-2, 1), (-2, 1)]
+...
+
+(2, 7) is in the Cone.
+(-5, 4) is in the Cone.
+(5, 4) is in the Cone.
+(2, 1) is in the Cone.
+(-3, 4) is in the Cone.
+(-9, 7) is in the Cone.
+(1, 2) is in the Cone.
+(10, 9) is in the Cone.
+(0, 1) is in the Cone.
+(-7, 8) is in the Cone.
+(1, 1) is in the Cone.
+(0, 1) is in the Cone.
+(5, 9) is in the Cone.
+(-4, 3) is in the Cone.
+(2, 7) is in the Cone.
+(3, 2) is in the Cone.
+(4, 5) is in the Cone.
+(-3, 4) is in the Cone.
+(1, 1) is in the Cone.
+(6, 7) is in the Cone.
+(1, 1) is in the Cone.
+(1, 1) is in the Cone.
+(8, 9) is in the Cone.
+(1, 7) is in the Cone.
+(1, 2) is in the Cone.
+(-3, 7) is in the Cone.
+(1, 5) is in the Cone.
+(3, 2) is in the Cone.
+(3, 7) is in the Cone.
+(-4, 5) is in the Cone.
+(10, 3) is in the Cone.
+(-4, 5) is in the Cone.
+(-7, 10) is in the Cone.
+(0, 1) is in the Cone.
+(2, 1) is in the Cone.
+(-4, 9) is in the Cone.
+(-2, 3) is in the Cone.
+(1, 2) is in the Cone.
+(1, 5) is in the Cone.
+(3, 1) is in the Cone.
+(1, 5) is in the Cone.
+(2, 9) is in the Cone.
+(-8, 7) is in the Cone.
+(1, 3) is in the Cone.
+(-4, 9) is in the Cone.
+(-9, 8) is in the Cone.
+(-5, 3) is in the Cone.
+(-9, 7) is in the Cone.
+(-1, 2) is in the Cone.
+(4, 5) is in the Cone.
+(4, 1) is in the Cone.
+(-1, 2) is in the Cone.
+(2, 7) is in the Cone.
+(5, 9) is in the Cone.
+(1, 1) is in the Cone.
+(1, 1) is in the Cone.
+(-1, 2) is in the Cone.
+(-4, 3) is in the Cone.
+(1, 1) is in the Cone.
+(7, 10) is in the Cone.
+(-7, 5) is in the Cone.
+(1, 3) is in the Cone.
+(8, 5) is in the Cone.
+(1, 3) is in the Cone.
+(-2, 5) is in the Cone.
+(-1, 1) is in the Cone.
+(-3, 2) is in the Cone.
+(-1, 1) is in the Cone.
+(-2, 3) is in the Cone.
+(1, 4) is in the Cone.
+(3, 1) is in the Cone.
+(3, 4) is in the Cone.
+(-5, 3) is in the Cone.
+(-1, 1) is in the Cone.
+(-5, 4) is in the Cone.
+(2, 3) is in the Cone.
+(-10, 7) is in the Cone.
+(5, 3) is in the Cone.
+(3, 2) is in the Cone.
+(3, 8) is in the Cone.
+(-7, 5) is in the Cone.
+(3, 4) is in the Cone.
+(5, 4) is in the Cone.
+(2, 3) is in the Cone.
+(-5, 4) is in the Cone.
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (-2, 1), A ray in the direction (4, 1))
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-9, 1), A ray in the direction (7, 1))
+=============Initialization Complete============
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(82), 5*sqrt(2)]
+Vector to remove = (7, 1) and its norm = 5*sqrt(2)
+Forming cone with 18 vectors in Hilbert Basis of D + Extremal Generators of C.

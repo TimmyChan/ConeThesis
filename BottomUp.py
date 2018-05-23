@@ -2,7 +2,7 @@ from sage.all import *
 from sage.misc import *
 #import PyNormaliz as PyNormaliz
 import numpy as np
-from InitialConditions import *
+from Init import *
 
 # Function takes on C, v: v is external to C
 # 	Returns a list of facets [f1,f2,...,fn], where each f_i is visible WRT v
