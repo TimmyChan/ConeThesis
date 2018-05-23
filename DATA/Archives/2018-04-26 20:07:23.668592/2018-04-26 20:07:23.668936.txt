@@ -1,7 +1,0 @@
-
-Verbose Run for Accuracy Verification:
-
-=============Initializing Experiment============
-Generating Cone with: 
-[(-10, 7), (-3, 7), (0, 1), (-2, 3), (-4, 3), (6, 5), (-8, 1), (-7, 2), (-7, 5), (3, 1)]
-...

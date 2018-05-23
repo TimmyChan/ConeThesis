@@ -1,6 +1,0 @@
-
-Verbose Run for Accuracy Verification:
-Number of Extremal Generators NOT contained in C: 1
-Vector norms: [1]
-Vector to remove = (1, 0) and its norm = 1
-Forming cone with 3 vectors in Hilbert Basis of D + Extremal Generators of C.
