@@ -1,185 +1,36 @@
-dimension = Saving Data to file "./DATA/3d experiment - 2018-04-06 18:08:37.636276.txt"
-Verbose Run for Accuracy Verification:
+#####################
+#  TESTING Init.py  #
+#####################
 
-=============Initializing Experiment============
-Generating Cone with: 
-[(8, -5, 5), (9, -5, 3), (-2, 1, 3)]
-...
-
-Extremal Generators of the Inner Cone: 
-(A ray in the direction (-2, 1, 3), A ray in the direction (8, -5, 5), A ray in the direction (9, -5, 3))
-Vector Outside of Inner Cone: (-6, 5, 3)
-Extremal Generators of the Outer Cone: 
-(A ray in the direction (-6, 5, 3), A ray in the direction (-2, 1, 3), A ray in the direction (8, -5, 5), A ray in the direction (9, -5, 3))
-=============Initialization Complete============
-Hilbert Basis of D: [(-6, 5, 3), (-5, 4, 3), (-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (-1, 1, 1), (0, 0, 1), (2, -1, 1), (3, -2, 4), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3)]
-Extremal generators not contained in C: [(-5, 4, 3), (-1, 1, 1)]
-Vector norms: [5*sqrt(2), sqrt(3)]
-Vector to remove = (-1, 1, 1) and its norm = sqrt(3)
-Forming new cone with: 
-[(-5, 4, 3), (-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (0, 0, 1), (2, -1, 1), (3, -2, 4), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 2... Original number of extremal rays: 3, Now: 5
-Extremal generators not contained in C: [(-5, 4, 3), (2, -1, 1)]
-Vector norms: [5*sqrt(2), sqrt(6)]
-Vector to remove = (2, -1, 1) and its norm = sqrt(6)
-Forming new cone with: 
-[(-5, 4, 3), (-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (-2, 2, 3), (-1, 1, 2), (0, 0, 1), (3, -2, 4), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 3... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(-5, 4, 3)]
-Vector norms: [5*sqrt(2)]
-Vector to remove = (-5, 4, 3) and its norm = 5*sqrt(2)
-Forming new cone with: 
-[(-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (-2, 2, 3), (-1, 1, 2), (0, 0, 1), (0, 1, 4), (1, 0, 3), (2, -1, 2), (2, 0, 5), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 4... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(-4, 3, 3), (-2, 2, 3), (2, 0, 5)]
-Vector norms: [sqrt(34), sqrt(17), sqrt(29)]
-Vector to remove = (-2, 2, 3) and its norm = sqrt(17)
-Forming new cone with: 
-[(-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (-1, 1, 2), (0, 0, 1), (0, 1, 4), (1, 0, 3), (2, -1, 2), (2, 0, 5), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 5... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(-4, 3, 3), (0, 1, 4), (2, 0, 5)]
-Vector norms: [sqrt(34), sqrt(17), sqrt(29)]
-Vector to remove = (0, 1, 4) and its norm = sqrt(17)
-Forming new cone with: 
-[(-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (-1, 1, 2), (0, 0, 1), (1, 0, 3), (2, -1, 2), (2, 0, 5), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 6... Original number of extremal rays: 3, Now: 5
-Extremal generators not contained in C: [(-4, 3, 3), (2, 0, 5)]
-Vector norms: [sqrt(34), sqrt(29)]
-Vector to remove = (2, 0, 5) and its norm = sqrt(29)
-Forming new cone with: 
-[(-4, 3, 3), (-3, 2, 3), (-2, 1, 3), (-1, 1, 2), (0, 0, 1), (1, 0, 3), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (9, -5, 3), (9, -4, 7), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 7... Original number of extremal rays: 3, Now: 5
-Extremal generators not contained in C: [(-4, 3, 3), (9, -4, 7)]
-Vector norms: [sqrt(34), sqrt(146)]
-Vector to remove = (-4, 3, 3) and its norm = sqrt(34)
-Forming new cone with: 
-[(-3, 2, 3), (-2, 1, 3), (-1, 1, 2), (0, 0, 1), (1, 0, 3), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (9, -5, 3), (9, -4, 7), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 8... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(-3, 2, 3), (-1, 1, 2), (9, -4, 7)]
-Vector norms: [sqrt(22), sqrt(6), sqrt(146)]
-Vector to remove = (-1, 1, 2) and its norm = sqrt(6)
-Forming new cone with: 
-[(-3, 2, 3), (-2, 1, 3), (0, 0, 1), (1, 0, 3), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (9, -5, 3), (9, -4, 7), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 9... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(-3, 2, 3), (1, 0, 3), (9, -4, 7)]
-Vector norms: [sqrt(22), sqrt(10), sqrt(146)]
-Vector to remove = (1, 0, 3) and its norm = sqrt(10)
-Forming new cone with: 
-[(-3, 2, 3), (-2, 1, 3), (-1, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 10... Original number of extremal rays: 3, Now: 7
-Extremal generators not contained in C: [(-3, 2, 3), (-1, 1, 3), (3, -1, 4), (9, -4, 7)]
-Vector norms: [sqrt(22), sqrt(11), sqrt(26), sqrt(146)]
-Vector to remove = (-1, 1, 3) and its norm = sqrt(11)
-Forming new cone with: 
-[(-3, 2, 3), (-2, 1, 3), (0, 0, 1), (1, 0, 4), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 11... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(-3, 2, 3), (3, -1, 4), (9, -4, 7)]
-Vector norms: [sqrt(22), sqrt(26), sqrt(146)]
-Vector to remove = (-3, 2, 3) and its norm = sqrt(22)
-Forming new cone with: 
-[(-2, 1, 3), (-1, 1, 4), (0, 0, 1), (1, 0, 4), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 12... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(-1, 1, 4), (3, -1, 4), (9, -4, 7)]
-Vector norms: [3*sqrt(2), sqrt(26), sqrt(146)]
-Vector to remove = (-1, 1, 4) and its norm = 3*sqrt(2)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (1, 0, 4), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 13... Original number of extremal rays: 3, Now: 6
-Extremal generators not contained in C: [(1, 0, 4), (3, -1, 4), (9, -4, 7)]
-Vector norms: [sqrt(17), sqrt(26), sqrt(146)]
-Vector to remove = (1, 0, 4) and its norm = sqrt(17)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (3, -1, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 14... Original number of extremal rays: 3, Now: 5
-Extremal generators not contained in C: [(3, -1, 4), (9, -4, 7)]
-Vector norms: [sqrt(26), sqrt(146)]
-Vector to remove = (3, -1, 4) and its norm = sqrt(26)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (5, -2, 5), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 15... Original number of extremal rays: 3, Now: 5
-Extremal generators not contained in C: [(5, -2, 5), (9, -4, 7)]
-Vector norms: [3*sqrt(6), sqrt(146)]
-Vector to remove = (5, -2, 5) and its norm = 3*sqrt(6)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (7, -3, 6), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), (12, -6, 7), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 16... Original number of extremal rays: 3, Now: 5
-Extremal generators not contained in C: [(7, -3, 6), (9, -4, 7)]
-Vector norms: [sqrt(94), sqrt(146)]
-Vector to remove = (7, -3, 6) and its norm = sqrt(94)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (8, -4, 5), (9, -5, 3), (9, -4, 7), (10, -5, 6), (12, -6, 7), (14, -7, 8), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 17... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(9, -4, 7)]
-Vector norms: [sqrt(146)]
-Vector to remove = (9, -4, 7) and its norm = sqrt(146)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (8, -4, 5), (9, -5, 3), (10, -5, 6), (12, -6, 7), (14, -7, 8), (16, -8, 9), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 18... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(16, -8, 9)]
-Vector norms: [sqrt(401)]
-Vector to remove = (16, -8, 9) and its norm = sqrt(401)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (8, -4, 5), (9, -5, 3), (10, -5, 6), (12, -6, 7), (14, -7, 8), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 19... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(14, -7, 8)]
-Vector norms: [sqrt(309)]
-Vector to remove = (14, -7, 8) and its norm = sqrt(309)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (8, -4, 5), (9, -5, 3), (10, -5, 6), (12, -6, 7), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 20... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(12, -6, 7)]
-Vector norms: [sqrt(229)]
-Vector to remove = (12, -6, 7) and its norm = sqrt(229)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (8, -4, 5), (9, -5, 3), (10, -5, 6), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 21... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(10, -5, 6)]
-Vector norms: [sqrt(161)]
-Vector to remove = (10, -5, 6) and its norm = sqrt(161)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (8, -4, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 22... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(8, -4, 5)]
-Vector norms: [sqrt(105)]
-Vector to remove = (8, -4, 5) and its norm = sqrt(105)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (6, -3, 4), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 23... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(6, -3, 4)]
-Vector norms: [sqrt(61)]
-Vector to remove = (6, -3, 4) and its norm = sqrt(61)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (4, -2, 3), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 24... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(4, -2, 3)]
-Vector norms: [sqrt(29)]
-Vector to remove = (4, -2, 3) and its norm = sqrt(29)
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (2, -1, 2), (3, -2, 4), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 25... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(2, -1, 2)]
-Vector norms: [3]
-Vector to remove = (2, -1, 2) and its norm = 3
-Forming new cone with: 
-[(-2, 1, 3), (0, 0, 1), (3, -2, 4), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 26... Original number of extremal rays: 3, Now: 4
-Extremal generators not contained in C: [(0, 0, 1)]
-Vector norms: [1]
-Vector to remove = (0, 0, 1) and its norm = 1
-Forming new cone with: 
-[(-2, 1, 3), (3, -2, 4), (5, -3, 3), (7, -4, 3), (8, -5, 5), (9, -5, 3), [-2L, 1L, 3L], [8L, -5L, 5L], [9L, -5L, 3L]]
-Step 27... Original number of extremal rays: 3, Now: 3
-
- Intermediate Cone = 
-[[-2, 1, 3], [8, -5, 5], [9, -5, 3]]
- Goal Cone = 
-[[-2, 1, 3], [8, -5, 5], [9, -5, 3]]
- Initial Cone = 
-[[-6, 5, 3], [-2, 1, 3], [8, -5, 5], [9, -5, 3]]
-	Finished in 27 steps. 
+----------------------------------------------------------------------
 
 
+----------------------------------------------------------------------
 
-Number of Tests: 1000 
-Vector Coordinate Bound: (+/-)10
-================================================================
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+#####################
+#  TESTING Init.py  #
+#####################
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
