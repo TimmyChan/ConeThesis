@@ -1,4 +1,4 @@
-# Computational Verification of the Cone Conjecture v0.1.0
+# Computational Verification of the Cone Conjecture
 
 Written and tested in Ubuntu 16.04.4 LTS (xenial). Used the development branch of SAGE also.
 
