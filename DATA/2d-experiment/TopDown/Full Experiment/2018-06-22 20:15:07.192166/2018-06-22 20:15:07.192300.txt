@@ -1,0 +1,770 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(-9, 10), (-1, 5), (-5, 2), (2, 1), (-5, 3), (3, 5), (-1, 1), (-10, 7), (0, 1), (-2, 1)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-3, 2], [3, 2]]
+Extremal Generators of the Outer Cone: 
+[[-5, 2], [2, 1]]
+=============Initialization Complete============
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(29), sqrt(5)]
+Vector to remove = (2, 1) and its norm = sqrt(5)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(29)]
+Vector to remove = (-5, 2) and its norm = sqrt(29)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-3, 2], [3, 2]]
+ Goal Cone = 
+[[-3, 2], [3, 2]]
+ Initial Cone = 
+[[-5, 2], [2, 1]]
+	Finished in 3 steps. 
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------
+
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(37), sqrt(10)]
+Vector to remove = (3, 1) and its norm = sqrt(10)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(37), sqrt(5)]
+Vector to remove = (2, 1) and its norm = sqrt(5)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(37)]
+Vector to remove = (-6, 1) and its norm = sqrt(37)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (-4, 1) and its norm = sqrt(17)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-3, 1], [10, 7]]
+ Goal Cone = 
+[[-3, 1], [10, 7]]
+ Initial Cone = 
+[[-6, 1], [3, 1]]
+	Finished in 5 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(101)]
+Vector to remove = (-10, 1) and its norm = sqrt(101)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(82)]
+Vector to remove = (-9, 1) and its norm = sqrt(82)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(65)]
+Vector to remove = (-8, 1) and its norm = sqrt(65)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5*sqrt(2)]
+Vector to remove = (-7, 1) and its norm = 5*sqrt(2)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(37)]
+Vector to remove = (-6, 1) and its norm = sqrt(37)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 6 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (-4, 1) and its norm = sqrt(17)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 7 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 8 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 5 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 9 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-3, 2], [1, 1]]
+ Goal Cone = 
+[[-3, 2], [1, 1]]
+ Initial Cone = 
+[[-10, 1], [1, 1]]
+	Finished in 9 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(74)]
+Vector to remove = (7, 5) and its norm = sqrt(74)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5]
+Vector to remove = (4, 3) and its norm = 5
+Forming cone with 5 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-1, 1], [1, 1]]
+ Goal Cone = 
+[[-1, 1], [1, 1]]
+ Initial Cone = 
+[[-1, 1], [7, 5]]
+	Finished in 2 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(109), sqrt(34)]
+Vector to remove = (5, 3) and its norm = sqrt(34)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(109)]
+Vector to remove = (-10, 3) and its norm = sqrt(109)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-8, 3], [3, 2]]
+ Goal Cone = 
+[[-8, 3], [3, 2]]
+ Initial Cone = 
+[[-10, 3], [5, 3]]
+	Finished in 3 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [5*sqrt(2), sqrt(34)]
+Vector to remove = (5, 3) and its norm = sqrt(34)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [5*sqrt(2), sqrt(13)]
+Vector to remove = (3, 2) and its norm = sqrt(13)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [5*sqrt(2), sqrt(2)]
+Vector to remove = (1, 1) and its norm = sqrt(2)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5*sqrt(2)]
+Vector to remove = (-7, 1) and its norm = 5*sqrt(2)
+Forming cone with 16 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(37)]
+Vector to remove = (-6, 1) and its norm = sqrt(37)
+Forming cone with 15 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 14 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 6 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (-4, 1) and its norm = sqrt(17)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 7 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-10, 3], [7, 8]]
+ Goal Cone = 
+[[-10, 3], [7, 8]]
+ Initial Cone = 
+[[-7, 1], [5, 3]]
+	Finished in 7 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(34)]
+Vector to remove = (-5, 3) and its norm = sqrt(34)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(13)]
+Vector to remove = (-3, 2) and its norm = sqrt(13)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-1, 1], [7, 3]]
+ Goal Cone = 
+[[-1, 1], [7, 3]]
+ Initial Cone = 
+[[-5, 3], [7, 3]]
+	Finished in 2 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(65)]
+Vector to remove = (-8, 1) and its norm = sqrt(65)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5*sqrt(2)]
+Vector to remove = (-7, 1) and its norm = 5*sqrt(2)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-6, 1], [1, 1]]
+ Goal Cone = 
+[[-6, 1], [1, 1]]
+ Initial Cone = 
+[[-8, 1], [1, 1]]
+	Finished in 2 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(10), sqrt(65)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(5), sqrt(65)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(2), sqrt(65)]
+Vector to remove = (-1, 1) and its norm = sqrt(2)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(65)]
+Vector to remove = (8, 1) and its norm = sqrt(65)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5*sqrt(2)]
+Vector to remove = (7, 1) and its norm = 5*sqrt(2)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(37)]
+Vector to remove = (6, 1) and its norm = sqrt(37)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 6 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (5, 1) and its norm = sqrt(26)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 7 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-5, 7], [4, 1]]
+ Goal Cone = 
+[[-5, 7], [4, 1]]
+ Initial Cone = 
+[[-3, 1], [8, 1]]
+	Finished in 7 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-2, 1], [3, 2]]
+ Goal Cone = 
+[[-2, 1], [3, 2]]
+ Initial Cone = 
+[[-3, 1], [3, 2]]
+	Finished in 1 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(85)]
+Vector to remove = (9, 2) and its norm = sqrt(85)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-1, 1], [10, 3]]
+ Goal Cone = 
+[[-1, 1], [10, 3]]
+ Initial Cone = 
+[[-1, 1], [9, 2]]
+	Finished in 2 steps. 
+TRIAL 1/100: test # 1 - 10
+TRIAL STATS:
+	Mean: 4.0	Median: 2.5	Mode: [2]
+	Min: 1	Max: 9 
+	Standard Deviation: 2.79
+----------------------------------------------------------------------
+
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (5, 1) and its norm = sqrt(26)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (3, 1) and its norm = sqrt(10)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-2, 7], [2, 1]]
+ Goal Cone = 
+[[-2, 7], [2, 1]]
+ Initial Cone = 
+[[-2, 7], [5, 1]]
+	Finished in 3 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(29), sqrt(149)]
+Vector to remove = (-5, 2) and its norm = sqrt(29)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(149)]
+Vector to remove = (10, 7) and its norm = sqrt(149)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(74)]
+Vector to remove = (7, 5) and its norm = sqrt(74)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5]
+Vector to remove = (4, 3) and its norm = 5
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-9, 4], [10, 9]]
+ Goal Cone = 
+[[-9, 4], [10, 9]]
+ Initial Cone = 
+[[-5, 2], [10, 7]]
+	Finished in 4 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(26), sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-4, 1], [3, 1]]
+ Goal Cone = 
+[[-4, 1], [3, 1]]
+ Initial Cone = 
+[[-5, 1], [4, 1]]
+	Finished in 2 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(29), sqrt(5)]
+Vector to remove = (2, 1) and its norm = sqrt(5)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(29), sqrt(2)]
+Vector to remove = (1, 1) and its norm = sqrt(2)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(29)]
+Vector to remove = (-5, 2) and its norm = sqrt(29)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-5, 3], [2, 3]]
+ Goal Cone = 
+[[-5, 3], [2, 3]]
+ Initial Cone = 
+[[-5, 2], [2, 1]]
+	Finished in 4 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(109), sqrt(29)]
+Vector to remove = (5, 2) and its norm = sqrt(29)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(109), sqrt(5)]
+Vector to remove = (2, 1) and its norm = sqrt(5)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(109)]
+Vector to remove = (-10, 3) and its norm = sqrt(109)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-1, 1], [9, 5]]
+ Goal Cone = 
+[[-1, 1], [9, 5]]
+ Initial Cone = 
+[[-10, 3], [5, 2]]
+	Finished in 5 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(5), sqrt(17)]
+Vector to remove = (-2, 1) and its norm = sqrt(5)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (3, 1) and its norm = sqrt(10)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (2, 1) and its norm = sqrt(5)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-5, 3], [6, 5]]
+ Goal Cone = 
+[[-5, 3], [6, 5]]
+ Initial Cone = 
+[[-2, 1], [4, 1]]
+	Finished in 4 steps. 
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(65)]
+Vector to remove = (7, 4) and its norm = sqrt(65)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(34)]
+Vector to remove = (5, 3) and its norm = sqrt(34)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(13)]
+Vector to remove = (3, 2) and its norm = sqrt(13)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-3, 4], [1, 1]]
+ Goal Cone = 
+[[-3, 4], [1, 1]]
+ Initial Cone = 
+[[-3, 4], [7, 4]]
+	Finished in 3 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(2), sqrt(53)]
+Vector to remove = (-1, 1) and its norm = sqrt(2)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(53)]
+Vector to remove = (7, 2) and its norm = sqrt(53)
+Forming cone with 15 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-9, 10], [3, 1]]
+ Goal Cone = 
+[[-9, 10], [3, 1]]
+ Initial Cone = 
+[[-1, 1], [7, 2]]
+	Finished in 2 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(85), sqrt(26)]
+Vector to remove = (5, 1) and its norm = sqrt(26)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(85), sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(85), sqrt(10)]
+Vector to remove = (3, 1) and its norm = sqrt(10)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(85)]
+Vector to remove = (-6, 7) and its norm = sqrt(85)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(61)]
+Vector to remove = (-5, 6) and its norm = sqrt(61)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(41)]
+Vector to remove = (-4, 5) and its norm = sqrt(41)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 6 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [5]
+Vector to remove = (-3, 4) and its norm = 5
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 7 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-2, 3], [2, 1]]
+ Goal Cone = 
+[[-2, 3], [2, 1]]
+ Initial Cone = 
+[[-6, 7], [5, 1]]
+	Finished in 7 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(34), sqrt(26)]
+Vector to remove = (5, 1) and its norm = sqrt(26)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(34), sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(34), sqrt(10)]
+Vector to remove = (3, 1) and its norm = sqrt(10)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(34)]
+Vector to remove = (-5, 3) and its norm = sqrt(34)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(13)]
+Vector to remove = (-3, 2) and its norm = sqrt(13)
+Forming cone with 6 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-9, 7], [2, 1]]
+ Goal Cone = 
+[[-9, 7], [2, 1]]
+ Initial Cone = 
+[[-5, 3], [5, 1]]
+	Finished in 5 steps. 
+TRIAL 2/100: test # 11 - 20
+TRIAL STATS:
+	Mean: 3.9	Median: 4.0	Mode: [4]
+	Min: 2	Max: 7 
+	Standard Deviation: 1.52
+----------------------------------------------------------------------
+
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(13)]
+Vector to remove = (2, 3) and its norm = sqrt(13)
+Forming cone with 5 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-1, 1], [5, 8]]
+ Goal Cone = 
+[[-1, 1], [5, 8]]
+ Initial Cone = 
+[[-1, 1], [2, 3]]
+	Finished in 1 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(10), sqrt(29)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(29)]
+Vector to remove = (5, 2) and its norm = sqrt(29)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(5)]
+Vector to remove = (2, 1) and its norm = sqrt(5)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-9, 4], [3, 2]]
+ Goal Cone = 
+[[-9, 4], [3, 2]]
+ Initial Cone = 
+[[-3, 1], [5, 2]]
+	Finished in 3 steps. 
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(26), sqrt(17)]
+Vector to remove = (4, 1) and its norm = sqrt(17)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(26), sqrt(10)]
+Vector to remove = (3, 1) and its norm = sqrt(10)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(26)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(17)]
+Vector to remove = (-4, 1) and its norm = sqrt(17)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(10)]
+Vector to remove = (-3, 1) and its norm = sqrt(10)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-2, 1], [5, 2]]
+ Goal Cone = 
+[[-2, 1], [5, 2]]
+ Initial Cone = 
+[[-5, 1], [4, 1]]
+	Finished in 5 steps. 
