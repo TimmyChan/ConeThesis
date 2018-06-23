@@ -74,3 +74,14 @@ Implements the Top Down Algorithm as described in "The Poset of Rational Cones"
 		Takes Hilbert Basis of D, removes shortest extremal ray of D not contained in C
 		Takes conical hull of vectors remaining from previous step, return this intermediate cone.
 
+Changelog:
+5/20/18 - v0.9 complete, passed Dr. Gubeladze's verification of homogenous cases for dimension 2 and 3.
+Before 5/20
+v0.8 I/O improvements, allows for inputting custom inner/outer cones with error checking.
+v0.7 Fixed import issues and began using fork of SAGE that includes PyNormaliz2
+v0.6 I/O improvements, allows for choosing which program and dimension with error checking
+v0.5 Completed outputing data to file instead of to terminal
+v0.4 Combined TopDown and BottomUp into one experiment 
+v0.3 Added BottomUp Algorithm
+v0.2 Generalized TopDown Algorithm for any dimensions > 2
+v0.1 Added TopDown Algorithm for dimensions 3, 4 and 5.
