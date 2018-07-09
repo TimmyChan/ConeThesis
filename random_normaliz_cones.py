@@ -10,6 +10,8 @@ def gcd(a,b):
 		int: Greatest Common Divisor of a and b.
 	""" 
     return abs(a) if b==0 else GCD(b, a%b)
+
+
 def gcd_of_list(args):
 	"""Greatest Common Divisor of a list of integers
 
@@ -21,11 +23,12 @@ def gcd_of_list(args):
 	"""
     return reduce(GCD, args)
 
+
 def cone_containment(C,D):
 	"""Verifies if cone C is contained in (or equals to) of D
 	Args:
-		C (sage.geometry.polyhedron): Cone with Normaliz Backend
-		D (sage.geometry.polyhedron): Cone with Normaliz Backend
+		C (SAGE.geometry.Polyhedron): Cone with Normaliz Backend
+		D (SAGE.geometry.Polyhedron): Cone with Normaliz Backend
 	Returns: 
 		sofar (boolean): True for C contained in D, False otherwise.
 	"""
@@ -49,6 +52,7 @@ def shortest_vector(vectorlist):
     	return min(vectorlist, key = lambda x: x.norm())
     except:
     	return None 
+
 
 def longest_vector(vectorlist):
 	"""Given a list of SAGE vectors, return longest WRT Euclidean norm.
@@ -75,14 +79,61 @@ def makePrimitive(vectlist):
     primvectlist = [(i / gcd) for i in vectlist] 
     return vector(primvectlist)
 
-def generateRandomVector(dim, RMIN, RMAX, verbose=False):
-    vectlist  = [randint(RMIN,RMAX) for i in range(dim-1)]
-    vectlist.append(randint(1,RMAX))
-    # in testing, so currently ast digit is always 1
-    #vectlist.append(1)
 
-    
-    vect = makePrimitive(vectlist)
-    #verboseprint("returning {}".format(vect))
+def generateRandomVector(dim, rmax=10):
+	"""Generate a random vector of the form (x_1, x_2, ..., x_(d-1), x_d)
+	where each x_i is in the interval [-rmax,rmax] except x_d which is in [1,rmax]
+	Args:
+		dim (int): dimension of the ambient space, number of entries in vector
+		rmax (int): max number for random number generator
+	Returns:
+	"""
+	rmin = -rmax 
+    vectlist  = [randint(rmin,rmax) for i in range(dim-1)]	
+    # create a list d-1 of random numbers 
+    vectlist.append(randint(1,RMAX))	# append the last entry
+    vect = makePrimitive(vectlist)		# 
     return vect
  
+
+def generateCone(dim, rmax, numgen=10, file=None, verbose=False):
+	""" Generates a random SAGE polyhedral cone C with Normaliz backend
+	where C is pointed, proper,full dimensional and lies strictly in 
+	the halfspace x_d > 0.
+	Args:
+		dim (int): dimension of the ambient space, number of entries in vector
+		rmax (int): max number for random number generator
+		numgen (int): number of generators. (Default = 10)
+		file (FILE): for outputting data will migrate to JSON
+		verbose (boolean): option for verbose mode
+	Returns:
+		Temp (SAGE.geometry.Polyhedron): SAGE cone object with Normaliz backend. 
+	"""
+    # Verbose option; 
+    if verbose:
+        def verboseprint(*args):
+            for arg in args:
+                print arg,
+                if FILE <> None:
+                    FILE.write("\n"+str(arg))
+            print
+    else:
+        verboseprint = lambda *a: None  # default verbose print does nothing
+
+
+    if numgen < dim: 			# catch: if numgen < dim, guarenteed not full dimensional. 
+        numgen = int(dim) + 1 	# force numgen to have at least one more than the dimension.
+
+    vects = [generateRandomVector(dim,rmax) for i in range(numgen)] # Empty list of vectors
+    Temp = Polyhedron(rays=[vector(v) for v in vects],backend='normaliz')
+        
+    while (not Temp.is_full_dimensional()): 
+    #keep looping until we have a full dimensional cone. 
+        vects.append(generateRandomVector(dim,rmax))
+        Temp = Polyhedron(rays=[vector(v) for v in vects],
+    					  backend='normaliz')
+        # keep tacking on random vectors, eventually the convex hull will be full dimensional
+
+    return Temp
+
+if __name__ == "__main__":
