@@ -92,7 +92,7 @@ def generate_random_vector(dim, rmax=10):
 	vectlist  = [randint(rmin,rmax) for i in range(dim-1)]	
 	# create a list d-1 of random numbers 
 	vectlist.append(randint(1,rmax))	# append the last entry
-	vect = makePrimitive(vectlist)		# 
+	vect = make_primitive(vectlist)		# 
 	return vect
  
 
@@ -125,16 +125,17 @@ def generate_cone(dim, rmax=10, numgen=10, file=None, verbose=False):
 		numgen = int(dim) + 1 	# force numgen to have at least one more than the dimension.
 
 	vects = [generate_random_vector(dim,rmax) for i in range(numgen)] # Empty list of vectors
-	Temp = Polyhedron(rays=[vector(v) for v in vects],backend='normaliz')
+	temp = Polyhedron(rays=[vector(v) for v in vects],backend='normaliz')
+	# conical hull of vectors in list vects.
 		
-	while (not Temp.is_full_dimensional()): 
-	#keep looping until we have a full dimensional cone. 
-		vects.append(generateRandomVector(dim,rmax))
-		Temp = Polyhedron(rays=[vector(v) for v in vects],
+	while (not temp.is_full_dimensional()): 
+		#keep looping until we have a full dimensional cone. 
+		vects.append(generate_random_vector(dim,rmax))
+		temp = Polyhedron(rays=[vector(v) for v in vects],
 						  backend='normaliz')
 		# keep tacking on random vectors, eventually 
 		# the convex hull will be full dimensional
-	return Temp
+	return temp
 
 def generate_inner_cone(outer, rmax=10, numgen=10):
 	"""Generates a full dimensional cone that is contained by outer.
@@ -145,11 +146,32 @@ def generate_inner_cone(outer, rmax=10, numgen=10):
 	Returns:
 		inner (SAGE.geometry.Polyhedron): Inner Cone contained by outer cone
 	"""
-
+	dim = outer.dimension()
+	# store the dimension of the outer cone
+	vectlist = []
+	# empty list to house the generator of cones
+	while len(vectlist) < numgen:
+		temp_vect = generate_random_vector(dim, rmax)
+		if outer.contains(temp_vect):
+			vectlist.append(temp_vect)
+	inner = Polyhedron(rays=[vector(v) for v in vectlist],
+					   backend='normaliz')		
+	while not inner.is_full_dimensional():
+		#keep looping until we have a full dimensional cone. 
+		temp_vect = generate_random_vector(dim, rmax)
+		if outer.contains(temp_vect):
+			vectlist.append(temp_vect)
+		inner = Polyhedron(rays=[vector(v) for v in vectlist],
+						  backend='normaliz')
+		# keep tacking on random vectors, eventually 
+		# the convex hull will be full dimensional
+	return inner
 
 if __name__ == "__main__":
 	for i in range(3):
 		print("Generating Cone for dimension {}:".format(i+2))
-		Cone = generate_cone(i+2, 10)
-		print("\tCone has generators: \n\t{}".format(Cone.rays_list()))
+		test_outer_cone = generate_cone(i+2, 10)
+		test_inner_cone = generate_inner_cone(test_outer_cone)
+		print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
+		print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
 
