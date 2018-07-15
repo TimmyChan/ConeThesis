@@ -225,6 +225,9 @@ def extremal_generators_outside_inner_cone(inner, outer):
 
 	return ext_gens_final 
 
+##################
+# Test Code Here #
+##################
 
 if __name__ == "__main__":
 	for i in range(3):

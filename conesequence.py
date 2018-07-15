@@ -1,12 +1,6 @@
 """ConeSequence
 
 This module contains the an object that will contain a sequence of cones.
-
-Attributes:
-	outer_cone (SAGE.geometry.Polyhedron): Normaliz backend cone
-	inner_cone (SAGE.geometry.Polyhedron): Normaliz backend cone,
-											contained inside outer_cone.
-
 """
 
 import cone_tools
@@ -31,12 +25,11 @@ class ConeSequence(object):
 		outer_cone (SAGE.geometry.Polyhedron): A outer cone
 		inner_cone (SAGE.geometry.Polyhedron): An inner cone
 		top_sequence (list of SAGE.geometry.Polyhedron): Begins with outer_cone
-		bottom_sequence (liset of SAGE.geometry.Polyhedron): Begins with inner_cone
+		bottom_sequence (list of SAGE.geometry.Polyhedron): Begins with inner_cone
+		cone_sequence (list of SAGE.geometry.Polyhedron): Begins empty until glue()
 	"""
 	def __init__(self,inner,outer,rmax=10):
-		"""Initiate using cones, then initialize data
-
-		"""
+		"""Initiate using cones, then initialize data	"""
 		self.outer_cone = outer
 		self.inner_cone = inner
 		self.top_sequence = [outer]
@@ -44,48 +37,61 @@ class ConeSequence(object):
 		self.sequence_complete = False
 		self.cone_sequence = []
 
-	def get_inner_cone(self):
-		""" Returns actual inner cone
-		Args:
-		Returns: 
-			self.inner_cone (SAGE.geometry.Polyhedron)
-			"""
-		return self.inner_cone
-
-	def inner_cone_rays(self):
-		""" Returns a list of extremal generators of inner_cone
-		Args:
-		Returns: 
-			self.inner_cone.rays_list()
-		"""
-		return self.inner_cone.rays_list()
-
-	def get_outer_cone(self):
-		""" Returns actual outer cone
-		Args:
-		Returns: 
-			self.outer_cone (SAGE.geometry.Polyhedron)
-			"""
-		return self.outer_cone
-
-	def outer_cone_rays(self):
-		""" Returns a list of extremal generators of outer_cone
-		Args:
-		Returns: 
-			self.outer_cone.rays_list()
-		"""
-		return self.outer_cone.rays_list()
 
 	def append_top(self, somecone):
 		""" Appends a cone to the top sequence """
-		top_sequence.append(somecone)
+		self.top_sequence.append(somecone)
 
 	def append_bottom(self, somecone):
 		""" Appends a cone to the bottom sequence """
-		bottom_sequence.append(somecone)
+		self.bottom_sequence.append(somecone)
+
+	def number_of_steps_completed(self):
+		""" Returns the number of steps """
+		if self.sequence_complete:
+			return len(self.cone_sequence) - 2  
+		else:
+			return len(self.top_sequence) + len(self.bottom_sequence) - 2 # return the 
 
 	def check_complete(self):
-		
+		""" Checks if the sequence is complete 
+		1) verify the poset conditions on the last entries of
+			top_sequence and bottom_sequence.
+		2) if the poset condition is met, glue the bottom_sequence and 
+			top_sequence together into cone_sequence.
+		Args: Nothing
+		Returns: Nothing.
+		"""
+		# get the index of the last element of each sequence.
+		top_index = len(self.top_sequence) - 1
+		bottom_index = len(self.bottom_sequence) - 1
+		# sequence is complete if the poset condition is met for the two intermediate cones
+		self.sequence_complete = poset_condition_verification(self.bottom_sequence[bottom_index],
+										self.top_sequence[top_index])
+		# if the sequence is complete, we should glue them together.
+		if self.sequence_complete:
+			self.glue()
+			
+	def glue(self):
+		""" Glue bottom_sequence and top_sequence and store into 
+		cone_sequence
+
+		1) Check if sequence_complete flag is true; 
+		2) if yes, join the bottom_sequence and top_sequence into cone_sequence
+		so that cone_sequence begins with bottom_sequence, then top_sequence in reverse order
+		"""
+		if self.sequence_complete:
+			# get the index of the last element of each sequence.
+			top_index = len(self.top_sequence) - 1
+			bottom_index = len(self.bottom_sequence) - 1
+			# If we run bottom up or top down purely, one of the sequence
+			# ends with inner_cone or outer_cone, creating an overlap.
+			# if the sequence's ends are the same cone, just pop one WLOG
+			if self.bottom_sequence[bottom_index] == self.top_sequence[top_index]:
+				self.top_sequence.pop() # Remove one of the repeated cones
+ 
+			# if we end up with some different cones:
+			self.cone_sequence = self.bottom_sequence + self.top_sequence.reverse()
 
 
 if __name__ == "__main__":
