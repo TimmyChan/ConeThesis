@@ -81,22 +81,27 @@ def make_primitive(vectlist):
 
 
 def generate_random_vector(dim, rmax=10):
-	"""Generate a random vector of the form (x_1, x_2, ..., x_(d-1), x_d)
-	where each x_i is in the interval [-rmax,rmax] except x_d which is in [1,rmax]
+	""" Generate a random vector in Z^d
 	Args:
-		dim (int): dimension of the ambient space, number of entries in vector
-		rmax (int): max number for random number generator
+		dim (int): ambient dimension
+		rmax (int): upperbound for random number generator
 	Returns:
+		vect (SAGE vector): random vector of the form (x_1,...,x_(n-1),x_n)
+		where -rmax < x_1,...,x_(n-1) < rmax
+		and 1 < x_n < rmax.
+		This guarentees that the cones generated with this vector lie within
+		the halfspace x_n > 0, so forces all cones generated this way to be pointed.
 	"""
-	rmin = -rmax 
-	vectlist  = [randint(rmin,rmax) for i in range(dim-1)]	
-	# create a list d-1 of random numbers 
-	vectlist.append(randint(1,rmax))	# append the last entry
-	vect = make_primitive(vectlist)		# 
+	vectlist  = [randint(-rmax,rmax) for i in range(dim-1)]
+	# make the first n-1 entries
+	vectlist.append(randint(1,rmax))
+	# append the last entry  
+	vect = makePrimitive(vectlist) 
+	# make a primative vector and return it.
 	return vect
  
 
-def generate_cone(dim, rmax=10, numgen=10, file=None, verbose=False):
+def generate_cone(dim, rmax=10, numgen=10):
 	""" Generates a random SAGE polyhedral cone C with Normaliz backend
 	where C is pointed, proper,full dimensional and lies strictly in 
 	the halfspace x_d > 0.
@@ -104,23 +109,9 @@ def generate_cone(dim, rmax=10, numgen=10, file=None, verbose=False):
 		dim (int): dimension of the ambient space, number of entries in vector
 		rmax (int): max number for random number generator
 		numgen (int): number of generators. (Default = 10)
-		file (FILE): for outputting data will migrate to JSON
-		verbose (boolean): option for verbose mode
 	Returns:
 		Temp (SAGE.geometry.Polyhedron): SAGE cone object with Normaliz backend. 
 	"""
-	# Verbose option; 
-	if verbose:
-		def verboseprint(*args):
-			for arg in args:
-				print arg,
-				if FILE <> None:
-					FILE.write("\n"+str(arg))
-			print
-	else:
-		verboseprint = lambda *a: None  # default verbose print does nothing
-
-
 	if numgen < dim: 			# catch: if numgen < dim, guarenteed not full dimensional. 
 		numgen = int(dim) + 1 	# force numgen to have at least one more than the dimension.
 
@@ -166,6 +157,74 @@ def generate_inner_cone(outer, rmax=10, numgen=10):
 		# keep tacking on random vectors, eventually 
 		# the convex hull will be full dimensional
 	return inner
+
+def poset_condition_verification(C,D):
+	""" Verifies if the Poset condition is met by C, D 
+	Default behavior for same cone given is to return True.
+	We do this by checking the hilbert basis of C, then D,
+	and verify that:
+		1) One or less extremal generator of D is outside C, call this v
+		2) Hilbert basis of D take away v should be a subset of
+			the Hilbert basis of C.
+	Args: 
+		C (SAGE.geometry.Polyhedron): "inner" cone
+		D (SAGE.geometry.Polyhedron): "outer" cone
+	Returns: 
+		poset_condition (Boolean): 	True if C, D satisify the poset condition
+										or if they're the same cone;
+									False otherwise.
+	TODO:
+		Maybe make this return a tuple, so that the hilbert basis calculation can be saved.
+	"""
+
+	# Computing Hilbert basis of C and D:
+	HilbC = list(C.integral_points_generators()[1])
+	HilbD = list(D.integral_points_generators()[1])
+
+	# if they're the same cone just return true...
+	if C == D:
+		return True
+	# Finding extremal generator of D not in C
+	v = extremal_generators_outside_inner_cone(C,D)
+	
+	if len(v) > 1:
+		# if there's more than one extremal generator outside of C, 
+		# this cannot satisify the poset condition.
+		return False
+	# Removing the extremal generator (should be just one) from HilbD
+	HilbD.remove(v[0])
+
+	# Assume that the poset condition is satisified at this point, then
+	# loop through each vector in the Hilbert basis of D, 
+	poset_condition = True
+	for vect in HilbD:
+		# the poset condition will remain true as long as 
+		# each vect in Hilbert basis of D is also
+		# contained in the Hilbert basis of D
+		poset_condition = poset_condition and (vect in HilbC) 
+	
+	return poset_condition
+
+def extremal_generators_outside_inner_cone(inner, outer):
+	""" Given inner, outer cone pair return extremal generators of outer cone
+		not contained by inner cone
+	Args:
+		inner (SAGE.geometry.Polyhedron): cone of dimension d
+		outer (SAGE.geometry.Polyhedron): contains inner cone of same ambient dimension
+	Returns:
+		ext_gens_final (List of SAGE vectors): list of extremal generators not in inner cone.
+	"""
+	# grab the outer cone's extremal generators and loop through each one:
+	ext_gens = outer.rays_list()
+	for r in outer.rays_list():
+		# if r is inside of inner cone, discard it.
+		if (inner.contains(r)):
+			ext_gens.remove(r)
+	# convert the lists into vectors			
+	ext_gens_final = [vector(i for i in v) for v in ext_gens]
+
+	return ext_gens_final 
+
 
 if __name__ == "__main__":
 	for i in range(3):
