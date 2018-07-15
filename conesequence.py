@@ -12,7 +12,8 @@ class ConeSequence(object):
 
 		C = C_0 < ... < C_n = D
 
-	can be "grown" from two ends, the tail or the head. 
+	can be "grown" from two ends, the tail or the head so that
+
 	bottom_sequence: C = C_0 < C_1 < ... 
 	top_sequence: D = D_0 > D_1 > ...
 	
@@ -103,8 +104,8 @@ if __name__ == "__main__":
 		inner = cone_tools.generate_inner_cone(outer)
 
 		trial = ConeSequence(inner,outer)
-		print("The inner cone has generators: \n{}".format(trial.inner_cone_rays()))
-		print("The outer cone has generators: \n{}".format(trial.outer_cone_rays()))
+		print("The inner cone has generators: \n{}".format(trial.inner_cone.rays_list()))
+		print("The outer cone has generators: \n{}".format(trial.outer_cone.rays_list()))
 
 
 

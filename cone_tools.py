@@ -96,7 +96,7 @@ def generate_random_vector(dim, rmax=10):
 	# make the first n-1 entries
 	vectlist.append(randint(1,rmax))
 	# append the last entry  
-	vect = makePrimitive(vectlist) 
+	vect = make_primitive(vectlist) 
 	# make a primative vector and return it.
 	return vect
  
