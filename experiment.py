@@ -7,6 +7,7 @@ experimental method used (top_down vs bottom_up vs manual).
 """
 
 from cone_sequence import ConeSequence
+import cone_tools
 import experiment_io_tools
 
 #suggested number of trials and random number generator cap
@@ -45,8 +46,8 @@ class Experiment(object):
 		else:
 			self.rmax = 0
 			self.number_of_trials = 1
-			user_inner, user_outer = self.manual_input() 
-			
+			self.trial.append(ConeSequence(self.manual_input()))
+		
 
 
 	def ask_random_or_input(self):
@@ -83,8 +84,17 @@ class Experiment(object):
 					print("Please enter a positive integer...")
 			return numtrials
 
+
 	def manual_input(self):
-		""" prompts to input vectors for the cones
+		""" prompts to input cones
 		Args: none
-		Returns: 
+		Returns: user_inner, user_outer
+			user_inner (SAGE.geometry.Polyhedron)
+			user_outer (SAGE.geometry.Polyhedron)
+		"""
+
+	def vector_input(self):
+		""" Prompts user to input a vector.
+		Args: none
+		Returns: integer vector
 		"""
