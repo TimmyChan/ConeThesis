@@ -2,9 +2,8 @@
 cone conjecture experimet.
 """
 
-'''
-http://code.activestate.com/recipes/577058/
-'''
+
+
 import sys
 
 def query_yes_no(question, default="yes"):
@@ -16,6 +15,8 @@ def query_yes_no(question, default="yes"):
         an answer is required of the user).
 
     The "answer" return value is True for "yes" or False for "no".
+
+    Source: http://code.activestate.com/recipes/577058/)
     """
     valid = {"yes": True, "y": True, "ye": True,
              "no": False, "n": False}

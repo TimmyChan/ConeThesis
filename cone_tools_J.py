@@ -1,20 +1,8 @@
+#!/usr/bin/env sage
 """ Contains methods required to generate cones randomly."""
-#!/usr/bin/env sage -python
 
 import sys
-from sage.all import *
-
-
-# Functions used to generate a primitive rational vector
-def gcd(a,b):
-	"""Greatest Common Divisor using Euclidean Algorithm
-	Args: 
-		a (int): some integer
-		b (int): some integer
-	Returns: 
-		int: Greatest Common Divisor of a and b.
-	""" 
-	return abs(a) if b==0 else gcd(b, a%b)
+import sage.all
 
 
 def gcd_of_list(args):
@@ -25,7 +13,7 @@ def gcd_of_list(args):
 	Returns:
 		int: Greatest Common Divisor of args.
 	"""
-	return reduce(gcd, args)
+	return reduce(sage.all.gcd, args)
 
 
 def cone_containment(C,D):
@@ -96,9 +84,9 @@ def generate_random_vector(dim, rmax=10):
 		This guarentees that the cones generated with this vector lie within
 		the halfspace x_n > 0, so forces all cones generated this way to be pointed.
 	"""
-	vectlist  = [randint(-rmax,rmax) for i in range(dim-1)]
+	vectlist  = [sage.all.randint(-rmax,rmax) for i in range(dim-1)]
 	# make the first n-1 entries
-	vectlist.append(randint(1,rmax))
+	vectlist.append(sage.all.randint(1,rmax))
 	# append the last entry  
 	vect = make_primitive(vectlist) 
 	# make a primative vector and return it.
@@ -120,13 +108,13 @@ def generate_cone(dim, rmax=10, numgen=10):
 		numgen = int(dim) + 1 	# force numgen to have at least one more than the dimension.
 
 	vects = [generate_random_vector(dim,rmax) for i in range(numgen)] # Empty list of vectors
-	temp = Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
+	temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
 	# conical hull of vectors in list vects.
 		
 	while (not temp.is_full_dimensional()): 
 		#keep looping until we have a full dimensional cone. 
 		vects.append(generate_random_vector(dim,rmax))
-		temp = Polyhedron(rays=[sage.all.vector(v) for v in vects],
+		temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],
 						  backend='normaliz')
 		# keep tacking on random vectors, eventually 
 		# the convex hull will be full dimensional
@@ -149,14 +137,14 @@ def generate_inner_cone(outer, rmax=10, numgen=10):
 		temp_vect = generate_random_vector(dim, rmax)
 		if outer.contains(temp_vect):
 			vectlist.append(temp_vect)
-	inner = Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
+	inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
 					   backend='normaliz')		
 	while not inner.is_full_dimensional():
 		#keep looping until we have a full dimensional cone. 
 		temp_vect = generate_random_vector(dim, rmax)
 		if outer.contains(temp_vect):
 			vectlist.append(temp_vect)
-		inner = Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
+		inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
 						  backend='normaliz')
 		# keep tacking on random vectors, eventually 
 		# the convex hull will be full dimensional
