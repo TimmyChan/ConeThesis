@@ -5,7 +5,25 @@ This module contains the an object that will contain a sequence of cones.
 
 import cone_tools
 
-class ConeSequence(object):
+class TimmyCone(object):
+	""" A data structure to hold a cone and its hilbert basis
+	Attributes:
+		cone (sage.all.Polyhedron): the cone object to be stored
+		generation_step (int):		step in the generation process
+		algorithm_used (str):		"i" = initial step
+									"t" = top down
+									"b" = bottom up
+		hilbert_basis (list of lists): Hilbert basis of cone
+	"""
+	def __init__(self,cone,generation_step, algorithm_used, hilbert_basis=None)
+		self.cone = cone
+		self.generation_step = generation_step
+		self.algorithm_used = algorithm_used
+		self.hilbert_basis = hilbert_basis
+
+	
+
+class ConeChain(object):
 	""" Initializes with two cones (assuming containment)
 	
 	We wish the represent the data so that a sequence of cones (poset)
@@ -23,18 +41,12 @@ class ConeSequence(object):
 		Note that top_sequence needs to be "glued" backwards for the containment to make sense!
 
 	Attributes:
-		outer_cone (SAGE.geometry.Polyhedron): A outer cone
-		inner_cone (SAGE.geometry.Polyhedron): An inner cone
-		top_sequence (list of SAGE.geometry.Polyhedron): Begins with outer_cone
-		bottom_sequence (list of SAGE.geometry.Polyhedron): Begins with inner_cone
-		cone_sequence (list of SAGE.geometry.Polyhedron): Begins empty until glue()
+		outer_cone (sage.all.Polyhedron): A outer cone
+		inner_cone (sage.all.Polyhedron): An inner cone
+		top_sequence (list of TimmyCones): Begins with outer_cone
+		bottom_sequence (list of TimmyCones): Begins with inner_cone
+		cone_sequence (list of TimmyCones): Begins empty until glue()
 			intended to contain the order of the algorithmetically generated poset chain.
-		cone_dict (dictionary of tuples): A dictionary where each key 
-			is a cone in trial, and each value is the associated 
-			1) hilbert basis (list of lists) - indecomposible vectors in the cone
-			   (expected to stay empty until self.sequence_completed is True.)
-			2) way the particular cone was appended - "t" or "b" or "i"
-			3) the step the cone was appended.
 	"""
 	def __init__(self,inner,outer,rmax=10):
 		"""Initiate using cones, then initialize data	"""
@@ -42,8 +54,8 @@ class ConeSequence(object):
 		self.inner_cone = inner
 
 		# Lists to store poset elements
-		self.top_sequence = [outer]
-		self.bottom_sequence = [inner]		
+		self.top_sequence = [TimmyCone(outer,0,"i")]
+		self.bottom_sequence = [TimmyCone(inner,0,"i")]		
 		self.cone_sequence = []
 
 		# Internal logic flags
@@ -58,23 +70,23 @@ class ConeSequence(object):
 	def current_inner(self):
 		""" get the current inner cone 
 		Args: none
-		Returns: bottom_sequence[-1] (SAGE.geometry.Polyhedron)
+		Returns: bottom_sequence[-1].cone (sage.all.Polyhedron)
 		"""
-		return self.bottom_sequence[-1]
+		return self.bottom_sequence[-1].cone
 
 
 	def current_outer(self):
 		""" get the current outer cone 
 		Args: none
-		Returns: top_sequence[-1] (SAGE.geometry.Polyhedron)
+		Returns: top_sequence[-1].cone (sage.all.Polyhedron)
 		"""
-		return self.top_sequence[-1]
+		return self.top_sequence[-1].cone
 
 
 	def append_top(self, somecone):
 		""" Appends a cone to the top sequence and adds to cone_dict
 		Args:
-			somecone (SAGE.geometry.Polyhedron): A polyhedral cone
+			somecone (sage.all.Polyhedron): A polyhedral cone
 		Returns: none.
 		"""
 		self.top_sequence.append(somecone)
@@ -84,7 +96,7 @@ class ConeSequence(object):
 	def append_bottom(self, somecone):
 		""" Appends a cone to the bottom sequence and adds to cone_dict
 		Args:
-			somecone (SAGE.geometry.Polyhedron): A polyhedral cone
+			somecone (sage.all.Polyhedron): A polyhedral cone
 		Returns: none.
 		"""self.bottom_sequence.append(somecone)
 		self.cone_dict[somecone] = ([],"b",self.number_of_steps())
@@ -111,11 +123,11 @@ class ConeSequence(object):
 		else:
 			if len(self.bottom_sequence) > 1:
 				for i in range(len(self.bottom_sequence)-1):
-					if not cone_tools.poset_condition_checker(self.bottom_sequence[i], self.bottom_sequence[i+1])
+					if not self.poset_condition_checker(self.bottom_sequence[i], self.bottom_sequence[i+1])
 						return False
 			if len(self.top_sequence) > 1:
 				for i in range(len(self.top_sequence)-1):
-					if not cone_tools.poset_condition_checker(self.top_sequence[i], self.bottom_sequence[i+1])
+					if not self.poset_condition_checker(self.top_sequence[i], self.bottom_sequence[i+1])
 						return False
 		return True
 
@@ -146,8 +158,8 @@ class ConeSequence(object):
 			2) Hilbert basis of outer take away v should be a subset of
 				the Hilbert basis of inner.
 		Args: 
-			inner (SAGE.geometry.Polyhedron): "inner" cone
-			outer (SAGE.geometry.Polyhedron): "outer" cone (assume inner is contained)
+			inner (sage.all.Polyhedron): "inner" cone
+			outer (sage.all.Polyhedron): "outer" cone (assume inner is contained)
 		Returns: 
 			poset_condition, hilbert_inner, hilbert_outer
 			poset_condition (Boolean): 	True if C, D satisify the poset condition

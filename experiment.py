@@ -42,10 +42,15 @@ class Experiment(object):
 		if self.randomly_generated:
 			self.number_of_trials = self.ask_number_of_trials()
 			self.rmax = self.ask_rmax()
-
+			for i in range(number_of_trials):			
+				current_outer_cone = generate_cone(self.dimension, self.rmax)
+				current_inner_cone = generate_inner_cone(current_outer_cone)
+				# Loop through for number of trials and initialize the ConeSequences. 
+				self.trials.append(ConeSequence(current_inner_cone, current_outer_cone))
 		else:
 			self.rmax = 0
 			self.number_of_trials = 1
+			# MIGHT NEED THE * self.manual_input()MAYBE NOT
 			self.trial.append(ConeSequence(self.manual_input()))
 		
 
