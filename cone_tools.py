@@ -171,6 +171,61 @@ def extremal_generators_outside_inner_cone(inner, outer):
 
 	return ext_gens_final 
 
+
+def poset_condition_checker(self, inner, outer):
+	""" Verifies if the Poset condition is met by inner and outer
+	Default behavior for same cone given is to return True.
+	We do this by checking the hilbert basis of inner, then outer,
+	and verify that:
+		1) One or less extremal generator of outer is outside inner, call this v
+		2) Hilbert basis of outer take away v should be a subset of
+			the Hilbert basis of inner.
+	Args: 
+		inner (sage.all.Polyhedron): "inner" cone
+		outer (sage.all.Polyhedron): "outer" cone (assume inner is contained)
+	Returns: 
+		poset_condition, hilbert_inner, hilbert_outer
+		poset_condition (Boolean): 	True if C, D satisify the poset condition
+										or if they're the same cone;
+									False otherwise.
+		hilbert_inner (list of lists): Hilbert Basis of inner cone
+		hilbert_outer (list of lists): Hilbert Basis of outer cone.
+	TODO:
+		store hilbert basis calculated here into cone_dict -> key = inner / outer,
+				value of first element of this list needs to change only.
+	"""
+
+	# Computing Hilbert basis of C and D:
+	hilbert_inner = list(inner.integral_points_generators()[1])
+	hilbert_outer = list(outer.integral_points_generators()[1])
+	
+	# TODO: store the hilbert basis into cone_dict 
+	# 		ASK JUNE HOW
+
+	# if they're the same cone just return true...
+	if inner == outer:
+		return True
+	# Finding extremal generator of D not in C
+	v = extremal_generators_outside_inner_cone(inner,outer)
+	
+	if len(v) > 1:
+		# if there's more than one extremal generator outside of C, 
+		# this cannot satisify the poset condition.
+		return False
+	# Removing the extremal generator (should be just one) from hilbert_working
+	hilbert_outer.remove(v[0])
+
+	# Assume that the poset condition is satisified at this point, then
+	# loop through each vector in the Hilbert basis of D, 
+	poset_condition = True
+	for vect in hilbert_outer:
+		# the poset condition will remain true as long as 
+		# each vect in Hilbert basis of D is also
+		# contained in the Hilbert basis of D
+		poset_condition = poset_condition and (vect in hilbert_inner) 
+	
+	return poset_condition
+
 ##################
 # Test Code Here #
 ##################

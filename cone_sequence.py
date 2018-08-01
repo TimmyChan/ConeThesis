@@ -21,7 +21,10 @@ class TimmyCone(object):
 		self.algorithm_used = algorithm_used
 		self.hilbert_basis = hilbert_basis
 
-	
+	def get_hilbert_basis(self):
+		if hilbert_basis = None:
+			self.hilbert_basis = self.cone.integral_points_generators()[1]
+		return self.hilbert_basis
 
 class ConeChain(object):
 	""" Initializes with two cones (assuming containment)
@@ -37,7 +40,7 @@ class ConeChain(object):
 	
 	After some steps, we expect C_n and D_k (for some finite n and k) 
 		to satisify the poset condition. When this happens, we will glue the two together;
-	cone_sequence: [C_0, C_1, ..., C_n, D_k, D_(k-1), ..., D_0]
+	cone_poset_chain: [C_0, C_1, ..., C_n, D_k, D_(k-1), ..., D_0]
 		Note that top_sequence needs to be "glued" backwards for the containment to make sense!
 
 	Attributes:
@@ -45,8 +48,10 @@ class ConeChain(object):
 		inner_cone (sage.all.Polyhedron): An inner cone
 		top_sequence (list of TimmyCones): Begins with outer_cone
 		bottom_sequence (list of TimmyCones): Begins with inner_cone
-		cone_sequence (list of TimmyCones): Begins empty until glue()
+		cone_poset_chain (list of TimmyCones): Begins empty until glue()
 			intended to contain the order of the algorithmetically generated poset chain.
+		sequence_complete (boolean): flag to see if the sequence is ready for gluing
+		valid_poset (boolean): flag to see if the entire chain fits poset condition. 
 	"""
 	def __init__(self,inner,outer,rmax=10):
 		"""Initiate using cones, then initialize data	"""
@@ -56,16 +61,11 @@ class ConeChain(object):
 		# Lists to store poset elements
 		self.top_sequence = [TimmyCone(outer,0,"i")]
 		self.bottom_sequence = [TimmyCone(inner,0,"i")]		
-		self.cone_sequence = []
+		self.cone_poset_chain = []
 
 		# Internal logic flags
 		self.sequence_complete = False # sequence complete whenever the poset condition is satisified.
-		self.poset_chain = False # sequence is considered a poset chain when verfiication is checked for every cone.
-
-		# Dictionary to hold data associated with each cone in the sequences.
-		self.cone_dict = {	self.outer_cone:(list(self.outer_cone.integral_points_generators()[1]),"i",0),
-							self.inner_cone:(list(self.inner_cone.integral_points_generators()[1]),"i",0)}
-	
+		self.valid_poset = False # sequence is considered a poset chain when verfiication is checked for every cone.
 
 	def current_inner(self):
 		""" get the current inner cone 
@@ -89,8 +89,7 @@ class ConeChain(object):
 			somecone (sage.all.Polyhedron): A polyhedral cone
 		Returns: none.
 		"""
-		self.top_sequence.append(somecone)
-		self.cone_dict[somecone] = ([],"t",self.number_of_steps())
+		self.top_sequence.append(TimmyCone(somecone,self.number_of_steps(),"t"))
 
 
 	def append_bottom(self, somecone):
@@ -98,14 +97,14 @@ class ConeChain(object):
 		Args:
 			somecone (sage.all.Polyhedron): A polyhedral cone
 		Returns: none.
-		"""self.bottom_sequence.append(somecone)
-		self.cone_dict[somecone] = ([],"b",self.number_of_steps())
+		"""
+		self.bottom_sequence.append(TimmyCone(somecone,self.number_of_steps(),"b"))
 
 
 	def number_of_steps(self):
 		""" Returns the number of steps """
 		if self.sequence_complete:
-			return len(self.cone_sequence) - 2  
+			return len(self.cone_poset_chain) - 2  
 		else:
 			return len(self.top_sequence) + len(self.bottom_sequence) - 2 
 
@@ -115,19 +114,28 @@ class ConeChain(object):
 		Note: This is a computationally heavy function, and should not be used frequently
 			For optimization, this should be ran once per experiment, instead of for every trial.
 		Args: none
-		Returns: True - sequence is valid
+		Returns: True - sequence is valid (not necessarily complete)
 		"""
+		# if the sequence is complete, loop through each consecutive pair
+		# and verify the entire sequence is good.
+		# break out and return false if even just one of them fail
+		# TODO: Need to make this use the index of the cone, and rewrite 
+		#		poset_check to operate on the TimmyCone objects
+		#		directly.
 		if self.sequence_complete:
-			for i in range(len(self.cone_sequence)-1):
-
+			# the length of the sequence - 1 because we're looking at consecutive pairs.
+			for i in range(len(self.cone_poset_chain)-1):
+				if not self.poset_check(self.cone_poset_chain[i].cone, self.cone_poset_chain[i+1].cone)
+					return False
+		# otherwise, go through top down and bottom up 
 		else:
 			if len(self.bottom_sequence) > 1:
 				for i in range(len(self.bottom_sequence)-1):
-					if not self.poset_condition_checker(self.bottom_sequence[i], self.bottom_sequence[i+1])
+					if not self.poset_check(self.bottom_sequence[i].cone, self.bottom_sequence[i+1].cone)
 						return False
 			if len(self.top_sequence) > 1:
 				for i in range(len(self.top_sequence)-1):
-					if not self.poset_condition_checker(self.top_sequence[i], self.bottom_sequence[i+1])
+					if not self.poset_check(self.top_sequence[-(i+1)].cone, self.top_sequence[-(i+2)].cone)
 						return False
 		return True
 
@@ -136,20 +144,22 @@ class ConeChain(object):
 		1) verify the poset conditions on the last entries of
 			top_sequence and bottom_sequence.
 		2) if the poset condition is met, glue the bottom_sequence and 
-			top_sequence together into cone_sequence.
+			top_sequence together into cone_poset_chain.
 		Args: Nothing
 		Returns: Nothing.
 		"""
 		# sequence is complete if the poset condition is met for the two intermediate cones
 		self.sequence_complete = 
-			cone_tools.poset_condition_checker(	self.bottom_sequence[-1],
-												self.top_sequence[-1])
+			cone_tools.poset_check(	self.bottom_sequence[-1].cone,
+												self.top_sequence[-1].cone)
 		# if the sequence is complete, we should glue them together.
 		if self.sequence_complete:
 			self.glue()
 
 
-	def poset_condition_checker(self, inner, outer):
+	
+			
+	def poset_check(self, inner_index, outer):
 		""" Verifies if the Poset condition is met by inner and outer
 		Default behavior for same cone given is to return True.
 		We do this by checking the hilbert basis of inner, then outer,
@@ -176,10 +186,7 @@ class ConeChain(object):
 		hilbert_inner = list(inner.integral_points_generators()[1])
 		hilbert_outer = list(outer.integral_points_generators()[1])
 		
-		# TODO: store the hilbert basis into cone_dict 
-		# 		ASK JUNE HOW
-
-		# if they're the same cone just return true...
+		
 		if inner == outer:
 			return True
 		# Finding extremal generator of D not in C
@@ -202,15 +209,16 @@ class ConeChain(object):
 			poset_condition = poset_condition and (vect in hilbert_inner) 
 		
 		return poset_condition
-			
+
+
 
 	def glue(self):
 		""" Glue bottom_sequence and top_sequence and store into 
-		cone_sequence
+		cone_poset_chain
 
 		1) Check if sequence_complete flag is true; 
-		2) if yes, join the bottom_sequence and top_sequence into cone_sequence
-		so that cone_sequence begins with bottom_sequence, then top_sequence in reverse order
+		2) if yes, join the bottom_sequence and top_sequence into cone_poset_chain
+		so that cone_poset_chain begins with bottom_sequence, then top_sequence in reverse order
 		"""
 		if self.sequence_complete:
 			# get the index of the last element of each sequence.
@@ -219,11 +227,13 @@ class ConeChain(object):
 			# If we run bottom up or top down purely, one of the sequence
 			# ends with inner_cone or outer_cone, creating an overlap.
 			# if the sequence's ends are the same cone, just pop one WLOG
-			if self.bottom_sequence[bottom_index] == self.top_sequence[top_index]:
+			if self.bottom_sequence[-1] == self.top_sequence[-1]:
 				self.top_sequence.pop() # Remove one of the repeated cones
  
 			# if we end up with some different cones:
-			self.cone_sequence = self.bottom_sequence + self.top_sequence.reverse()
+			self.cone_poset_chain = self.bottom_sequence + self.top_sequence.reverse()
+
+
 
 
 
@@ -239,6 +249,3 @@ if __name__ == "__main__":
 		trial = ConeSequence(inner,outer)
 		print("The inner cone has generators: \n{}".format(trial.inner_cone.rays_list()))
 		print("The outer cone has generators: \n{}".format(trial.outer_cone.rays_list()))
-		
-
-

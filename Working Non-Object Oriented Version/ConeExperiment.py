@@ -56,7 +56,7 @@ while True:
 	except:
 		print("Please enter 1 or 2.")	
 # Ask the user, second, are we randomly generating cones or testing a specific case.
-generaterandomly = query_yes_no("Generate random cones?")
+generaterandomly = query_yes_no("Generate radnom cones?")
 
 
 # If we are generating the cones randomly...
@@ -76,7 +76,7 @@ if generaterandomly:
 				else: 
 					print("Please enter a positive integer greater than {}.".format(dim))
 			except:
-				print("Please enter a positive integer greater than {}.".format(dim))
+				print("Please enter a postiive integer greater than {}.".format(dim))
 		# RESTRICTIONS ON RANDOM NUMBER GENERATOR. 
 		while True:
 			try:
