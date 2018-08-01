@@ -24,6 +24,7 @@ class ConeChainElement(object):
 		hilbert_basis (list of lists): Hilbert basis of cone
 	"""
 	num_hilbert_calc = 0
+
 	def __init__(self,cone,generation_step=0, algorithm_used="i", hilbert_basis=None):
 		self.cone = cone
 		self.generation_step = generation_step
@@ -35,6 +36,7 @@ class ConeChainElement(object):
 		# if the hilbert_basis data is empty, generate it using Normaliz and store it
 		if self.hilbert_basis == None:
 			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
+			num_hilbert_calc += 1
 		#return the stored value.
 		return self.hilbert_basis
 
@@ -71,12 +73,9 @@ class ConeChain(object):
 	Attributes:
 		outer_cone (sage.all.Polyhedron): A outer cone
 		inner_cone (sage.all.Polyhedron): An inner cone
-		top_sequence (list of ConeChainElement
-	s): Begins with outer_cone
-		bottom_sequence (list of ConeChainElement
-	s): Begins with inner_cone
-		cone_poset_chain (list of ConeChainElement
-	s): Begins empty until glue()
+		top_sequence (list of ConeChainElements): Begins with outer_cone
+		bottom_sequence (list of ConeChainElements): Begins with inner_cone
+		cone_poset_chain (list of ConeChainElements): Begins empty until glue()
 			intended to contain the order of the algorithmetically generated poset chain.
 		sequence_complete (boolean): flag to see if the sequence is ready for gluing
 		valid_poset (boolean): flag to see if the entire chain fits poset condition. 
@@ -96,8 +95,8 @@ class ConeChain(object):
 		# so default is False.
 		self.sequence_complete = False 
 		# sequence is considered a poset chain 
-		#when verfiication is checked for every cone.
-		self.valid_poset = False 	
+		# when verfiication is checked for every consecutive pair of cones.
+		self.valid_poset = True 
 
 	def current_inner(self):
 		""" get the current inner cone 
@@ -131,7 +130,6 @@ class ConeChain(object):
 		Returns: none.
 		"""
 		self.bottom_sequence.append(ConeChainElement(somecone,self.number_of_steps(),"b"))
-
 
 	
 	def top_down(self):
@@ -209,7 +207,6 @@ class ConeChain(object):
 						self.valid_poset = False
 		return self.valid_poset
 
-
 	def check_complete(self):
 		""" Checks if the sequence is complete 
 		1) verify the poset conditions on the last entries of
@@ -236,7 +233,6 @@ class ConeChain(object):
 			# debug print("Sequence incomplete!")
 		# debug experiment_io_tools.pause()
 		# debug experiment_io_tools.new_screen()
-
 			
 	def poset_check(self, inner, outer):
 		""" Verifies if the Poset condition is met by inner and outer
@@ -287,7 +283,6 @@ class ConeChain(object):
 		
 		return poset_condition
 
-
 	def glue(self):
 		""" Glue bottom_sequence and top_sequence and store into 
 		cone_poset_chain
@@ -315,16 +310,16 @@ class ConeChain(object):
 
 	def output_to_terminal(self):
 		""" Prints essencial information about the sequence """
-		experiment_io_tools.new_screen("Printing information on the cone chain:")
+		experiment_io_tools.new_screen("Printing summary information about the cone chain:")
 		print("inner_cone has generators: \n{}".format(self.inner_cone.rays_list()))
 		print("outer_cone has generators: \n{}".format(self.outer_cone.rays_list()))
 		print("sequence_complete = {}".format(self.sequence_complete))
 		print("top_sequence has length {}".format(len(self.top_sequence)))
 		print("bottom_sequence has length {}".format(len(self.bottom_sequence)))
 		print("cone_poset_chain has length {}".format(len(self.cone_poset_chain)))
+		print("we have used Normaliz for hilbert basis calculation {} times.".format(ConeChainElement.num_hilbert_calc))
 		experiment_io_tools.pause()
 		experiment_io_tools.new_screen()
-
 
 	def chain_details(self):
 		switcher = {
@@ -343,6 +338,7 @@ class ConeChain(object):
 				if sage.all.mod(i,5) == 0:
 					experiment_io_tools.pause()
 			experiment_io_tools.pause()
+		self.output_to_terminal()
 		experiment_io_tools.new_screen()
 	
 		
@@ -389,7 +385,6 @@ if __name__ == "__main__":
 		while not rand_test.sequence_complete:
 			rand_test.top_down()
 		experiment_io_tools.pause()
-		rand_test.output_to_terminal()
 		rand_test.chain_details()
 """
 	# what happens when we give a pair C,D st L(D) = L(C) + v (direct sum)
