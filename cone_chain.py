@@ -132,7 +132,7 @@ class ConeChain(object):
 		self.bottom_sequence.append(ConeChainElement(somecone,self.number_of_steps(),"b"))
 
 	
-	def top_down(self):
+	def top_down(self, steps=1):
 		""" Top down algorithm
 		Args: none
 		Returns: True if top_down completes the sequence
@@ -166,6 +166,10 @@ class ConeChain(object):
 		#print("Forming new cone with: \n{}".format(new_generators))
 		#print("Forming cone with {} vectors in Hilbert Basis of D + Extremal Generators of C.".format(len(new_generators)))
 		self.append_top(sage.all.Polyhedron(rays=new_generators,backend='normaliz'))
+		# minor recursion; if the number of steps is not the default, then repeat by
+		# returning its results.
+		if steps > 1:
+			return self.top_down(steps-1)
 		return self.check_complete()
 
 	def number_of_steps(self):
@@ -381,9 +385,8 @@ if __name__ == "__main__":
 
 		rand_test = ConeChain(test_inner_cone, test_outer_cone)
 
-		print("Now running top down, each dot is one new cone in the chain:")
-		while not rand_test.sequence_complete:
-			rand_test.top_down()
+		print("Now running top down...")
+		rand_test.top_down(100)
 		experiment_io_tools.pause()
 		rand_test.chain_details()
 """
