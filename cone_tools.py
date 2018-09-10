@@ -60,6 +60,10 @@ def longest_vector(vectorlist):
 		return None
 
 	  
+#####################################
+# TOOLS FOR GENERATING RANDOM CONES #
+#####################################
+
 def make_primitive(vectlist):
 	"""Given some vector v in Z^d, return primitive of v
 	Args:
@@ -70,7 +74,6 @@ def make_primitive(vectlist):
 	gcd = gcd_of_list(vectlist)
 	primvectlist = [(i / gcd) for i in vectlist] 
 	return sage.all.vector(primvectlist)
-
 
 def generate_random_vector(dim, rmax=10):
 	""" Generate a random vector in Z^d
@@ -91,7 +94,6 @@ def generate_random_vector(dim, rmax=10):
 	vect = make_primitive(vectlist) 
 	# make a primative vector and return it.
 	return vect
- 
 
 def generate_cone(dim, rmax=10, numgen=10):
 	""" Generates a random SAGE polyhedral cone C with Normaliz backend
@@ -150,6 +152,9 @@ def generate_inner_cone(outer, rmax=10, numgen=10):
 		# the convex hull will be full dimensional
 	return inner
 
+#################################
+# TOOLS FOR BOTTOM UP ALGORITHM #
+#################################
 
 def extremal_generators_outside_inner_cone(inner, outer):
 	""" Given inner, outer cone pair return extremal generators of outer cone
@@ -204,10 +209,14 @@ def visible_facets(cone,vect):
 
 
 
+def facets_with_max_lambda(visiblefacets,v):
+	''' given visible facets, find max lambda '''
+	return max(visiblefacets, key = lambda x: abs(x.ambient_Hrepresentation(0).eval(vector(v))))
 
 
 
-		
+
+
 ##################
 # Test Code Here #
 ##################

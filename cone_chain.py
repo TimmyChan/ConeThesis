@@ -131,7 +131,6 @@ class ConeChain(object):
 		"""
 		self.bottom_sequence.append(ConeChainElement(somecone,self.number_of_steps(),"b"))
 
-	
 	def top_down(self, steps=1):
 		""" Top down algorithm
 		Args: none
@@ -173,6 +172,39 @@ class ConeChain(object):
 		if steps > 1:
 			return self.top_down(steps-1)
 		return self.check_complete()
+
+def bottom_up(self,steps=1):
+	""" Bottom Up algorithm
+	Args: none
+	Returns: True if top_down completes the sequence
+			 False if top_down isn't complete. 
+	"""
+		
+	if self.sequence_complete:
+		print("Sequence already complete.")
+		return True
+
+	current_inner = self.bottom_sequence[-1].cone
+	current_outer = self.top_sequence[-1].cone
+
+	# find all the extremal generators of outer cone outside of current inner cone
+	vlist = cone_tools.extremal_generators_outside_inner_cone(current_inner, current_outer)
+
+	# if the list is empty, we should be done.
+	if len(vlist) == 0:
+		print("Ended up with the same cone, run self.check_complete()")
+		return self.check_complete()
+	
+	longestv = cone_tools.longest_vector(vlist)
+	visible_facets = cone_tools.visible_facets(current_inner, longestv)
+	visible_max_lambda_facet = 
+
+
+	if steps > 1:
+		return self.bottom_up(steps-1)
+	else:
+		return self.check_complete()
+
 
 	def number_of_steps(self):
 		""" Returns the number of steps """
