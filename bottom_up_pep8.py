@@ -154,3 +154,17 @@ def BOTTOMUPtrial(C,D,FILE=None,verbose=False):
 
 	return counter, C, D
 	
+
+
+def bottom_up(self):
+	""" Bottom Up algorithm
+	Args: none
+	Returns: True if top_down completes the sequence
+			 False if top_down isn't complete. 
+	"""
+		
+	if self.sequence_complete:
+		print("Sequence already complete.")
+		return True
+
+	current_inner = self.

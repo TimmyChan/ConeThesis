@@ -17,6 +17,7 @@ class ConeChainElement(object):
 									Hilbert basis calculations.
 	Attributes:
 		cone (sage.all.Polyhedron): the cone object to be stored
+		cone_rays_list (list of lists):	extremal generators of cone object (mostly for JSON)
 		generation_step (int):		step in the generation process
 		algorithm_used (str):		"i" = initial step
 									"t" = top down
@@ -27,6 +28,7 @@ class ConeChainElement(object):
 
 	def __init__(self,cone,generation_step=0, algorithm_used="i", hilbert_basis=None):
 		self.cone = cone
+		self.cone_rays_list = cone.rays_list()
 		self.generation_step = generation_step
 		self.algorithm_used = algorithm_used
 		self.hilbert_basis = hilbert_basis
@@ -44,13 +46,13 @@ class ConeChainElement(object):
 		"""Returns the extremal generators of the cone 
 		self.cone.rays_list() (list of lists): normaliz returns this.
 		"""
-		return self.cone.rays_list()
+		return self.cone_rays_list
 
 	def output_details(self):
 		""" Prints basic details about this particular cone. """
 		print("rays = {}".format(self.rays_list()))
 		print("generated on step {} with algorithm {}".format(self.generation_step,self.algorithm_used))
-		print("number of elements in hilbert_basis = {}".format(len(self.hilbert_basis)))
+		print("number of elements in hilbert_basis = {}".format(len(self.get_hilbert_basis())))
 
 
 class ConeChain(object):
@@ -71,8 +73,11 @@ class ConeChain(object):
 		Note that top_sequence needs to be "glued" backwards for the containment to make sense!
 
 	Attributes:
-		outer_cone (sage.all.Polyhedron): A outer cone
-		inner_cone (sage.all.Polyhedron): An inner cone
+		outer_cone (sage.all.Polyhedron): outer cone
+		inner_cone (sage.all.Polyhedron): inner cone, assume outer_cone contains inner_cone.
+
+		outer_cone_rays_list (list of lists of integers): Extremal generators of outer cone
+		inner_cone_rays_list (list of lists of integers): Extremal generators of inner cone
 		top_sequence (list of ConeChainElements): Begins with outer_cone
 		bottom_sequence (list of ConeChainElements): Begins with inner_cone
 		cone_poset_chain (list of ConeChainElements): Begins empty until glue()
@@ -84,7 +89,10 @@ class ConeChain(object):
 		"""Initiate using cones, then initialize data	"""
 		self.outer_cone = outer
 		self.inner_cone = inner
-
+		self.outer_cone_rays_list = outer.rays_list()
+		self.inner_cone_rays_list = inner.rays_list()
+		
+		self.dimension = outer.dimension()
 		# Lists to store poset elements
 		self.top_sequence = [ConeChainElement(outer)]
 		self.bottom_sequence = [ConeChainElement(inner)]		
@@ -173,37 +181,69 @@ class ConeChain(object):
 			return self.top_down(steps-1)
 		return self.check_complete()
 
-def bottom_up(self,steps=1):
-	""" Bottom Up algorithm
-	Args: none
-	Returns: True if top_down completes the sequence
-			 False if top_down isn't complete. 
-	"""
+	def bottom_up(self,steps=1):
+		""" Bottom Up algorithm
+		Args: none
+		Returns: True if top_down completes the sequence
+				 False if top_down isn't complete. 
+		"""
+			
+		if self.sequence_complete:
+			print("Sequence already complete.")
+			return True
+
+		current_inner = self.bottom_sequence[-1].cone
+		current_outer = self.top_sequence[-1].cone
+
+		# find all the extremal generators of outer cone outside of current inner cone
+		vlist = cone_tools.extremal_generators_outside_inner_cone(current_inner, current_outer)
+
+		# if the list is empty, we should be done.
+		if len(vlist) == 0:
+			print("Ended up with the same cone, run self.check_complete()")
+			return self.check_complete()
 		
-	if self.sequence_complete:
-		print("Sequence already complete.")
-		return True
+		# find the longest of the vectors strictly outside current_inner
+		longestv = cone_tools.longest_vector(vlist)
 
-	current_inner = self.bottom_sequence[-1].cone
-	current_outer = self.top_sequence[-1].cone
+		# collect visible facets WRT longestv
+		visible_facets = cone_tools.visible_facets(current_inner, longestv)
+		
+		# out of those, choose the one with the max lambda
+		visible_max_lambda_facet = cone_tools.facets_with_max_lambda(visible_facets, longestv)
+		
+		# collect all the extremal generators of the facet
+		facet_generators =  visible_max_lambda_facet.as_polyhedron().rays_list()
 
-	# find all the extremal generators of outer cone outside of current inner cone
-	vlist = cone_tools.extremal_generators_outside_inner_cone(current_inner, current_outer)
+		# form a zonotope (collect the list of vertices of the zonotope) using facet_generators
+		preshift_zonotope_gens = cone_tools.zonotope_generators(facet_generators)
 
-	# if the list is empty, we should be done.
-	if len(vlist) == 0:
-		print("Ended up with the same cone, run self.check_complete()")
-		return self.check_complete()
-	
-	longestv = cone_tools.longest_vector(vlist)
-	visible_facets = cone_tools.visible_facets(current_inner, longestv)
-	visible_max_lambda_facet = 
+		# 1/lambda as discussed in paper. This is the shift factor needed to guarentee the zonotope will
+		# contain at least one lattice point.
+		shift_factor = 1/ abs(visible_max_lambda_facet.ambient_Hrepresentation(0).eval(sage.all.vector(longestv)))
 
+		# the origin, a point on the zonotope, will be shifted also (so the image is just the shift vector)
+		shift_vector = [shift_factor*i for i in longestv]
 
-	if steps > 1:
-		return self.bottom_up(steps-1)
-	else:
-		return self.check_complete()
+		# take all the generators, shift them, and then include the shift vector
+		shifted_generators = [[gen[i] + shift_vector[i] for i in range(self.dimension)] for gen in preshift_zonotope_gens]
+		shifted_generators.append(shift_vector)
+
+		# formally generate the zonotope now
+		zono = sage.all.Polyhedron(vertices=shifted_generators,backend='normaliz')
+		
+		# find the lattice points in the zonotope
+		lattice_points_in_zono = list(zono.integral_points())
+
+		# then find the shortest one
+		shortest_lattice_point_in_zono = cone_tools.shortest_vector(lattice_points_in_zono)
+
+		self.append_bottom(current_inner.convex_hull(sage.all.Polyhedron(rays=[shortest_lattice_point_in_zono],backend='normaliz')))
+
+		if steps > 1:
+			return self.bottom_up(steps-1)
+		else:
+			return self.check_complete()
 
 
 	def number_of_steps(self):
@@ -392,7 +432,7 @@ if __name__ == "__main__":
 
 		trial = ConeChain(inner,outer)
 		trial.output_to_terminal()
-	"""
+
 
 	# known cones in Z^2 for testing.
 	outer = sage.all.Polyhedron(rays=[[1,0],[1,3]],backend="normaliz")
@@ -417,12 +457,30 @@ if __name__ == "__main__":
 		print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
 		print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
 
-		rand_test = ConeChain(test_inner_cone, test_outer_cone)
+		top_down_rand_test = ConeChain(test_inner_cone, test_outer_cone)
 
 		print("Now running top down...")
-		rand_test.top_down(50)
+		top_down_rand_test.top_down(50)
 		experiment_io_tools.pause()
-		rand_test.chain_details()
+		top_down_rand_test.chain_details()
+"""
+	steps = 500
+	for i in range(3):
+		experiment_io_tools.new_screen("Generating Cone for dimension {}:".format(i+2))
+		test_outer_cone = cone_tools.generate_cone(i+2)
+		test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone)
+
+		print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
+		print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
+
+		bottom_up_rand_test = ConeChain(test_inner_cone, test_outer_cone)
+
+		print("Now running {} steps of bottom_up algorithm...".format(steps))
+		bottom_up_rand_test.bottom_up(steps)
+		experiment_io_tools.pause()
+		bottom_up_rand_test.chain_details()
+
+json
 """
 	# what happens when we give a pair C,D st L(D) = L(C) + v (direct sum)
 	# for some v outside of :(D)?

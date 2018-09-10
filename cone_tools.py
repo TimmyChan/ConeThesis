@@ -199,7 +199,7 @@ def visible_facets(cone,vect):
 			#print("Facet {}:".format(facets.index(facet)))
 			facet_ineq = facet.ambient_Hrepresentation(0)
 			#print("\tambient halfspace {}".format(facet_ineq))
-			facet_visibile = (facet_ineq.eval(vector(vect)) < 0)
+			facet_visibile = (facet_ineq.eval(sage.all.vector(vect)) < 0)
 			#print facet_ineq.eval(vector(v))
 			#print("\trays = {}".format(facet.as_polyhedron().rays_list()))
 			if facet_visibile:
@@ -211,8 +211,41 @@ def visible_facets(cone,vect):
 
 def facets_with_max_lambda(visiblefacets,v):
 	''' given visible facets, find max lambda '''
-	return max(visiblefacets, key = lambda x: abs(x.ambient_Hrepresentation(0).eval(vector(v))))
+	return max(visiblefacets, key = lambda x: abs(x.ambient_Hrepresentation(0).eval(sage.all.vector(v))))
 
+
+def vector_sum(listofvectors):
+	''' Returns vector sum of a given list of vectors  takes a list of vectors of the same dimension
+	returns a vector that is the termwise sum of each vector in the list.
+	'''
+	length = len(listofvectors)
+	dim = len(listofvectors[0])
+	summand = [0 for i in range(dim)]
+	for i in range(length):
+		for d in range(dim):
+			summand[d] = summand[d] + listofvectors[i][d]
+	return summand
+
+
+def zonotope_generators(vectlist):
+	'''  Form a zonotope given v_1,...,v_n. Gives the vertices of said zonotope.
+	Args:
+		vectlist (list of vectors): assumes they're all same dimension.
+	Returns:
+		zonogens (list of vectors): vertices of a zonotope_generators generated
+			by vectlist.
+	'''
+
+	# First create the powerset of the list	and remove the empty set.
+	dimension = len(vectlist[0])
+	combo = list(sage.all.powerset(vectlist))
+	combo.remove([])
+	combo.append([[0 for i in range(dimension)]])
+	#print combo
+	zonogens = [vector_sum(c) for c in combo]
+	#print zonogens
+	#return Polyhedron(vertices=zonogens,backend='normaliz')
+	return zonogens
 
 
 
