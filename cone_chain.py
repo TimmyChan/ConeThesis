@@ -36,7 +36,7 @@ class ConeChainElement(object):
 		# if the hilbert_basis data is empty, generate it using Normaliz and store it
 		if self.hilbert_basis == None:
 			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
-			num_hilbert_calc += 1
+			ConeChainElement.num_hilbert_calc += 1
 		#return the stored value.
 		return self.hilbert_basis
 
@@ -144,7 +144,9 @@ class ConeChain(object):
 			return True
 
 		# Collect the set of extremal generators of the intermediate cone that is not in C
-		extremal_gens_outside_inner_cone = cone_tools.extremal_generators_outside_inner_cone(self.bottom_sequence[-1].cone, self.top_sequence[-1].cone)
+		extremal_gens_outside_inner_cone = 	cone_tools.extremal_generators_outside_inner_cone(
+												self.bottom_sequence[-1].cone, 
+												self.top_sequence[-1].cone)
 		
 		if len(extremal_gens_outside_inner_cone) == 0:
 			print("Ended up with the same cone, run self.check_complete()")
@@ -153,11 +155,11 @@ class ConeChain(object):
 
 		vector_to_remove = cone_tools.shortest_vector(extremal_gens_outside_inner_cone)
 		#print("Vector norms: {}".format([r.norm() for r in extremal_gens_outside_inner_cone]))
-		print("Vector to remove = {} and its norm = {}".format(vector_to_remove,vector_to_remove.norm()))
+		#print("Vector to remove = {} and its norm = {}".format(vector_to_remove,vector_to_remove.norm()))
 
 		intermediate_hilb = self.top_sequence[-1].get_hilbert_basis()
 		intermediate_hilb[0]
-		print("intermediate_hilb = {}".format(intermediate_hilb))
+		#print("intermediate_hilb = {}".format(intermediate_hilb))
 		#verboseprint("Hilbert Basis of Intermediate Cone: \n {}".format(IntermediateHB))
 
 		intermediate_hilb.remove(vector_to_remove)
@@ -386,7 +388,7 @@ if __name__ == "__main__":
 		rand_test = ConeChain(test_inner_cone, test_outer_cone)
 
 		print("Now running top down...")
-		rand_test.top_down(100)
+		rand_test.top_down(50)
 		experiment_io_tools.pause()
 		rand_test.chain_details()
 """

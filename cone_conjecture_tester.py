@@ -13,7 +13,11 @@ class ConeConjectureTester(object):
 	"""All user interface with the Experiment object goes here.
 	"""
 	def __init__(self):
+		self.randomly_generated = self.ask_random_or_input()
+		self.num_trials = self.
 
+	def menu(self):
+		""" a menu function that gives control over the experiment """
 
 	def ask_random_or_input(self):
 		""" Prompts user if they want to generate the cone 
@@ -59,6 +63,11 @@ class ConeConjectureTester(object):
 			user_outer (SAGE.geometry.Polyhedron)
 		"""
 
+	def outer_cone_input(self):
+		""" prompts user to input outer cone.
+		"""
+
+	def inner_cone_input(self):
 	def vector_input(self):
 		""" Prompts user to input a vector.
 		Args: none

@@ -28,7 +28,7 @@ class Experiment(object):
 										False) user inputted cones.
 		rmax (int): the upper bound used on the random integer generator
 
-		--- below only used when randomly_generated == False ---
+		--- below MUST be used when randomly_generated == False ---
 		inner_gens (list of lists): extremal generators of inner cone
 		outer_gens (list of lists): extremal generators of outer cone
 	"""
