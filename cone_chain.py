@@ -9,65 +9,11 @@ import sage.all
 import cone_tools
 import experiment_io_tools
 import json 
+import sys
+from cone_chain_element import ConeChainElement, ConeChainElementEncoder, ConeChainElementDecoder
+import pylab as plt
+import datetime, os
 
-class ConeChainElement(object):
-	""" A data structure to hold a cone and its hilbert basis
-	and associated experimental data.
-	Class Attribute:
-		(currently not used)
-		num_hilbert_calc (int):		Keeps track of the number of times we call
-									Hilbert basis calculations.
-	Attributes:
-		cone (sage.all.Polyhedron): the cone object to be stored
-		cone_rays_list (list of lists):	extremal generators of cone object (mostly for JSON)
-		generation_step (int):		step in the generation process
-		algorithm_used (str):		"i" = initial step
-									"t" = top down
-									"b" = bottom up
-		hilbert_basis (list of lists): Hilbert basis of cone
-	"""
-	# MAY NOT BE NECESSARY num_hilbert_calc = 0
-
-	def __init__(self,cone,generation_step=0, algorithm_used="i", hilbert_basis=None):
-		self.cone = cone
-		self.cone_rays_list = cone.rays_list()
-		self.generation_step = generation_step
-		self.algorithm_used = algorithm_used
-		self.hilbert_basis = hilbert_basis
-		self.longest_hilbert_basis_element = None if hilbert_basis is None else cone_tools.longest_vector(self.hilbert_basis)
-
-	def get_hilbert_basis(self):
-		""" Retreives the hilbert basis, only calculates once. """
-		# if the hilbert_basis data is empty, generate it using Normaliz and store it
-		if self.hilbert_basis == None:
-			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
-			#ConeChainElement.num_hilbert_calc += 1
-		self.longest_hilbert_basis_element = cone_tools.longest_vector(self.hilbert_basis)
-		
-		#return the stored value.
-		return self.hilbert_basis
-
-	def rays_list(self):
-		"""Returns the extremal generators of the cone 
-		self.cone.rays_list() (list of lists): normaliz returns this.
-		"""
-		return self.cone_rays_list
-
-	def output_details(self):
-		""" Prints basic details about this particular cone. """
-		print("rays = {}".format(self.rays_list()))
-		print("generated on step {} with algorithm {}".format(self.generation_step,self.algorithm_used))
-		if self.hilbert_basis == None:
-			L = 0
-		else:
-			L = len(self.hilbert_basis)
-		print("number of elements in hilbert_basis = {}".format(L))
-
-	def calculate(self):
-		if self.hilbert_basis == None:
-			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
-		self.longest_hilbert_basis_element = cone_tools.longest_vector(self.hilbert_basis)
-		
 
 class ConeChain(object):
 	""" Initializes with two cones (assuming containment)
@@ -180,11 +126,14 @@ class ConeChain(object):
 		#print("Vector to remove = {} and its norm = {}".format(vector_to_remove,vector_to_remove.norm()))
 
 		intermediate_hilb = self.top_sequence[-1].get_hilbert_basis()
-		intermediate_hilb[0]
+		#intermediate_hilb[0]
 		#print("intermediate_hilb = {}".format(intermediate_hilb))
 		#verboseprint("Hilbert Basis of Intermediate Cone: \n {}".format(IntermediateHB))
 
-		intermediate_hilb.remove(vector_to_remove)
+		try:
+			intermediate_hilb.remove(vector_to_remove)
+		except:
+			print("Not sure what happened here but {} is not in intermediate_hilb".format(vector_to_remove))
 
 		new_generators = intermediate_hilb + self.bottom_sequence[-1].cone.rays_list()
 		#print("Forming new cone with: \n{}".format(new_generators))
@@ -456,11 +405,92 @@ class ConeChain(object):
 		# now print a summary
 		self.output_to_terminal()
 		experiment_io_tools.new_screen()
-	
+
+	def hilbert_graph(self):
+		directory = "Hilbert_Graphs/{}d/".format(self.dimension)
+		directory += str(datetime.datetime.now())
+		os.makedirs(directory, 0755) 
+		topdown_length_filename = directory + "/top sequence LENGTH.png"
+		top_hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in self.top_sequence]
+		plt.figure(1)
+		plt.plot(top_hilbert_graph_data_length)
+		plt.savefig(topdown_length_filename)
+
+		topdown_size_filename = directory + "/top sequence SIZE.png"
+		top_hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in self.top_sequence]
+		plt.figure(2)
+		plt.plot(top_hilbert_graph_data_size)
+		plt.savefig(topdown_size_filename)
+
+class ConeChainEncoder(json.JSONEncoder):
+	def default(self,obj):
+		if isinstance(obj, ConeChain):
+			outer_cone_rays_list_json = cone_tools.rays_list_to_json_array(obj.outer_cone_rays_list)
+			inner_cone_rays_list_json = cone_tools.rays_list_to_json_array(obj.inner_cone_rays_list)
+			top_seq = [json.dumps(cone_element,cls=ConeChainElementEncoder) for cone_element in obj.top_sequence]
+			bottom_seq = [json.dumps(cone_element,cls=ConeChainElementEncoder) for cone_element in obj.bottom_sequence]
+			poset_chain = [json.dumps(cone_element,cls=ConeChainElementEncoder) for cone_element in obj.cone_poset_chain]
+			
+			return {'outer_cone_rays_list' : outer_cone_rays_list_json,
+				'inner_cone_rays_list' : inner_cone_rays_list_json,
+				'dimension' : obj.dimension,
+				'top_sequence': top_seq,
+				'bottom_sequence': bottom_seq,
+				'cone_poset_chain': poset_chain,
+				'sequence_complete': obj.sequence_complete,
+				'valid_poset': obj.valid_poset}
+		return json.JSONEncoder.default(self, obj)
+
+class ConeChainDecoder(json.JSONDecoder):
+	def __init__(self, *args, **kwargs):
+		json.JSONDecoder.__init__(self, object_hook=self.object_hook, *args, **kwargs)
+	def object_hook(self, dictionary):
+		if 'outer_cone_rays_list' in dictionary:
+			outer = sage.all.Polyhedron(rays=dictionary['outer_cone_rays_list'],backend='normaliz')
+		if 'inner_cone_rays_list' in dictionary:
+			inner = sage.all.Polyhedron(rays=dictionary['inner_cone_rays_list'],backend='normaliz')
+		top_seq = [json.loads(cone_element,cls=ConeChainElementDecoder) for cone_element in dictionary['top_sequence']]
+		bottom_seq = [json.loads(cone_element,cls=ConeChainElementDecoder) for cone_element in dictionary['bottom_sequence']]
+		poset_chain = [json.loads(cone_element,cls=ConeChainElementDecoder) for cone_element in dictionary['cone_poset_chain']]
+		return ConeChain(inner, outer, top_seq, bottom_seq, poset_chain, dictionary['sequence_complete'], dictionary['valid_poset'])
+
 		
 if __name__ == "__main__":
+
 	""" Some testing code here """
-	"""
+
+	steps = 100
+	dim = 4
+	bound = 5
+	
+	loadtest = None
+	try:
+		with open('cone_chain_top_down_{}d.json'.format(dim), 'r') as fp:
+			loadtest = json.load(fp, cls=ConeChainDecoder)
+	except:
+		print('A file loading error has occured.')
+	
+
+	test_outer_cone = cone_tools.generate_cone(dim,bound)
+	test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone,bound)
+	
+	toptest = ConeChain(test_inner_cone, test_outer_cone) if loadtest is None else loadtest
+	
+	toptest.hilbert_graph()
+	toptest.output_to_terminal()
+
+	user_continue = experiment_io_tools.query_yes_no("Begin more testing?")
+	count = 0
+	while user_continue:
+		toptest.top_down(steps)
+		with open('cone_chain_top_down_{}d.json'.format(dim), 'w') as fp:
+			json.dump(toptest, fp, cls=ConeChainEncoder,sort_keys=True,
+				indent=4, separators=(',', ': '))
+		count += steps
+		user_continue = experiment_io_tools.query_yes_no("Completed {} steps, saved data. Continue?".format(count))
+ 		
+
+"""
 	experiment_io_tools.new_screen()
 	for i in range(4):
 		# loop through dimension 2 through 5
@@ -485,7 +515,6 @@ if __name__ == "__main__":
 	toptest.check_complete()
 	toptest.output_to_terminal()
 	toptest.chain_details()
-"""
 	steps = 50
 	i=0
 	#for i in range(2):
@@ -519,7 +548,7 @@ if __name__ == "__main__":
 	experiment_io_tools.pause()
 	bottom_up_rand_test.chain_details()
 
-"""
+
 	# what happens when we give a pair C,D st L(D) = L(C) + v (direct sum)
 	# for some v outside of :(D)?
 	print("Running short test (input of elementary ascend):")
