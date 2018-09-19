@@ -5,6 +5,9 @@ import sys
 import sage.all
 
 
+def rays_list_to_json_array(rays_list):
+	return None if rays_list is None else [[int(i) for i in v] for v in rays_list] 
+
 def gcd_of_list(args):
 	"""Greatest Common Divisor of a list of integers
 	Intended for use to scale a lattice vector

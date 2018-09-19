@@ -57,9 +57,17 @@ class ConeChainElement(object):
 		""" Prints basic details about this particular cone. """
 		print("rays = {}".format(self.rays_list()))
 		print("generated on step {} with algorithm {}".format(self.generation_step,self.algorithm_used))
-		print("number of elements in hilbert_basis = {}".format(len(self.get_hilbert_basis())))
+		if self.hilbert_basis == None:
+			L = 0
+		else:
+			L = len(self.hilbert_basis)
+		print("number of elements in hilbert_basis = {}".format(L))
 
-
+	def calculate(self):
+		if self.hilbert_basis == None:
+			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
+		self.longest_hilbert_basis_element = cone_tools.longest_vector(self.hilbert_basis)
+		
 
 class ConeChain(object):
 	""" Initializes with two cones (assuming containment)
@@ -80,8 +88,7 @@ class ConeChain(object):
 
 	Attributes:
 		outer_cone (sage.all.Polyhedron): outer cone
-		inner_cone (sage.all.Polyhedron): inner cone, assume outer_cone contains inner_cone.
-
+		inner_cone (sage.all.Polyhedron): inner cone, assume outer_cone contains inner_cone
 		outer_cone_rays_list (list of lists of integers): Extremal generators of outer cone
 		inner_cone_rays_list (list of lists of integers): Extremal generators of inner cone
 		top_sequence (list of ConeChainElements): Begins with outer_cone
@@ -91,7 +98,9 @@ class ConeChain(object):
 		sequence_complete (boolean): flag to see if the sequence is ready for gluing
 		valid_poset (boolean): flag to see if the entire chain fits poset condition. 
 	"""
-	def __init__(self,inner,outer):
+	def __init__(self, inner, outer, 
+			top_seq=None, bottom_seq=None,
+			poset_chain=None, seq_comp=False, valid = True):
 		"""Initiate using cones, then initialize data	"""
 		self.outer_cone = outer
 		self.inner_cone = inner
@@ -100,17 +109,17 @@ class ConeChain(object):
 		
 		self.dimension = outer.dimension()
 		# Lists to store poset elements
-		self.top_sequence = [ConeChainElement(outer)]
-		self.bottom_sequence = [ConeChainElement(inner)]		
-		self.cone_poset_chain = []
+		self.top_sequence = [ConeChainElement(outer)] if top_seq is None else top_seq
+		self.bottom_sequence = [ConeChainElement(inner)] if bottom_seq is None else bottom_seq
+		self.cone_poset_chain = [] if poset_chain is None else poset_chain
 
 		# Internal logic flags
 		# sequence complete whenever the poset condition is satisified,
 		# so default is False.
-		self.sequence_complete = False 
+		self.sequence_complete = seq_comp 
 		# sequence is considered a poset chain 
 		# when verfiication is checked for every consecutive pair of cones.
-		self.valid_poset = True 
+		self.valid_poset = valid 
 
 	def current_inner(self):
 		""" get the current inner cone 
