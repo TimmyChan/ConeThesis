@@ -13,8 +13,15 @@ class ConeConjectureTester(object):
 	"""All user interface with the Experiment object goes here.
 	"""
 	def __init__(self):
+		self.initial_menu()
 		self.randomly_generated = self.ask_random_or_input()
-		self.num_trials = self.
+
+	def initial_menu(self):
+		""" a menu function that decides if:
+			1) create new experiment
+			2) load experiment
+		"""
+
 
 	def menu(self):
 		""" a menu function that gives control over the experiment """

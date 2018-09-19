@@ -1,6 +1,6 @@
 #!/usr/bin/env sage
 
-"""ConeChian
+"""ConeChain
 
 This module contains the an object that will contain a sequence of cones
 and defines ConeChainElement, an object that will contain experimental data for each cone.
@@ -8,11 +8,13 @@ and defines ConeChainElement, an object that will contain experimental data for 
 import sage.all
 import cone_tools
 import experiment_io_tools
+import json 
 
 class ConeChainElement(object):
 	""" A data structure to hold a cone and its hilbert basis
 	and associated experimental data.
 	Class Attribute:
+		(currently not used)
 		num_hilbert_calc (int):		Keeps track of the number of times we call
 									Hilbert basis calculations.
 	Attributes:
@@ -24,7 +26,7 @@ class ConeChainElement(object):
 									"b" = bottom up
 		hilbert_basis (list of lists): Hilbert basis of cone
 	"""
-	num_hilbert_calc = 0
+	# MAY NOT BE NECESSARY num_hilbert_calc = 0
 
 	def __init__(self,cone,generation_step=0, algorithm_used="i", hilbert_basis=None):
 		self.cone = cone
@@ -32,13 +34,16 @@ class ConeChainElement(object):
 		self.generation_step = generation_step
 		self.algorithm_used = algorithm_used
 		self.hilbert_basis = hilbert_basis
+		self.longest_hilbert_basis_element = None if hilbert_basis is None else cone_tools.longest_vector(self.hilbert_basis)
 
 	def get_hilbert_basis(self):
 		""" Retreives the hilbert basis, only calculates once. """
 		# if the hilbert_basis data is empty, generate it using Normaliz and store it
 		if self.hilbert_basis == None:
 			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
-			ConeChainElement.num_hilbert_calc += 1
+			#ConeChainElement.num_hilbert_calc += 1
+		self.longest_hilbert_basis_element = cone_tools.longest_vector(self.hilbert_basis)
+		
 		#return the stored value.
 		return self.hilbert_basis
 
@@ -53,6 +58,7 @@ class ConeChainElement(object):
 		print("rays = {}".format(self.rays_list()))
 		print("generated on step {} with algorithm {}".format(self.generation_step,self.algorithm_used))
 		print("number of elements in hilbert_basis = {}".format(len(self.get_hilbert_basis())))
+
 
 
 class ConeChain(object):
@@ -85,7 +91,7 @@ class ConeChain(object):
 		sequence_complete (boolean): flag to see if the sequence is ready for gluing
 		valid_poset (boolean): flag to see if the entire chain fits poset condition. 
 	"""
-	def __init__(self,inner,outer,rmax=10):
+	def __init__(self,inner,outer):
 		"""Initiate using cones, then initialize data	"""
 		self.outer_cone = outer
 		self.inner_cone = inner
@@ -387,7 +393,10 @@ class ConeChain(object):
 				self.top_sequence.append(self.cone_poset_chain[-1])
 
 	def output_to_terminal(self):
-		""" Prints essencial information about the sequence """
+		""" Prints essencial information about the sequence
+			Args: None
+			Returns: None 
+		"""
 		experiment_io_tools.new_screen("Printing summary information about the cone chain:")
 		print("inner_cone has generators: \n{}".format(self.inner_cone.rays_list()))
 		print("outer_cone has generators: \n{}".format(self.outer_cone.rays_list()))
@@ -395,27 +404,47 @@ class ConeChain(object):
 		print("top_sequence has length {}".format(len(self.top_sequence)))
 		print("bottom_sequence has length {}".format(len(self.bottom_sequence)))
 		print("cone_poset_chain has length {}".format(len(self.cone_poset_chain)))
-		print("we have used Normaliz for hilbert basis calculation {} times.".format(ConeChainElement.num_hilbert_calc))
+		#print("we have used Normaliz for hilbert basis calculation {} times.".format(ConeChainElement.num_hilbert_calc))
 		experiment_io_tools.pause()
 		experiment_io_tools.new_screen()
 
 	def chain_details(self):
-		switcher = {
-			0: ("bottom_sequence",self.bottom_sequence),
-			1: ("top_sequence", self.top_sequence),
-			2: ("cone_poset_chain", self.cone_poset_chain)
-		}
-		for key in range(3):
-			experiment_io_tools.new_screen("Printing details of the chain.")
-			print(switcher[key][0])
+		""" Prints the details for each cone in the chain 
+			Args: None
+			Returns: None
+		"""
+		if self.sequence_complete:
+			experiment_io_tools.new_screen("Printing details of the (complete) chain.")
+			# only need to use case 2,
+			# go through each cone in the cone_poset_chain:
 			i = 0
-			for tcone in switcher[key][1]:
-				print(switcher[key][0]+"[{}]:".format(i))
+			for tcone in self.cone_poset_chain:
+				print("cone_poset_chain"+"[{}]:".format(i))
 				tcone.output_details()
 				i = i + 1 
+				# pause every fifth cone
 				if sage.all.mod(i,5) == 0:
 					experiment_io_tools.pause()
-			experiment_io_tools.pause()
+
+		else:
+			# do the same as above but with bottom_sequence
+			# and top sequence instead.
+			switcher = {
+				0: ("bottom_sequence",self.bottom_sequence),
+				1: ("top_sequence", self.top_sequence),
+			}
+			for key in range(2):
+				experiment_io_tools.new_screen("Printing details of the (incomplete) chain.")
+				print(switcher[key][0])
+				i = 0
+				for tcone in switcher[key][1]:
+					print(switcher[key][0]+"[{}]:".format(i))
+					tcone.output_details()
+					i = i + 1 
+					if sage.all.mod(i,5) == 0:
+						experiment_io_tools.pause()
+				experiment_io_tools.pause()
+		# now print a summary
 		self.output_to_terminal()
 		experiment_io_tools.new_screen()
 	
@@ -447,40 +476,40 @@ if __name__ == "__main__":
 	toptest.check_complete()
 	toptest.output_to_terminal()
 	toptest.chain_details()
-
-
-	for i in range(3):
-		experiment_io_tools.new_screen("Generating Cone for dimension {}:".format(i+2))
-		test_outer_cone = cone_tools.generate_cone(i+2)
-		test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone)
-
-		print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
-		print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
-
-		top_down_rand_test = ConeChain(test_inner_cone, test_outer_cone)
-
-		print("Now running top down...")
-		top_down_rand_test.top_down(50)
-		experiment_io_tools.pause()
-		top_down_rand_test.chain_details()
 """
-	steps = 500
-	for i in range(3):
-		experiment_io_tools.new_screen("Generating Cone for dimension {}:".format(i+2))
-		test_outer_cone = cone_tools.generate_cone(i+2)
-		test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone)
+	steps = 50
+	i=0
+	#for i in range(2):
+	experiment_io_tools.new_screen("Generating Cone for dimension {}:".format(i+2))
+	test_outer_cone = cone_tools.generate_cone(i+2)
+	test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone)
 
-		print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
-		print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
+	print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
+	print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
 
-		bottom_up_rand_test = ConeChain(test_inner_cone, test_outer_cone)
+	top_down_rand_test = ConeChain(test_inner_cone, test_outer_cone)
 
-		print("Now running {} steps of bottom_up algorithm...".format(steps))
-		bottom_up_rand_test.bottom_up(steps)
-		experiment_io_tools.pause()
-		bottom_up_rand_test.chain_details()
+	print("Now running {} steps of top_down algorithm...".format(steps))
+	top_down_rand_test.top_down(steps)
+	experiment_io_tools.pause()
+	top_down_rand_test.chain_details()
 
-json
+	
+	#for i in range(2):
+	experiment_io_tools.new_screen("Generating Cone for dimension {}:".format(i+2))
+	test_outer_cone = cone_tools.generate_cone(i+2)
+	test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone)
+
+	print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
+	print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
+
+	bottom_up_rand_test = ConeChain(test_inner_cone, test_outer_cone)
+
+	print("Now running {} steps of bottom_up algorithm...".format(steps))
+	bottom_up_rand_test.bottom_up(steps)
+	experiment_io_tools.pause()
+	bottom_up_rand_test.chain_details()
+
 """
 	# what happens when we give a pair C,D st L(D) = L(C) + v (direct sum)
 	# for some v outside of :(D)?
