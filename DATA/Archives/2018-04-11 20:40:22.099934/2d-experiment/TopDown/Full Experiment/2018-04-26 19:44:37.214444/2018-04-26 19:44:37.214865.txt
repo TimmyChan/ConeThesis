@@ -1,0 +1,154 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(-1, 7), (9, 7), (-8, 1), (-3, 7), (4, 5), (-3, 2), (-1, 1), (7, 9), (-1, 1), (-1, 1)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-3, 1], [1, 1]]
+Extremal Generators of the Outer Cone: 
+[[-8, 1], [9, 7]]
+=============Initialization Complete============
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(65), sqrt(130)]
+Vector to remove = (-8, 1) and its norm = sqrt(65)
+Forming cone with 13 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 1 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [5*sqrt(2), sqrt(130)]
+Vector to remove = (-7, 1) and its norm = 5*sqrt(2)
+Forming cone with 12 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 2 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(37), sqrt(130)]
+Vector to remove = (-6, 1) and its norm = sqrt(37)
+Forming cone with 11 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 3 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(26), sqrt(130)]
+Vector to remove = (-5, 1) and its norm = sqrt(26)
+Forming cone with 10 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 4 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 2
+Vector norms: [sqrt(17), sqrt(130)]
+Vector to remove = (-4, 1) and its norm = sqrt(17)
+Forming cone with 9 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 5 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(130)]
+Vector to remove = (9, 7) and its norm = sqrt(130)
+Forming cone with 8 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 6 - Original number of extremal rays: 2, Now: 2
+Number of Extremal Generators NOT contained in C: 1
+Vector norms: [sqrt(41)]
+Vector to remove = (5, 4) and its norm = sqrt(41)
+Forming cone with 7 vectors in Hilbert Basis of D + Extremal Generators of C.
+#########################################
+Finished Step 7 - Original number of extremal rays: 2, Now: 2
+
+ Intermediate Cone = 
+[[-3, 1], [1, 1]]
+ Goal Cone = 
+[[-3, 1], [1, 1]]
+ Initial Cone = 
+[[-8, 1], [9, 7]]
+	Finished in 7 steps. 
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------
+
+TRIAL 1/10: test # 1 - 100
+TRIAL STATS:
+	Mean: 5.07	Median: 5.0	Mode: [5]
+	Min: 0	Max: 15 
+	Standard Deviation: 3.03
+----------------------------------------------------------------------
+
+TRIAL 2/10: test # 101 - 200
+TRIAL STATS:
+	Mean: 5.91	Median: 5.0	Mode: [5]
+	Min: 0	Max: 15 
+	Standard Deviation: 3.36
+----------------------------------------------------------------------
+
+TRIAL 3/10: test # 201 - 300
+TRIAL STATS:
+	Mean: 4.76	Median: 5.0	Mode: [3, 5]
+	Min: 0	Max: 12 
+	Standard Deviation: 2.67
+----------------------------------------------------------------------
+
+TRIAL 4/10: test # 301 - 400
+TRIAL STATS:
+	Mean: 5.09	Median: 4.0	Mode: [4]
+	Min: 1	Max: 12 
+	Standard Deviation: 2.63
+----------------------------------------------------------------------
+
+TRIAL 5/10: test # 401 - 500
+TRIAL STATS:
+	Mean: 4.79	Median: 4.0	Mode: [3]
+	Min: 0	Max: 15 
+	Standard Deviation: 2.87
+----------------------------------------------------------------------
+
+TRIAL 6/10: test # 501 - 600
+TRIAL STATS:
+	Mean: 4.65	Median: 4.0	Mode: [5]
+	Min: 0	Max: 13 
+	Standard Deviation: 2.66
+----------------------------------------------------------------------
+
+TRIAL 7/10: test # 601 - 700
+TRIAL STATS:
+	Mean: 5.1	Median: 4.0	Mode: [4]
+	Min: 0	Max: 13 
+	Standard Deviation: 2.99
+----------------------------------------------------------------------
+
+TRIAL 8/10: test # 701 - 800
+TRIAL STATS:
+	Mean: 4.77	Median: 4.0	Mode: [3]
+	Min: 0	Max: 13 
+	Standard Deviation: 2.8
+----------------------------------------------------------------------
+
+TRIAL 9/10: test # 801 - 900
+TRIAL STATS:
+	Mean: 5.0	Median: 4.5	Mode: [4]
+	Min: 0	Max: 11 
+	Standard Deviation: 2.45
+----------------------------------------------------------------------
+
+TRIAL 10/10: test # 901 - 1000
+TRIAL STATS:
+	Mean: 5.09	Median: 5.0	Mode: [2]
+	Min: 1	Max: 14 
+	Standard Deviation: 3.1
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+DATA SUMMARY:
+	Mean: 5.02	Median: 5.0	Mode: [4]
+	Min: 0	Max: 15 
+	Standard Deviation: 2.87
+An initial condition that gave us the minimum number of steps (0):
+Inner Cone: 
+[[-2, 1], [1, 1]]
+OuterCone:
+[[-2, 1], [1, 1]]
+An initial condition that gave us the maximum number of steps (15):
+Inner Cone: 
+[[-2, 1], [2, 5]]
+OuterCone:
+[[-8, 1], [9, 1]]

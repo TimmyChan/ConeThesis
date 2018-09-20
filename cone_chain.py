@@ -257,25 +257,18 @@ class ConeChain(object):
 			top_sequence together into cone_poset_chain.
 		Args: Nothing
 		Returns: Nothing.
-		"""
-		# debug print("Checking if the last element of top_sequence and bottom_sequence \n satisify the poset condition:")
-		
+		"""	
 		# sequence is complete if the poset condition is met for the two intermediate cones
 		self.sequence_complete = self.poset_check(self.bottom_sequence[-1],
 														self.top_sequence[-1])
 		# if the sequence is complete, we should glue them together.
 		if self.sequence_complete:
-			# debug print("Sequence complete!")
 			if len(self.cone_poset_chain) == 0:
 				self.glue()
 			return True
 		else:
 			return False
-		# else:
-			# debug print("Sequence incomplete!")
-		# debug experiment_io_tools.pause()
-		# debug experiment_io_tools.new_screen()
-			
+		
 	def poset_check(self, inner, outer):
 		""" Verifies if the Poset condition is met by inner and outer
 		Default behavior for same cone given is to return True.
@@ -305,8 +298,6 @@ class ConeChain(object):
 			return True
 		# Finding extremal generator of D not in C
 		v = cone_tools.extremal_generators_outside_inner_cone(inner.cone,outer.cone)
-		# debug print("hilbert_outer = {}".format(hilbert_outer))
-		# debug print("v = {}".format(v))
 		if len(v) > 1:
 			# if there's more than one extremal generator outside of C, 
 			# this cannot satisify the poset condition.
@@ -334,14 +325,11 @@ class ConeChain(object):
 		so that cone_poset_chain begins with bottom_sequence, then top_sequence in reverse order
 		"""
 		if self.sequence_complete:
-			# debug print("Now arranging data.")
 			# get the index of the last element of each sequence.
 			# If we run bottom up or top down purely, one of the sequence
 			# ends with inner_cone or outer_cone, creating an overlap.
 			# if the sequence's ends are the same cone, just pop one WLOG
 			if self.bottom_sequence[-1].cone == self.top_sequence[-1].cone:
-				# debug print("Removing a cone from top_sequence because \n the last elements in the sequences are equal...")
-				# experiment_io_tools.pause()
 				self.top_sequence.pop() # Remove one of the repeated cones
  
 			# if we end up with some different cones:
@@ -356,15 +344,38 @@ class ConeChain(object):
 			Returns: None 
 		"""
 		experiment_io_tools.new_screen("Printing summary information about the cone chain:")
-		print("inner_cone has generators: \n{}".format(self.inner_cone.rays_list()))
-		print("outer_cone has generators: \n{}".format(self.outer_cone.rays_list()))
-		print("sequence_complete = {}".format(self.sequence_complete))
-		print("top_sequence has length {}".format(len(self.top_sequence)))
-		print("bottom_sequence has length {}".format(len(self.bottom_sequence)))
-		print("cone_poset_chain has length {}".format(len(self.cone_poset_chain)))
+		print("inner_cone has generators: \n{}\n".format(self.inner_cone.rays_list()))
+		print("outer_cone has generators: \n{}\n".format(self.outer_cone.rays_list()))
+		print("\tsequence_complete = {}\n".format(self.sequence_complete))
+		print("\ttop_sequence has length {}\n".format(len(self.top_sequence)))
+		print("\tbottom_sequence has length {}\n".format(len(self.bottom_sequence)))
+		print("\tcone_poset_chain has length {}\n".format(len(self.cone_poset_chain)))
 		#print("we have used Normaliz for hilbert basis calculation {} times.".format(ConeChainElement.num_hilbert_calc))
 		experiment_io_tools.pause()
 		experiment_io_tools.new_screen()
+
+	def save_summary(self,folder=None,experiment_name=None):
+		""" """
+		# 
+		directory = "/DATA/{}d/".format(self.dimension) if folder is None else folder
+		filename = str(datetime.datetime.now()) if experiment_name is None else experiment_name
+		summary_name = filename + " Data Summary"
+		try:
+			os.makedirs(directory, 0755) 
+		except:
+			NotImplemented
+
+		fileobj = open(directory + summary_name , "w")
+
+		fileobj.write("inner_cone has generators: \n{}\n".format(self.inner_cone.rays_list()))
+		fileobj.write("outer_cone has generators: \n{}\n".format(self.outer_cone.rays_list()))
+		fileobj.write("\tsequence_complete = {}\n".format(self.sequence_complete))
+		fileobj.write("\ttop_sequence has length {}\n".format(len(self.top_sequence)))
+		fileobj.write("\tbottom_sequence has length {}\n".format(len(self.bottom_sequence)))
+		fileobj.write("\tcone_poset_chain has length {}\n".format(len(self.cone_poset_chain)))
+
+		fileobj.close()
+		
 
 	def chain_details(self):
 		""" Prints the details for each cone in the chain 
@@ -406,21 +417,49 @@ class ConeChain(object):
 		self.output_to_terminal()
 		experiment_io_tools.new_screen()
 
-	def hilbert_graph(self):
-		directory = "Hilbert_Graphs/{}d/".format(self.dimension)
-		directory += str(datetime.datetime.now())
-		os.makedirs(directory, 0755) 
-		topdown_length_filename = directory + "/top sequence LENGTH.png"
-		top_hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in self.top_sequence]
-		plt.figure(1)
-		plt.plot(top_hilbert_graph_data_length)
-		plt.savefig(topdown_length_filename)
+	def generate_hilbert_graphs(self, folder=None, experiment_name=None):
+		directory = "/DATA/{}d/Hilbert Graphs".format(self.dimension) if folder is None else folder
+		filename = str(datetime.datetime.now()) if experiment_name is None else experiment_name
+		try:
+			os.makedirs(directory, 0755) 
+		except:
+			NotImplemented
 
-		topdown_size_filename = directory + "/top sequence SIZE.png"
-		top_hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in self.top_sequence]
-		plt.figure(2)
-		plt.plot(top_hilbert_graph_data_size)
-		plt.savefig(topdown_size_filename)
+
+
+		switcher = {"top_sequence" : self.top_sequence,
+					"bottom_sequence" : self.bottom_sequence,
+					"cone_poset_chain" : self.cone_poset_chain}
+
+
+		for name in switcher:
+			if len(switcher[name]) > 1:
+				length_filename = filename + " " + name + " LENGTH {} steps.png".format(self.number_of_steps())
+				hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in switcher[name]]
+				plt.figure(1)
+				plt.plot(hilbert_graph_data_length)
+				plt.savefig(directory + length_filename)
+
+				size_filename = filename + " " +  name + " SIZE {} steps.png".format(self.number_of_steps())
+				hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in switcher[name]]
+				plt.figure(2)
+				plt.plot(hilbert_graph_data_size)
+				plt.savefig(directory + size_filename)
+
+
+		if len(self.top_sequence) > 1:
+			topdown_length_filename = filename + " top sequence LENGTH {} steps.png".format(self.number_of_steps())
+			top_hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in self.top_sequence]
+			plt.figure(1)
+			plt.plot(top_hilbert_graph_data_length)
+			plt.savefig(directory + topdown_length_filename)
+
+			topdown_size_filename = filename + " top sequence SIZE {} steps.png".format(self.number_of_steps())
+			top_hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in self.top_sequence]
+			plt.figure(2)
+			plt.plot(top_hilbert_graph_data_size)
+			plt.savefig(directory + topdown_size_filename)
+		
 
 class ConeChainEncoder(json.JSONEncoder):
 	def default(self,obj):
@@ -459,36 +498,63 @@ if __name__ == "__main__":
 
 	""" Some testing code here """
 
-	steps = 100
-	dim = 4
-	bound = 5
-	
-	loadtest = None
-	try:
-		with open('cone_chain_top_down_{}d.json'.format(dim), 'r') as fp:
-			loadtest = json.load(fp, cls=ConeChainDecoder)
-	except:
-		print('A file loading error has occured.')
-	
+	steps = 200
+	dim = 3
+	bound = 10
 
-	test_outer_cone = cone_tools.generate_cone(dim,bound)
-	test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone,bound)
+	experiment_name = "New_File_Structure_Second_Try"
+
+	directory = "DATA/{}d/".format(dim)  + experiment_name + "/"
+	try:
+		os.makedirs(directory, 0755) 
+	except:
+		NotImplemented
+
+	raw_data_file_path = directory + experiment_name + ".json"
+
+	print("Loading file: {}".format(raw_data_file_path))
+
+	
+	
+	loadtest = None 
+	try:
+		with open(raw_data_file_path, 'r') as fp:
+			loadtest = json.load(fp, cls=ConeChainDecoder)
+		print('\tloading successful...')
+	except:
+		print('\tA file loading error has occured, generating new cones.')
+		test_outer_cone = cone_tools.generate_cone(dim,bound)
+		test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone,bound)
+		
+	experiment_io_tools.pause()
+
+
 	
 	toptest = ConeChain(test_inner_cone, test_outer_cone) if loadtest is None else loadtest
-	
-	toptest.hilbert_graph()
-	toptest.output_to_terminal()
 
+
+	print('Graphing current data')
+	toptest.generate_hilbert_graphs(directory, experiment_name)
+	toptest.output_to_terminal()
+	toptest.save_summary(directory, experiment_name)
 	user_continue = experiment_io_tools.query_yes_no("Begin more testing?")
-	count = 0
+
+
+	original_count = toptest.number_of_steps()
 	while user_continue:
+		print('\trunning top down for {} steps...'.format(steps))
 		toptest.top_down(steps)
-		with open('cone_chain_top_down_{}d.json'.format(dim), 'w') as fp:
+		print('Saving to file...')
+
+		with open(raw_data_file_path, 'w') as fp:
 			json.dump(toptest, fp, cls=ConeChainEncoder,sort_keys=True,
 				indent=4, separators=(',', ': '))
-		count += steps
-		user_continue = experiment_io_tools.query_yes_no("Completed {} steps, saved data. Continue?".format(count))
- 		
+		print('Printing graph...')
+		toptest.generate_hilbert_graphs(directory, experiment_name)
+		toptest.save_summary(directory, experiment_name)
+		user_continue = experiment_io_tools.query_yes_no("Completed {} steps this run so far.\n\tSaved data and printed graph. Continue?".format(toptest.number_of_steps()-original_count))
+ 	
+
 
 """
 	experiment_io_tools.new_screen()

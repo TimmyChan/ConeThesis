@@ -29,13 +29,18 @@ class ConeChainElement(object):
 	"""
 	# MAY NOT BE NECESSARY num_hilbert_calc = 0
 
-	def __init__(self,cone,generation_step=0, algorithm_used="i", hilbert_basis=None):
+	def __init__(self,cone,generation_step=0, algorithm_used="i", 
+				hilbert_basis=None, hilbert_basis_size=None,
+				longest_hilbert_basis_element=None,
+				longest_hilbert_basis_element_length=None):
 		self.cone = cone
 		self.cone_rays_list = cone.rays_list()
 		self.generation_step = generation_step
 		self.algorithm_used = algorithm_used
 		self.hilbert_basis = hilbert_basis
-		self.longest_hilbert_basis_element = None if hilbert_basis is None else cone_tools.longest_vector(self.hilbert_basis)
+		self.hilbert_basis_size = hilbert_basis_size
+		self.longest_hilbert_basis_element = longest_hilbert_basis_element
+		self.longest_hilbert_basis_element_length = longest_hilbert_basis_element_length
 
 	def get_hilbert_basis(self):
 		""" Retreives the hilbert basis, only calculates once. """
@@ -50,14 +55,18 @@ class ConeChainElement(object):
 
 	def get_longest_hilbert_basis_element(self):
 		if self.longest_hilbert_basis_element == None:
-			return cone_tools.longest_vector(self.get_hilbert_basis())
+			self.longest_hilbert_basis_element =  cone_tools.longest_vector(self.get_hilbert_basis())
 		return self.longest_hilbert_basis_element
 
 	def hilbert_graph_data_size(self):
-		return len(self.get_hilbert_basis())
+		if self.hilbert_basis_size == None:
+			self.hilbert_basis_size = float(len(self.get_hilbert_basis()))
+		return self.hilbert_basis_size
 
 	def hilbert_graph_data_length(self):
-		return sage.all.vector(self.get_longest_hilbert_basis_element()).norm()
+		if self.longest_hilbert_basis_element_length == None:
+			self.longest_hilbert_basis_element_length = float(sage.all.vector(self.get_longest_hilbert_basis_element()).norm())
+		return self.longest_hilbert_basis_element_length
 
 	def rays_list(self):
 		"""Returns the extremal generators of the cone 
@@ -86,10 +95,14 @@ class ConeChainElementEncoder(json.JSONEncoder):
 		if isinstance(obj, ConeChainElement):
 			cone_rays_list_json = cone_tools.rays_list_to_json_array(obj.cone_rays_list)
 			hilb_basis = cone_tools.rays_list_to_json_array(obj.hilbert_basis)
+			longest = [int(i) for i in obj.longest_hilbert_basis_element]
 			return {'cone_rays_list' : cone_rays_list_json, 
 				'generation_step' : obj.generation_step, 
 				'algorithm_used' : obj.algorithm_used, 
-				'hilbert_basis' : hilb_basis}
+				'hilbert_basis' : hilb_basis,
+				'hilbert_basis_size': obj.hilbert_basis_size,
+				'longest_hilbert_basis_element': longest,
+				'longest_hilbert_basis_element_length': obj.longest_hilbert_basis_element_length}
 		return json.JSONEncoder.default(self, obj)
 
 class ConeChainElementDecoder(json.JSONDecoder):
@@ -109,5 +122,8 @@ class ConeChainElementDecoder(json.JSONDecoder):
 			return ConeChainElement(cone,
 				dictionary['generation_step'], 
 				dictionary['algorithm_used'],
-				[sage.all.vector(v) for v in dictionary['hilbert_basis']])
+				[sage.all.vector(v) for v in dictionary['hilbert_basis']],
+				dictionary['hilbert_basis_size'],
+				sage.all.vector(dictionary['longest_hilbert_basis_element']),
+				dictionary['longest_hilbert_basis_element_length'])
 

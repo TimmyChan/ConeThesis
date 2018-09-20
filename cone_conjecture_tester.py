@@ -1,9 +1,23 @@
 #!/usr/bin/env sage
 """ Wrapper of the experiment, contains all interface stuff
 """
+#!/usr/bin/env sage
+
+"""ConeConjectureTester
+
+This module contains the an object that will contain a sequence of cones
+and defines ConeChainElement, an object that will contain experimental data for each cone.
+"""
+import sage.all
+import cone_tools
+import experiment_io_tools
+import json 
+import sys
+from cone_chain_element import ConeChainElement, ConeChainElementEncoder, ConeChainElementDecoder
+import pylab as plt
+import datetime, os
 
 import sage.all
-import experiment
 import experiment_io_tools
 import cone_tools
 import cone_chain
@@ -12,71 +26,30 @@ import cone_chain
 class ConeConjectureTester(object):
 	"""All user interface with the Experiment object goes here.
 	"""
+	main_menu_dict = {1: "New Experiment",
+					  2: "Load Existing Experiment",
+					  0: "Exit"}
+
+
 	def __init__(self):
-		self.initial_menu()
-		self.randomly_generated = self.ask_random_or_input()
+		self.main_choice = experiment_io_tools.menu(main_menu_dict,"Cone Conjecture Tester v1.0")
+		while not valid_dimension:
+				dim = experiment_io_tools.ask_int("Dimension: ")
+				if dim > 1:
+					valid_dimension = True
+		if self.main_choice == 1:
+			# make a new experiment
+			self.current_experiment_name = input("Experiment Name: ")
+			self.current_experiment_dimension = 
+		elif self.main_choice == 2:
+			# load an old experiment
+			valid_dimension = False
+			
 
-	def initial_menu(self):
-		""" a menu function that decides if:
-			1) create new experiment
-			2) load experiment
-		"""
-
-
-	def menu(self):
-		""" a menu function that gives control over the experiment """
-
-	def ask_random_or_input(self):
-		""" Prompts user if they want to generate the cone 
-		randomly or raw input 
-		Args: none
-		Returns: True if randomly generated, False otherwise.
-		"""
-		experiment_io_tools.new_screen("Initializing experiment in dimension {}...".format(self.dimension))
-		return experiment_io_tools.query_yes_no("Generate cones randomly?")
+			os.listdir("./DATA/{}d/".format(dim))
+		elif self.main_choice == 0:
+			# exit
 
 
-	def ask_number_of_trials(self):
-		""" Prompts user if they want default number of trials 
-		Args: none
-		Returns: 
-			DEFAULT_NUM_OF_TRIALS if default
-			numtrials otherwise.
-		"""
-		experiment_io_tools.new_screen("Initializing randomly generated experiment in dimension {}...".format(self.dimension))
-		# ask if we keep default number of trials, if so just skip everything else
-		if experiment_io_tools.query_yes_no("Keep default number of trials ({})?".format(DEFAULT_NUMBER_OF_TRIALS)):
-			return DEFAULT_NUMBER_OF_TRIALS
-		else:
-			# otherwise we loop through until we get a valid input
-			while True:
-				try:
-					# ask for an input here, if we have 1 or more done.
-					numtrials = int(input("Number of trials = "))
-					if numtrials >= 1:
-						return numtrials
-					else:
-						print("Please enter a positive integer...")
-				except:
-					print("Please enter a positive integer...")
-			return numtrials
-
-
-	def manual_input(self):
-		""" prompts to input cones
-		Args: none
-		Returns: user_inner, user_outer
-			user_inner (SAGE.geometry.Polyhedron)
-			user_outer (SAGE.geometry.Polyhedron)
-		"""
-
-	def outer_cone_input(self):
-		""" prompts user to input outer cone.
-		"""
-
-	def inner_cone_input(self):
-	def vector_input(self):
-		""" Prompts user to input a vector.
-		Args: none
-		Returns: integer vector
-		"""
+if __name__ == "__main__":
+	debug = ConeConjectureTester()

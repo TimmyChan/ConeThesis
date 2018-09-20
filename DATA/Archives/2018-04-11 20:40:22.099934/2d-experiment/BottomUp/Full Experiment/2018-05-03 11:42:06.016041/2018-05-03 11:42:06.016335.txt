@@ -1,0 +1,15 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(2, 3), (-3, 5)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[0, 1]]
+Extremal Generators of the Outer Cone: 
+[[-3, 5], [2, 3]]
+=============Initialization Complete============
+Extremal generators of D not in Intermediate: [(-3, 5), (2, 3)]
+Step 1

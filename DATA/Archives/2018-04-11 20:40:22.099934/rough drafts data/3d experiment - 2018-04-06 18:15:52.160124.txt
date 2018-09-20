@@ -1,0 +1,27 @@
+
+Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(-10, -1, 7), (-8, 3, 9), (-1, 0, 2)]
+...
+
+Extremal Generators of the Inner Cone: 
+(A ray in the direction (-10, -1, 7), A ray in the direction (-8, 3, 9), A ray in the direction (-1, 0, 2))
+Vector Outside of Inner Cone: (-4, 1, 4)
+Extremal Generators of the Outer Cone: 
+(A ray in the direction (-10, -1, 7), A ray in the direction (-8, 3, 9), A ray in the direction (-4, 1, 4), A ray in the direction (-1, 0, 2))
+=============Initialization Complete============
+Hilbert Basis of D: [(-10, -1, 7), (-8, 3, 9), (-6, 2, 7), (-5, 0, 4), (-4, 1, 4), (-4, 1, 5), (-1, 0, 1), (-1, 0, 2)]
+
+ Intermediate Cone = 
+[[-10, -1, 7], [-8, 3, 9], [-1, 0, 2]]
+ Goal Cone = 
+[[-10, -1, 7], [-8, 3, 9], [-1, 0, 2]]
+ Initial Cone = 
+[[-10, -1, 7], [-8, 3, 9], [-4, 1, 4], [-1, 0, 2]]
+	Finished in 1 steps. 
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10
+================================================================

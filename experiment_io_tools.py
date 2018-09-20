@@ -1,10 +1,23 @@
+#!/usr/bin/env sage
+
 """ Module to contain all I/O functions used by 
-cone conjecture experimet.
+cone conjecture experiment.
 """
 
 
 
 import sys
+import time
+
+def autocontinue_query_yes_no(question,expire=5,default=True):
+	start_time = time.time()
+	expires_in = expire # seconds
+	user_input = None
+	while (time.time() - start_time < expires_in):
+		if user_input is not None:
+			return user_input
+		user_input = query_yes_no(question)
+	return default
 
 def query_yes_no(question, default="yes"):
 	"""Ask a yes/no question via raw_input() and return their answer.
@@ -69,3 +82,68 @@ def pause(pausestring="Press Enter to continue..."):
 		input("\n"+pausestring)
 	except:
 		None
+
+def ask_int(string="Please input an integer: "):
+	""" returns a user inputted integer """
+	acceptable_input = False
+	user_input = None
+	while not acceptable_input:
+		try:
+			user_input = input(string)
+		except:
+			print("\tNon-integer input detected, try again...")
+		if isinstance(user_input, (int,long)):
+			acceptable_input = True
+	return user_input
+
+
+def printseparator(): 
+    print("\n----------------------------------------------------------------------\n")
+ 
+def printmenu(choices_dict,
+		menutitle = "Menu"):
+	new_screen(menutitle)
+	for choice in choices_dict:
+		print("{} : {}".format(choice, choices_dict[choice]))
+	printseparator()
+	
+
+
+def menu(choices_dict,
+		menutitle = "Menu",
+		prompt = "Please enter your choice: "):
+	""" displays a menu and returns the choice listed
+	Args:
+		choices_dict (dictionary) : ( int : "choice text")
+		menutitle (string) : optional text
+	Returns:
+		user_choice (int)
+			"""
+	printmenu(choices_dict,menutitle)
+	
+	keys = choices_dict.keys()
+	valid_input = False
+	while not valid_input:
+		user_input = ask_int(prompt)
+		if user_input in keys:
+			valid_input = True
+		else:
+			printmenu(choices_dict,menutitle)
+	new_screen()
+	return user_input
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+
+	""" Some testing code here """
+	choice = menu({1: "New Experiment", 
+		  		   2: "Load Experiment"})
+	print("You chose {}".format(choice))

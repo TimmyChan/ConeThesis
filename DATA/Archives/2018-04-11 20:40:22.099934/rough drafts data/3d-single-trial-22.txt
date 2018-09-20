@@ -1,0 +1,306 @@
+=============Initializing Experiment============
+vector before making it primitive = [9, 10, 8], gcd = 1
+returning (9, 10, 8)
+vector before making it primitive = [-8, 5, 8], gcd = 1
+returning (-8, 5, 8)
+vector before making it primitive = [9, 5, 7], gcd = 1
+returning (9, 5, 7)
+vector before making it primitive = [-5, -6, 6], gcd = 1
+returning (-5, -6, 6)
+vector before making it primitive = [-7, 0, 9], gcd = 1
+returning (-7, 0, 9)
+Generating Cone with: 
+[(9, 10, 8), (-8, 5, 8), (9, 5, 7), (-5, -6, 6), (-7, 0, 9)]
+...
+
+vector before making it primitive = [-7, -1, 9], gcd = 1
+returning (-7, -1, 9)
+(-7, -1, 9) is in the Cone.
+vector before making it primitive = [9, 9, 4], gcd = 1
+returning (9, 9, 4)
+Extremal Generators of the Inner Cone: 
+N(-8,  5, 8),
+N( 9, 10, 8),
+N(-5, -6, 6),
+N( 9,  5, 7)
+in 3-d lattice N
+Vector Outside of Inner Cone: (9, 9, 4)
+Extremal Generators of the Outer Cone: 
+N(-8,  5, 8),
+N(-5, -6, 6),
+N( 9,  5, 7),
+N( 9,  9, 4)
+in 3-d lattice N
+=============Initialization Complete============
+C proper?: True
+D contains C?: True
+D contains v?: True
+C contains v?: False
+
+Is D proper?: True
+Hilbert Basis of D: [[-12L, -1L, 13L], [-12L, 0L, 13L], [-11L, -2L, 12L], [-11L, -1L, 12L], [-11L, 0L, 12L], [-11L, 1L, 12L], [-10L, -2L, 11L], [-10L, -1L, 11L], [-10L, 0L, 11L], [-10L, 1L, 11L], [-10L, 2L, 11L], [-9L, -3L, 10L], [-9L, -2L, 10L], [-9L, -1L, 10L], [-9L, 0L, 10L], [-9L, 1L, 10L], [-9L, 2L, 10L], [-9L, 3L, 10L], [-8L, -4L, 9L], [-8L, -3L, 9L], [-8L, -2L, 9L], [-8L, -1L, 9L], [-8L, 0L, 9L], [-8L, 1L, 9L], [-8L, 2L, 9L], [-8L, 3L, 9L], [-8L, 4L, 9L], [-8L, 5L, 8L], [-7L, -4L, 8L], [-7L, -3L, 8L], [-7L, -2L, 8L], [-7L, -1L, 8L], [-7L, 0L, 8L], [-7L, 1L, 8L], [-7L, 2L, 8L], [-7L, 3L, 8L], [-7L, 4L, 8L], [-7L, 5L, 8L], [-6L, -5L, 7L], [-6L, -4L, 7L], [-6L, -3L, 7L], [-6L, -2L, 7L], [-6L, -1L, 7L], [-6L, 0L, 7L], [-6L, 1L, 7L], [-6L, 2L, 7L], [-6L, 3L, 7L], [-6L, 4L, 7L], [-5L, -6L, 6L], [-5L, -5L, 6L], [-5L, -4L, 6L], [-5L, -3L, 6L], [-5L, -2L, 6L], [-5L, -1L, 6L], [-5L, 0L, 6L], [-5L, 1L, 6L], [-5L, 2L, 6L], [-5L, 3L, 6L], [-5L, 4L, 6L], [-4L, -5L, 6L], [-4L, -4L, 5L], [-4L, -3L, 5L], [-4L, -2L, 5L], [-4L, -1L, 5L], [-4L, 0L, 5L], [-4L, 1L, 5L], [-4L, 2L, 5L], [-4L, 3L, 5L], [-3L, -4L, 5L], [-3L, -3L, 4L], [-3L, -2L, 4L], [-3L, -1L, 4L], [-3L, 0L, 4L], [-3L, 1L, 4L], [-3L, 2L, 4L], [-3L, 3L, 4L], [-2L, -3L, 5L], [-2L, -2L, 3L], [-2L, -1L, 3L], [-2L, 0L, 3L], [-2L, 1L, 3L], [-2L, 2L, 3L], [-1L, -2L, 4L], [-1L, -1L, 2L], [-1L, 0L, 2L], [-1L, 1L, 2L], [-1L, 4L, 4L], [0L, -1L, 4L], [0L, 0L, 1L], [0L, 1L, 1L], [1L, 0L, 3L], [1L, 1L, 1L], [1L, 5L, 4L], [2L, 0L, 5L], [2L, 1L, 2L], [2L, 2L, 1L], [3L, 6L, 4L], [5L, 3L, 4L], [5L, 4L, 3L], [5L, 7L, 4L], [7L, 8L, 4L], [8L, 5L, 6L], [9L, 5L, 7L], [9L, 9L, 4L]]
+v removed ok
+Extremal generators of Intermediate Cone: 
+N( 9,  5, 7),
+N( 7,  8, 4),
+N( 5,  4, 3),
+N( 2,  2, 1),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(7, 8, 4), N(5, 4, 3), N(2, 2, 1)]
+Vector norms: [sqrt(129), 5*sqrt(2), 3]
+Vector to remove = N(2, 2, 1) and its norm = 3
+Step 2... Original number of extremal rays: 4, Now: 5
+Extremal generators of Intermediate Cone: 
+N( 9,  5, 7),
+N( 7,  8, 4),
+N( 5,  4, 3),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(7, 8, 4), N(5, 4, 3)]
+Vector norms: [sqrt(129), 5*sqrt(2)]
+Vector to remove = N(5, 4, 3) and its norm = 5*sqrt(2)
+Step 3... Original number of extremal rays: 4, Now: 6
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 7,  8, 4),
+N( 5,  5, 3),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(7, 8, 4), N(5, 5, 3)]
+Vector norms: [3*sqrt(26), sqrt(129), sqrt(59)]
+Vector to remove = N(5, 5, 3) and its norm = sqrt(59)
+Step 4... Original number of extremal rays: 4, Now: 5
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 7,  8, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(7, 8, 4)]
+Vector norms: [3*sqrt(26), sqrt(129)]
+Vector to remove = N(7, 8, 4) and its norm = sqrt(129)
+Step 5... Original number of extremal rays: 4, Now: 8
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N( 6,  5, 4),
+N( 5,  7, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4), N(6, 5, 4), N(5, 7, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101), sqrt(77), 3*sqrt(10)]
+Vector to remove = N(6, 5, 4) and its norm = sqrt(77)
+Step 6... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N( 5,  7, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4), N(5, 7, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101), 3*sqrt(10)]
+Vector to remove = N(5, 7, 4) and its norm = 3*sqrt(10)
+Step 7... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N( 3,  6, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4), N(3, 6, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101), sqrt(61)]
+Vector to remove = N(3, 6, 4) and its norm = sqrt(61)
+Step 8... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N( 1,  5, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4), N(1, 5, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101), sqrt(42)]
+Vector to remove = N(1, 5, 4) and its norm = sqrt(42)
+Step 9... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N(-1,  4, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4), N(-1, 4, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101), sqrt(33)]
+Vector to remove = N(-1, 4, 4) and its norm = sqrt(33)
+Step 10... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N(-3,  3, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4), N(-3, 3, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101), sqrt(34)]
+Vector to remove = N(-3, 3, 4) and its norm = sqrt(34)
+Step 11... Original number of extremal rays: 4, Now: 6
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 6,  7, 4),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(6, 7, 4)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(101)]
+Vector to remove = N(6, 7, 4) and its norm = sqrt(101)
+Step 12... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 4,  5, 3),
+N(-1,  6, 6),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(4, 5, 3), N(-1, 6, 6)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), 5*sqrt(2), sqrt(73)]
+Vector to remove = N(4, 5, 3) and its norm = 5*sqrt(2)
+Step 13... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 2,  3, 2),
+N(-1,  6, 6),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(2, 3, 2), N(-1, 6, 6)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(17), sqrt(73)]
+Vector to remove = N(2, 3, 2) and its norm = sqrt(17)
+Step 14... Original number of extremal rays: 4, Now: 6
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N(-1,  6, 6),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(-1, 6, 6)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(73)]
+Vector to remove = N(-1, 6, 6) and its norm = sqrt(73)
+Step 15... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 2,  7, 6),
+N(-3,  4, 5),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(2, 7, 6), N(-3, 4, 5)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(89), 5*sqrt(2)]
+Vector to remove = N(-3, 4, 5) and its norm = 5*sqrt(2)
+Step 16... Original number of extremal rays: 4, Now: 6
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 2,  7, 6),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(2, 7, 6)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), sqrt(89)]
+Vector to remove = N(2, 7, 6) and its norm = sqrt(89)
+Step 17... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 5,  8, 6),
+N(-3,  6, 7),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(5, 8, 6), N(-3, 6, 7)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), 5*sqrt(5), sqrt(94)]
+Vector to remove = N(-3, 6, 7) and its norm = sqrt(94)
+Step 18... Original number of extremal rays: 4, Now: 6
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N( 5,  8, 6),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5), N(5, 8, 6)]
+Vector norms: [3*sqrt(26), 3*sqrt(17), 5*sqrt(5)]
+Vector to remove = N(5, 8, 6) and its norm = 5*sqrt(5)
+Step 19... Original number of extremal rays: 4, Now: 5
+Extremal generators of Intermediate Cone: 
+N(11,  7, 8),
+N( 9,  5, 7),
+N( 8,  8, 5),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(11, 7, 8), N(8, 8, 5)]
+Vector norms: [3*sqrt(26), 3*sqrt(17)]
+Vector to remove = N(8, 8, 5) and its norm = 3*sqrt(17)
+Step 20... Original number of extremal rays: 4, Now: 8
+Extremal generators of Intermediate Cone: 
+N(13, 10, 9),
+N(11,  7, 8),
+N( 9,  8, 6),
+N( 9,  5, 7),
+N( 3,  3, 2),
+N( 0,  1, 1),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(13, 10, 9), N(11, 7, 8), N(9, 8, 6), N(3, 3, 2), N(0, 1, 1)]
+Vector norms: [5*sqrt(14), 3*sqrt(26), sqrt(181), sqrt(22), sqrt(2)]
+Vector to remove = N(0, 1, 1) and its norm = sqrt(2)
+Step 21... Original number of extremal rays: 4, Now: 7
+Extremal generators of Intermediate Cone: 
+N(13, 10, 9),
+N(11,  7, 8),
+N( 9,  8, 6),
+N( 9,  5, 7),
+N( 3,  3, 2),
+N(-5, -6, 6),
+N(-8,  5, 8)
+in 3-d lattice N
+Extremal generators not contained in C: [N(13, 10, 9), N(11, 7, 8), N(9, 8, 6), N(3, 3, 2)]
+Vector norms: [5*sqrt(14), 3*sqrt(26), sqrt(181), sqrt(22)]
+Vector to remove = N(3, 3, 2) and its norm = sqrt(22)
+Step 22... Original number of extremal rays: 4, Now: 8
+ERROR: C not in Intermediate Cone

@@ -1,0 +1,764 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(-3, 5), (-8, 1), (8, 3), (1, 10), (5, 9), (-3, 2), (6, 7), (-1, 7), (9, 10), (-1, 2)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-4, 3], [2, 1]]
+Extremal Generators of the Outer Cone: 
+[[-8, 1], [8, 3]]
+=============Initialization Complete============
+Extremal generators of D not in Intermediate: [(-8, 1), (8, 3)]
+Step 1
+Returning the convex hull of Intermediate with (5, 2)...
+Extremal generators of D not in Intermediate: [(-8, 1), (8, 3)]
+Step 2
+Returning the convex hull of Intermediate with (8, 3)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 3
+Returning the convex hull of Intermediate with (-3, 2)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 4
+Returning the convex hull of Intermediate with (-2, 1)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 5
+Returning the convex hull of Intermediate with (-3, 1)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 6
+Returning the convex hull of Intermediate with (-4, 1)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 7
+Returning the convex hull of Intermediate with (-5, 1)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 8
+Returning the convex hull of Intermediate with (-6, 1)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 9
+Returning the convex hull of Intermediate with (-7, 1)...
+Extremal generators of D not in Intermediate: [(-8, 1)]
+Step 10
+Returning the convex hull of Intermediate with (-8, 1)...
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------
+
+TRIAL 1/100: test # 1 - 10
+TRIAL STATS:
+	Mean: 7.2	Median: 6.0	Mode: [3]
+	Min: 3	Max: 19 
+	Standard Deviation: 4.89
+----------------------------------------------------------------------
+
+TRIAL 2/100: test # 11 - 20
+TRIAL STATS:
+	Mean: 4.9	Median: 3.5	Mode: [3]
+	Min: 1	Max: 14 
+	Standard Deviation: 3.98
+----------------------------------------------------------------------
+
+TRIAL 3/100: test # 21 - 30
+TRIAL STATS:
+	Mean: 6.4	Median: 6.5	Mode: [4]
+	Min: 4	Max: 10 
+	Standard Deviation: 2.01
+----------------------------------------------------------------------
+
+TRIAL 4/100: test # 31 - 40
+TRIAL STATS:
+	Mean: 4.8	Median: 5.0	Mode: [5]
+	Min: 2	Max: 7 
+	Standard Deviation: 1.62
+----------------------------------------------------------------------
+
+TRIAL 5/100: test # 41 - 50
+TRIAL STATS:
+	Mean: 5.2	Median: 4.5	Mode: [3]
+	Min: 3	Max: 10 
+	Standard Deviation: 2.57
+----------------------------------------------------------------------
+
+TRIAL 6/100: test # 51 - 60
+TRIAL STATS:
+	Mean: 6.9	Median: 5.0	Mode: [5]
+	Min: 1	Max: 16 
+	Standard Deviation: 4.38
+----------------------------------------------------------------------
+
+TRIAL 7/100: test # 61 - 70
+TRIAL STATS:
+	Mean: 6.4	Median: 6.5	Mode: [7, 11]
+	Min: 2	Max: 11 
+	Standard Deviation: 3.06
+----------------------------------------------------------------------
+
+TRIAL 8/100: test # 71 - 80
+TRIAL STATS:
+	Mean: 8.5	Median: 7.0	Mode: [6]
+	Min: 5	Max: 14 
+	Standard Deviation: 3.6
+----------------------------------------------------------------------
+
+TRIAL 9/100: test # 81 - 90
+TRIAL STATS:
+	Mean: 5.8	Median: 6.0	Mode: [6, 7]
+	Min: 1	Max: 10 
+	Standard Deviation: 2.7
+----------------------------------------------------------------------
+
+TRIAL 10/100: test # 91 - 100
+TRIAL STATS:
+	Mean: 7.3	Median: 6.0	Mode: [2, 5]
+	Min: 2	Max: 17 
+	Standard Deviation: 4.85
+----------------------------------------------------------------------
+
+TRIAL 11/100: test # 101 - 110
+TRIAL STATS:
+	Mean: 4.2	Median: 3.5	Mode: [2]
+	Min: 2	Max: 8 
+	Standard Deviation: 2.44
+----------------------------------------------------------------------
+
+TRIAL 12/100: test # 111 - 120
+TRIAL STATS:
+	Mean: 6.5	Median: 6.0	Mode: [3, 5, 8]
+	Min: 2	Max: 13 
+	Standard Deviation: 3.6
+----------------------------------------------------------------------
+
+TRIAL 13/100: test # 121 - 130
+TRIAL STATS:
+	Mean: 4.0	Median: 3.0	Mode: [3]
+	Min: 1	Max: 10 
+	Standard Deviation: 2.83
+----------------------------------------------------------------------
+
+TRIAL 14/100: test # 131 - 140
+TRIAL STATS:
+	Mean: 6.7	Median: 7.0	Mode: [4, 7]
+	Min: 4	Max: 10 
+	Standard Deviation: 2.21
+----------------------------------------------------------------------
+
+TRIAL 15/100: test # 141 - 150
+TRIAL STATS:
+	Mean: 7.4	Median: 8.0	Mode: [8]
+	Min: 2	Max: 13 
+	Standard Deviation: 3.47
+----------------------------------------------------------------------
+
+TRIAL 16/100: test # 151 - 160
+TRIAL STATS:
+	Mean: 6.2	Median: 6.0	Mode: [6, 7, 11]
+	Min: 2	Max: 11 
+	Standard Deviation: 3.01
+----------------------------------------------------------------------
+
+TRIAL 17/100: test # 161 - 170
+TRIAL STATS:
+	Mean: 6.0	Median: 7.0	Mode: [7]
+	Min: 0	Max: 14 
+	Standard Deviation: 4.64
+----------------------------------------------------------------------
+
+TRIAL 18/100: test # 171 - 180
+TRIAL STATS:
+	Mean: 6.7	Median: 4.5	Mode: [4]
+	Min: 4	Max: 15 
+	Standard Deviation: 3.74
+----------------------------------------------------------------------
+
+TRIAL 19/100: test # 181 - 190
+TRIAL STATS:
+	Mean: 5.5	Median: 5.0	Mode: [5]
+	Min: 2	Max: 11 
+	Standard Deviation: 2.99
+----------------------------------------------------------------------
+
+TRIAL 20/100: test # 191 - 200
+TRIAL STATS:
+	Mean: 6.3	Median: 6.0	Mode: [6]
+	Min: 2	Max: 12 
+	Standard Deviation: 2.95
+----------------------------------------------------------------------
+
+TRIAL 21/100: test # 201 - 210
+TRIAL STATS:
+	Mean: 7.5	Median: 7.0	Mode: [4, 8]
+	Min: 2	Max: 15 
+	Standard Deviation: 4.12
+----------------------------------------------------------------------
+
+TRIAL 22/100: test # 211 - 220
+TRIAL STATS:
+	Mean: 4.6	Median: 4.0	Mode: [0, 2, 5]
+	Min: 0	Max: 14 
+	Standard Deviation: 4.27
+----------------------------------------------------------------------
+
+TRIAL 23/100: test # 221 - 230
+TRIAL STATS:
+	Mean: 5.9	Median: 6.0	Mode: [6]
+	Min: 1	Max: 15 
+	Standard Deviation: 3.87
+----------------------------------------------------------------------
+
+TRIAL 24/100: test # 231 - 240
+TRIAL STATS:
+	Mean: 6.3	Median: 4.0	Mode: [1, 3, 4]
+	Min: 1	Max: 16 
+	Standard Deviation: 5.6
+----------------------------------------------------------------------
+
+TRIAL 25/100: test # 241 - 250
+TRIAL STATS:
+	Mean: 4.5	Median: 3.5	Mode: [3]
+	Min: 2	Max: 12 
+	Standard Deviation: 3.03
+----------------------------------------------------------------------
+
+TRIAL 26/100: test # 251 - 260
+TRIAL STATS:
+	Mean: 6.0	Median: 6.0	Mode: [6]
+	Min: 2	Max: 11 
+	Standard Deviation: 2.83
+----------------------------------------------------------------------
+
+TRIAL 27/100: test # 261 - 270
+TRIAL STATS:
+	Mean: 5.6	Median: 6.0	Mode: [6]
+	Min: 3	Max: 9 
+	Standard Deviation: 1.9
+----------------------------------------------------------------------
+
+TRIAL 28/100: test # 271 - 280
+TRIAL STATS:
+	Mean: 6.3	Median: 5.0	Mode: [1, 4, 8]
+	Min: 1	Max: 18 
+	Standard Deviation: 5.27
+----------------------------------------------------------------------
+
+TRIAL 29/100: test # 281 - 290
+TRIAL STATS:
+	Mean: 5.1	Median: 4.5	Mode: [2, 4, 6]
+	Min: 2	Max: 11 
+	Standard Deviation: 2.81
+----------------------------------------------------------------------
+
+TRIAL 30/100: test # 291 - 300
+TRIAL STATS:
+	Mean: 6.3	Median: 6.0	Mode: [5, 7]
+	Min: 1	Max: 13 
+	Standard Deviation: 3.89
+----------------------------------------------------------------------
+
+TRIAL 31/100: test # 301 - 310
+TRIAL STATS:
+	Mean: 7.3	Median: 8.0	Mode: [8]
+	Min: 1	Max: 14 
+	Standard Deviation: 4.42
+----------------------------------------------------------------------
+
+TRIAL 32/100: test # 311 - 320
+TRIAL STATS:
+	Mean: 5.6	Median: 5.0	Mode: [5, 6]
+	Min: 1	Max: 13 
+	Standard Deviation: 3.78
+----------------------------------------------------------------------
+
+TRIAL 33/100: test # 321 - 330
+TRIAL STATS:
+	Mean: 4.1	Median: 3.0	Mode: [1]
+	Min: 0	Max: 12 
+	Standard Deviation: 4.07
+----------------------------------------------------------------------
+
+TRIAL 34/100: test # 331 - 340
+TRIAL STATS:
+	Mean: 7.4	Median: 8.0	Mode: [8]
+	Min: 3	Max: 11 
+	Standard Deviation: 2.27
+----------------------------------------------------------------------
+
+TRIAL 35/100: test # 341 - 350
+TRIAL STATS:
+	Mean: 5.7	Median: 7.0	Mode: [7]
+	Min: 1	Max: 10 
+	Standard Deviation: 3.23
+----------------------------------------------------------------------
+
+TRIAL 36/100: test # 351 - 360
+TRIAL STATS:
+	Mean: 6.9	Median: 7.0	Mode: [7]
+	Min: 3	Max: 11 
+	Standard Deviation: 2.18
+----------------------------------------------------------------------
+
+TRIAL 37/100: test # 361 - 370
+TRIAL STATS:
+	Mean: 6.9	Median: 7.0	Mode: [9]
+	Min: 0	Max: 19 
+	Standard Deviation: 5.57
+----------------------------------------------------------------------
+
+TRIAL 38/100: test # 371 - 380
+TRIAL STATS:
+	Mean: 5.4	Median: 6.0	Mode: [2, 6]
+	Min: 2	Max: 9 
+	Standard Deviation: 2.63
+----------------------------------------------------------------------
+
+TRIAL 39/100: test # 381 - 390
+TRIAL STATS:
+	Mean: 4.7	Median: 4.0	Mode: [2]
+	Min: 1	Max: 10 
+	Standard Deviation: 3.27
+----------------------------------------------------------------------
+
+TRIAL 40/100: test # 391 - 400
+TRIAL STATS:
+	Mean: 6.5	Median: 5.0	Mode: [5]
+	Min: 2	Max: 12 
+	Standard Deviation: 3.37
+----------------------------------------------------------------------
+
+TRIAL 41/100: test # 401 - 410
+TRIAL STATS:
+	Mean: 5.6	Median: 6.0	Mode: [7]
+	Min: 3	Max: 8 
+	Standard Deviation: 1.78
+----------------------------------------------------------------------
+
+TRIAL 42/100: test # 411 - 420
+TRIAL STATS:
+	Mean: 7.6	Median: 6.5	Mode: [6]
+	Min: 2	Max: 15 
+	Standard Deviation: 3.57
+----------------------------------------------------------------------
+
+TRIAL 43/100: test # 421 - 430
+TRIAL STATS:
+	Mean: 7.6	Median: 8.5	Mode: [3]
+	Min: 3	Max: 12 
+	Standard Deviation: 3.84
+----------------------------------------------------------------------
+
+TRIAL 44/100: test # 431 - 440
+TRIAL STATS:
+	Mean: 6.7	Median: 6.5	Mode: [2, 8]
+	Min: 2	Max: 15 
+	Standard Deviation: 4.3
+----------------------------------------------------------------------
+
+TRIAL 45/100: test # 441 - 450
+TRIAL STATS:
+	Mean: 8.4	Median: 8.0	Mode: [7]
+	Min: 1	Max: 16 
+	Standard Deviation: 4.99
+----------------------------------------------------------------------
+
+TRIAL 46/100: test # 451 - 460
+TRIAL STATS:
+	Mean: 7.2	Median: 7.5	Mode: [6, 11]
+	Min: 0	Max: 12 
+	Standard Deviation: 3.91
+----------------------------------------------------------------------
+
+TRIAL 47/100: test # 461 - 470
+TRIAL STATS:
+	Mean: 6.0	Median: 5.0	Mode: [5]
+	Min: 2	Max: 13 
+	Standard Deviation: 3.68
+----------------------------------------------------------------------
+
+TRIAL 48/100: test # 471 - 480
+TRIAL STATS:
+	Mean: 6.5	Median: 7.0	Mode: [7, 9]
+	Min: 2	Max: 10 
+	Standard Deviation: 2.72
+----------------------------------------------------------------------
+
+TRIAL 49/100: test # 481 - 490
+TRIAL STATS:
+	Mean: 3.6	Median: 3.0	Mode: [2, 4]
+	Min: 1	Max: 11 
+	Standard Deviation: 2.8
+----------------------------------------------------------------------
+
+TRIAL 50/100: test # 491 - 500
+TRIAL STATS:
+	Mean: 5.9	Median: 5.5	Mode: [4]
+	Min: 4	Max: 9 
+	Standard Deviation: 1.91
+----------------------------------------------------------------------
+
+TRIAL 51/100: test # 501 - 510
+TRIAL STATS:
+	Mean: 6.6	Median: 6.5	Mode: [6, 7]
+	Min: 3	Max: 11 
+	Standard Deviation: 2.37
+----------------------------------------------------------------------
+
+TRIAL 52/100: test # 511 - 520
+TRIAL STATS:
+	Mean: 8.1	Median: 6.5	Mode: [5]
+	Min: 3	Max: 15 
+	Standard Deviation: 4.2
+----------------------------------------------------------------------
+
+TRIAL 53/100: test # 521 - 530
+TRIAL STATS:
+	Mean: 4.9	Median: 4.5	Mode: [4]
+	Min: 0	Max: 10 
+	Standard Deviation: 3.21
+----------------------------------------------------------------------
+
+TRIAL 54/100: test # 531 - 540
+TRIAL STATS:
+	Mean: 8.3	Median: 8.0	Mode: [8]
+	Min: 3	Max: 14 
+	Standard Deviation: 3.5
+----------------------------------------------------------------------
+
+TRIAL 55/100: test # 541 - 550
+TRIAL STATS:
+	Mean: 3.9	Median: 3.5	Mode: [1]
+	Min: 1	Max: 8 
+	Standard Deviation: 2.77
+----------------------------------------------------------------------
+
+TRIAL 56/100: test # 551 - 560
+TRIAL STATS:
+	Mean: 5.6	Median: 6.0	Mode: [6]
+	Min: 2	Max: 12 
+	Standard Deviation: 2.95
+----------------------------------------------------------------------
+
+TRIAL 57/100: test # 561 - 570
+TRIAL STATS:
+	Mean: 6.0	Median: 5.0	Mode: [5]
+	Min: 2	Max: 11 
+	Standard Deviation: 2.83
+----------------------------------------------------------------------
+
+TRIAL 58/100: test # 571 - 580
+TRIAL STATS:
+	Mean: 8.4	Median: 8.0	Mode: [5, 7, 8]
+	Min: 5	Max: 13 
+	Standard Deviation: 2.67
+----------------------------------------------------------------------
+
+TRIAL 59/100: test # 581 - 590
+TRIAL STATS:
+	Mean: 6.3	Median: 7.5	Mode: [8]
+	Min: 1	Max: 11 
+	Standard Deviation: 3.13
+----------------------------------------------------------------------
+
+TRIAL 60/100: test # 591 - 600
+TRIAL STATS:
+	Mean: 6.2	Median: 6.5	Mode: [3, 7]
+	Min: 2	Max: 11 
+	Standard Deviation: 3.16
+----------------------------------------------------------------------
+
+TRIAL 61/100: test # 601 - 610
+TRIAL STATS:
+	Mean: 6.8	Median: 7.0	Mode: [5, 7, 9]
+	Min: 1	Max: 11 
+	Standard Deviation: 3.08
+----------------------------------------------------------------------
+
+TRIAL 62/100: test # 611 - 620
+TRIAL STATS:
+	Mean: 8.2	Median: 8.5	Mode: [1, 3, 5, 6, 8, 9, 10, 11, 13, 16]
+	Min: 1	Max: 16 
+	Standard Deviation: 4.59
+----------------------------------------------------------------------
+
+TRIAL 63/100: test # 621 - 630
+TRIAL STATS:
+	Mean: 6.6	Median: 4.5	Mode: [3]
+	Min: 1	Max: 15 
+	Standard Deviation: 4.84
+----------------------------------------------------------------------
+
+TRIAL 64/100: test # 631 - 640
+TRIAL STATS:
+	Mean: 5.8	Median: 5.5	Mode: [7]
+	Min: 0	Max: 13 
+	Standard Deviation: 3.29
+----------------------------------------------------------------------
+
+TRIAL 65/100: test # 641 - 650
+TRIAL STATS:
+	Mean: 5.2	Median: 4.0	Mode: [3, 4]
+	Min: 1	Max: 11 
+	Standard Deviation: 3.33
+----------------------------------------------------------------------
+
+TRIAL 66/100: test # 651 - 660
+TRIAL STATS:
+	Mean: 6.2	Median: 7.0	Mode: [8]
+	Min: 1	Max: 9 
+	Standard Deviation: 2.44
+----------------------------------------------------------------------
+
+TRIAL 67/100: test # 661 - 670
+TRIAL STATS:
+	Mean: 6.4	Median: 5.5	Mode: [2, 3, 6]
+	Min: 2	Max: 16 
+	Standard Deviation: 4.6
+----------------------------------------------------------------------
+
+TRIAL 68/100: test # 671 - 680
+TRIAL STATS:
+	Mean: 7.6	Median: 7.0	Mode: [4]
+	Min: 3	Max: 13 
+	Standard Deviation: 4.3
+----------------------------------------------------------------------
+
+TRIAL 69/100: test # 681 - 690
+TRIAL STATS:
+	Mean: 8.6	Median: 8.5	Mode: [14]
+	Min: 1	Max: 16 
+	Standard Deviation: 4.99
+----------------------------------------------------------------------
+
+TRIAL 70/100: test # 691 - 700
+TRIAL STATS:
+	Mean: 6.9	Median: 4.5	Mode: [3]
+	Min: 2	Max: 20 
+	Standard Deviation: 5.72
+----------------------------------------------------------------------
+
+TRIAL 71/100: test # 701 - 710
+TRIAL STATS:
+	Mean: 5.9	Median: 5.0	Mode: [5]
+	Min: 2	Max: 12 
+	Standard Deviation: 3.14
+----------------------------------------------------------------------
+
+TRIAL 72/100: test # 711 - 720
+TRIAL STATS:
+	Mean: 5.7	Median: 6.5	Mode: [7]
+	Min: 1	Max: 11 
+	Standard Deviation: 3.16
+----------------------------------------------------------------------
+
+TRIAL 73/100: test # 721 - 730
+TRIAL STATS:
+	Mean: 7.1	Median: 7.0	Mode: [7]
+	Min: 0	Max: 13 
+	Standard Deviation: 4.12
+----------------------------------------------------------------------
+
+TRIAL 74/100: test # 731 - 740
+TRIAL STATS:
+	Mean: 4.8	Median: 5.0	Mode: [6]
+	Min: 2	Max: 8 
+	Standard Deviation: 1.87
+----------------------------------------------------------------------
+
+TRIAL 75/100: test # 741 - 750
+TRIAL STATS:
+	Mean: 5.0	Median: 4.5	Mode: [2, 3, 5]
+	Min: 2	Max: 13 
+	Standard Deviation: 3.27
+----------------------------------------------------------------------
+
+TRIAL 76/100: test # 751 - 760
+TRIAL STATS:
+	Mean: 6.5	Median: 6.0	Mode: [3]
+	Min: 0	Max: 14 
+	Standard Deviation: 4.58
+----------------------------------------------------------------------
+
+TRIAL 77/100: test # 761 - 770
+TRIAL STATS:
+	Mean: 7.5	Median: 7.5	Mode: [5, 8]
+	Min: 3	Max: 16 
+	Standard Deviation: 3.75
+----------------------------------------------------------------------
+
+TRIAL 78/100: test # 771 - 780
+TRIAL STATS:
+	Mean: 5.4	Median: 4.5	Mode: [4]
+	Min: 2	Max: 11 
+	Standard Deviation: 2.84
+----------------------------------------------------------------------
+
+TRIAL 79/100: test # 781 - 790
+TRIAL STATS:
+	Mean: 5.1	Median: 5.0	Mode: [3, 5]
+	Min: 1	Max: 11 
+	Standard Deviation: 3.0
+----------------------------------------------------------------------
+
+TRIAL 80/100: test # 791 - 800
+TRIAL STATS:
+	Mean: 6.6	Median: 5.0	Mode: [4, 5]
+	Min: 1	Max: 16 
+	Standard Deviation: 4.79
+----------------------------------------------------------------------
+
+TRIAL 81/100: test # 801 - 810
+TRIAL STATS:
+	Mean: 6.3	Median: 5.0	Mode: [3, 5]
+	Min: 1	Max: 18 
+	Standard Deviation: 4.85
+----------------------------------------------------------------------
+
+TRIAL 82/100: test # 811 - 820
+TRIAL STATS:
+	Mean: 7.0	Median: 8.0	Mode: [9]
+	Min: 2	Max: 11 
+	Standard Deviation: 3.02
+----------------------------------------------------------------------
+
+TRIAL 83/100: test # 821 - 830
+TRIAL STATS:
+	Mean: 7.3	Median: 8.0	Mode: [9]
+	Min: 4	Max: 10 
+	Standard Deviation: 2.21
+----------------------------------------------------------------------
+
+TRIAL 84/100: test # 831 - 840
+TRIAL STATS:
+	Mean: 5.7	Median: 5.0	Mode: [4, 6]
+	Min: 2	Max: 13 
+	Standard Deviation: 3.47
+----------------------------------------------------------------------
+
+TRIAL 85/100: test # 841 - 850
+TRIAL STATS:
+	Mean: 6.6	Median: 6.5	Mode: [3]
+	Min: 2	Max: 13 
+	Standard Deviation: 3.5
+----------------------------------------------------------------------
+
+TRIAL 86/100: test # 851 - 860
+TRIAL STATS:
+	Mean: 6.2	Median: 6.5	Mode: [4, 9]
+	Min: 2	Max: 10 
+	Standard Deviation: 2.82
+----------------------------------------------------------------------
+
+TRIAL 87/100: test # 861 - 870
+TRIAL STATS:
+	Mean: 6.6	Median: 4.0	Mode: [3]
+	Min: 2	Max: 14 
+	Standard Deviation: 4.88
+----------------------------------------------------------------------
+
+TRIAL 88/100: test # 871 - 880
+TRIAL STATS:
+	Mean: 7.7	Median: 6.0	Mode: [5, 6]
+	Min: 5	Max: 13 
+	Standard Deviation: 3.3
+----------------------------------------------------------------------
+
+TRIAL 89/100: test # 881 - 890
+TRIAL STATS:
+	Mean: 6.8	Median: 5.5	Mode: [5, 11]
+	Min: 2	Max: 14 
+	Standard Deviation: 3.94
+----------------------------------------------------------------------
+
+TRIAL 90/100: test # 891 - 900
+TRIAL STATS:
+	Mean: 5.9	Median: 6.0	Mode: [3, 6]
+	Min: 1	Max: 11 
+	Standard Deviation: 3.03
+----------------------------------------------------------------------
+
+TRIAL 91/100: test # 901 - 910
+TRIAL STATS:
+	Mean: 7.2	Median: 7.5	Mode: [3, 10]
+	Min: 1	Max: 14 
+	Standard Deviation: 4.21
+----------------------------------------------------------------------
+
+TRIAL 92/100: test # 911 - 920
+TRIAL STATS:
+	Mean: 7.5	Median: 8.0	Mode: [2, 11, 12]
+	Min: 2	Max: 12 
+	Standard Deviation: 4.03
+----------------------------------------------------------------------
+
+TRIAL 93/100: test # 921 - 930
+TRIAL STATS:
+	Mean: 6.0	Median: 5.0	Mode: [3]
+	Min: 1	Max: 13 
+	Standard Deviation: 3.92
+----------------------------------------------------------------------
+
+TRIAL 94/100: test # 931 - 940
+TRIAL STATS:
+	Mean: 6.9	Median: 6.5	Mode: [2]
+	Min: 2	Max: 15 
+	Standard Deviation: 4.07
+----------------------------------------------------------------------
+
+TRIAL 95/100: test # 941 - 950
+TRIAL STATS:
+	Mean: 5.3	Median: 5.0	Mode: [2, 5, 8]
+	Min: 2	Max: 10 
+	Standard Deviation: 2.71
+----------------------------------------------------------------------
+
+TRIAL 96/100: test # 951 - 960
+TRIAL STATS:
+	Mean: 5.9	Median: 5.0	Mode: [3, 5]
+	Min: 2	Max: 14 
+	Standard Deviation: 3.67
+----------------------------------------------------------------------
+
+TRIAL 97/100: test # 961 - 970
+TRIAL STATS:
+	Mean: 8.2	Median: 8.0	Mode: [11]
+	Min: 2	Max: 15 
+	Standard Deviation: 3.99
+----------------------------------------------------------------------
+
+TRIAL 98/100: test # 971 - 980
+TRIAL STATS:
+	Mean: 7.2	Median: 6.0	Mode: [5]
+	Min: 2	Max: 12 
+	Standard Deviation: 3.58
+----------------------------------------------------------------------
+
+TRIAL 99/100: test # 981 - 990
+TRIAL STATS:
+	Mean: 4.7	Median: 4.0	Mode: [3]
+	Min: 1	Max: 10 
+	Standard Deviation: 2.87
+----------------------------------------------------------------------
+
+TRIAL 100/100: test # 991 - 1000
+TRIAL STATS:
+	Mean: 6.1	Median: 6.0	Mode: [6]
+	Min: 2	Max: 12 
+	Standard Deviation: 3.67
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+DATA SUMMARY:
+	Mean: 6.3	Median: 6.0	Mode: [5]
+	Min: 0	Max: 20 
+	Standard Deviation: 3.6
+An initial condition that gave us the minimum number of steps (0):
+Inner Cone: 
+[[-4, 3], [2, 1]]
+OuterCone:
+[[-4, 3], [2, 1]]
+An initial condition that gave us the maximum number of steps (20):
+Inner Cone: 
+[[-9, 7], [7, 6]]
+OuterCone:
+[[-10, 1], [6, 1]]

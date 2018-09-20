@@ -1,0 +1,29 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(2, 1), (-7, 6), (-3, 2), (1, 3), (7, 5), (5, 3), (-3, 1), (0, 1), (-1, 6), (5, 4)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-2, 1], [5, 7]]
+Extremal Generators of the Outer Cone: 
+[[-3, 1], [2, 1]]
+=============Initialization Complete============
+Extremal generators of D not in Intermediate: [(-3, 1), (2, 1)]
+Step 1
+Returning the convex hull of Intermediate with (-3, 1)...
+Extremal generators of D not in Intermediate: [(2, 1)]
+Step 2
+Returning the convex hull of Intermediate with (3, 4)...
+Extremal generators of D not in Intermediate: [(2, 1)]
+Step 3
+Returning the convex hull of Intermediate with (1, 1)...
+Extremal generators of D not in Intermediate: [(2, 1)]
+Step 4
+Returning the convex hull of Intermediate with (2, 1)...
+
+Number of Tests: 1 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------

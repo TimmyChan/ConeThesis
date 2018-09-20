@@ -1,0 +1,119 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(0, 1), (-1, 1), (-1, 5), (-3, 1), (0, 1), (1, 1), (4, 1), (8, 7), (6, 1), (6, 7)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[-5, 3], [3, 1]]
+Extremal Generators of the Outer Cone: 
+[[-3, 1], [6, 1]]
+=============Initialization Complete============
+Extremal generators of D not in Intermediate: [(-3, 1), (6, 1)]
+Step 1
+Returning the convex hull of Intermediate with (4, 1)...
+Extremal generators of D not in Intermediate: [(-3, 1), (6, 1)]
+Step 2
+Returning the convex hull of Intermediate with (5, 1)...
+Extremal generators of D not in Intermediate: [(-3, 1), (6, 1)]
+Step 3
+Returning the convex hull of Intermediate with (6, 1)...
+Extremal generators of D not in Intermediate: [(-3, 1)]
+Step 4
+Returning the convex hull of Intermediate with (-2, 1)...
+Extremal generators of D not in Intermediate: [(-3, 1)]
+Step 5
+Returning the convex hull of Intermediate with (-3, 1)...
+
+Number of Tests: 1000 
+Vector Coordinate Bound: (+/-)10
+----------------------------------------------------------------------
+
+TRIAL 1/10: test # 1 - 100
+TRIAL STATS:
+	Mean: 6.74	Median: 6.0	Mode: [5]
+	Min: 1	Max: 19 
+	Standard Deviation: 3.76
+----------------------------------------------------------------------
+
+TRIAL 2/10: test # 101 - 200
+TRIAL STATS:
+	Mean: 6.86	Median: 6.0	Mode: [6]
+	Min: 0	Max: 19 
+	Standard Deviation: 3.88
+----------------------------------------------------------------------
+
+TRIAL 3/10: test # 201 - 300
+TRIAL STATS:
+	Mean: 6.16	Median: 6.0	Mode: [7]
+	Min: 0	Max: 16 
+	Standard Deviation: 3.81
+----------------------------------------------------------------------
+
+TRIAL 4/10: test # 301 - 400
+TRIAL STATS:
+	Mean: 6.23	Median: 6.0	Mode: [4]
+	Min: 0	Max: 16 
+	Standard Deviation: 3.52
+----------------------------------------------------------------------
+
+TRIAL 5/10: test # 401 - 500
+TRIAL STATS:
+	Mean: 6.63	Median: 6.0	Mode: [5]
+	Min: 1	Max: 22 
+	Standard Deviation: 3.8
+----------------------------------------------------------------------
+
+TRIAL 6/10: test # 501 - 600
+TRIAL STATS:
+	Mean: 6.34	Median: 5.0	Mode: [4]
+	Min: 0	Max: 19 
+	Standard Deviation: 3.93
+----------------------------------------------------------------------
+
+TRIAL 7/10: test # 601 - 700
+TRIAL STATS:
+	Mean: 6.54	Median: 6.0	Mode: [5]
+	Min: 0	Max: 17 
+	Standard Deviation: 3.6
+----------------------------------------------------------------------
+
+TRIAL 8/10: test # 701 - 800
+TRIAL STATS:
+	Mean: 5.58	Median: 5.0	Mode: [4]
+	Min: 1	Max: 19 
+	Standard Deviation: 3.62
+----------------------------------------------------------------------
+
+TRIAL 9/10: test # 801 - 900
+TRIAL STATS:
+	Mean: 6.12	Median: 5.0	Mode: [3]
+	Min: 1	Max: 20 
+	Standard Deviation: 3.75
+----------------------------------------------------------------------
+
+TRIAL 10/10: test # 901 - 1000
+TRIAL STATS:
+	Mean: 5.95	Median: 5.5	Mode: [4]
+	Min: 0	Max: 18 
+	Standard Deviation: 3.56
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+DATA SUMMARY:
+	Mean: 6.32	Median: 6.0	Mode: [4]
+	Min: 0	Max: 22 
+	Standard Deviation: 3.73
+An initial condition that gave us the minimum number of steps (0):
+Inner Cone: 
+[[-5, 2], [2, 3]]
+OuterCone:
+[[-5, 2], [2, 3]]
+An initial condition that gave us the maximum number of steps (22):
+Inner Cone: 
+[[-10, 9], [8, 7]]
+OuterCone:
+[[-9, 2], [7, 1]]

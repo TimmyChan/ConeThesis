@@ -1,0 +1,15 @@
+
+Beginning Verbose Run for Accuracy Verification:
+
+=============Initializing Experiment============
+Generating Cone with: 
+[(759, 652), (311, 994)]
+...
+
+Extremal Generators of the Inner Cone: 
+[[63, 166]]
+Extremal Generators of the Outer Cone: 
+[[311, 994], [759, 652]]
+=============Initialization Complete============
+Extremal generators of D not in Intermediate: [(311, 994), (759, 652)]
+Step 1
