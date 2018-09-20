@@ -446,19 +446,6 @@ class ConeChain(object):
 				plt.plot(hilbert_graph_data_size)
 				plt.savefig(directory + size_filename)
 
-
-		if len(self.top_sequence) > 1:
-			topdown_length_filename = filename + " top sequence LENGTH {} steps.png".format(self.number_of_steps())
-			top_hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in self.top_sequence]
-			plt.figure(1)
-			plt.plot(top_hilbert_graph_data_length)
-			plt.savefig(directory + topdown_length_filename)
-
-			topdown_size_filename = filename + " top sequence SIZE {} steps.png".format(self.number_of_steps())
-			top_hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in self.top_sequence]
-			plt.figure(2)
-			plt.plot(top_hilbert_graph_data_size)
-			plt.savefig(directory + topdown_size_filename)
 		
 
 class ConeChainEncoder(json.JSONEncoder):
@@ -498,11 +485,20 @@ if __name__ == "__main__":
 
 	""" Some testing code here """
 
-	steps = 200
-	dim = 3
-	bound = 10
+	steps = 50
+	
+	bound = 2
 
-	experiment_name = "New_File_Structure_Second_Try"
+	valid_dimension = False
+	while not valid_dimension:
+		dim = experiment_io_tools.ask_int("Dimension: ")
+		if dim > 1:
+			valid_dimension = True
+
+	accept_name = False
+	while not accept_name:
+		experiment_name = str(raw_input("Experiment Name: "))
+		accept_name = experiment_io_tools.query_yes_no("\tYou entered '{}'. Accept?".format(experiment_name))
 
 	directory = "DATA/{}d/".format(dim)  + experiment_name + "/"
 	try:
@@ -516,21 +512,25 @@ if __name__ == "__main__":
 
 	
 	
-	loadtest = None 
+	toptest = None 
 	try:
 		with open(raw_data_file_path, 'r') as fp:
-			loadtest = json.load(fp, cls=ConeChainDecoder)
+			toptest = json.load(fp, cls=ConeChainDecoder)
 		print('\tloading successful...')
 	except:
 		print('\tA file loading error has occured, generating new cones.')
 		test_outer_cone = cone_tools.generate_cone(dim,bound)
 		test_inner_cone = cone_tools.generate_inner_cone(test_outer_cone,bound)
+		toptest = ConeChain(test_inner_cone, test_outer_cone)
+		with open(directory + experiment_name + " initial conditions.json", 'w') as fp:
+			json.dump(toptest, fp, cls=ConeChainEncoder,sort_keys=True,
+				indent=4, separators=(',', ': '))
 		
 	experiment_io_tools.pause()
 
 
 	
-	toptest = ConeChain(test_inner_cone, test_outer_cone) if loadtest is None else loadtest
+	 
 
 
 	print('Graphing current data')
@@ -544,14 +544,16 @@ if __name__ == "__main__":
 	while user_continue:
 		print('\trunning top down for {} steps...'.format(steps))
 		toptest.top_down(steps)
+		print('Printing graph...')
+		toptest.generate_hilbert_graphs(directory, experiment_name)
+		print("Saving summary...")
+		toptest.save_summary(directory, experiment_name)
 		print('Saving to file...')
 
 		with open(raw_data_file_path, 'w') as fp:
 			json.dump(toptest, fp, cls=ConeChainEncoder,sort_keys=True,
 				indent=4, separators=(',', ': '))
-		print('Printing graph...')
-		toptest.generate_hilbert_graphs(directory, experiment_name)
-		toptest.save_summary(directory, experiment_name)
+		
 		user_continue = experiment_io_tools.query_yes_no("Completed {} steps this run so far.\n\tSaved data and printed graph. Continue?".format(toptest.number_of_steps()-original_count))
  	
 

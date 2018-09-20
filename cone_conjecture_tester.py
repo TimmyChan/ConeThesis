@@ -32,23 +32,32 @@ class ConeConjectureTester(object):
 
 
 	def __init__(self):
-		self.main_choice = experiment_io_tools.menu(main_menu_dict,"Cone Conjecture Tester v1.0")
+		self.main_choice = experiment_io_tools.menu(ConeConjectureTester.main_menu_dict,"Cone Conjecture Tester v1.0")
+		valid_dimension = False
 		while not valid_dimension:
-				dim = experiment_io_tools.ask_int("Dimension: ")
-				if dim > 1:
-					valid_dimension = True
+			dim = experiment_io_tools.ask_int("Dimension: ")
+			if dim > 1:
+				valid_dimension = True
+			
+
+
 		if self.main_choice == 1:
 			# make a new experiment
-			self.current_experiment_name = input("Experiment Name: ")
-			self.current_experiment_dimension = 
+			accept_name = False
+			while not accept_name:
+				self.current_experiment_name = input("Experiment Name: ")
+				accept_name = experiment_io_tools.query_yes_no("\tYou entered '{}'. Accept?".format(self.current_experiment_name))
+
+			
 		elif self.main_choice == 2:
 			# load an old experiment
-			valid_dimension = False
+			
 			
 
 			os.listdir("./DATA/{}d/".format(dim))
 		elif self.main_choice == 0:
 			# exit
+			fuckthis = 1
 
 
 if __name__ == "__main__":
