@@ -487,7 +487,7 @@ if __name__ == "__main__":
 
 	steps = 50
 	
-	bound = 2
+	bound = 100
 
 	valid_dimension = False
 	while not valid_dimension:
