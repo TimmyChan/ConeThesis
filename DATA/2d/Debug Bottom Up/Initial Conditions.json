@@ -1,0 +1,32 @@
+{
+    "bottom_sequence": [
+        "{\"hilbert_basis\": null, \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-2, 1], [9, 5]], \"longest_hilbert_basis_element_length\": 10.295630140987, \"hilbert_basis_size\": 8.0, \"longest_hilbert_basis_element\": null}"
+    ],
+    "cone_poset_chain": [],
+    "dimension": 2,
+    "inner_cone_rays_list": [
+        [
+            -2,
+            1
+        ],
+        [
+            9,
+            5
+        ]
+    ],
+    "outer_cone_rays_list": [
+        [
+            -9,
+            4
+        ],
+        [
+            4,
+            1
+        ]
+    ],
+    "sequence_complete": false,
+    "top_sequence": [
+        "{\"hilbert_basis\": null, \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-9, 4], [4, 1]], \"longest_hilbert_basis_element_length\": 9.848857801796104, \"hilbert_basis_size\": 8.0, \"longest_hilbert_basis_element\": null}"
+    ],
+    "valid_poset": true
+}

@@ -96,6 +96,8 @@ def ask_int(string="Please input an integer: "):
 			acceptable_input = True
 	return user_input
 
+def separator():
+	return "\n----------------------------------------------------------------------\n"
 
 def printseparator(): 
     print("\n----------------------------------------------------------------------\n")
@@ -111,7 +113,7 @@ def printmenu(choices_dict,
 
 def menu(choices_dict,
 		menutitle = "Menu",
-		prompt = "Please enter your choice: "):
+		optional_text=" ", prompt = "Please enter your choice: "):
 	""" displays a menu and returns the choice listed
 	Args:
 		choices_dict (dictionary) : ( int : "choice text")
@@ -120,7 +122,8 @@ def menu(choices_dict,
 		user_choice (int)
 			"""
 	printmenu(choices_dict,menutitle)
-	
+	print(optional_text)
+
 	keys = choices_dict.keys()
 	valid_input = False
 	while not valid_input:
@@ -129,6 +132,7 @@ def menu(choices_dict,
 			valid_input = True
 		else:
 			printmenu(choices_dict,menutitle)
+			print(optional_text)
 	new_screen()
 	return user_input
 

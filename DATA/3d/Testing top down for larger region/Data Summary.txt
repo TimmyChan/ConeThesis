@@ -1,0 +1,8 @@
+inner_cone has generators: 
+[[-98, -31, 81], [-61, 26, 58], [-9, -31, 78], [30, 64, 99], [36, -17, 67], [39, 1, 72]]
+outer_cone has generators: 
+[[-92, -24, 51], [-90, -97, 39], [-49, 37, 40], [53, -57, 87], [65, 80, 79], [70, 41, 73]]
+	sequence_complete = False
+	top_sequence has length 1001
+	bottom_sequence has length 1
+	cone_poset_chain has length 0

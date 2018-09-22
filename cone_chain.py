@@ -354,27 +354,7 @@ class ConeChain(object):
 		experiment_io_tools.pause()
 		experiment_io_tools.new_screen()
 
-	def save_summary(self,folder=None,experiment_name=None):
-		""" """
-		# 
-		directory = "/DATA/{}d/".format(self.dimension) if folder is None else folder
-		filename = str(datetime.datetime.now()) if experiment_name is None else experiment_name
-		summary_name = filename + " Data Summary"
-		try:
-			os.makedirs(directory, 0755) 
-		except:
-			NotImplemented
-
-		fileobj = open(directory + summary_name , "w")
-
-		fileobj.write("inner_cone has generators: \n{}\n".format(self.inner_cone.rays_list()))
-		fileobj.write("outer_cone has generators: \n{}\n".format(self.outer_cone.rays_list()))
-		fileobj.write("\tsequence_complete = {}\n".format(self.sequence_complete))
-		fileobj.write("\ttop_sequence has length {}\n".format(len(self.top_sequence)))
-		fileobj.write("\tbottom_sequence has length {}\n".format(len(self.bottom_sequence)))
-		fileobj.write("\tcone_poset_chain has length {}\n".format(len(self.cone_poset_chain)))
-
-		fileobj.close()
+	
 		
 
 	def chain_details(self):
@@ -418,7 +398,7 @@ class ConeChain(object):
 		experiment_io_tools.new_screen()
 
 	def generate_hilbert_graphs(self, folder=None, experiment_name=None):
-		directory = "/DATA/{}d/Hilbert Graphs".format(self.dimension) if folder is None else folder
+		directory = "DATA/{}d/Hilbert Graphs of Unnamed Experiments/".format(self.dimension) if folder is None else folder
 		filename = str(datetime.datetime.now()) if experiment_name is None else experiment_name
 		try:
 			os.makedirs(directory, 0755) 
@@ -431,18 +411,20 @@ class ConeChain(object):
 					"bottom_sequence" : self.bottom_sequence,
 					"cone_poset_chain" : self.cone_poset_chain}
 
-
+		i = 0
 		for name in switcher:
 			if len(switcher[name]) > 1:
-				length_filename = filename + " " + name + " LENGTH {} steps.png".format(self.number_of_steps())
+				length_filename = name + " LENGTH {} steps.png".format(self.number_of_steps())
 				hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in switcher[name]]
-				plt.figure(1)
+				plt.figure(i)
+				i += 1
 				plt.plot(hilbert_graph_data_length)
 				plt.savefig(directory + length_filename)
 
-				size_filename = filename + " " +  name + " SIZE {} steps.png".format(self.number_of_steps())
+				size_filename = name + " SIZE {} steps.png".format(self.number_of_steps())
 				hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in switcher[name]]
-				plt.figure(2)
+				plt.figure(i)
+				i += 1
 				plt.plot(hilbert_graph_data_size)
 				plt.savefig(directory + size_filename)
 
@@ -479,6 +461,20 @@ class ConeChainDecoder(json.JSONDecoder):
 		bottom_seq = [json.loads(cone_element,cls=ConeChainElementDecoder) for cone_element in dictionary['bottom_sequence']]
 		poset_chain = [json.loads(cone_element,cls=ConeChainElementDecoder) for cone_element in dictionary['cone_poset_chain']]
 		return ConeChain(inner, outer, top_seq, bottom_seq, poset_chain, dictionary['sequence_complete'], dictionary['valid_poset'])
+
+
+
+class ConeChainInitialConditionExtractor(json.JSONDecoder):
+	def __init__(self, *args, **kwargs):
+		json.JSONDecoder.__init__(self, object_hook=self.object_hook, *args, **kwargs)
+	def object_hook(self, dictionary):
+		if 'outer_cone_rays_list' in dictionary:
+			outer = sage.all.Polyhedron(rays=dictionary['outer_cone_rays_list'],backend='normaliz')
+		if 'inner_cone_rays_list' in dictionary:
+			inner = sage.all.Polyhedron(rays=dictionary['inner_cone_rays_list'],backend='normaliz')
+		return ConeChain(inner, outer)
+
+
 
 		
 if __name__ == "__main__":
@@ -536,7 +532,7 @@ if __name__ == "__main__":
 	print('Graphing current data')
 	toptest.generate_hilbert_graphs(directory, experiment_name)
 	toptest.output_to_terminal()
-	toptest.save_summary(directory, experiment_name)
+	#toptest.save_summary(directory, experiment_name)
 	user_continue = experiment_io_tools.query_yes_no("Begin more testing?")
 
 
@@ -546,8 +542,8 @@ if __name__ == "__main__":
 		toptest.top_down(steps)
 		print('Printing graph...')
 		toptest.generate_hilbert_graphs(directory, experiment_name)
-		print("Saving summary...")
-		toptest.save_summary(directory, experiment_name)
+		#print("Saving summary...")
+		#toptest.save_summary(directory, experiment_name)
 		print('Saving to file...')
 
 		with open(raw_data_file_path, 'w') as fp:

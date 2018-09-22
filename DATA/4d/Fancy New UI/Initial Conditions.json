@@ -1,0 +1,112 @@
+{
+    "bottom_sequence": [
+        "{\"hilbert_basis\": null, \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-2, 0, -1, 2], [0, 1, 0, 1], [0, 1, 1, 2], [1, 0, -1, 2], [2, 0, 1, 2], [2, 1, -2, 2], [2, 2, -1, 2]], \"longest_hilbert_basis_element_length\": 5.0990195135927845, \"hilbert_basis_size\": 25.0, \"longest_hilbert_basis_element\": null}"
+    ],
+    "cone_poset_chain": [],
+    "dimension": 4,
+    "inner_cone_rays_list": [
+        [
+            -2,
+            0,
+            -1,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            1,
+            0,
+            -1,
+            2
+        ],
+        [
+            2,
+            0,
+            1,
+            2
+        ],
+        [
+            2,
+            1,
+            -2,
+            2
+        ],
+        [
+            2,
+            2,
+            -1,
+            2
+        ]
+    ],
+    "outer_cone_rays_list": [
+        [
+            -2,
+            -1,
+            -2,
+            1
+        ],
+        [
+            -2,
+            1,
+            -2,
+            2
+        ],
+        [
+            -2,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            2,
+            -1,
+            2
+        ],
+        [
+            2,
+            -1,
+            -1,
+            2
+        ],
+        [
+            2,
+            0,
+            0,
+            1
+        ],
+        [
+            2,
+            1,
+            -1,
+            1
+        ]
+    ],
+    "sequence_complete": false,
+    "top_sequence": [
+        "{\"hilbert_basis\": null, \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-2, -1, -2, 1], [-2, 1, -2, 2], [-2, 1, 2, 2], [0, 0, 1, 1], [0, 1, 0, 1], [0, 2, -1, 2], [2, -1, -1, 2], [2, 0, 0, 1], [2, 1, -1, 1]], \"longest_hilbert_basis_element_length\": 3.7416573867739413, \"hilbert_basis_size\": 26.0, \"longest_hilbert_basis_element\": null}"
+    ],
+    "valid_poset": true
+}
