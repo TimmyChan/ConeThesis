@@ -42,9 +42,9 @@ The data will be outputted into the folder "DATA", with the dimension and the da
 ### Modules
 
 #### cone_conjecture_tester.py
-Main UI for interfacing with ConeChain objects, and allows user to create, load and save these objects.
+Main UI for interfacing with ConeChain objects, and allows user to create, load, generate and save data.
 #### cone_chain.py
-Data structure to store the possible poset chains
+Data structure to store the possible poset chains and the algorithms top_down and bottom_up. 
 #### cone_chain_element.py
 Data structure to hold a polyhedral cone (sage.all.Polyhedra) and holds the hilbert basis of said cone, so that the calculation needs to only be done once.
 #### cone_tools.py
