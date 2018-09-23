@@ -32,11 +32,20 @@ Check when a ticket is merged in which version:
 https://groups.google.com/forum/#!forum/sage-release
 
 ### Instructions
-Install dependencies then simply run
+Install dependencies, save the .py files listed below to the same directory. Then run from terminal in that directory:
 ```
-sage Experiment.py 
+chmod +x cone_conjecture_tester.py
+./cone_conjecture_tester.py
 ```
-The data will be outputted into the folder "DATA", with the dimension and the date/time the experiment was run as the name of the data file for that particular file.
+And have fun~
+
+The data will be outputted into the folder "DATA/{}d/experiment_name" where {} is the dimension of the experiment, and experiment_name is what you choose in the UI. 
+
+Main .json file will be named the same as the experiment name.
+Data Summary.text - read the title.
+Graphs : 
+"SIZE" - the number of hilbert basis elements.
+"LENGTH" - the euclidean norm of the longest element of the hilbert basis element.
 
 
 ### Modules
