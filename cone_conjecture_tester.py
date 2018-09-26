@@ -114,7 +114,7 @@ class ConeConjectureTester(object):
 			#0
 			if ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_run_experiment:
 				# run a loaded experiment
-				self.run_mode_menu()
+				self.run_mode = self.run_mode_menu()
 				self.run_experiment()	
 
 			#1
@@ -225,6 +225,8 @@ class ConeConjectureTester(object):
 				if user_choice <> -1:
 					self.experiment_name = choose_experiment_menu[user_choice]
 					accept_expr_choice = experiment_io_tools.query_yes_no("Your choice is '{}'. \n\tAccept?".format(self.experiment_name))
+				else:
+					return
 			except:
 				experiment_io_tools.pause("Problem finding or opening folder, likely non-existent path.")
 

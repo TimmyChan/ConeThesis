@@ -9,17 +9,20 @@ cone conjecture experiment.
 import sys
 import time
 
-def autocontinue_query_yes_no(question,expire=5,default=True):
-	start_time = time.time()
-	expires_in = expire # seconds
+def timed_query_yes_no(question,expire=5,default=True):
+	timeout = time.time()+ expire # seconds
 	user_input = None
-	while (time.time() - start_time < expires_in):
+	while True:
+
+		time.sleep(.1)
+		user_input = query_yes_no(question)
 		if user_input is not None:
 			return user_input
-		user_input = query_yes_no(question)
+		if time.time() > timeout:
+			break
 	return default
 
-def query_yes_no(question, default="yes"):
+def query_yes_no(question, expire=5,default="yes"):
 	"""Ask a yes/no question via raw_input() and return their answer.
 
 	"question" is a string that is presented to the user.
@@ -141,13 +144,12 @@ def menu(choices_dict,
 
 
 
-
-
-
-
 if __name__ == "__main__":
 
 	""" Some testing code here """
 	choice = menu({1: "New Experiment", 
 		  		   2: "Load Experiment"})
 	print("You chose {}".format(choice))
+
+	usr_input = timed_query_yes_no("Try this (10 seconds)",10)
+	print usr_input

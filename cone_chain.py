@@ -278,12 +278,9 @@ class ConeChain(object):
 			2) Hilbert basis of outer take away v should be a subset of
 				the Hilbert basis of inner.
 		Args: 
-			inner (ConeChainElement
-		): "inner" cone
-			outer (ConeChainElement
-		): "outer" cone (assume inner is contained)
+			inner (ConeChainElement): "inner" cone
+			outer (ConeChainElement): "outer" cone (assume inner is contained)
 		Returns: 
-			poset_condition
 			poset_condition (Boolean): 	True if C, D satisify the poset condition
 											or if they're the same cone;
 										False otherwise.
@@ -298,23 +295,27 @@ class ConeChain(object):
 			return True
 		# Finding extremal generator of D not in C
 		v = cone_tools.extremal_generators_outside_inner_cone(inner.cone,outer.cone)
+
 		if len(v) > 1:
 			# if there's more than one extremal generator outside of C, 
 			# this cannot satisify the poset condition.
 			return False
 		# Removing the extremal generator (should be just one) from hilbert_outer
-		hilbert_outer.remove(v[0])
+		if len(v) == 1:
+			hilbert_outer.remove(v[0])
 
 		# Assume that the poset condition is satisified at this point, then
 		# loop through each vector in the Hilbert basis of D, 
-		poset_condition = True
-		for vect in hilbert_outer:
-			# the poset condition will remain true as long as 
-			# each vect in Hilbert basis of D is also
-			# contained in the Hilbert basis of D
-			poset_condition = poset_condition and (vect in hilbert_inner) 
-		
-		return poset_condition
+			poset_condition = True
+			for vect in hilbert_outer:
+				# the poset condition will remain true as long as 
+				# each vect in Hilbert basis of D is also
+				# contained in the Hilbert basis of D
+				poset_condition = poset_condition and (vect in hilbert_inner) 
+			
+			return poset_condition
+		if len(v) == 0:
+			return True
 
 	def glue(self):
 		""" Glue bottom_sequence and top_sequence and store into 
@@ -330,14 +331,13 @@ class ConeChain(object):
 			# ends with inner_cone or outer_cone, creating an overlap.
 			# if the sequence's ends are the same cone, just pop one WLOG
 			if self.bottom_sequence[-1].cone == self.top_sequence[-1].cone:
-				self.top_sequence.pop() # Remove one of the repeated cones
+				temp_seq = [i for i in self.top_sequence]
+				temp_seq.pop() # Remove one of the repeated cones
  
 			# if we end up with some different cones:
-			self.cone_poset_chain = self.cone_poset_chain + self.bottom_sequence
-			self.cone_poset_chain = self.cone_poset_chain + [self.top_sequence[-(i+1)] for i in range(len(self.top_sequence))]
-			if len(self.top_sequence) == 0:
-				self.top_sequence.append(self.cone_poset_chain[-1])
-
+			self.cone_poset_chain = [] + self.bottom_sequence
+			self.cone_poset_chain = self.cone_poset_chain + [temp_seq[-(i+1)] for i in range(len(temp_seq))]
+			
 	def output_to_terminal(self):
 		""" Prints essencial information about the sequence
 			Args: None
