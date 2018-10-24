@@ -7,6 +7,8 @@
 
 This module contains the an object that will contain a sequence of cones
 and defines ConeChainElement, an object that will contain experimental data for each cone.
+TODO: Make option for changing number of extremal generators
+
 """
 
 import sage.all
@@ -42,8 +44,8 @@ class ConeConjectureTester(object):
 	text_create = "Create new experiment"
 	
 	text_load_continue = "Load and continue existing experiment"
-	text_load_copy = "Load and copy existing experiment to new file (Not available yet)"
-	text_load_initial = "Load only initial values of previous experiment (Not available yet)"
+	text_load_copy = "Load and copy existing experiment to new file"
+	text_load_initial = "Load only initial values of previous experiment"
 
 	text_save_exit = "Save and exit"
 	text_summary = "Display summary of current experiment"
@@ -76,7 +78,7 @@ class ConeConjectureTester(object):
 						2: text_bottom_up,
 						3: text_alternating}
 
-	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False):
+	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False,numgen=None):
 		self.dimension = dim  #dimension
 		self.experiment_name = expr_name #experiment name
 		self.directory = None # default will be DATA/{}d/expr_name/
@@ -96,6 +98,7 @@ class ConeConjectureTester(object):
 		self.current_cone_chain = some_cone_chain
 		self.batch_mode = batchmode 
 
+		self.num_gen = numgen
 
 		self.loaded = False if self.current_cone_chain is None else True
 		self.begin()		
@@ -200,9 +203,16 @@ class ConeConjectureTester(object):
 		except:
 			None
 		self.ask_bound()
+		self.ask_num_gen()
 		print("Generating New Cones...")
-		outer_cone = cone_tools.generate_cone(self.dimension, self.bound)
-		inner_cone = cone_tools.generate_inner_cone(outer_cone, self.bound)
+		cones_unacceptable = True
+		while cones_unacceptable:
+			outer_cone = cone_tools.generate_cone(self.dimension, rmax=self.bound, numgen=self.num_gen)
+			inner_cone = cone_tools.generate_inner_cone(outer_cone, rmax=self.bound, numgen=self.num_gen)
+			cones_unacceptable = (inner_cone.rays_list() == outer_cone.rays_list())
+				 
+		
+
 		self.current_cone_chain = cone_chain.ConeChain(inner_cone, outer_cone)
 		self.save_file("Initial Conditions.json")
 		self.save_file()
@@ -337,6 +347,22 @@ class ConeConjectureTester(object):
 			if self.bound > 0:
 				accept_bound = True
 
+	def ask_num_gen(self):
+		"""Asks user for the number of generators needed"""
+		if self.num_gen is not None:
+			accept_num = experiment_io_tools.query_yes_no("Current number of generators = {}. Keep settings?".format(self.num_gen))
+		else:
+			accept_num = False
+
+		while not accept_num:
+			self.num_gen = experiment_io_tools.ask_int("Enter the number of generators for each cone: ")
+			if self.num_gen >= self.dimension:
+				accept_num = True
+			else:
+				print("Please input a number greater or equal to the dimension chosen for a full dimensional cone.")
+
+
+
 	def ask_steps(self):
 		"""Asks user for the number of times to run the algorithms between saving and sets self.steps"""
 		if self.steps > 0:
@@ -363,11 +389,16 @@ class ConeConjectureTester(object):
 
 
 	def run_experiment(self):
+
+		# ask run_mode (1,2,3?)
 		if self.run_mode not in ConeConjectureTester.run_mode_dict.keys():
 			self.run_mode = self.run_mode_menu()
 
+
+		# verify number of steps to run between printing/saving data
 		self.ask_steps()
 
+		# Beginning running experiment
 		experiment_io_tools.new_screen(self.experiment_name)
 		user_continue = experiment_io_tools.query_yes_no("Begin running '{}'?".format(ConeConjectureTester.run_mode_dict[self.run_mode]))
 
@@ -382,11 +413,11 @@ class ConeConjectureTester(object):
 				self.current_cone_chain.bottom_up(self.steps)
 
 			elif ConeConjectureTester.run_mode_dict[self.run_mode] == ConeConjectureTester.text_alternating:
-				for i in range(self.steps):
-					if sage.all.mod(steps_ran_this_sitting, 2*self.alternation_constant) < self.alternation_constant:
-						self.current_cone_chain.top_down()
+				for step_counter in range(self.steps):
+					if sage.all.mod(step_counter, 2*self.alternation_constant) < self.alternation_constant:
+						self.current_cone_chain.top_down(self.alternation_constant)
 					else:
-						self.current_cone_chain.bottom_up()
+						self.current_cone_chain.bottom_up(self.alternation_constant)
 
 			print('Printing graph...')
 			self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)

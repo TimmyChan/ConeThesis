@@ -330,8 +330,9 @@ class ConeChain(object):
 			# If we run bottom up or top down purely, one of the sequence
 			# ends with inner_cone or outer_cone, creating an overlap.
 			# if the sequence's ends are the same cone, just pop one WLOG
+			temp_seq = [i for i in self.top_sequence]
+				
 			if self.bottom_sequence[-1].cone == self.top_sequence[-1].cone:
-				temp_seq = [i for i in self.top_sequence]
 				temp_seq.pop() # Remove one of the repeated cones
  
 			# if we end up with some different cones:
@@ -417,16 +418,17 @@ class ConeChain(object):
 				length_filename = name + " LENGTH {} steps.png".format(self.number_of_steps())
 				hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in switcher[name]]
 				plt.figure(i)
-				i += 1
+				
 				plt.plot(hilbert_graph_data_length)
 				plt.savefig(directory + length_filename)
 
 				size_filename = name + " SIZE {} steps.png".format(self.number_of_steps())
 				hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in switcher[name]]
-				plt.figure(i)
-				i += 1
+				plt.figure(i+1)
 				plt.plot(hilbert_graph_data_size)
 				plt.savefig(directory + size_filename)
+				i += 2
+				
 
 		
 

@@ -98,7 +98,7 @@ def generate_random_vector(dim, rmax=10):
 	# make a primative vector and return it.
 	return vect
 
-def generate_cone(dim, rmax=10, numgen=10):
+def generate_cone(dim, rmax=10, numgen=5):
 	""" Generates a random SAGE polyhedral cone C with Normaliz backend
 	where C is pointed, proper,full dimensional and lies strictly in 
 	the halfspace x_d > 0.
@@ -110,22 +110,26 @@ def generate_cone(dim, rmax=10, numgen=10):
 		Temp (SAGE.geometry.Polyhedron): SAGE cone object with Normaliz backend. 
 	"""
 	if numgen < dim: 			# catch: if numgen < dim, guarenteed not full dimensional. 
-		numgen = int(dim) + 1 	# force numgen to have at least one more than the dimension.
+		numgen = int(dim)  		# force numgen to have at least be full dimensional.
 
 	vects = [generate_random_vector(dim,rmax) for i in range(numgen)] # Empty list of vectors
 	temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
 	# conical hull of vectors in list vects.
-		
-	while (not temp.is_full_dimensional()): 
-		#keep looping until we have a full dimensional cone. 
-		vects.append(generate_random_vector(dim,rmax))
-		temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],
-						  backend='normaliz')
-		# keep tacking on random vectors, eventually 
-		# the convex hull will be full dimensional
+	print("\t attempting to generate a cone with {}...".format(vects))
+	
+	if dim > 2:
+		while len(temp.rays_list())<numgen: 
+			#print("len(temp.rays()), numgen: {}, {}".format(len(temp.rays_list()),numgen))
+			#keep looping until we have a full dimensional cone. 
+			vects.append(generate_random_vector(dim,rmax))
+			#print("\t attempting to generate a cone with {}...".format(vects))
+			temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],
+							  backend='normaliz')
+			# keep tacking on random vectors, eventually 
+			# the convex hull will be full dimensional
 	return temp
 
-def generate_inner_cone(outer, rmax=10, numgen=10):
+def generate_inner_cone(outer, rmax=10, numgen=5):
 	"""Generates a full dimensional cone that is contained by outer.
 	Args:
 		outer (SAGE.geometry.Polyhedron): Outer Cone
@@ -136,23 +140,28 @@ def generate_inner_cone(outer, rmax=10, numgen=10):
 	"""
 	dim = outer.dimension()
 	# store the dimension of the outer cone
+	if numgen < dim:
+		numgen = int(dim)
 	vectlist = []
+
 	# empty list to house the generator of cones
 	while len(vectlist) < numgen:
 		temp_vect = generate_random_vector(dim, rmax)
 		if outer.contains(temp_vect):
 			vectlist.append(temp_vect)
 	inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
-					   backend='normaliz')		
-	while not inner.is_full_dimensional():
-		#keep looping until we have a full dimensional cone. 
-		temp_vect = generate_random_vector(dim, rmax)
-		if outer.contains(temp_vect):
-			vectlist.append(temp_vect)
-		inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
-						  backend='normaliz')
-		# keep tacking on random vectors, eventually 
-		# the convex hull will be full dimensional
+					   backend='normaliz')	
+	if dim > 2:	
+		while len(inner.rays_list())<numgen:
+			#keep looping until we have a full dimensional cone. 
+			temp_vect = generate_random_vector(dim, rmax)
+			if outer.contains(temp_vect):
+				vectlist.append(temp_vect)
+			del inner
+			inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
+							  backend='normaliz')
+			# keep tacking on random vectors, eventually 
+			# the convex hull will be full dimensional
 	return inner
 
 #################################
@@ -259,9 +268,10 @@ def zonotope_generators(vectlist):
 
 if __name__ == "__main__":
 	for i in range(3):
-		print("Generating Cone for dimension {}:".format(i+2))
-		test_outer_cone = generate_cone(i+2, 10)
-		test_inner_cone = generate_inner_cone(test_outer_cone)
-		print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
-		print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
+		for j in range(i+2,i+5):
+			print("Generating Cone for dimension {} with {} vectors:".format(i+2,j))
+			test_outer_cone = generate_cone(i+2, numgen=j)
+			test_inner_cone = generate_inner_cone(test_outer_cone, numgen=j)
+			print("\tOuter cone has generators: \n\t{}".format(test_outer_cone.rays_list()))
+			print("\tInner cone has generators: \n\t{}".format(test_inner_cone.rays_list()))
 
