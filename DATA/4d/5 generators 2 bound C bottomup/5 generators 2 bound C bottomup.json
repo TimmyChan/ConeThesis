@@ -1,0 +1,112 @@
+{
+    "bottom_sequence": [
+        "{\"hilbert_basis\": [[-1, -1, 0, 1], [-1, -1, 1, 2], [-1, 0, 1, 2], [0, -1, 1, 1], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-1, -1, 0, 1], [-1, 0, 1, 2], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.1622776601683795, \"hilbert_basis_size\": 7, \"longest_hilbert_basis_element\": [1, -2, 2, 1]}",
+        "{\"hilbert_basis\": [[-1, -1, 0, 1], [-1, -1, 1, 2], [-1, 0, 1, 2], [-1, 0, 2, 3], [0, -1, 1, 1], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 0, \"cone_rays_list\": [[-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 0, 2, 3], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.7416573867739413, \"hilbert_basis_size\": 8, \"longest_hilbert_basis_element\": [-1, 0, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, -1, 1, 2], [-1, 0, 1, 2], [-1, 0, 2, 3], [0, -1, 1, 1], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 1, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.7416573867739413, \"hilbert_basis_size\": 9, \"longest_hilbert_basis_element\": [-1, 0, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 2, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.1622776601683795, \"hilbert_basis_size\": 7, \"longest_hilbert_basis_element\": [1, -2, 2, 1]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 3, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 1, 2, 3], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 8, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1], [1, 0, 3, 3]], \"algorithm_used\": \"b\", \"generation_step\": 4, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 1, 2, 3], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1], [1, 0, 3, 3]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 9, \"longest_hilbert_basis_element\": [1, 0, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3]], \"algorithm_used\": \"b\", \"generation_step\": 5, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 10, \"longest_hilbert_basis_element\": [1, 0, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3], [1, 2, 4, 5]], \"algorithm_used\": \"b\", \"generation_step\": 6, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 2, 4, 5]], \"longest_hilbert_basis_element_length\": 6.782329983125268, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 2, 4, 5]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3], [1, 2, 4, 5], [1, 4, 5, 7]], \"algorithm_used\": \"b\", \"generation_step\": 7, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 4, 5, 7]], \"longest_hilbert_basis_element_length\": 9.539392014169456, \"hilbert_basis_size\": 12, \"longest_hilbert_basis_element\": [1, 4, 5, 7]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3], [1, 3, 3, 4]], \"algorithm_used\": \"b\", \"generation_step\": 8, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 3, 3, 4]], \"longest_hilbert_basis_element_length\": 5.916079783099616, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 3, 3, 4]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 1, 2, 2], [1, 3, 3, 4]], \"algorithm_used\": \"b\", \"generation_step\": 9, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 1, 2, 2], [1, 3, 3, 4]], \"longest_hilbert_basis_element_length\": 5.916079783099616, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 3, 3, 4]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [1, -2, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 10, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 8, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 11, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 9, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 12, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 10, \"longest_hilbert_basis_element\": [0, 1, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 4, 3], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 13, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 4, 3], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 5.0990195135927845, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 0, 4, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 14, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [0, 1, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 15, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 16, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, 0, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}"
+    ],
+    "cone_poset_chain": [
+        "{\"hilbert_basis\": [[-1, -1, 0, 1], [-1, -1, 1, 2], [-1, 0, 1, 2], [0, -1, 1, 1], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-1, -1, 0, 1], [-1, 0, 1, 2], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.1622776601683795, \"hilbert_basis_size\": 7, \"longest_hilbert_basis_element\": [1, -2, 2, 1]}",
+        "{\"hilbert_basis\": [[-1, -1, 0, 1], [-1, -1, 1, 2], [-1, 0, 1, 2], [-1, 0, 2, 3], [0, -1, 1, 1], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 0, \"cone_rays_list\": [[-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 0, 2, 3], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.7416573867739413, \"hilbert_basis_size\": 8, \"longest_hilbert_basis_element\": [-1, 0, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, -1, 1, 2], [-1, 0, 1, 2], [-1, 0, 2, 3], [0, -1, 1, 1], [0, -1, 2, 2], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 1, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.7416573867739413, \"hilbert_basis_size\": 9, \"longest_hilbert_basis_element\": [-1, 0, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 2, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.1622776601683795, \"hilbert_basis_size\": 7, \"longest_hilbert_basis_element\": [1, -2, 2, 1]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"algorithm_used\": \"b\", \"generation_step\": 3, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 1, 2, 3], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 8, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1], [1, 0, 3, 3]], \"algorithm_used\": \"b\", \"generation_step\": 4, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 1, 2, 3], [0, 0, 1, 1], [0, 1, 1, 2], [1, -2, 2, 1], [1, 0, 3, 3]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 9, \"longest_hilbert_basis_element\": [1, 0, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3]], \"algorithm_used\": \"b\", \"generation_step\": 5, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 10, \"longest_hilbert_basis_element\": [1, 0, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3], [1, 2, 4, 5]], \"algorithm_used\": \"b\", \"generation_step\": 6, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 2, 4, 5]], \"longest_hilbert_basis_element_length\": 6.782329983125268, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 2, 4, 5]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3], [1, 2, 4, 5], [1, 4, 5, 7]], \"algorithm_used\": \"b\", \"generation_step\": 7, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 4, 5, 7]], \"longest_hilbert_basis_element_length\": 9.539392014169456, \"hilbert_basis_size\": 12, \"longest_hilbert_basis_element\": [1, 4, 5, 7]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 0, 3, 3], [1, 3, 3, 4]], \"algorithm_used\": \"b\", \"generation_step\": 8, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 3, 3, 4]], \"longest_hilbert_basis_element_length\": 5.916079783099616, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 3, 3, 4]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 1, 2, 2], [1, 3, 3, 4]], \"algorithm_used\": \"b\", \"generation_step\": 9, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 2, 3], [1, -2, 2, 1], [1, 1, 2, 2], [1, 3, 3, 4]], \"longest_hilbert_basis_element_length\": 5.916079783099616, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 3, 3, 4]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [1, -2, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 10, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 8, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 11, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 9, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 12, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 10, \"longest_hilbert_basis_element\": [0, 1, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 4, 3], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 13, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 4, 3], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 5.0990195135927845, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [1, 0, 4, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 3, 3], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 14, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 4.358898943540674, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [0, 1, 3, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 15, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 3, 2], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}",
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"b\", \"generation_step\": 16, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, 0, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}"
+    ],
+    "dimension": 4,
+    "inner_cone_rays_list": [
+        [
+            -1,
+            -1,
+            0,
+            1
+        ],
+        [
+            -1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            -1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            1,
+            -2,
+            2,
+            1
+        ]
+    ],
+    "outer_cone_rays_list": [
+        [
+            -2,
+            0,
+            1,
+            2
+        ],
+        [
+            -1,
+            -1,
+            0,
+            1
+        ],
+        [
+            1,
+            -2,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            1,
+            2,
+            1,
+            1
+        ]
+    ],
+    "sequence_complete": true,
+    "top_sequence": [
+        "{\"hilbert_basis\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [-1, 0, 1, 2], [-1, 1, 2, 3], [0, -1, 1, 1], [0, 0, 1, 1], [0, 1, 2, 2], [1, -2, 2, 1], [1, -1, 2, 1], [1, 0, 2, 1], [1, 2, 1, 1]], \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-2, 0, 1, 2], [-1, -1, 0, 1], [1, -2, 2, 1], [1, 0, 2, 1], [1, 2, 1, 1]], \"longest_hilbert_basis_element_length\": 3.872983346207417, \"hilbert_basis_size\": 11, \"longest_hilbert_basis_element\": [-1, 1, 2, 3]}"
+    ],
+    "valid_poset": true
+}

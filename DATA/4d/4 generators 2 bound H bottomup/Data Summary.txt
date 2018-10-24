@@ -1,0 +1,8 @@
+inner_cone has generators: 
+[[-2, -1, -1, 2], [1, -1, -1, 2], [2, -1, -2, 2], [2, 0, -1, 2]]
+outer_cone has generators: 
+[[-2, -1, -1, 2], [-1, -2, 0, 2], [2, -1, -2, 2], [2, 0, -1, 2]]
+	sequence_complete = True
+	top_sequence has length 1
+	bottom_sequence has length 8
+	cone_poset_chain has length 8
