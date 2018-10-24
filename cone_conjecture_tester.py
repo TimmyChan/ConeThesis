@@ -50,13 +50,14 @@ class ConeConjectureTester(object):
 	text_save_exit = "Save and exit"
 	text_summary = "Display summary of current experiment"
 	text_run_experiment = "Run current experiment with current settings"
-	text_change_settings = "Display and/or change current settings"
+	text_print_graphs = "Generate and save graphical data."
+	text_display_all_details = "Display all details"
 
 	main_menu_dict_initial = {1: text_create,
 							2: text_load_continue,
 							3: text_load_copy,
 							4: text_load_initial,
-							9: text_save_exit}
+							1337: text_save_exit}
 
 	main_menu_dict_loaded =  { 	0: text_run_experiment,
 								1: text_create,
@@ -64,8 +65,9 @@ class ConeConjectureTester(object):
 								3: text_load_copy,
 								4: text_load_initial,
 								5: text_summary,
-								#6: text_change_settings,
-								9: text_save_exit}
+								6: text_print_graphs,
+								7: text_display_all_details,
+								1337: text_save_exit}
 
 
 
@@ -152,15 +154,32 @@ class ConeConjectureTester(object):
 				self.current_cone_chain.output_to_terminal()
 				self.save_summary()
 
-											
+			#6
+			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_print_graphs:
+				# print the graphs
+				print('Printing graphs to {}'.format(self.directory))
+				self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)
+				experiment_io_tools.pause()
+					
+			
+			#7: 
+			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_display_all_details:
+				self.current_cone_chain.output_to_terminal()
+				self.current_cone_chain.chain_details()
 								
-			#9
+			#1337
 			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_save_exit:
 				# exit
 				self.check_loaded()
 				if self.loaded:
-					self.save_summary()
 					self.current_cone_chain.output_to_terminal()
+					print('Printing graphs...')
+					self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)
+					print("Saving summary...")
+					self.save_summary()
+					print('Saving to file...')
+					self.save_file()
+		
 				running = False
 
 
