@@ -80,20 +80,19 @@ class ConeConjectureTester(object):
 						2: text_bottom_up,
 						3: text_alternating}
 
-	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False,numgen=None):
+	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False, directory=None, numgen=None, steps=None):
 		self.dimension = dim  #dimension
 		self.experiment_name = expr_name #experiment name
-		self.directory = None # default will be DATA/{}d/expr_name/
+		self.directory = directory # default will be DATA/{}d/expr_name/
 		self.raw_data_path = None #default will be DATA/{}D/expr_name/expr_name.json
 
 	
 		self.bound = 2 # maximum value a coordinate will have
 
 
-		self.run_mode = 0 # see run_mode_dict for options
+		self.run_mode = 0 if runmode is None else runmode # see run_mode_dict for options
 
-
-		self.steps = 100 # default number of steps to run between printouts
+		self.steps = 1000 if steps is None else steps
 		self.alternation_constant = 1 # number of steps of top down and bottom up to run as you alternate
 
 
@@ -103,7 +102,9 @@ class ConeConjectureTester(object):
 		self.num_gen = numgen
 
 		self.loaded = False if self.current_cone_chain is None else True
-		self.begin()		
+		if not batchmode:
+			self.steps = 100 if steps is None else steps # default number of steps to run between printouts
+			self.begin()		
 
 	def begin(self):
 		running = True
@@ -157,9 +158,7 @@ class ConeConjectureTester(object):
 			#6
 			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_print_graphs:
 				# print the graphs
-				print('Printing graphs to {}'.format(self.directory))
-				self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)
-				experiment_io_tools.pause()
+				self.print_graphs()
 					
 			
 			#7: 
@@ -182,6 +181,11 @@ class ConeConjectureTester(object):
 		
 				running = False
 
+
+	def print_graphs(self):
+		print('Printing graphs to {}'.format(self.directory))
+		self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)
+		#experiment_io_tools.pause()
 
 	def main_menu(self):
 		if self.loaded:
@@ -239,6 +243,45 @@ class ConeConjectureTester(object):
 
 		experiment_io_tools.pause()
 
+	def batch_create_experiment(self):
+		self.update_paths(self.experiment_name)
+		try:
+			os.makedirs(self.directory, 0755) 
+		except:
+			None
+		if self.dimension is None:
+			self.ask_dimension()
+		if self.experiment_name is None:
+			self.ask_experiment_name()
+		
+		self.update_paths(self.experiment_name)
+		#make the directory if it doesn't exist
+		try:
+			os.makedirs(self.directory, 0755) 
+		except:
+			None
+		if self.bound is None:
+			self.ask_bound()
+		if self.num_gen is None:
+			self.ask_num_gen()
+
+		print("Generating New Cones...")
+		cones_unacceptable = True
+		while cones_unacceptable:
+			outer_cone = cone_tools.generate_cone(self.dimension, rmax=self.bound, numgen=self.num_gen)
+			inner_cone = cone_tools.generate_inner_cone(outer_cone, rmax=self.bound, numgen=self.num_gen)
+			cones_unacceptable = (inner_cone.rays_list() == outer_cone.rays_list())
+				 
+		
+
+		self.current_cone_chain = cone_chain.ConeChain(inner_cone, outer_cone)
+		self.save_file("Initial Conditions.json")
+		self.save_file()
+		self.check_loaded()
+
+		#experiment_io_tools.pause()
+
+
 
 	def load_experiment(self,initial_condition=False):
 		experiment_io_tools.new_screen(ConeConjectureTester.text_load_continue)
@@ -248,6 +291,7 @@ class ConeConjectureTester(object):
 			self.ask_dimension()
 			try:
 				possible_experiment_names = os.listdir("DATA/{}d/".format(self.dimension))
+				possible_experiment_names.sort()
 				choose_experiment_menu = {i+1: possible_experiment_names[i] for i in range(len(possible_experiment_names)) }
 				choose_experiment_menu.update({-1:"... back to main menu..."})
 				user_choice = experiment_io_tools.menu(choose_experiment_menu)
@@ -415,12 +459,13 @@ class ConeConjectureTester(object):
 
 
 		# verify number of steps to run between printing/saving data
-		self.ask_steps()
+		if self.batch_mode is False:
+			self.ask_steps()
+
+			experiment_io_tools.new_screen(self.experiment_name)
+			user_continue = experiment_io_tools.query_yes_no("Begin running '{}'?".format(ConeConjectureTester.run_mode_dict[self.run_mode]))
 
 		# Beginning running experiment
-		experiment_io_tools.new_screen(self.experiment_name)
-		user_continue = experiment_io_tools.query_yes_no("Begin running '{}'?".format(ConeConjectureTester.run_mode_dict[self.run_mode]))
-
 		original_count = self.current_cone_chain.number_of_steps()
 		while user_continue:
 			print("\trunning '{}' for {} steps...".format(ConeConjectureTester.run_mode_dict[self.run_mode],self.steps))
@@ -438,14 +483,14 @@ class ConeConjectureTester(object):
 					else:
 						self.current_cone_chain.bottom_up(self.alternation_constant)
 
-			print('Printing graph...')
-			self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)
+			self.print_graphs()
 			print("Saving summary...")
 			self.save_summary()
 			print('Saving to file...')
 			self.save_file()
 		
-			user_continue = experiment_io_tools.query_yes_no("Completed {} steps this run so far.\n\tSaved data and printed graph. Continue?".format(self.current_cone_chain.number_of_steps()-original_count))
+			if self.batch_mode is False:
+				user_continue = experiment_io_tools.query_yes_no("Completed {} steps this run so far.\n\tSaved data and printed graph. Continue?".format(self.current_cone_chain.number_of_steps()-original_count))
  	
 
 if __name__ == "__main__":

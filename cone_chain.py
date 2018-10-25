@@ -420,11 +420,17 @@ class ConeChain(object):
 				plt.figure(i)
 				
 				plt.plot(hilbert_graph_data_length)
+				plt.xlabel("Number of Steps: {}".format(name))
+				plt.ylabel("Vector Norm")
+				plt.title("Length of the longest element in the Hilbert Basis: {}".format(name))
 				plt.savefig(directory + length_filename)
 				plt.close(i)
 
 				size_filename = name + " SIZE {} steps.png".format(self.number_of_steps())
 				hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in switcher[name]]
+				plt.xlabel("Number of Steps: {}".format(name))
+				plt.ylabel("Number of Vectors")
+				plt.title("Size of the Hilbert Basis: {}".format(name))
 				plt.figure(i+1)
 				plt.plot(hilbert_graph_data_size)
 				plt.savefig(directory + size_filename)
