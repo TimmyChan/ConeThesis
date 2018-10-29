@@ -210,9 +210,10 @@ class ConeConjectureTester(object):
 
 	def run_mode_menu(self):
 		""" (Terminal UI) Asks user for the mode they want to run."""
+		self.check_loaded()
 		if self.loaded:
 			return experiment_io_tools.menu(ConeConjectureTester.run_mode_dict,
-											"Choose Run Mode")
+											"Choose Run Mode for '{}'".format(self.experiment_name))
 		else:
 			return 0
 
@@ -376,7 +377,7 @@ class ConeConjectureTester(object):
 		else:
 			file_path = self.directory + filename +".json"
 
-		print("DEBUG: file_path = \n{}".format(file_path))
+		#print("Saving file \n{}".format(file_path))
 		#try:
 		with open(file_path, 'w') as fp:
 			json.dump(self.current_cone_chain, fp, cls=cone_chain.ConeChainEncoder,sort_keys=True,
@@ -522,7 +523,7 @@ class ConeConjectureTester(object):
 			2) If you're in batch mode, self.run_mode() is set.
 		"""
 		# ask run_mode (1 - Top Down, 2 - Bottom up, 3 - Alternating?)
-		if self.run_mode not in ConeConjectureTester.run_mode_dict.keys():
+		if self.run_mode is None or self.run_mode == 0 or self.run_mode not in ConeConjectureTester.run_mode_dict.keys():
 			self.run_mode = self.run_mode_menu()
 
 

@@ -1,0 +1,100 @@
+{
+    "bottom_sequence": [
+        "{\"hilbert_basis\": null, \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-1, -2, 0, -2, 2], [-1, 1, -1, -1, 2], [-1, 1, -1, 0, 2], [-1, 2, 0, 2, 2], [0, -1, -1, -1, 2], [0, 1, -1, 0, 2]], \"longest_hilbert_basis_element_length\": 4.795831523312719, \"hilbert_basis_size\": 14.0, \"longest_hilbert_basis_element\": null}"
+    ],
+    "cone_poset_chain": [],
+    "dimension": 5,
+    "inner_cone_rays_list": [
+        [
+            -1,
+            -2,
+            0,
+            -2,
+            2
+        ],
+        [
+            -1,
+            1,
+            -1,
+            -1,
+            2
+        ],
+        [
+            -1,
+            1,
+            -1,
+            0,
+            2
+        ],
+        [
+            -1,
+            2,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            -1,
+            -1,
+            -1,
+            2
+        ],
+        [
+            0,
+            1,
+            -1,
+            0,
+            2
+        ]
+    ],
+    "outer_cone_rays_list": [
+        [
+            -2,
+            2,
+            0,
+            1,
+            1
+        ],
+        [
+            -1,
+            -2,
+            0,
+            -2,
+            2
+        ],
+        [
+            -1,
+            2,
+            -2,
+            -1,
+            2
+        ],
+        [
+            0,
+            0,
+            -1,
+            -2,
+            2
+        ],
+        [
+            1,
+            -1,
+            -2,
+            1,
+            2
+        ],
+        [
+            1,
+            0,
+            0,
+            1,
+            1
+        ]
+    ],
+    "sequence_complete": false,
+    "top_sequence": [
+        "{\"hilbert_basis\": null, \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-2, 2, 0, 1, 1], [-1, -2, 0, -2, 2], [-1, 2, -2, -1, 2], [0, 0, -1, -2, 2], [1, -1, -2, 1, 2], [1, 0, 0, 1, 1]], \"longest_hilbert_basis_element_length\": 6.324555320336759, \"hilbert_basis_size\": 73.0, \"longest_hilbert_basis_element\": null}"
+    ],
+    "valid_poset": true
+}
