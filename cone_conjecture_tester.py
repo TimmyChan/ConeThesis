@@ -217,6 +217,24 @@ class ConeConjectureTester(object):
 		else:
 			return 0
 
+	def deduce_run_mode(self):
+		self.check_loaded()
+		if self.loaded:
+			if self.batch_mode:
+				top_down_count = len(self.current_cone_chain.top_sequence)
+				bottom_up_count = len(self.current_cone_chain.bottom_sequence)
+				if top_down_count > bottom_up_count and bottom_up_count == 1:
+					self.run_mode=1 # topdown
+					return
+				elif top_down_count < bottom_up_count and top_down_count ==1:
+					self.run_mode = 2 # bottomup
+					return
+				elif top_down_count >= bottom_up_count -1 and top_down_count <= bottom_up_count + 1:
+					self.run_mode = 3
+					return
+			self.run_mode = self.run_mode_menu()
+		else:
+			return 0
 
 	def file_setting_string(self):
 		""" returns a string that shows settings """
@@ -524,7 +542,7 @@ class ConeConjectureTester(object):
 		"""
 		# ask run_mode (1 - Top Down, 2 - Bottom up, 3 - Alternating?)
 		if self.run_mode is None or self.run_mode == 0 or self.run_mode not in ConeConjectureTester.run_mode_dict.keys():
-			self.run_mode = self.run_mode_menu()
+			self.deduce_run_mode()
 
 
 		# verify number of steps to run between printing/saving data

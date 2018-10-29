@@ -6,8 +6,8 @@ import cone_conjecture_tester as cct
 
 if __name__ == "__main__":
 
-	for i in range(1):
-		dimension = i + 7
+	for i in range(2):
+		dimension = i + 5
 		experiments = os.listdir("DATA/{}d/".format(dimension))
 		experiments.sort()
 		num_experiments = len(experiments)

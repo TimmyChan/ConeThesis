@@ -428,10 +428,10 @@ class ConeChain(object):
 
 				size_filename = name + " SIZE {} steps.png".format(self.number_of_steps())
 				hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in switcher[name]]
+				plt.figure(i+1)
 				plt.xlabel("Number of Steps: {}".format(name))
 				plt.ylabel("Number of Vectors")
 				plt.title("Size of the Hilbert Basis: {}".format(name))
-				plt.figure(i+1)
 				plt.plot(hilbert_graph_data_size)
 				plt.savefig(directory + size_filename)
 				plt.close(i+1)
