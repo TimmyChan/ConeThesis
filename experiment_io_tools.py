@@ -100,10 +100,10 @@ def ask_int(string="Please input an integer: "):
 	return user_input
 
 def separator():
-	return "\n----------------------------------------------------------------------\n"
+	return "\n---------------------------------------------\n"
 
 def printseparator(): 
-    print("\n----------------------------------------------------------------------\n")
+    print("\n----------------------------------------------\n")
  
 def printmenu(choices_dict,
 		menutitle = "Menu"):

@@ -3,6 +3,7 @@
 
 import sys
 import sage.all
+import experiment_io_tools
 
 
 def rays_list_to_json_array(rays_list):
@@ -115,7 +116,7 @@ def generate_cone(dim, rmax=10, numgen=5):
 	vects = [generate_random_vector(dim,rmax) for i in range(numgen)] # Empty list of vectors
 	temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
 	# conical hull of vectors in list vects.
-	print("\t attempting to generate a cone with {}...".format(vects))
+	# DEBUG: print("\t attempting to generate a cone with {}...".format(vects))
 	
 	if dim > 2:
 		while len(temp.rays_list())<numgen: 
@@ -163,6 +164,13 @@ def generate_inner_cone(outer, rmax=10, numgen=5):
 			# keep tacking on random vectors, eventually 
 			# the convex hull will be full dimensional
 	return inner
+
+
+
+
+
+
+
 
 #################################
 # TOOLS FOR BOTTOM UP ALGORITHM #
@@ -259,6 +267,35 @@ def zonotope_generators(vectlist):
 	#return Polyhedron(vertices=zonogens,backend='normaliz')
 	return zonogens
 
+# SANITY CHECK
+
+def sanity_check(C,D):
+    if not C.is_full_dimensional():
+        print("C is not full dimensional!")
+        experiment_io_tools.printseparator()
+        experiment_io_tools.printseparator()
+        print("RESTARTING INPUT!")
+    if not D.is_full_dimensional():
+        print("D is not full dimensional!")
+        experiment_io_tools.printseparator()
+        experiment_io_tools.printseparator()
+        print("RESTARTING INPUT!")
+    if not C.lines_list() == []:
+        print("C is not proper!")
+        experiment_io_tools.printseparator()
+        experiment_io_tools.printseparator()
+        print("RESTARTING INPUT!")
+    if not D.lines_list() == []:
+        print("D is not proper!")
+        experiment_io_tools.printseparator()
+        experiment_io_tools.printseparator()        
+        print("RESTARTING INPUT!")
+    if not cone_containment(C,D):
+        print("C is not in D!")
+        experiment_io_tools.printseparator()
+        experiment_io_tools.printseparator()
+        print("RESTARTING INPUT!")
+    return (C.is_full_dimensional() and D.is_full_dimensional() and C.lines_list() == [] and D.lines_list() == [] and cone_containment(C,D))
 
 
 

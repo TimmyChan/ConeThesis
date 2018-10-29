@@ -1,0 +1,86 @@
+{
+    "bottom_sequence": [
+        "{\"hilbert_basis\": [[-1, 0, 0, 0, 1], [0, 0, -1, -1, 1], [0, 0, 0, 0, 1], [1, -1, 1, 0, 1], [1, 0, -1, 0, 1]], \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-1, 0, 0, 0, 1], [0, 0, -1, -1, 1], [0, 0, 0, 0, 1], [1, -1, 1, 0, 1], [1, 0, -1, 0, 1]], \"longest_hilbert_basis_element_length\": 2.0, \"hilbert_basis_size\": 5.0, \"longest_hilbert_basis_element\": [1, -1, 1, 0, 1]}"
+    ],
+    "cone_poset_chain": [],
+    "dimension": 5,
+    "inner_cone_rays_list": [
+        [
+            -1,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            -1,
+            -1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            1,
+            -1,
+            1,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            -1,
+            0,
+            1
+        ]
+    ],
+    "outer_cone_rays_list": [
+        [
+            -1,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            -1,
+            1,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            -1,
+            -1,
+            1
+        ],
+        [
+            1,
+            -1,
+            1,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            -1,
+            0,
+            1
+        ]
+    ],
+    "sequence_complete": false,
+    "top_sequence": [
+        "{\"hilbert_basis\": [[-1, 0, 0, 0, 1], [-1, 1, 0, 0, 1], [0, 0, -1, -1, 1], [0, 0, 0, 0, 1], [1, -1, 1, 0, 1], [1, 0, -1, 0, 1]], \"algorithm_used\": \"i\", \"generation_step\": 0, \"cone_rays_list\": [[-1, 0, 0, 0, 1], [-1, 1, 0, 0, 1], [0, 0, -1, -1, 1], [1, -1, 1, 0, 1], [1, 0, -1, 0, 1]], \"longest_hilbert_basis_element_length\": 2.0, \"hilbert_basis_size\": 6.0, \"longest_hilbert_basis_element\": [1, -1, 1, 0, 1]}"
+    ],
+    "valid_poset": true
+}

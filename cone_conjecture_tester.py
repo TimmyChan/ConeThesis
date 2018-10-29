@@ -46,6 +46,7 @@ class ConeConjectureTester(object):
 	text_load_continue = "Load and continue existing experiment"
 	text_load_copy = "Load and copy existing experiment to new file"
 	text_load_initial = "Load only initial values of previous experiment"
+	text_manual_input = "Create new experiment (manual_input)"
 
 	text_save_exit = "Save and exit"
 	text_summary = "Display summary of current experiment"
@@ -53,10 +54,12 @@ class ConeConjectureTester(object):
 	text_print_graphs = "Generate and save graphical data."
 	text_display_all_details = "Display all details"
 
+
 	main_menu_dict_initial = {1: text_create,
 							2: text_load_continue,
 							3: text_load_copy,
 							4: text_load_initial,
+							8: text_manual_input,
 							1337: text_save_exit}
 
 	main_menu_dict_loaded =  { 	0: text_run_experiment,
@@ -67,6 +70,7 @@ class ConeConjectureTester(object):
 								5: text_summary,
 								6: text_print_graphs,
 								7: text_display_all_details,
+								8: text_manual_input,
 								1337: text_save_exit}
 
 
@@ -80,19 +84,19 @@ class ConeConjectureTester(object):
 						2: text_bottom_up,
 						3: text_alternating}
 
-	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False, directory=None, numgen=None, steps=None):
+	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False, directory=None, numgen=None, steps=None, rmax=2):
 		self.dimension = dim  #dimension
 		self.experiment_name = expr_name #experiment name
 		self.directory = directory # default will be DATA/{}d/expr_name/
 		self.raw_data_path = None #default will be DATA/{}D/expr_name/expr_name.json
 
 	
-		self.bound = 2 # maximum value a coordinate will have
+		self.bound = rmax # maximum value a coordinate will have
 
 
 		self.run_mode = 0 if runmode is None else runmode # see run_mode_dict for options
 
-		self.steps = 1000 if steps is None else steps
+		self.steps = 200 if steps is None else steps
 		self.alternation_constant = 1 # number of steps of top down and bottom up to run as you alternate
 
 
@@ -165,6 +169,12 @@ class ConeConjectureTester(object):
 			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_display_all_details:
 				self.current_cone_chain.output_to_terminal()
 				self.current_cone_chain.chain_details()
+
+			#8:
+			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_manual_input:
+				self.manual_create_experiment()
+
+
 								
 			#1337
 			elif ConeConjectureTester.main_menu_dict_loaded[main_menu_choice] == ConeConjectureTester.text_save_exit:
@@ -188,6 +198,7 @@ class ConeConjectureTester(object):
 		#experiment_io_tools.pause()
 
 	def main_menu(self):
+		""" (Terminal UI) Main menu"""
 		if self.loaded:
 			return experiment_io_tools.menu(ConeConjectureTester.main_menu_dict_loaded,
 											ConeConjectureTester.text_main_title,
@@ -198,6 +209,7 @@ class ConeConjectureTester(object):
 
 
 	def run_mode_menu(self):
+		""" (Terminal UI) Asks user for the mode they want to run."""
 		if self.loaded:
 			return experiment_io_tools.menu(ConeConjectureTester.run_mode_dict,
 											"Choose Run Mode")
@@ -213,6 +225,20 @@ class ConeConjectureTester(object):
 		return settings
 
 
+	def generate_cones(self):
+		if self.bound is None or not self.batch_mode:
+			self.ask_bound()
+		if self.num_gen is None or not self.batch_mode:
+			self.ask_num_gen()
+		print("Generating New Cones...")
+		cones_unacceptable = True
+		while cones_unacceptable:
+			outer_cone = cone_tools.generate_cone(self.dimension, rmax=self.bound, numgen=self.num_gen)
+			inner_cone = cone_tools.generate_inner_cone(outer_cone, rmax=self.bound, numgen=self.num_gen)
+			cones_unacceptable = (inner_cone.rays_list() == outer_cone.rays_list())
+		self.current_cone_chain = cone_chain.ConeChain(inner_cone, outer_cone)
+		print("Geneation successful!")
+				 
 	def create_experiment(self):
 		"""Asks the relevant information then checks to see if randomly generated 
 		or user inputted"""
@@ -220,62 +246,50 @@ class ConeConjectureTester(object):
 		self.ask_dimension()
 		self.ask_experiment_name()
 		self.update_paths(self.experiment_name)
-		#make the directory if it doesn't exist
-		try:
-			os.makedirs(self.directory, 0755) 
-		except:
-			None
-		self.ask_bound()
-		self.ask_num_gen()
-		print("Generating New Cones...")
-		cones_unacceptable = True
-		while cones_unacceptable:
-			outer_cone = cone_tools.generate_cone(self.dimension, rmax=self.bound, numgen=self.num_gen)
-			inner_cone = cone_tools.generate_inner_cone(outer_cone, rmax=self.bound, numgen=self.num_gen)
-			cones_unacceptable = (inner_cone.rays_list() == outer_cone.rays_list())
-				 
 		
-
-		self.current_cone_chain = cone_chain.ConeChain(inner_cone, outer_cone)
-		self.save_file("Initial Conditions.json")
+		self.generate_cones()
+		
+		self.save_file("Initial Conditions")
 		self.save_file()
 		self.check_loaded()
 
 		experiment_io_tools.pause()
 
-	def batch_create_experiment(self):
+
+
+	def manual_create_experiment(self):
+		""" PUre UI version of creating experiment, user manually inputs everything """
+		experiment_io_tools.new_screen(ConeConjectureTester.text_manual_input)
+		self.ask_dimension()
+		self.ask_experiment_name()
 		self.update_paths(self.experiment_name)
-		try:
-			os.makedirs(self.directory, 0755) 
-		except:
-			None
-		if self.dimension is None:
-			self.ask_dimension()
-		if self.experiment_name is None:
-			self.ask_experiment_name()
+		self.manual_input()
 		
-		self.update_paths(self.experiment_name)
-		#make the directory if it doesn't exist
-		try:
-			os.makedirs(self.directory, 0755) 
-		except:
-			None
+		self.save_file("Initial Conditions")
+		self.save_file()
+		self.check_loaded()
+
+		experiment_io_tools.pause()
+
+
+	def batch_create_experiment(self,experiment_name=None):
+		#TODO: add a custom path option so that we can load the initial condition of another experiment and create a new one from that!
+		if experiment_name==None:
+			self.update_paths(self.experiment_name)
+		else:
+			self.update_paths(experiment_name)
+		
 		if self.bound is None:
 			self.ask_bound()
 		if self.num_gen is None:
 			self.ask_num_gen()
 
-		print("Generating New Cones...")
-		cones_unacceptable = True
-		while cones_unacceptable:
-			outer_cone = cone_tools.generate_cone(self.dimension, rmax=self.bound, numgen=self.num_gen)
-			inner_cone = cone_tools.generate_inner_cone(outer_cone, rmax=self.bound, numgen=self.num_gen)
-			cones_unacceptable = (inner_cone.rays_list() == outer_cone.rays_list())
-				 
+		self.check_loaded()
+		if not self.loaded:
+			self.generate_cones()	 
 		
 
-		self.current_cone_chain = cone_chain.ConeChain(inner_cone, outer_cone)
-		self.save_file("Initial Conditions.json")
+		self.save_file("Initial Conditions")
 		self.save_file()
 		self.check_loaded()
 
@@ -284,10 +298,12 @@ class ConeConjectureTester(object):
 
 
 	def load_experiment(self,initial_condition=False):
-		experiment_io_tools.new_screen(ConeConjectureTester.text_load_continue)
+		if self.batch_mode is False:
+			experiment_io_tools.new_screen(ConeConjectureTester.text_load_continue)
 
+		user_choice = -1337
 		accept_expr_choice = False
-		while not accept_expr_choice:
+		while (not accept_expr_choice) and (self.batch_mode is False):
 			self.ask_dimension()
 			try:
 				possible_experiment_names = os.listdir("DATA/{}d/".format(self.dimension))
@@ -310,32 +326,66 @@ class ConeConjectureTester(object):
 			experiment_io_tools.pause()
 			self.current_cone_chain.output_to_terminal()
 	
-				
-	def load_file(self,initial_condition):
-		print("Loading file: {}".format(self.raw_data_path))
+	
+	def copy_experiment(new_experiment, old_experiment=None, initial_condition=True):
+		""" Copies current (or existing) experiment to a new experiment.
+
+		"""
+
+	def load_file(self,initial_condition=False,custom_name=None):
+		""" Loads a json file into the current_cone_chain 
+			Args:
+				initial_condition (boolean): 	True if seeking only the initial cones
+												False if seeking the whole file (Default)
+				custom_name (string):	Sets the name of the experiment to be loaded
+		"""
+
+		# if no custom name, then simply load with current settings (TUI version)
+		# if there is a custom name, update paths to the appropriate experiment name then attempt to load.
+
+		self.update_paths()
+		if custom_name is None:
+			filepath = self.raw_data_path
+		else:
+			filepath = "DATA/{}d/{}/{}.json".format(self.dimension, custom_name,custom_name)
+
+		print("Loading file: {}".format(filepath))
 		try:
-			with open(self.raw_data_path, 'r') as fp:
+			with open(filepath, 'r') as fp:
 				if initial_condition:
 					self.current_cone_chain = json.load(fp, cls=cone_chain.ConeChainInitialConditionExtractor)
-					self.ask_experiment_name()
+					if not self.batch_mode or self.experiment_name is None:
+						self.ask_experiment_name()
 					self.update_paths()
-					self.save_file()
+					
 				else:
 					self.current_cone_chain = json.load(fp, cls=cone_chain.ConeChainDecoder)
 			print('\tloading successful...')
 		except:
 			print('\tA file loading error has occured.')
+		self.save_file()
 
 	def save_file(self, filename=None):
-		file_name = self.experiment_name+".json" if filename is None else filename
-		try:
-			with open(self.directory + file_name, 'w') as fp:
-				json.dump(self.current_cone_chain, fp, cls=cone_chain.ConeChainEncoder,sort_keys=True,
-					indent=4, separators=(',', ': '))
-		except:
-			None
+		'''Saves the data from the current cone chain to a file in self.directory
+			Args: filename (string): The name of the file with no extensions.
+		'''
+
+		self.update_paths()		
+		if filename is None:
+			file_path = self.raw_data_path
+		else:
+			file_path = self.directory + filename +".json"
+
+		print("DEBUG: file_path = \n{}".format(file_path))
+		#try:
+		with open(file_path, 'w') as fp:
+			json.dump(self.current_cone_chain, fp, cls=cone_chain.ConeChainEncoder,sort_keys=True,
+				indent=4, separators=(',', ': '))
+	#except:
+		#	print('\tA file saving error has occured.')
 
 	def check_loaded(self):
+		''' Verifies that current_cone_chain is loaded by verifying it's not "none '''
 		if self.current_cone_chain is None:
 			self.loaded = False
 		else:
@@ -343,20 +393,35 @@ class ConeConjectureTester(object):
 
 
 	def update_paths(self, new_expr_name=None):
-		if new_expr_name is None:
+		''' A function to update self.directory and self.raw_datapath
+			Args: new_expr_name (string): The name of the experiment we wish to save/load from	
+		'''
+		
+		# logic to determine the file name in a clear way:
+		# if the experiment_name is not set and there's no custom name provided:
+		if new_expr_name is None and self.experiment_name is None:
 			self.ask_experiment_name()
-		else:
+		elif new_expr_name is not None:
 			self.experiment_name = new_expr_name
 
+		# usually set, but just in case...
 		if self.dimension is None:
 			self.ask_dimension()
+
+		#set the directory and raw data path to be new
 		self.directory = "DATA/{}d/".format(self.dimension) + self.experiment_name + "/"
 		self.raw_data_path = self.directory + self.experiment_name + ".json"
 
+		#make the directory if it doesn't exist
+		try:
+			os.makedirs(self.directory, 0755) 
+		except:
+			NotImplemented
+			#print("Error making directory {}".format(self.directory))
+		#print("DEBUG: raw_data_path = {}".format(self.raw_data_path))
 				
 	def save_summary(self,folder=None,experiment_name=None):
-		""" """
-		# 
+		""" Writes current summary of data to a text file.""" 
 		summary_name = "Data Summary.txt"
 		try:
 			os.makedirs(self.directory, 0755) 
@@ -371,12 +436,8 @@ class ConeConjectureTester(object):
 		fileobj.write("\tcone_poset_chain has length {}\n".format(len(self.current_cone_chain.cone_poset_chain)))
 		fileobj.close()
 
-
-	
-
-
 	def ask_experiment_name(self):
-		"""Asks user for the experiment name and sets self.experiment_name"""
+		""" (Terminal UI) Asks user for the experiment name and sets self.experiment_name"""
 		if self.experiment_name is not None:
 			accept_name = not experiment_io_tools.query_yes_no("Current experiment name set to be {}. Change current setting? ".format(self.experiment_name))
 		else:
@@ -387,7 +448,7 @@ class ConeConjectureTester(object):
 
 
 	def ask_dimension(self):
-		"""Asks user for the dimension and sets self.dimension"""
+		""" (Terminal UI) Asks user for the dimension and sets self.dimension"""
 		if self.dimension <> None:
 			valid_dimension = experiment_io_tools.query_yes_no("Current dimension set to be {}. Keep current setting? ".format(self.dimension))
 		else:
@@ -399,7 +460,7 @@ class ConeConjectureTester(object):
 				valid_dimension = True
 
 	def ask_bound(self):
-		"""Asks user for the bound of the random number generator and sets self.bound"""
+		""" (Terminal UI) Asks user for the bound of the random number generator and sets self.bound"""
 		if self.bound > 0:
 			accept_bound = experiment_io_tools.query_yes_no("Current random numbers bound at +/-{}. Keep current setting? ".format(self.bound))
 		else:
@@ -411,7 +472,7 @@ class ConeConjectureTester(object):
 				accept_bound = True
 
 	def ask_num_gen(self):
-		"""Asks user for the number of generators needed"""
+		""" (Terminal UI) Asks user for the number of generators needed"""
 		if self.num_gen is not None:
 			accept_num = experiment_io_tools.query_yes_no("Current number of generators = {}. Keep settings?".format(self.num_gen))
 		else:
@@ -427,9 +488,9 @@ class ConeConjectureTester(object):
 
 
 	def ask_steps(self):
-		"""Asks user for the number of times to run the algorithms between saving and sets self.steps"""
+		""" (Terminal UI) Asks user for the number of times to run the algorithms between saving and sets self.steps"""
 		if self.steps > 0:
-			accept_steps = experiment_io_tools.query_yes_no("Run '{}' {} steps. Keep current setting? ".format(ConeConjectureTester.run_mode_dict[self.run_mode],self.steps))
+			accept_steps = experiment_io_tools.query_yes_no("Currently '{}' is set to run for [{}] steps. Keep current setting? ".format(ConeConjectureTester.run_mode_dict[self.run_mode],self.steps))
 		else:
 			accept_steps = False
 
@@ -439,7 +500,10 @@ class ConeConjectureTester(object):
 				accept_steps = True
 
 	def ask_alternation_constant(self):
-		"""Asks user for the number of times to run top_down/bottom_up before alternating"""
+		""" (Terminal UI) Asks user for the number of times to run top_down/bottom_up before alternating
+			CURRENTLY NOT REALLY USED... DEFAULT SET TO 1.
+		"""
+		
 		if self.steps > 0:
 			accept_alternation_constant = experiment_io_tools.query_yes_no("'{}' is currently set to switch every {} step(s). Keep current setting? ".format(ConeConjectureTester.run_mode_dict[self.run_mode],self.alternation_constant,self.steps))
 		else:
@@ -452,8 +516,12 @@ class ConeConjectureTester(object):
 
 
 	def run_experiment(self):
-
-		# ask run_mode (1,2,3?)
+		""" Runs the experiment using current settings 
+			Assumes:
+			1) current_cone_chain is not empty
+			2) If you're in batch mode, self.run_mode() is set.
+		"""
+		# ask run_mode (1 - Top Down, 2 - Bottom up, 3 - Alternating?)
 		if self.run_mode not in ConeConjectureTester.run_mode_dict.keys():
 			self.run_mode = self.run_mode_menu()
 
@@ -461,9 +529,10 @@ class ConeConjectureTester(object):
 		# verify number of steps to run between printing/saving data
 		if self.batch_mode is False:
 			self.ask_steps()
-
 			experiment_io_tools.new_screen(self.experiment_name)
 			user_continue = experiment_io_tools.query_yes_no("Begin running '{}'?".format(ConeConjectureTester.run_mode_dict[self.run_mode]))
+		else:
+			user_continue = True
 
 		# Beginning running experiment
 		original_count = self.current_cone_chain.number_of_steps()
@@ -483,6 +552,7 @@ class ConeConjectureTester(object):
 					else:
 						self.current_cone_chain.bottom_up(self.alternation_constant)
 
+			# At the end of each loop we save some data...
 			self.print_graphs()
 			print("Saving summary...")
 			self.save_summary()
@@ -491,7 +561,65 @@ class ConeConjectureTester(object):
 		
 			if self.batch_mode is False:
 				user_continue = experiment_io_tools.query_yes_no("Completed {} steps this run so far.\n\tSaved data and printed graph. Continue?".format(self.current_cone_chain.number_of_steps()-original_count))
- 	
+ 			else:
+ 				user_continue = False
+
+ 	def manual_input(self):
+ 		continueinput = True
+		while continueinput:
+			outerGenerator = []
+		
+			while True:
+				try:
+					experiment_io_tools.printseparator()
+					print("Current list of extremal generators for the OUTER cone: {}".format(outerGenerator))
+					experiment_io_tools.printseparator()
+					handle = raw_input("Please enter an extremal generator \"x_1,...,x_d\" of the outer cone without quotes, \nor type \"finish\" when done: ")
+					if str(handle).lower() == "finish":
+						if len(outerGenerator) +1 < self.dimension:
+							print("Not enough generators for a full dimensional cone!")
+						else:
+							break
+					else:
+						handlelist = [ int(i) for i in handle.split(",")]						
+						if len(handlelist) <> self.dimension:
+							print("Incorrect dimension.")
+						else:
+							outerGenerator.append(handlelist)		
+				except Exception as inputerror:
+					print("Input error detected: {}".format(inputerror))
+				
+			temp_outer = sage.all.Polyhedron(rays=outerGenerator,backend='normaliz')
+			
+			innerGenerator = []
+			while True:
+				try:
+					experiment_io_tools.printseparator()
+					print("Current list of extremal generators for the INNER cone: {}".format(innerGenerator))
+					experiment_io_tools.printseparator()
+					handle = raw_input("Please enter an extremal generator \"x_1,...,x_d\" of the inner cone without quotes, \nor type \"finish\" when done: ")
+					if handle.lower() == "finish":
+						if len(innerGenerator) < self.dimension:
+							print("Not enough generators for a full dimensional cone!")
+							break
+						else:
+							break
+					else:
+						handlelist = [int(i) for i in handle.split(",")]						
+						if len(handlelist) <> self.dimension:
+							print("Incorrect dimension.")
+						elif temp_outer.contains(handlelist):
+							innerGenerator.append(handlelist)
+						else:
+							print("{} is not contained in outer cone!".format(handlelist))				
+				except Exception as inputerror:
+					print("Input error detected: {}".format(inputerror))
+				
+			temp_inner = sage.all.Polyhedron(rays=innerGenerator,backend='normaliz')
+			continueinput = not cone_tools.sanity_check(temp_inner,temp_outer)
+			if continueinput:
+				print("Some error occured, please do this again.")
+		self.current_cone_chain = cone_chain.ConeChain(temp_inner,temp_outer)
 
 if __name__ == "__main__":
 	debug = ConeConjectureTester()
