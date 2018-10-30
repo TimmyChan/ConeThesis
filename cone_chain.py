@@ -416,6 +416,7 @@ class ConeChain(object):
 		for name in switcher:
 			if len(switcher[name]) > 1:
 				length_filename = name + " LENGTH {} steps.png".format(self.number_of_steps())
+				length_filename_no_step = name + " LENGTH.png"
 				hilbert_graph_data_length = [cone.hilbert_graph_data_length() for cone in switcher[name]]
 				plt.figure(i)
 				
@@ -424,9 +425,11 @@ class ConeChain(object):
 				plt.ylabel("Vector Norm")
 				plt.title("Length of the longest element in the Hilbert Basis: {}".format(name))
 				plt.savefig(directory + length_filename)
+				plt.savefig(directory + length_filename_no_step)
 				plt.close(i)
 
 				size_filename = name + " SIZE {} steps.png".format(self.number_of_steps())
+				size_filename_nostep = name + " SIZE.png"
 				hilbert_graph_data_size = [cone.hilbert_graph_data_size() for cone in switcher[name]]
 				plt.figure(i+1)
 				plt.xlabel("Number of Steps: {}".format(name))
@@ -434,6 +437,7 @@ class ConeChain(object):
 				plt.title("Size of the Hilbert Basis: {}".format(name))
 				plt.plot(hilbert_graph_data_size)
 				plt.savefig(directory + size_filename)
+				plt.savefig(directory + size_filename_nostep)
 				plt.close(i+1)
 			i += 2
 				
