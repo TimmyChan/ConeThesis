@@ -2,7 +2,7 @@ inner_cone has generators:
 [[-2, -1, -1, 2, 2], [0, -2, -1, -1, 1], [0, -1, -2, -1, 2], [0, 0, -1, 0, 1], [1, 2, -1, -1, 1]]
 outer_cone has generators: 
 [[-2, -1, -1, 2, 2], [0, -2, -1, -1, 1], [0, 2, -2, 0, 1], [1, -1, 0, 2, 2], [1, 2, -1, -1, 1]]
-	sequence_complete = False
+	sequence_complete = True
 	top_sequence has length 1
-	bottom_sequence has length 201
-	cone_poset_chain has length 0
+	bottom_sequence has length 275
+	cone_poset_chain has length 275

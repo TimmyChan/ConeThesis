@@ -8,14 +8,14 @@ import experiment_io_tools
 import time
 
 if __name__ == '__main__':
-	accept_dimension = False
+	'''accept_dimension = False
 	while not accept_dimension:
 		dimension = experiment_io_tools.ask_int("Dimension? ")
 		if dimension >1 :
 			accept_dimension = True
 		else:
 			print("\tEnter valid dimension please.")
-
+	'''
 	steps = 200
 	accept_steps = experiment_io_tools.query_yes_no("Current number of steps to continue is [{}]. Keep settings?".format(steps))
 	while not accept_steps:
@@ -30,23 +30,39 @@ if __name__ == '__main__':
 	accept_time = experiment_io_tools.query_yes_no("Run for {} minutes. Keep settings?".format(run_time))
 	while not accept_time:
 		run_time = experiment_io_tools.ask_int("Time limit? ")
+		if run_time > 0:
+			accept_time = True
 		if run_time <= 0:
 			print("\tEnter a positive integer please.")
+	start_time = time.time()
+	finish_time = start_time + 60* run_time # run this for 30 minutes
 
-
-	open_experiments = os.listdir("DATA/{}d".format(dimension))
-	open_experiments.sort()
-	
-	finish_time = time.time() + 60* run_time # run this for 30 minutes
-
-
-	for experiment in open_experiments:
-		tester = cct.ConeConjectureTester(dimension,expr_name=experiment,batchmode=True,steps=steps)
-		tester.load_file()
-		if not tester.current_cone_chain.sequence_complete:
-			tester.run_experiment()
+	while time.time() <= finish_time:
+		for dimension in range(4,6):
+			open_experiments = os.listdir("DATA/{}d".format(dimension))
+			open_experiments.sort()
 			
-		else:
-			print("{} already complete. Skipping...".format(experiment))
-		if time.time()> finish_time:
-			break
+		
+
+			for experiment in open_experiments:
+				try:
+					tester = cct.ConeConjectureTester(dimension,expr_name=experiment,batchmode=True,steps=steps)
+					tester.load_file()
+					if not tester.current_cone_chain.sequence_complete:
+						tester.run_experiment()
+						
+					else:
+						print("{} already complete. Skipping...".format(experiment))
+					tester.print_graphs()
+					tester.save_file()
+					tester.save_summary()
+				except:
+					with open("batch_errors.log",'a') as fp:
+						fp.write("Error loading/saving " + experiment)
+					print("Error loading/saving " + experiment +". Logged and moving on...")
+				print("RUN TIME: {} seconds".format(round(time.time()-start_time,2)))
+				if time.time()> finish_time:
+					break
+
+			if time.time()> finish_time:
+				break
