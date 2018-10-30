@@ -52,7 +52,8 @@ if __name__ == '__main__':
 						tester.run_experiment()
 						tester.print_graphs()
 						tester.save_file()
-						tester.save_summary()					else:
+						tester.save_summary()					
+					else:
 						print("{} already complete. Skipping...".format(experiment))
 					
 				except:
