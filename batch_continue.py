@@ -50,17 +50,18 @@ if __name__ == '__main__':
 					tester.load_file()
 					if not tester.current_cone_chain.sequence_complete:
 						tester.run_experiment()
-						
-					else:
+						tester.print_graphs()
+						tester.save_file()
+						tester.save_summary()					else:
 						print("{} already complete. Skipping...".format(experiment))
-					tester.print_graphs()
-					tester.save_file()
-					tester.save_summary()
+					
 				except:
 					with open("batch_errors.log",'a') as fp:
-						fp.write("Error loading/saving " + experiment)
+						fp.write("{} Error loading/saving ".format(time.time()) + experiment + "\n")
+						fp.close()
 					print("Error loading/saving " + experiment +". Logged and moving on...")
-				print("RUN TIME: {} seconds".format(round(time.time()-start_time,2)))
+				
+				print("\t\t\tRUN TIME: {} seconds".format(round(time.time()-start_time,2)))
 				if time.time()> finish_time:
 					break
 
