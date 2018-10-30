@@ -13,10 +13,12 @@ if __name__ == "__main__":
 		num_experiments = len(experiments)
 		print("Found {} experiments".format(num_experiments))
 		for expr in experiments:
-			tester = cct.ConeConjectureTester(dimension, expr_name=expr, batchmode=True)
-			tester.update_paths(expr)
-			tester.load_file(initial_condition=False)
-			tester.check_loaded()
-			tester.print_graphs()
-			
+			try:
+				tester = cct.ConeConjectureTester(dimension, expr_name=expr, batchmode=True)
+				tester.update_paths(expr)
+				tester.load_file(initial_condition=False)
+				tester.check_loaded()
+				tester.print_graphs()
+			except:
+				print("SOME ERROR for {}".format(expr))
 	

@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\begin{document}
+\textbf{Initial Conditions:}
+\begin{SAGE}
+inner_cone has generators: 
+[[-1, -1, 0, 0, 1], [-1, 0, -1, 1, 1], [0, 0, 0, 0, 1], [0, 1, 0, 1, 1], [1, 0, -1, 1, 1]]
+outer_cone has generators: 
+[[-1, -1, 0, 0, 1], [-1, 0, -1, 1, 1], [0, 1, 0, 1, 1], [1, 0, -1, 1, 1], [1, 0, 0, -1, 1]]
+
+\end{SAGE}
+\begin{tabular}{c|c}
+\textbf{Top Down} & \textbf{Bottom Up} \\ \hline  
+\begin{SAGE}
+	sequence_complete = True
+	top_sequence has length 2
+	bottom_sequence has length 1
+	cone_poset_chain has length 2
+\end{SAGE} 
+&
+\begin{SAGE}
+	sequence_complete = True
+	top_sequence has length 1
+	bottom_sequence has length 2
+	cone_poset_chain has length 2
+\end{SAGE} 
+\\ \hline
+\
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/5 generators 1 bound J/top_sequence SIZE"}
+\end{minipage} &
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/5 generators 1 bound J bottomup/bottom_sequence SIZE"}
+\end{minipage} \\ \\
+\hline \\\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/5 generators 1 bound J/top_sequence LENGTH"}
+\end{minipage} &
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/5 generators 1 bound J bottomup/bottom_sequence LENGTH"}
+\end{minipage}
+\end{tabular}
+\end{document}
