@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\begin{document}
+\textbf{Initial Conditions:}
+\begin{SAGE}
+inner_cone has generators: 
+[[1, -1, 1, 0, 1], [2, -2, -2, -1, 1], [2, -2, -1, -1, 2], [2, -2, 0, -1, 2], [2, -1, 1, 0, 2], [2, -1, 2, 0, 2]]
+outer_cone has generators: 
+[[-2, -2, -2, 1, 2], [-1, 2, 1, 1, 2], [2, -2, -2, -1, 1], [2, -2, 2, -2, 1], [2, -1, 1, -1, 1], [2, -1, 2, 1, 1]]
+
+\end{SAGE}
+\begin{tabular}{c|c}
+\textbf{Top Down} & \textbf{Bottom Up} \\ \hline  
+\begin{SAGE}
+	sequence_complete = False
+	top_sequence has length 201
+	bottom_sequence has length 1
+	cone_poset_chain has length 0
+\end{SAGE} 
+&
+\begin{SAGE}
+	sequence_complete = False
+	top_sequence has length 1
+	bottom_sequence has length 201
+	cone_poset_chain has length 0
+\end{SAGE} 
+\\ \hline
+\
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/6 generators 2 bound A/top_sequence SIZE"}
+\end{minipage} &
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/6 generators 2 bound A bottomup/bottom_sequence SIZE"}
+\end{minipage} \\ \\
+\hline \\\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/6 generators 2 bound A/top_sequence LENGTH"}
+\end{minipage} &
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{"DATA/5d/6 generators 2 bound A bottomup/bottom_sequence LENGTH"}
+\end{minipage}
+\end{tabular}
+\end{document}
