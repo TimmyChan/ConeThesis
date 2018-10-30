@@ -301,8 +301,12 @@ class ConeChain(object):
 			# this cannot satisify the poset condition.
 			return False
 		# Removing the extremal generator (should be just one) from hilbert_outer
+		#print("DEBUG: v[0] = {}".format(v[0]))
 		if len(v) == 1:
-			hilbert_outer.remove(v[0])
+			try:
+				hilbert_outer.remove(v[0])
+			except:
+				print("Failed trying to remove \n\t{} from \n{}".format(v[0],hilbert_outer))
 
 		# Assume that the poset condition is satisified at this point, then
 		# loop through each vector in the Hilbert basis of D, 
