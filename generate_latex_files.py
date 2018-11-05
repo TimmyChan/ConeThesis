@@ -84,5 +84,5 @@ if __name__ == '__main__':
 					
 					latex_code = latex_preamble + latex_init_condit + latex_tabular
 
-					with open(latex_directory + " {}d ".format(dim) + experiment_topdown + ".tex", 'w') as fp:
+					with open(latex_directory + "{}d ".format(dim) + experiment_topdown + ".tex", 'w') as fp:
 						fp.write(latex_code)
