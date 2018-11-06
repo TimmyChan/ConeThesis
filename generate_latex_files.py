@@ -72,7 +72,7 @@ if __name__ == '__main__':
 					latex_init_condit = "\\textbf{Initial Conditions:}\n\\begin{SAGE}\n" + initial_conditions_string + "\n\\end{SAGE}\n"
 					latex_tabular  = 	"\\begin{tabular}{c|c}\n\\textbf{Top Down} & \\textbf{Bottom Up} \\\\ \\hline  \n\\begin{SAGE}\n"
 					latex_tabular += 	topdown_string + "\\end{SAGE} \n&\n\\begin{SAGE}\n"
-					latex_tabular +=	bottomup_string + "\\end{SAGE} \n\\\\ \\hline\n\\\n"
+					latex_tabular +=	bottomup_string + "\\end{SAGE} \n\\\\ \\hline\n\n"
 					latex_tabular += 	'\\begin{minipage}{.45\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_topdown+'/top_sequence SIZE"}\n'
 					latex_tabular += 	"\\end{minipage} &\n"
 					latex_tabular +=	'\\begin{minipage}{.45\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_bottomup+'/bottom_sequence SIZE"}\n'
