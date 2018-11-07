@@ -520,7 +520,7 @@ class ConeConjectureTester(object):
 
 	def ask_alternation_constant(self):
 		""" (Terminal UI) Asks user for the number of times to run top_down/bottom_up before alternating
-			CURRENTLY NOT REALLY USED... DEFAULT SET TO 1.
+			CURRENTLY NOT USED... DEFAULT SET TO 1.
 		"""
 		
 		if self.steps > 0:
@@ -584,18 +584,20 @@ class ConeConjectureTester(object):
  				user_continue = False
 
  	def manual_input(self):
+ 		""" Terminal UI function to allow for manual input of experiments. """
  		continueinput = True
 		while continueinput:
-			outerGenerator = []
+			outer_generators = []
 		
 			while True:
 				try:
-					experiment_io_tools.printseparator()
-					print("Current list of extremal generators for the OUTER cone: {}".format(outerGenerator))
+					experiment_io_tools.new_screen("Entering Extremal Generators of Outer Cone")
+					
+					print("Current list of extremal generators for the OUTER cone: {}".format(outer_generators))
 					experiment_io_tools.printseparator()
 					handle = raw_input("Please enter an extremal generator \"x_1,...,x_d\" of the outer cone without quotes, \nor type \"finish\" when done: ")
 					if str(handle).lower() == "finish":
-						if len(outerGenerator) +1 < self.dimension:
+						if len(outer_generators) +1 < self.dimension:
 							print("Not enough generators for a full dimensional cone!")
 						else:
 							break
@@ -604,21 +606,22 @@ class ConeConjectureTester(object):
 						if len(handlelist) <> self.dimension:
 							print("Incorrect dimension.")
 						else:
-							outerGenerator.append(handlelist)		
+							outer_generators.append(handlelist)		
 				except Exception as inputerror:
 					print("Input error detected: {}".format(inputerror))
 				
-			temp_outer = sage.all.Polyhedron(rays=outerGenerator,backend='normaliz')
+			temp_outer = sage.all.Polyhedron(rays=outer_generators,backend='normaliz')
 			
-			innerGenerator = []
+			inner_generators = []
 			while True:
 				try:
-					experiment_io_tools.printseparator()
-					print("Current list of extremal generators for the INNER cone: {}".format(innerGenerator))
+					experiment_io_tools.new_screen("Entering Extremal Generators of Inner Cone")
+
+					print("Current list of extremal generators for the INNER cone: {}".format(inner_generators))
 					experiment_io_tools.printseparator()
 					handle = raw_input("Please enter an extremal generator \"x_1,...,x_d\" of the inner cone without quotes, \nor type \"finish\" when done: ")
 					if handle.lower() == "finish":
-						if len(innerGenerator) < self.dimension:
+						if len(inner_generators) < self.dimension:
 							print("Not enough generators for a full dimensional cone!")
 							break
 						else:
@@ -628,13 +631,13 @@ class ConeConjectureTester(object):
 						if len(handlelist) <> self.dimension:
 							print("Incorrect dimension.")
 						elif temp_outer.contains(handlelist):
-							innerGenerator.append(handlelist)
+							inner_generators.append(handlelist)
 						else:
 							print("{} is not contained in outer cone!".format(handlelist))				
 				except Exception as inputerror:
 					print("Input error detected: {}".format(inputerror))
 				
-			temp_inner = sage.all.Polyhedron(rays=innerGenerator,backend='normaliz')
+			temp_inner = sage.all.Polyhedron(rays=inner_generators,backend='normaliz')
 			continueinput = not cone_tools.sanity_check(temp_inner,temp_outer)
 			if continueinput:
 				print("Some error occured, please do this again.")
