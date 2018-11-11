@@ -42,16 +42,17 @@ class ConeChainElement(object):
 		self.longest_hilbert_basis_element = longest_hilbert_basis_element
 		self.longest_hilbert_basis_element_length = longest_hilbert_basis_element_length
 
-	def get_hilbert_basis(self):
+	def get_hilbert_basis(self,forced=False):
 		""" Retreives the hilbert basis, only calculates once. """
 		# if the hilbert_basis data is empty, generate it using Normaliz and store it
-		if self.hilbert_basis == None:
+		if self.hilbert_basis == None or forced:
 			self.hilbert_basis = list(self.cone.integral_points_generators()[1])
 			self.hilbert_basis_size = len(self.hilbert_basis)
 			self.longest_hilbert_basis_element = cone_tools.longest_vector(self.hilbert_basis)
 			self.longest_hilbert_basis_element_length = float(sage.all.vector(self.get_longest_hilbert_basis_element()).norm())
 		#return the stored value.
-		return self.hilbert_basis
+
+		return list(self.hilbert_basis)
 
 	def get_longest_hilbert_basis_element(self):
 		if self.longest_hilbert_basis_element == None:

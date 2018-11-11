@@ -444,7 +444,19 @@ class ConeChain(object):
 				plt.savefig(directory + size_filename_nostep)
 				plt.close(i+1)
 			i += 2
-				
+	def recalc(self):
+		print("\t\tRecalculating Hilbert basis for top_sequence...")
+		for cone in self.top_sequence:
+			cone.get_hilbert_basis(forced=True)
+
+		print("\t\tRecalculating Hilbert basis for bottom_sequence...")
+		for cone in self.bottom_sequence:
+			cone.get_hilbert_basis(forced=True)
+
+
+		print("\t\tRecalculating Hilbert basis for cone_poset_chain...")
+		for cone in self.cone_poset_chain:
+			cone.get_hilbert_basis(forced=True)
 
 		
 

@@ -5,11 +5,9 @@ import os
 import cone_conjecture_tester as cct
 import string
 
-if __name__ == "__main__":
-	dimension = 5
-	bound = 2
-	conditions = 10
+import argparse
 
+def main(dimension,bound,conditions):
 	possiblenames = ["{} generators {} bound {}".format(g,b,string.ascii_uppercase[char]) for g in range(dimension,dimension+2) 
 		for b in range(1,bound+1)
 		for char in range(10)] 
@@ -51,3 +49,13 @@ if __name__ == "__main__":
 				tester.run_experiment()
 			else:
 				print("Skipping {}...".format(expr_name_bottomup))
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser(description="Creates new experiments if they are not yet open.")
+	parser.add_argument("dimension", type=int, default=5, help="This is the dimension we are testing")
+	parser.add_argument("bound", type=int, default=2, help="This is the bound on the absolute value of the coordinates")
+	parser.add_argument("conditions", type=int, default=10, help="The number of experiments (unique initial conditions)")
+	args = parser.parse_args()
+
+	main(args.dimension, args.bound, args.conditions)
+

@@ -583,6 +583,8 @@ class ConeConjectureTester(object):
  			else:
  				user_continue = False
 
+
+
  	def manual_input(self):
  		""" Terminal UI function to allow for manual input of experiments. """
  		continueinput = True
@@ -642,6 +644,19 @@ class ConeConjectureTester(object):
 			if continueinput:
 				print("Some error occured, please do this again.")
 		self.current_cone_chain = cone_chain.ConeChain(temp_inner,temp_outer)
+
+	##########################################
+	# DEBUG FUNCTION: Recalculate everything #
+	##########################################
+
+	def recalc_experiment(self):
+		print("Recalculating '{}'".format(self.experiment_name))
+
+		totalsteps = self.current_cone_chain.number_of_steps()
+		print("There are {} cones.".format(totalsteps))
+		self.current_cone_chain.recalc()
+
+
 
 if __name__ == "__main__":
 	debug = ConeConjectureTester()

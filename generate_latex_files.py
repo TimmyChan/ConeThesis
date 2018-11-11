@@ -44,7 +44,7 @@ if __name__ == '__main__':
 						if i < 4:
 							topdown_summary_string += line
 						else:
-							topdown_string += line
+							topdown_string += line[1:]
 						i +=1
 
 					
@@ -58,7 +58,7 @@ if __name__ == '__main__':
 						if i < 4:
 							bottomup_summary_string += line
 						else:
-							bottomup_string += line
+							bottomup_string += line[1:]
 						i +=1
 					
 					initial_conditions_string = ""

@@ -3,6 +3,6 @@ inner_cone has generators:
 outer_cone has generators: 
 [[-2, -2, -2, -1, 2], [-1, -1, -2, -1, 1], [-1, 0, 1, 1, 1], [-1, 2, -1, 2, 2], [0, 0, 2, 0, 1], [2, -2, -2, 2, 1]]
 	sequence_complete = False
-	top_sequence has length 51
-	bottom_sequence has length 51
+	top_sequence has length 81
+	bottom_sequence has length 81
 	cone_poset_chain has length 0
