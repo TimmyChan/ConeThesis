@@ -7,7 +7,6 @@
 
 This module contains the an object that will contain a sequence of cones
 and defines ConeChainElement, an object that will contain experimental data for each cone.
-TODO: Make option for changing number of extremal generators
 
 """
 
@@ -25,30 +24,24 @@ import cone_chain
 
 class ConeConjectureTester(object):
 	"""All user interface with the Experiment object goes here.
-
-	Attributes:
-		directory (string): where will the data be saved/loaded
-		dimension (int): dimension of the current experiment.
-		experiment_name (string): Experiment name
-		current_cone_chain (ConeChain): current actual data
+	Class Attributes:
+		text_* (string): menu strings used for every experiment's Terminal UI
+		main_menu_dict_* (dict): dictionaries where the key is the choice and the value is the menu texts.
 
 	UI Attributes:
 		batch_mode (boolean): flag to denote if batch mode is happening
+		loaded (boolean): flag to denote if the object contains an active experiment.
 		
-	Global Attributes:
-		main_menu_dict (dictionary): dictionary of choices for the main menu
 	"""
 	text_main_title = "Cone Conjecture Tester v1.0"
 
-
 	text_create = "Create new experiment"
-	
 	text_load_continue = "Load and continue existing experiment"
 	text_load_copy = "Load and copy existing experiment to new file"
 	text_load_initial = "Load only initial values of previous experiment"
 	text_manual_input = "Create new experiment (manual_input)"
-
 	text_save_exit = "Save and exit"
+
 	text_summary = "Display summary of current experiment"
 	text_run_experiment = "Run current experiment with current settings"
 	text_print_graphs = "Generate and save graphical data."
@@ -74,7 +67,7 @@ class ConeConjectureTester(object):
 								1337: text_save_exit}
 
 
-
+	# names of the algorithms
 	text_top_down = "Top Down"
 	text_bottom_up = "Bottom Up"
 	text_alternating = "Alternating"
@@ -85,6 +78,19 @@ class ConeConjectureTester(object):
 						3: text_alternating}
 
 	def __init__(self, dim=None, expr_name=None, some_cone_chain=None, runmode=None, batchmode=False, directory=None, numgen=None, steps=None, rmax=2):
+	'''
+	Attributes: 
+		dimension (int): dimension of the experiment, expecting dim >= 2
+		experiment_name (string): the name of the experiment 
+		directory (string): the directory the experiment will be contained
+		raw_data_path (string): the path to the .JSON file that contains all raw data
+		bound (int): the bound on the absolute value of the coordinates of the randomly generated vectors
+		run_mode (int): 1 = Top Down, 2 = Bottom Up, 3 = Alternating
+		steps (int): Steps to run before saving and prompting to continue again.
+		alternation_constant (int): number of steps to run each algorithm before switching.
+		current_cone_chain (ConeChain): object to contain the mathematical data
+		num_gen (int): number of extremal generators used for the randomly generated cones.
+	'''
 		self.dimension = dim  #dimension
 		self.experiment_name = expr_name #experiment name
 		self.directory = directory # default will be DATA/{}d/expr_name/
@@ -193,6 +199,7 @@ class ConeConjectureTester(object):
 
 
 	def print_graphs(self):
+		'''	Generates and saves graphs to the appropriate directory.'''
 		print('Printing graphs to {}'.format(self.directory))
 		self.current_cone_chain.generate_hilbert_graphs(self.directory, self.experiment_name)
 		#experiment_io_tools.pause()
@@ -218,6 +225,8 @@ class ConeConjectureTester(object):
 			return 0
 
 	def deduce_run_mode(self):
+		""" (Internal logic function) Determines what mode a loaded experiment has even 
+			if runmode was not saved. """
 		self.check_loaded()
 		if self.loaded:
 			if self.batch_mode:
@@ -245,6 +254,7 @@ class ConeConjectureTester(object):
 
 
 	def generate_cones(self):
+		""" Takes input from user either by script or by the UI and generates cones """
 		if self.bound is None or not self.batch_mode:
 			self.ask_bound()
 		if self.num_gen is None or not self.batch_mode:
@@ -292,7 +302,7 @@ class ConeConjectureTester(object):
 
 
 	def batch_create_experiment(self,experiment_name=None):
-		#TODO: add a custom path option so that we can load the initial condition of another experiment and create a new one from that!
+		"""Creates experiment without running it. Does not involve TUI unless there are errors."""
 		if experiment_name==None:
 			self.update_paths(self.experiment_name)
 		else:
@@ -307,26 +317,25 @@ class ConeConjectureTester(object):
 		if not self.loaded:
 			self.generate_cones()	 
 		
-
 		self.save_file("Initial Conditions")
 		self.save_file()
-		self.check_loaded()
-
-		#experiment_io_tools.pause()
 
 
 
 	def load_experiment(self,initial_condition=False):
+		""" Terminal UI for loading a experiment. """
 		if self.batch_mode is False:
 			experiment_io_tools.new_screen(ConeConjectureTester.text_load_continue)
 
-		user_choice = -1337
+		user_choice = -1337 
 		accept_expr_choice = False
 		while (not accept_expr_choice) and (self.batch_mode is False):
 			self.ask_dimension()
 			try:
+				# get the list of experiments and sort it
 				possible_experiment_names = os.listdir("DATA/{}d/".format(self.dimension))
 				possible_experiment_names.sort()
+				# Ask user by making a menu...
 				choose_experiment_menu = {i+1: possible_experiment_names[i] for i in range(len(possible_experiment_names)) }
 				choose_experiment_menu.update({-1:"... back to main menu..."})
 				user_choice = experiment_io_tools.menu(choose_experiment_menu)
@@ -344,12 +353,7 @@ class ConeConjectureTester(object):
 			self.check_loaded()
 			experiment_io_tools.pause()
 			self.current_cone_chain.output_to_terminal()
-	
-	
-	def copy_experiment(new_experiment, old_experiment=None, initial_condition=True):
-		""" Copies current (or existing) experiment to a new experiment.
 
-		"""
 
 	def load_file(self,initial_condition=False,custom_name=None):
 		""" Loads a json file into the current_cone_chain 
@@ -395,14 +399,10 @@ class ConeConjectureTester(object):
 		else:
 			file_path = self.directory + filename +".json"
 
-		#print("Saving file \n{}".format(file_path))
-		#try:
 		with open(file_path, 'w') as fp:
 			json.dump(self.current_cone_chain, fp, cls=cone_chain.ConeChainEncoder,sort_keys=True,
 				indent=4, separators=(',', ': '))
-	#except:
-		#	print('\tA file saving error has occured.')
-
+	
 	def check_loaded(self):
 		''' Verifies that current_cone_chain is loaded by verifying it's not "none '''
 		if self.current_cone_chain is None:
@@ -587,7 +587,8 @@ class ConeConjectureTester(object):
 
  	def manual_input(self):
  		""" Terminal UI function to allow for manual input of experiments. """
- 		continueinput = True
+		continueinput = True
+
 		while continueinput:
 			outer_generators = []
 		
@@ -645,9 +646,9 @@ class ConeConjectureTester(object):
 				print("Some error occured, please do this again.")
 		self.current_cone_chain = cone_chain.ConeChain(temp_inner,temp_outer)
 
-	##########################################
-	# DEBUG FUNCTION: Recalculate everything #
-	##########################################
+	#################################################
+	# DEBUG FUNCTION: Recalculate all Hilbert Basis #
+	#################################################
 
 	def recalc_experiment(self):
 		print("Recalculating '{}'".format(self.experiment_name))

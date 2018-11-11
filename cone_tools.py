@@ -7,6 +7,7 @@ import experiment_io_tools
 
 
 def rays_list_to_json_array(rays_list):
+	''' Tool to convert from SAGE numbers to Python native integers '''
 	return None if rays_list is None else [[int(i) for i in v] for v in rays_list] 
 
 def gcd_of_list(args):
@@ -113,21 +114,19 @@ def generate_cone(dim, rmax=10, numgen=5):
 	if numgen < dim: 			# catch: if numgen < dim, guarenteed not full dimensional. 
 		numgen = int(dim)  		# force numgen to have at least be full dimensional.
 
-	vects = [generate_random_vector(dim,rmax) for i in range(numgen)] # Empty list of vectors
-	temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
+	vects = [generate_random_vector(dim,rmax) for i in range(numgen)] # list of random vectors
 	# conical hull of vectors in list vects.
-	# DEBUG: print("\t attempting to generate a cone with {}...".format(vects))
+	temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
 	
 	if dim > 2:
+		# the number of extremal generators is only greater than
+		# the dimension if the dimension is greater than 2.
 		while len(temp.rays_list())<numgen: 
-			#print("len(temp.rays()), numgen: {}, {}".format(len(temp.rays_list()),numgen))
-			#keep looping until we have a full dimensional cone. 
+			#keep appending random vectors until we have a full dimensional cone. 
 			vects.append(generate_random_vector(dim,rmax))
-			#print("\t attempting to generate a cone with {}...".format(vects))
-			temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],
-							  backend='normaliz')
+			temp = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vects],backend='normaliz')
 			# keep tacking on random vectors, eventually 
-			# the convex hull will be full dimensional
+			# the convex hull will be full dimensional (this doesn't take long for low dimensions like 4 or 5)
 	return temp
 
 def generate_inner_cone(outer, rmax=10, numgen=5):
@@ -143,34 +142,27 @@ def generate_inner_cone(outer, rmax=10, numgen=5):
 	# store the dimension of the outer cone
 	if numgen < dim:
 		numgen = int(dim)
-	vectlist = []
+	vectlist = [] # empty list to collect the generator of the inner cone
 
-	# empty list to house the generator of cones
 	while len(vectlist) < numgen:
 		temp_vect = generate_random_vector(dim, rmax)
 		if outer.contains(temp_vect):
 			vectlist.append(temp_vect)
-	inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
-					   backend='normaliz')	
+
+	inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],backend='normaliz')	
 	if dim > 2:	
+		# the number of extremal generators is only greater than
+		# the dimension if the dimension is greater than 2.
 		while len(inner.rays_list())<numgen:
 			#keep looping until we have a full dimensional cone. 
 			temp_vect = generate_random_vector(dim, rmax)
 			if outer.contains(temp_vect):
 				vectlist.append(temp_vect)
 			del inner
-			inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],
-							  backend='normaliz')
+			inner = sage.all.Polyhedron(rays=[sage.all.vector(v) for v in vectlist],backend='normaliz')
 			# keep tacking on random vectors, eventually 
 			# the convex hull will be full dimensional
 	return inner
-
-
-
-
-
-
-
 
 #################################
 # TOOLS FOR BOTTOM UP ALGORITHM #
@@ -259,43 +251,48 @@ def zonotope_generators(vectlist):
 	# First create the powerset of the list	and remove the empty set.
 	dimension = len(vectlist[0])
 	combo = list(sage.all.powerset(vectlist))
+	# remove the empty set and replace it with the 0 vector
 	combo.remove([])
 	combo.append([[0 for i in range(dimension)]])
-	#print combo
+	# take the vector sum of each set in the modified power set.
 	zonogens = [vector_sum(c) for c in combo]
-	#print zonogens
-	#return Polyhedron(vertices=zonogens,backend='normaliz')
 	return zonogens
 
-# SANITY CHECK
 
-def sanity_check(C,D):
-    if not C.is_full_dimensional():
-        print("C is not full dimensional!")
+def sanity_check(inner_cone,outer_cone):
+	'''
+	Args: 
+		inner_cone (sage.all.Polyhedron): Cone with Normaliz backend
+		outer_cone (sage.all.Polyhedorn): Cone with Normaliz backend
+	Returns:
+		boolean: True if inner_cone and outer_cone satisifes experiment constraints, false otherwise.
+	'''
+    if not inner_cone.is_full_dimensional():
+        print("inner_cone is not full dimensional!")
         experiment_io_tools.printseparator()
         experiment_io_tools.printseparator()
         print("RESTARTING INPUT!")
-    if not D.is_full_dimensional():
-        print("D is not full dimensional!")
+    if not outer_cone.is_full_dimensional():
+        print("outer_cone is not full dimensional!")
         experiment_io_tools.printseparator()
         experiment_io_tools.printseparator()
         print("RESTARTING INPUT!")
-    if not C.lines_list() == []:
-        print("C is not proper!")
+    if not inner_cone.lines_list() == []:
+        print("inner_cone is not proper!")
         experiment_io_tools.printseparator()
         experiment_io_tools.printseparator()
         print("RESTARTING INPUT!")
-    if not D.lines_list() == []:
-        print("D is not proper!")
+    if not outer_cone.lines_list() == []:
+        print("outer_cone is not proper!")
         experiment_io_tools.printseparator()
         experiment_io_tools.printseparator()        
         print("RESTARTING INPUT!")
-    if not cone_containment(C,D):
-        print("C is not in D!")
+    if not cone_containment(inner_cone,outer_cone):
+        print("inner_cone is not in outer_cone!")
         experiment_io_tools.printseparator()
         experiment_io_tools.printseparator()
         print("RESTARTING INPUT!")
-    return (C.is_full_dimensional() and D.is_full_dimensional() and C.lines_list() == [] and D.lines_list() == [] and cone_containment(C,D))
+    return (inner_cone.is_full_dimensional() and outer_cone.is_full_dimensional() and inner_cone.lines_list() == [] and outer_cone.lines_list() == [] and cone_containment(inner_cone,outer_cone))
 
 
 

@@ -228,9 +228,6 @@ class ConeChain(object):
 		# if the sequence is complete, loop through each consecutive pair
 		# and verify the entire sequence is good.
 		# break out and return false if even just one of them fail
-		# TODO: Need to make this use the index of the cone, and rewrite 
-		#		poset_check to operate on the ConeChainElement objects
-		#		directly.
 		self.valid_poset = True
 		if self.sequence_complete:
 			# the length of the sequence - 1 because we're looking at consecutive pairs.
@@ -403,6 +400,9 @@ class ConeChain(object):
 		experiment_io_tools.new_screen()
 
 	def generate_hilbert_graphs(self, folder=None, experiment_name=None):
+		''' Generates the graphs for the length of longest hilbert basis element,
+			and also the number of vectors in the hilbert basis.  
+		'''
 		directory = "DATA/{}d/Hilbert Graphs of Unnamed Experiments/".format(self.dimension) if folder is None else folder
 		filename = str(datetime.datetime.now()) if experiment_name is None else experiment_name
 		try:
@@ -444,7 +444,10 @@ class ConeChain(object):
 				plt.savefig(directory + size_filename_nostep)
 				plt.close(i+1)
 			i += 2
+
+
 	def recalc(self):
+		''' force self to recalc every hilbert basis. '''
 		print("\t\tRecalculating Hilbert basis for top_sequence...")
 		for cone in self.top_sequence:
 			cone.get_hilbert_basis(forced=True)
@@ -553,11 +556,6 @@ if __name__ == "__main__":
 				indent=4, separators=(',', ': '))
 		
 	experiment_io_tools.pause()
-
-
-	
-	 
-
 
 	print('Graphing current data')
 	toptest.generate_hilbert_graphs(directory, experiment_name)
