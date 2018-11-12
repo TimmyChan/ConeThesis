@@ -73,13 +73,13 @@ if __name__ == '__main__':
 					latex_tabular  = 	"\\begin{tabular}{c|c}\n\\textbf{Top Down} & \\textbf{Bottom Up} \\\\ \\hline  \n\\begin{SAGE}\n"
 					latex_tabular += 	topdown_string + "\\end{SAGE} \n&\n\\begin{SAGE}\n"
 					latex_tabular +=	bottomup_string + "\\end{SAGE} \n\\\\ \\hline\n\n"
-					latex_tabular += 	'\\begin{minipage}{.45\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_topdown+'/top_sequence SIZE"}\n'
+					latex_tabular += 	'\\begin{minipage}{.4\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_topdown+'/top_sequence SIZE"}\n'
 					latex_tabular += 	"\\end{minipage} &\n"
-					latex_tabular +=	'\\begin{minipage}{.45\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_bottomup+'/bottom_sequence SIZE"}\n'
+					latex_tabular +=	'\\begin{minipage}{.4\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_bottomup+'/bottom_sequence SIZE"}\n'
 					latex_tabular += 	"\\end{minipage} \\\\ \\\\\n\\hline \\\\"
-					latex_tabular += 	'\\begin{minipage}{.45\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_topdown+'/top_sequence LENGTH"}\n'
+					latex_tabular += 	'\\begin{minipage}{.4\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_topdown+'/top_sequence LENGTH"}\n'
 					latex_tabular += 	"\\end{minipage} &\n"
-					latex_tabular +=	'\\begin{minipage}{.45\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_bottomup+'/bottom_sequence LENGTH"}\n'
+					latex_tabular +=	'\\begin{minipage}{.4\\textwidth}\n\\includegraphics[width=\\textwidth]{"'+"DATA/{}d/".format(dim)+experiment_bottomup+'/bottom_sequence LENGTH"}\n'
 					latex_tabular += 	"\\end{minipage}\n\\end{tabular}\n\\end{document}"
 					
 					latex_code = latex_preamble + latex_init_condit + latex_tabular
